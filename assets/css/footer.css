@@ -26,11 +26,12 @@
   border-radius: 20px;
   width: 1232px;
   max-width: 100%;
+  padding: 0px 24px;
   display: flex;
   justify-content: space-between;
   position: absolute;
   top: 0;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -38,6 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 24px 0px;
 }
 
 .newsletter-content h2 {
@@ -53,7 +55,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom:12px ;
+  margin-bottom: 12px;
 }
 
 .newsletter-content h4 {
@@ -178,7 +180,7 @@
   text-decoration: none;
   color: var(--blackish-green-color);
 }
-/*meta */
+/* meta */
 /* ==========================================
    RESPONSIVE: TABLET & MOBILE
    ========================================== */
