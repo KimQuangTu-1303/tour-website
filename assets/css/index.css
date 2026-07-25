@@ -1,3 +1,4 @@
+
 /* --- 1. HERO SECTION & NAVBAR --- */
 .hero-section {
     position: relative;
@@ -846,12 +847,7 @@ select:focus {
     text-decoration: none;
     font-size: 13.5px;
     font-weight: 500;
-}isplay: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background-color 0.2s;
 }
-
 .btn-seach:hover {
     background-color: #72c4a8;
 }
@@ -1464,11 +1460,9 @@ select:focus {
         font-size: 14px;
     }
     .btn-signup{
-      box-sizing:border-box;
-      background:
+      box-sizing: border-box;
+      background: transparent;
     }
-
-    /* Booking Form Mobile */
     .booking {
         margin-top: 20px;
     }
@@ -1518,8 +1512,7 @@ select:focus {
     .footer-brand {
         grid-column: span 2;
     }
-}
-
+  }
 /* --- Small Mobile (Dưới 480px) --- */
 @media (max-width: 480px) {
     .footer-grid {
