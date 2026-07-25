@@ -17,6 +17,11 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fafbfc;
+  color: var(--blackish-green-color);
+}
+
 /* RESPONSIVE */
 .grid {
   width: 100%;

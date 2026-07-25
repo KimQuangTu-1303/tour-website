@@ -185,7 +185,7 @@
           </div>
         </div>
 
-        <div class="hotel-listing__separator"></div>
+        <div class="filters__separator"></div>
 
         <!-- Rating -->
         <div class="filters-group">
@@ -218,7 +218,7 @@
           </div>
         </div>
 
-        <div class="hotel-listing__separator"></div>
+        <div class="filters__separator"></div>
 
         <div class="filters-group">
           <div class="filters-group__header">
@@ -249,7 +249,7 @@
           </div>
         </div>
 
-        <div class="hotel-listing__separator"></div>
+        <div class="filters__separator"></div>
 
         <div class="filters-group">
           <div class="filters-group__header">
@@ -279,7 +279,51 @@
         </div>
       </aside>
 
-      <main class="hotel-listing__content"></main>
+      <div class="hotel-listing__separator"></div>
+
+      <main class="hotel-listing__content">
+        <header class="hotel-listing__header">
+          <div class="hotel-listing__tabs">
+            <button class="hotel-listing__tab hotel-listing__tab--active" data-target="hotels-list">
+              <h3 class="hotel-listing__tab-heading">Hotels</h3>
+              <p class="hotel-listing__tab-desc">257 places</p>
+            </button>
+            <button class="hotel-listing__tab" data-target="motels-list">
+              <h3 class="hotel-listing__tab-heading">Motels</h3>
+              <p class="hotel-listing__tab-desc">51 places</p>
+            </button>
+            <button class="hotel-listing__tab" data-target="resorts-list">
+              <h3 class="hotel-listing__tab-heading">Resorts</h3>
+              <p class="hotel-listing__tab-desc">72 places</p>
+            </button>
+
+            <div class="slide-indicator"></div>
+          </div>
+
+          <div class="hotel-listing__control">
+            <p class="hotel-listing__showing">Showing 4 of <span class="highlight">257 places</span></p>
+
+            <div class="hotel-listing__sort sort-dropdown" id="sort-dropdown">
+              <span class="sort-dropdown__label">Sort by</span>
+
+              <div class="sort-dropdown__container">
+                <button class="sort-dropdown__trigger" type="button">
+                  <span class="sort-dropdown__selected">Recommended</span>
+                  <img src="assets/image/chevron_down.svg" alt="" class="sort-dropdown__icon" />
+                </button>
+
+                <ul class="sort-dropdown__options">
+                  <li class="sort-dropdown__option sort-dropdown__option--active" data-value="recommended">Recommended</li>
+                  <li class="sort-dropdown__option" data-value="ascending">Ascending</li>
+                  <li class="sort-dropdown__option" data-value="descending">Descending</li>
+                </ul>
+              </div>
+
+              <input type="hidden" name="sort" id="sort-input" value="recommended" />
+            </div>
+          </div>
+        </header>
+      </main>
     </div>
 
     <footer class="footer-wrapper">
