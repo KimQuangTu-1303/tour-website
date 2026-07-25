@@ -130,8 +130,8 @@
 
 .user-menu::before {
   content: "";
-  width: 100px;
-  height: 200px;
+  width: 100%;
+  height: 25px;
   display: block;
   position: absolute;
   top: -20px;
@@ -193,3 +193,4 @@
   opacity: 0.25;
   margin: 22px 0;
 }
+
