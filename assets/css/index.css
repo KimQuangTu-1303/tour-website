@@ -298,19 +298,6 @@
     color: #6b7280;
     margin-top: 0.25rem;
 }
-
-.btn-outline {
-    color:black;
-    background-color:#8DD3BB ;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
-
-.btn-outline:hover { background-color:#cccecd; }
-
 /* --- 3. PLAN YOUR PERFECT TRIP --- */
 .destinations-grid {
     display: grid;
@@ -525,6 +512,10 @@ select:focus {
     display:flex;
     padding: 0 20px;
     justify-content: space-between;
+}
+.section-places h2{
+    font-size:24px;
+    margin-bottom: 12px;
 }
 /*Danh sách địa điểm du lịch*/
 .git{
@@ -877,15 +868,16 @@ select:focus {
 
 .section-subtitle {
     color: #6b7280;
-    margin-top: 0.25rem;
+    font-size:14px;
 }
 
 .btn-outline {
     color:black;
-    background-color:#8DD3BB ;
-    padding: 0.5rem 1rem;
+    background-color:#f5faf9 ;
+    padding: 1rem 2rem;
     border-radius: 0.5rem;
-    font-size: 0.875rem;
+    border:1px solid #8DD3BB;
+    font-size: 12px;
     font-weight: 600;
     margin-bottom: 2rem;
 }
@@ -1172,6 +1164,9 @@ select:focus {
 .option-title h2{
     font-size:24px;
     font-family: Vertical;
+}
+.option-des{
+    margin: 12px 0 12px;
 }
 /* Danh sách review*/
 

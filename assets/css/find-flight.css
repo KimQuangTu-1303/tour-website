@@ -1,62 +1,3 @@
-/* .header {
-  background-color: #ffffff;
-  padding: 20px 40px;
-  width: 100%;
-  position: relative;
-  z-index: 10;
-}
-
-.header__container {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-#navbar__list {
-  display: flex;
-  list-style: none;
-  gap: 32px;
-  padding: 0;
-}
-
-.navbar__item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  position: relative;
-  padding-bottom: 12px;
-}
-.navbar__item--active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #8dd3bb;
-  border-radius: 2px;
-}
-
-.header__icon {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
-
-.navbar__link {
-  text-decoration: none;
-  color: #111111;
-  font-size: 14px;
-  font-weight: 600;
-} */
-
-/* Logo ở giữa */
-/* .logo-link img {
-  height: 36px;
-  display: block;
-} */
-
 /* Menu bên phải */
 .navbar_list {
   display: flex;
@@ -225,19 +166,7 @@
     grid-template-columns: 1fr;
   }
 }
-.btn-outline {
-  color: black;
-  background-color: #8dd3bb;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-}
 
-.btn-outline:hover {
-  background-color: #cccecd;
-}
 .plan {
   max-width: 1200px;
   margin: 10rem auto 0 auto;
@@ -255,15 +184,18 @@
 .plan h2 {
   font-size: 24px;
 }
-.btn-subtitle {
-  color: black;
-  background-color: #f2f4f3;
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  border: 1px solid #8dd3bb;
+.btn-subtitle{
+  color:black;
+    background-color:#f5faf9 ;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border:1px solid #8DD3BB;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 2rem;
 }
+
+.btn-subtitle:hover { background-color:#cccecd; }
 /* Container chính */
 .banner-2 {
   background: #8dd3bb url("../image/Frame\ 2608705.png") no-repeat center center;
