@@ -40,7 +40,7 @@
         <div class="user-action">
           <ul class="user-action__list">
             <li class="user-action__item">
-              <img src="assets/image/heart_light.png" alt="Heart" class="header__icon" />
+              <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
               <a href="#" class="user-action__link">Favourites</a>
             </li>
             <li class="user-action__item user-action__separator">|</li>
@@ -299,31 +299,227 @@
 
             <div class="slide-indicator"></div>
           </div>
-
-          <div class="hotel-listing__control">
-            <p class="hotel-listing__showing">Showing 4 of <span class="highlight">257 places</span></p>
-
-            <div class="hotel-listing__sort sort-dropdown" id="sort-dropdown">
-              <span class="sort-dropdown__label">Sort by</span>
-
-              <div class="sort-dropdown__container">
-                <button class="sort-dropdown__trigger" type="button">
-                  <span class="sort-dropdown__selected">Recommended</span>
-                  <img src="assets/image/chevron_down.svg" alt="" class="sort-dropdown__icon" />
-                </button>
-
-                <ul class="sort-dropdown__options">
-                  <li class="sort-dropdown__option sort-dropdown__option--active" data-value="recommended">Recommended</li>
-                  <li class="sort-dropdown__option" data-value="ascending">Ascending</li>
-                  <li class="sort-dropdown__option" data-value="descending">Descending</li>
-                </ul>
-              </div>
-
-              <input type="hidden" name="sort" id="sort-input" value="recommended" />
-            </div>
-          </div>
         </header>
+
+        <div class="hotel-listing__control">
+          <p class="hotel-listing__showing">Showing 4 of <span class="highlight">257 places</span></p>
+
+          <div class="hotel-listing__sort sort-dropdown" id="sort-dropdown">
+            <span class="sort-dropdown__label">Sort by</span>
+
+            <div class="sort-dropdown__container">
+              <button class="sort-dropdown__trigger" type="button">
+                <span class="sort-dropdown__selected">Recommended</span>
+                <img src="assets/image/chevron_down.svg" alt="" class="sort-dropdown__icon" />
+              </button>
+
+              <ul class="sort-dropdown__options">
+                <li class="sort-dropdown__option sort-dropdown__option--active" data-value="recommended">Recommended</li>
+                <li class="sort-dropdown__option" data-value="ascending">Ascending</li>
+                <li class="sort-dropdown__option" data-value="descending">Descending</li>
+              </ul>
+            </div>
+
+            <input type="hidden" name="sort" id="sort-input" value="recommended" />
+          </div>
+        </div>
+
+        <ul class="hotel-listing__list">
+          <li class="hotel-listing__item">
+            <article class="hotel-card">
+              <img src="assets/image/cvk-park-bosphorus-hotel.png" alt="" class="hotel-card__img" />
+              <div class="hotel-card__body">
+                <div class="hotel-card__info">
+                  <div class="hotel-card__detail">
+                    <h2 class="hotel-card__name">CVK Park Bosphorus Hotel Istanbul</h2>
+                    <div class="hotel-card__desc">
+                      <span class="hotel-card__location">
+                        <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
+                        <span class="hotel-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
+                      </span>
+                      <div class="hotel-card__features">
+                        <span class="hotel-card__stars">
+                          <img src="assets/image/5-stars.svg" alt="5 star" />
+                          <span class="hotel-card__stars-text">5 Star Hotel</span>
+                        </span>
+                        <span class="hotel-card__amenities">
+                          <img src="assets/image/cafe_light.svg" alt="amenities" class="hotel-card__amenities-icon" />
+                          <span class="hotel-card__amenities-text"><strong>20+</strong> Amenities</span>
+                        </span>
+                      </div>
+                      <span class="hotel-card__rating">
+                        <span class="hotel-card__rating-box rating-box__label">4.2</span>
+                        <span class="hotel-card__rating-text"><strong>Very Good</strong> 371 reviews</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="hotel-card__price">
+                    <span class="price-label">starting from</span>
+                    <div class="price-value">
+                      <span class="price-amount">$240</span>
+                      <span class="price-unit">/night</span>
+                    </div>
+                    <span class="price-tax">excl. tax</span>
+                  </div>
+                </div>
+                <div class="hotel-card__separator"></div>
+                <div class="hotel-card__actions">
+                  <label class="hotel-card__actions-favorite">
+                    <input type="checkbox" class="favorite-checkbox" />
+                    <span class="favorite-icon"></span>
+                  </label>
+                  <button class="hotel-card__actions-btn">View Place</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="hotel-listing__item">
+            <article class="hotel-card">
+              <img src="assets/image/eresin-hotels-sultanahmet(1).png" alt="" class="hotel-card__img" />
+              <div class="hotel-card__body">
+                <div class="hotel-card__info">
+                  <div class="hotel-card__detail">
+                    <h2 class="hotel-card__name">Eresin Hotels Sultanahmet - Boutique Class</h2>
+                    <div class="hotel-card__desc">
+                      <span class="hotel-card__location">
+                        <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
+                        <span class="hotel-card__location-text">Kucukayasofya No. 40 Sultanahmet, Istanbul 34022</span>
+                      </span>
+                      <div class="hotel-card__features">
+                        <span class="hotel-card__stars">
+                          <img src="assets/image/5-stars.svg" alt="5 star" />
+                          <span class="hotel-card__stars-text">5 Star Hotel</span>
+                        </span>
+                        <span class="hotel-card__amenities">
+                          <img src="assets/image/cafe_light.svg" alt="amenities" class="hotel-card__amenities-icon" />
+                          <span class="hotel-card__amenities-text"><strong>20+</strong> Amenities</span>
+                        </span>
+                      </div>
+                      <span class="hotel-card__rating">
+                        <span class="hotel-card__rating-box rating-box__label">4.2</span>
+                        <span class="hotel-card__rating-text"><strong>Very Good</strong> 54 reviews</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="hotel-card__price">
+                    <span class="price-label">starting from</span>
+                    <div class="price-value">
+                      <span class="price-amount">$104</span>
+                      <span class="price-unit">/night</span>
+                    </div>
+                    <span class="price-tax">excl. tax</span>
+                  </div>
+                </div>
+                <div class="hotel-card__separator"></div>
+                <div class="hotel-card__actions">
+                  <label class="hotel-card__actions-favorite">
+                    <input type="checkbox" class="favorite-checkbox" />
+                    <span class="favorite-icon"></span>
+                  </label>
+                  <button class="hotel-card__actions-btn">View Place</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="hotel-listing__item">
+            <article class="hotel-card">
+              <img src="assets/image/eresin-hotels-sultanahmet(2).png" alt="" class="hotel-card__img" />
+              <div class="hotel-card__body">
+                <div class="hotel-card__info">
+                  <div class="hotel-card__detail">
+                    <h2 class="hotel-card__name">Eresin Hotels Sultanahmet - Boutique Class</h2>
+                    <div class="hotel-card__desc">
+                      <span class="hotel-card__location">
+                        <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
+                        <span class="hotel-card__location-text">Kucukayasofya No. 40 Sultanahmet, Istanbul 34022</span>
+                      </span>
+                      <div class="hotel-card__features">
+                        <span class="hotel-card__stars">
+                          <img src="assets/image/5-stars.svg" alt="5 star" />
+                          <span class="hotel-card__stars-text">5 Star Hotel</span>
+                        </span>
+                        <span class="hotel-card__amenities">
+                          <img src="assets/image/cafe_light.svg" alt="amenities" class="hotel-card__amenities-icon" />
+                          <span class="hotel-card__amenities-text"><strong>20+</strong> Amenities</span>
+                        </span>
+                      </div>
+                      <span class="hotel-card__rating">
+                        <span class="hotel-card__rating-box rating-box__label">4.2</span>
+                        <span class="hotel-card__rating-text"><strong>Very Good</strong> 54 reviews</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="hotel-card__price">
+                    <span class="price-label">starting from</span>
+                    <div class="price-value">
+                      <span class="price-amount">$104</span>
+                      <span class="price-unit">/night</span>
+                    </div>
+                    <span class="price-tax">excl. tax</span>
+                  </div>
+                </div>
+                <div class="hotel-card__separator"></div>
+                <div class="hotel-card__actions">
+                  <label class="hotel-card__actions-favorite">
+                    <input type="checkbox" class="favorite-checkbox" />
+                    <span class="favorite-icon"></span>
+                  </label>
+                  <button class="hotel-card__actions-btn">View Place</button>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="hotel-listing__item">
+            <article class="hotel-card">
+              <img src="assets/image/eresin-hotels-sultanahmet(3).png" alt="" class="hotel-card__img" />
+              <div class="hotel-card__body">
+                <div class="hotel-card__info">
+                  <div class="hotel-card__detail">
+                    <h2 class="hotel-card__name">Eresin Hotels Sultanahmet - Boutique Class</h2>
+                    <div class="hotel-card__desc">
+                      <span class="hotel-card__location">
+                        <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
+                        <span class="hotel-card__location-text">Kucukayasofya No. 40 Sultanahmet, Istanbul 34022</span>
+                      </span>
+                      <div class="hotel-card__features">
+                        <span class="hotel-card__stars">
+                          <img src="assets/image/5-stars.svg" alt="5 star" />
+                          <span class="hotel-card__stars-text">5 Star Hotel</span>
+                        </span>
+                        <span class="hotel-card__amenities">
+                          <img src="assets/image/cafe_light.svg" alt="amenities" class="hotel-card__amenities-icon" />
+                          <span class="hotel-card__amenities-text"><strong>20+</strong> Amenities</span>
+                        </span>
+                      </div>
+                      <span class="hotel-card__rating">
+                        <span class="hotel-card__rating-box rating-box__label">4.2</span>
+                        <span class="hotel-card__rating-text"><strong>Very Good</strong> 54 reviews</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="hotel-card__price">
+                    <span class="price-label">starting from</span>
+                    <div class="price-value">
+                      <span class="price-amount">$104</span>
+                      <span class="price-unit">/night</span>
+                    </div>
+                    <span class="price-tax">excl. tax</span>
+                  </div>
+                </div>
+                <div class="hotel-card__separator"></div>
+                <div class="hotel-card__actions">
+                  <label class="hotel-card__actions-favorite">
+                    <input type="checkbox" class="favorite-checkbox" />
+                    <span class="favorite-icon"></span>
+                  </label>
+                  <button class="hotel-card__actions-btn">View Place</button>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
       </main>
+      <button class="hotel-listing__btn">Show more results</button>
     </div>
 
     <footer class="footer-wrapper">
