@@ -442,15 +442,19 @@
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
+  margin: 0;
 }
 
 .hotel-card__location {
   display: flex;
+  align-items: center;
+}
+
+.hotel-card__location-text {
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 1;
   opacity: 0.75;
-  align-items: center;
 }
 
 .hotel-card__img {
@@ -460,9 +464,6 @@
 .hotel-card__features {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1;
   gap: 32px;
 }
 
@@ -470,6 +471,9 @@
 .hotel-card__amenities {
   display: flex;
   align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1;
 }
 
 .hotel-card__stars-text {
@@ -498,7 +502,7 @@
   line-height: 1;
 }
 
-.hotel-card__price {
+.hotel-card__price .price-tax {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
