@@ -115,48 +115,61 @@
     </header>
 
     <main class="hotel-detail">
-      <section class="detail-header">
-        <div class="detail-header__info">
-          <div class="detail-header__title-group">
-            <h1 class="hotel-card__name">CVK Park Bosphorus Hotel Istanbul</h1>
-            <span class="hotel-card__stars">
-              <img src="assets/image/5-stars.svg" alt="5 star" />
-              <span class="hotel-card__stars-text">5 Star Hotel</span>
+      <div class="hotel-detail__intro">
+        <nav class="breadcrumb">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a href="#" class="breadcrumb__link">Turkey</a>
+            </li>
+            <li class="breadcrumb__item">
+              <a href="#" class="breadcrumb__link">Istanbul</a>
+            </li>
+            <li class="breadcrumb__item breadcrumb__item--active">CVK Park Bosphorus Hotel Istanbul</li>
+          </ol>
+        </nav>
+        <section class="detail-header">
+          <div class="detail-header__info">
+            <div class="detail-header__title-group">
+              <h1 class="hotel-card__name">CVK Park Bosphorus Hotel Istanbul</h1>
+              <span class="hotel-card__stars">
+                <img src="assets/image/5-stars.svg" alt="5 star" />
+                <span class="hotel-card__stars-text">5 Star Hotel</span>
+              </span>
+            </div>
+
+            <span class="hotel-card__location">
+              <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
+              <span class="hotel-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
             </span>
-          </div>
 
-          <span class="hotel-card__location">
-            <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
-            <span class="hotel-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
-          </span>
-
-          <div class="rating-display">
-            <span class="hotel-card__rating-box rating-box__label">4.2</span>
-            <span class="hotel-card__rating-text"><strong>Very Good</strong> 371 reviews</span>
-          </div>
-        </div>
-        <div class="detail-header__actions">
-          <div class="price-display">
-            <div class="price-value">
-              <span class="price-amount">$240</span>
-              <span class="price-unit">/night</span>
+            <div class="rating-display">
+              <span class="hotel-card__rating-box rating-box__label">4.2</span>
+              <span class="hotel-card__rating-text"><strong>Very Good</strong> 371 reviews</span>
             </div>
           </div>
+          <div class="detail-header__actions">
+            <div class="price-display">
+              <div class="price-value">
+                <span class="price-amount">$240</span>
+                <span class="price-unit">/night</span>
+              </div>
+            </div>
 
-          <div class="detail-buttons">
-            <label class="hotel-card__actions-favorite">
-              <input type="checkbox" class="favorite-checkbox" />
-              <span class="favorite-icon"></span>
-            </label>
+            <div class="detail-buttons">
+              <label class="hotel-card__actions-favorite">
+                <input type="checkbox" class="favorite-checkbox" />
+                <span class="favorite-icon"></span>
+              </label>
 
-            <button class="hotel-card__actions-favorite">
-              <img src="assets/image/share_light.svg" alt="Share" />
-            </button>
+              <button class="hotel-card__actions-favorite">
+                <img src="assets/image/share_light.svg" alt="Share" />
+              </button>
 
-            <a href="#" class="hotel-card__actions-btn">Book now</a>
+              <a href="#" class="hotel-card__actions-btn">Book now</a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   </body>
 </html>
