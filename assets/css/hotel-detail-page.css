@@ -1,3 +1,38 @@
+.hotel-detail__intro {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  max-width: 1232px;
+  gap: 32px;
+}
+
+.breadcrumb__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.breadcrumb__item:not(:last-child)::after {
+  margin-left: 8px;
+  content: url(../image/chevron_forward.svg);
+  transform: translateY(2px);
+}
+
+.breadcrumb__link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--slamon-color);
+}
+
 .detail-header {
   display: flex;
   justify-content: space-between;
