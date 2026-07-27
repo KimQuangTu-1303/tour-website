@@ -1,8 +1,15 @@
+.hotel-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 1232px;
+  gap: 64px;
+  margin: 0px auto;
+}
+
 .hotel-detail__intro {
   display: flex;
   flex-direction: column;
-  margin: 0px auto;
-  max-width: 1232px;
   gap: 32px;
 }
 
@@ -23,7 +30,7 @@
 
 .breadcrumb__item:not(:last-child)::after {
   margin-left: 8px;
-  content: url(../image/chevron_forward.svg);
+  content: url(../image/chevron-forward.svg);
   transform: translateY(2px);
 }
 
@@ -66,4 +73,64 @@
 
 .hotel-card__actions-btn {
   width: 150px;
+}
+
+.detail-gallery {
+  display: grid;
+  grid-template-columns: 5fr 3fr 3fr;
+  grid-template-rows: repeat(2, 271px);
+  border-radius: 12px;
+  gap: 8px;
+}
+
+.detail-gallery__main {
+  grid-row: span 2;
+}
+
+.overview__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.overview__desc {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.overview__feature-list {
+  display: flex;
+  margin-top: 32px;
+  gap: 16px;
+}
+
+.overview__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 64px 16px 16px;
+  width: 165px;
+  border: 1px solid var(--mint-green-color);
+  border-radius: 12px;
+  gap: 32px;
+}
+
+.overview__rating {
+  background-color: var(--mint-green-color);
+  border: none;
+}
+
+.overview__rating-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.overview__rating-response {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.overview__chip-icon {
+  width: 32px;
 }
