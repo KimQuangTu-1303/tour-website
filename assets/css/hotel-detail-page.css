@@ -208,3 +208,177 @@
   width: 150px;
   height: 48px;
 }
+
+/* HOTEL DETAIL: LOCATION */
+.hotel-detail__location {
+}
+
+.hotel-detail__location-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.hotel-detail__location-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hotel-detail__location-header .hotel-card__actions-btn {
+  max-width: 190px;
+  height: 48px;
+}
+
+/* HOTEL DETAIL: AMENITIES */
+.hotel-detail__amenities-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.hotel-detail__amenities-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: max-content max-content;
+  gap: 24px 300px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hotel-detail__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hotel-detail__item-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-top: 2px;
+}
+
+/* HOTEL DETAIL: FEEDBACK */
+.hotel-detail__feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hotel-detail__feedback-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hotel-detail__feedback-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+.hotel-detail__feedback .hotel-card__actions-btn {
+  max-width: 152px;
+  height: 48px;
+}
+
+.hotel-detail__overview {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  gap: 3px 16px;
+}
+
+.hotel-detail__overview-score {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  grid-row: span 2;
+}
+
+.hotel-detail__overview-label {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.hotel-detail__overview-count {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.hotel-detail__overview .hotel-detail__separator {
+  height: 0.5px;
+}
+
+.hotel-detail__feedback-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 24px;
+}
+
+.hotel-detail__feedback-item {
+  display: grid;
+  grid-auto-flow: column;
+
+  grid-template-columns: 1fr 30fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 16px;
+}
+
+.hotel-detail__feedback-avt {
+  grid-row: span 2;
+}
+
+.hotel-detail__feedback-action {
+  grid-row: span 2;
+}
+
+.hotel-detail__feedback-list .user-action__item {
+  font-weight: 400;
+}
+
+.hotel-detail__feedback-item-header {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.hotel-detail__feedback-rating {
+  font-weight: 600;
+}
+
+.hotel-detail__feedback-item-text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  align-self: end;
+}
+
+.hotel-detail__feedback-action {
+  justify-self: end;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.hotel-detail__feedback-pages {
+  display: flex;
+  margin: 0px auto;
+  gap: 24px;
+}
+
+.hotel-detail__feedback-num {
+  align-self: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+}
