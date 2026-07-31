@@ -1,0 +1,257 @@
+.main-content {
+  display: grid;
+  grid-template-rows: max-content max-content max-content;
+  max-width: 1280px;
+  margin: 0px auto;
+  gap: 40px;
+}
+
+/* BOOKING DETAIL */
+
+.reservation-info {
+  max-width: 800px;
+  background: var(--white-color);
+  padding: 32px 24px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+}
+
+.reservation-info__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reservation-info__heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  max-width: 490px;
+  margin: 0;
+}
+
+.reservation-info__hotel-card {
+  display: grid;
+  align-items: center;
+  padding: 16px 32px;
+  margin: 16px 0px 40px 0px;
+  border: 0.5px solid var(--mint-green-color);
+  border-radius: 8px;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 24px;
+}
+
+.reservation-info__hotel-img {
+  max-width: 64px;
+  grid-row: span 2;
+  border-radius: 12px;
+}
+.reservation-info__hotel-name {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.reservation-info__schedule {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reservation-info__date {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.reservation-info__desc {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* PAYMENT */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  border-radius: 12px;
+  gap: 16px;
+  padding: 16px;
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+}
+
+.payment-option {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.payment-option__label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  flex-shrink: 0;
+  background-image: url("../image/none-checked.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease;
+}
+
+.payment-option__radio:checked + .radio-icon {
+  background-image: url(../image/checked.svg);
+}
+
+.payment-option__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.payment-option__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.payment-option__desc {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.payment-option:has(.payment-option__radio:checked) {
+  background-color: var(--mint-green-color);
+  transition: all 0.3s ease-in;
+}
+
+.payment-option__radio {
+  display: none;
+}
+
+.payment-options__more-info {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* LOGIN CARD */
+.login-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  background-color: var(--white-color);
+  padding: 24px;
+
+  gap: 24px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+}
+
+.login-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.login-card__input {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 16px 0px 16px 16px;
+  border: 1px solid var(--blackish-green-color);
+  border-radius: 4px;
+}
+
+.login-card__hint {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-bottom: 18px;
+}
+
+.login-card__link {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.login-card__btn {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 14px 16px;
+  max-height: 48px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-card__btn--primary {
+  background-color: var(--mint-green-color);
+}
+.login-card__divider {
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 500;
+  align-items: center;
+  text-align: center;
+}
+
+.login-card__divider::before,
+.login-card__divider::after {
+  content: "";
+  flex: 1;
+
+  height: 1px;
+  background-color: var(--blackish-green-color);
+  opacity: 0.25;
+}
+
+.login-card__divider::before {
+  margin-right: 24px;
+}
+
+.login-card__divider::after {
+  margin-left: 24px;
+}
+
+.login-card__socials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.login-card__social-btn {
+  max-height: 48px;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+.login-card__btn--outline {
+  border: 1px solid var(--mint-green-color);
+  border-radius: 4px;
+}
+
+.login-card__socials .login-card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+  grid-column: span 3;
+  gap: 16px;
+}
