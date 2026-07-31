@@ -172,6 +172,7 @@
   font-size: 16px;
   margin-bottom: 16px;
   cursor: pointer;
+
 }
 
 .arrow-icon {
@@ -446,7 +447,6 @@
 .btn-favorite:hover{
   background: #83c6a6;
 }
-
 .btn-primary {
   flex: 1;
   height: 44px;
@@ -454,8 +454,16 @@
   border: none;
   border-radius: 4px;
   font-weight: 600;
-  color: #112211;
   cursor: pointer;
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+}
+
+.btn-primary p {
+  color: #112211;
+  font-size: 17px;
+  margin: 0; 
 }
 
 .btn-primary:hover {

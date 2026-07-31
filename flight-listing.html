@@ -1,392 +1,394 @@
 <!doctype html>
 <html lang="VI">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Flight-Listing</title>
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/flight-listing.css" />
-  <link rel="stylesheet" href="assets/css/header.css">
-  <link rel="stylesheet" href="assets/css/footer.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Flight-Listing</title>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/flight-listing.css">
+<link rel="stylesheet" href="assets/css/hotel-listing.css">
+<link rel="stylesheet" href="assets/css/header.css">
+<link rel="stylesheet" href="assets/css/footer.css">
 </html>
 <body>
-  <header class="header header--no-margin">
-      <div class="header__container">
-        <!-- Left Menu -->
-        <nav class="navbar">
-          <ul class="navbar__list">
-            <li class="navbar__item navbar__item--active">
-              <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
-              <a href="find-flight.html" class="navbar__link">Find Flight</a>
-            </li>
-            <li class="navbar__item ">
-              <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
-              <a href="find-stays.html" class="navbar__link">Find Stays</a>
-            </li>
-          </ul>
-        </nav>
+<header class="header header--no-margin">
+    <div class="header__container">
+      <!-- Left Menu -->
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item navbar__item--active">
+            <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
+            <a href="find-flight.html" class="navbar__link">Find Flight</a>
+          </li>
+          <li class="navbar__item ">
+            <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
+            <a href="find-stays.html" class="navbar__link">Find Stays</a>
+          </li>
+        </ul>
+      </nav>
 
-        <!-- Logo Center -->
-        <div class="logo">
-          <a href="index.html" class="logo-link">
-            <img src="assets/image/logo-small.png" alt="Golobe" />
-          </a>
-        </div>
-
-        <!-- Right Menu -->
-        <div class="user-action">
-          <ul class="user-action__list">
-            <li class="user-action__item">
-              <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
-              <a href="#" class="user-action__link">Favourites</a>
-            </li>
-            <li class="user-action__item user-action__separator">|</li>
-            <li class="user-action__item">
-              <a href="#" class="user-action__link user-action__profile">
-                <div class="header__avatar-wrap">
-                  <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
-                  <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
-                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
-                </div>
-                John D.
-              </a>
-              <!-- User Menu -->
-              <div class="user-menu">
-                <div class="user-menu__header">
-                  <img src="assets/image/user-avt.svg" alt="John Doe." class="user-menu_avatar" />
-                  <div class="user-menu__info">
-                    <span class="user-menu__info-name">John Doe.</span>
-                    <span class="user-menu__info-status">Online</span>
-                  </div>
-                </div>
-
-                <div class="user-menu__separator"></div>
-
-                <ul class="user-menu__list account-menu">
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/user_light.svg" alt="#" class="user__icon" />
-                      My account
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                    </a>
-                  </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/card_light.png" alt="#" class="user__icon" />
-                      Payments
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                    </a>
-                  </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/setting_light.png" alt="#" class="user__icon" />
-                      Setting
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                    </a>
-                  </li>
-                </ul>
-                <div class="user-menu__separator"></div>
-
-                <ul class="user-menu__list system-menu">
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/support_light.png" alt="#" class="user__icon" />
-                      Support
-                      <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                    </a>
-                  </li>
-                  <li class="user-menu__item">
-                    <a href="#" class="user-menu__link">
-                      <img src="assets/image/logout_light.png" alt="#" class="user__icon" />
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <!-- Logo Center -->
+      <div class="logo">
+        <a href="index.html" class="logo-link">
+          <img src="assets/image/logo-small.png" alt="Golobe" />
+        </a>
       </div>
-    </header>
-    <div class="search-container">
-  <div class="search-card">
-    <form class="search-form">
-      <fieldset class="input-group">
-        <legend>From - To</legend>
-        <div class="select-wrapper">
-          <select name="from-to">
-            <option value="">Lahore - Karachi</option>
-            <option value="1">Ha Noi - Da Nang</option>
-          </select>
-          <i class="fa-solid fa-arrows-rotate swap-icon"></i>
-        </div>
-      </fieldset>
 
-      <fieldset class="input-group">
-        <legend>Trip</legend>
-        <select name="trip">
-          <option value="">Return</option>
-          <option value="">One Way</option>
+      <!-- Right Menu -->
+      <div class="user-action">
+        <ul class="user-action__list">
+          <li class="user-action__item">
+            <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
+            <a href="#" class="user-action__link">Favourites</a>
+          </li>
+          <li class="user-action__item user-action__separator">|</li>
+          <li class="user-action__item">
+            <a href="#" class="user-action__link user-action__profile">
+              <div class="header__avatar-wrap">
+                <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
+                <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
+                <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
+              </div>
+              John D.
+            </a>
+            <!-- User Menu -->
+            <div class="user-menu">
+              <div class="user-menu__header">
+                <img src="assets/image/user-avt.svg" alt="John Doe." class="user-menu_avatar" />
+                <div class="user-menu__info">
+                  <span class="user-menu__info-name">John Doe.</span>
+                  <span class="user-menu__info-status">Online</span>
+                </div>
+              </div>
+
+              <div class="user-menu__separator"></div>
+
+              <ul class="user-menu__list account-menu">
+                <li class="user-menu__item">
+                  <a href="#" class="user-menu__link">
+                    <img src="assets/image/user_light.svg" alt="#" class="user__icon" />
+                    My account
+                    <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                  </a>
+                </li>
+                <li class="user-menu__item">
+                  <a href="#" class="user-menu__link">
+                    <img src="assets/image/card_light.png" alt="#" class="user__icon" />
+                    Payments
+                    <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                  </a>
+                </li>
+                <li class="user-menu__item">
+                  <a href="#" class="user-menu__link">
+                    <img src="assets/image/setting_light.png" alt="#" class="user__icon" />
+                    Setting
+                    <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                  </a>
+                </li>
+              </ul>
+              <div class="user-menu__separator"></div>
+
+              <ul class="user-menu__list system-menu">
+                <li class="user-menu__item">
+                  <a href="#" class="user-menu__link">
+                    <img src="assets/image/support_light.png" alt="#" class="user__icon" />
+                    Support
+                    <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
+                  </a>
+                </li>
+                <li class="user-menu__item">
+                  <a href="#" class="user-menu__link">
+                    <img src="assets/image/logout_light.png" alt="#" class="user__icon" />
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="search-container">
+<div class="search-card">
+  <form class="search-form">
+    <fieldset class="input-group">
+      <legend>From - To</legend>
+      <div class="select-wrapper">
+        <select name="from-to">
+          <option value="">Lahore - Karachi</option>
+          <option value="1">Ha Noi - Da Nang</option>
         </select>
-      </fieldset>
+        <i class="fa-solid fa-arrows-rotate swap-icon"></i>
+      </div>
+    </fieldset>
 
-      <fieldset class="input-group">
-        <legend>Depart - Return</legend>
-        <input type="text" value="07 Nov 22 - 13 Nov 22">
-      </fieldset>
+    <fieldset class="input-group">
+      <legend>Trip</legend>
+      <select name="trip">
+        <option value="">Return</option>
+        <option value="">One Way</option>
+      </select>
+    </fieldset>
 
-      <fieldset class="input-group">
-        <legend>Passenger - Class</legend>
-        <input type="text" value="1 Passenger, Economy">
-      </fieldset>
+    <fieldset class="input-group">
+      <legend>Depart - Return</legend>
+      <input type="text" value="07 Nov 22 - 13 Nov 22">
+    </fieldset>
 
-      <button type="submit" class="btn-search">
-        <img src="assets/image/Search.png">
-      </button>
-    </form>
-  </div>
+    <fieldset class="input-group">
+      <legend>Passenger - Class</legend>
+      <input type="text" value="1 Passenger, Economy">
+    </fieldset>
+
+    <button type="submit" class="btn-search">
+      <img src="assets/image/Search.png">
+    </button>
+  </form>
+</div>
 </div>
 <div class="main-layout">
-  <!-- CỘT BÊN TRÁI: FILTER -->
-  <aside class="filter-sidebar">
-    <h2 class="filter-title">Filters</h2>
+<!-- CỘT BÊN TRÁI: FILTER -->
+<aside class="filter-sidebar">
+  <h2 class="filter-title">Filters</h2>
 
-    <!-- Price Filter -->
-    <div class="filter-group">
-      <div class="filter-header">
-        <label>Price</label>
-        <i class="fa-solid fa-chevron-up arrow-icon"></i>
-      </div>
-      <div class="slider-wrapper">
-        <div class="filters-group__slider price-slider">
-            <!-- Thanh nền xám và thanh màu xanh nối giữa 2 cục tròn -->
-            <div class="slider-track"></div>
-            <div class="slider-fill" id="slider-fill"></div>
+  <!-- Price Filter -->
+  <div class="filter-group">
+    <div class="filter-header">
+      <label>Price</label>
+      <i class="fa-solid fa-chevron-up arrow-icon"></i>
+    </div>
+    <div class="slider-wrapper">
+      <div class="filters-group__slider price-slider">
+          <!-- Thanh nền xám và thanh màu xanh nối giữa 2 cục tròn -->
+          <div class="slider-track"></div>
+          <div class="slider-fill" id="slider-fill"></div>
 
-            <!-- 2 thẻ input -->
-            <input type="range" class="slider-input" id="slider-min" min="50" max="1200" value="50" step="10" />
-            <input type="range" class="slider-input" id="slider-max" min="50" max="1200" value="1200" step="10" />
+          <!-- 2 thẻ input -->
+          <input type="range" class="slider-input" id="slider-min" min="50" max="1200" value="50" step="10" />
+          <input type="range" class="slider-input" id="slider-max" min="50" max="1200" value="1200" step="10" />
 
-            <!-- Chữ số chạy theo -->
-            <div class="slider-labels">
-              <span class="slider-label" id="label-min">$50</span>
-              <span class="slider-label" id="label-max">$1200</span>
-            </div>
+          <!-- Chữ số chạy theo -->
+          <div class="slider-labels">
+            <span class="slider-label" id="label-min">$50</span>
+            <span class="slider-label" id="label-max">$1200</span>
           </div>
-      </div>
-    </div>
-
-    <!-- Departure Time Filter -->
-     <div class="filter-group">
-      <div class="filter-header">
-        <label>Departure Time</label>
-        <i class="fa-solid fa-chevron-up arrow-icon"></i>
-      </div>
-      <div class="slider-wrapper">
-        <div class="filters-group__slider price-slider">
-            <!-- Thanh nền xám và thanh màu xanh nối giữa 2 cục tròn -->
-            <div class="slider-track"></div>
-            <div class="slider-fill" id="slider-fill"></div>
-
-            <!-- 2 thẻ input -->
-           <input type="range" class="slider-input" id="slider-min" min="0" max="1440" value="0" step="15" />
-    <input type="range" class="slider-input" id="slider-max" min="0" max="1440" value="1440" step="15" />
-            <!-- Chữ số chạy theo -->
-            <div class="slider-labels">
-              <span class="slider-label" id="label-min">12:01 am</span>
-              <span class="slider-label" id="label-max">11:56</span>
-            </div>
-          </div>
-      </div>
-    </div>
-   
-
-    <!-- Rating Filter -->
-    <div class="filter-group">
-      <div class="filter-header">
-        <label>Rating</label>
-        <i class="fa-solid fa-chevron-up arrow-icon"></i>
-      </div>
-      <div class="rating-options">
-        <button class="btn-rating">0+</button>
-        <button class="btn-rating">1+</button>
-        <button class="btn-rating">2+</button>
-        <button class="btn-rating">3+</button>
-        <button class="btn-rating">4+</button>
-      </div>
-    </div>
-
-    <!-- Airlines Filter -->
-    <div class="filter-group">
-      <div class="filter-header">
-        <label>Airlines</label>
-        <i class="fa-solid fa-chevron-up arrow-icon"></i>
-      </div>
-      <div class="checkbox-list">
-        <label class="custom-checkbox"><input type="checkbox"> Emirates</label>
-        <label class="custom-checkbox"><input type="checkbox"> Fly Dubai</label>
-        <label class="custom-checkbox"><input type="checkbox"> Qatar</label>
-        <label class="custom-checkbox"><input type="checkbox"> Etihad</label>
-      </div>
-    </div>
-
-     <div class="filter-group">
-      <div class="filter-header">
-        <label>Trips</label>
-        <i class="fa-solid fa-chevron-up arrow-icon"></i>
-      </div>
-      <div class="checkbox-list">
-        <label class="custom-checkbox"><input type="checkbox"> Round trip</label>
-        <label class="custom-checkbox"><input type="checkbox"> On Way</label>
-        <label class="custom-checkbox"><input type="checkbox"> Multi - City</label>
-        <label class="custom-checkbox"><input type="checkbox"> My Dates Are Flexible</label>
-      </div>
-    </div>
-  </aside>
-
-  <!-- CỘT BÊN PHẢI: KẾT QUẢ TÌM KIẾM -->
-  <main class="content-area">
-    <!-- Thanh Tabs Lọc (Cheapest / Best / Quickest) -->
-    <div class="sort-tabs">
-      <div class="tab-item">
-        <strong>Cheapest</strong>
-        <span>$99 . 2h 18m</span>
-      </div>
-      <div class="tab-item active">
-        <strong>Best</strong>
-        <span>$99 . 2h 18m</span>
-      </div>
-      <div class="tab-item">
-        <strong>Quickest</strong>
-        <span>$99 . 2h 18m</span>
-      </div>
-      <div class="tab-item other-sort">
-        <i class="fa-solid fa-bars-staggered"></i> Other sort
-      </div>
-    </div>
-    <div class="ticket-status-bar">
-      <span class="showing-text">Showing 4 of <strong class="highlight-count">257 places</strong></span>
-      <div class="sort-dropdown">
-        Sort by <strong>Recommended</strong> <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </div>
-    <div id="cheapest">
-<div id="ticket-list">
-
-<!-- Mẫu Ticket Card (Trình duyệt sẽ không hiển thị thẻ template này) -->
-<template id="ticket-template">
-  <div class="ticket-card">
-    <div class="ticket-logo">
-      <img class="airline-logo" src="" alt="Airline Logo">
-    </div>
-    <div class="ticket-info">
-      <div class="ticket-rating-price">
-        <div class="rating-box">
-          <span class="ticket-review rating-score"></span>
-          <p><strong class="rating-text"></strong> <span class="review-count"></span></p>
         </div>
-        <div class="ticket-price">
-          <span class="price-label">starting from</span>
-          <span class="price"><strong class="price-value"></strong></span>
-        </div>
-      </div>
-
-      <!-- Container chứa các chuyến bay (lượt đi/về) -->
-      <div class="flights-container"></div>
-
-      <div class="ticket-actions">
-        <button class="btn-favorite"><img src="assets/image/heart_light.svg" alt="Favorite"></button>
-        <button class="btn-primary"><a href="flight-detail-page.html"> Deals</button>
-      </div>
     </div>
   </div>
-</template>
+
+  <!-- Departure Time Filter -->
+    <div class="filter-group">
+    <div class="filter-header">
+      <label>Departure Time</label>
+      <i class="fa-solid fa-chevron-up arrow-icon"></i>
+    </div>
+    <div class="slider-wrapper">
+      <div class="filters-group__slider price-slider">
+          <!-- Thanh nền xám và thanh màu xanh nối giữa 2 cục tròn -->
+          <div class="slider-track"></div>
+          <div class="slider-fill" id="slider-fill"></div>
+
+          <!-- 2 thẻ input -->
+          <input type="range" class="slider-input" id="slider-min" min="0" max="1440" value="0" step="15" />
+  <input type="range" class="slider-input" id="slider-max" min="0" max="1440" value="1440" step="15" />
+          <!-- Chữ số chạy theo -->
+          <div class="slider-labels">
+            <span class="slider-label" id="label-min">12:01 am</span>
+            <span class="slider-label" id="label-max">11:56</span>
+          </div>
+        </div>
+    </div>
+  </div>
+  
+
+  <!-- Rating Filter -->
+  <div class="filter-group">
+    <div class="filter-header">
+      <label>Rating</label>
+      <i class="fa-solid fa-chevron-up arrow-icon"></i>
+    </div>
+    <div class="rating-options">
+      <button class="btn-rating">0+</button>
+      <button class="btn-rating">1+</button>
+      <button class="btn-rating">2+</button>
+      <button class="btn-rating">3+</button>
+      <button class="btn-rating">4+</button>
+    </div>
+  </div>
+
+  <!-- Airlines Filter -->
+  <div class="filter-group">
+    <div class="filter-header">
+      <label>Airlines</label>
+      <i class="fa-solid fa-chevron-up arrow-icon"></i>
+    </div>
+    <div class="checkbox-list">
+      <label class="custom-checkbox"><input type="checkbox"> Emirates</label>
+      <label class="custom-checkbox"><input type="checkbox"> Fly Dubai</label>
+      <label class="custom-checkbox"><input type="checkbox"> Qatar</label>
+      <label class="custom-checkbox"><input type="checkbox"> Etihad</label>
+    </div>
+  </div>
+
+    <div class="filter-group">
+    <div class="filter-header">
+      <label>Trips</label>
+      <i class="fa-solid fa-chevron-up arrow-icon"></i>
+    </div>
+    <div class="checkbox-list">
+      <label class="custom-checkbox"><input type="checkbox"> Round trip</label>
+      <label class="custom-checkbox"><input type="checkbox"> On Way</label>
+      <label class="custom-checkbox"><input type="checkbox"> Multi - City</label>
+      <label class="custom-checkbox"><input type="checkbox"> My Dates Are Flexible</label>
+    </div>
+  </div>
+</aside>
+
+<!-- CỘT BÊN PHẢI: KẾT QUẢ TÌM KIẾM -->
+<main class="content-area">
+  <!-- Thanh Tabs Lọc (Cheapest / Best / Quickest) -->
+  <div class="sort-tabs">
+    <div class="tab-item">
+      <strong>Cheapest</strong>
+      <span>$99 . 2h 18m</span>
+    </div>
+    <div class="tab-item active">
+      <strong>Best</strong>
+      <span>$99 . 2h 18m</span>
+    </div>
+    <div class="tab-item">
+      <strong>Quickest</strong>
+      <span>$99 . 2h 18m</span>
+    </div>
+    <div class="tab-item other-sort">
+      <i class="fa-solid fa-bars-staggered"></i> Other sort
+    </div>
+  </div>
+  <div class="ticket-status-bar">
+    <span class="showing-text">Showing 4 of <strong class="highlight-count">257 places</strong></span>
+    <div class="sort-dropdown">
+      Sort by <strong>Recommended</strong> <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </div>
+  <div id="cheapest">
+
+<!-- 1. VÙNG CHỨA: Nơi các thẻ vé sẽ được JS bơm vào -->
+<div id="ticket-list" class="ticket-list-container">
+  </div>
 </div>
+<template id="ticket-template">
+<div class="ticket-card">
+  <div class="ticket-logo">
+    <img class="airline-logo" src="" alt="Airline Logo">
+  </div>
+  <div class="ticket-info">
+    <div class="ticket-rating-price">
+      <div class="rating-box">
+        <span class="ticket-review rating-score"></span>
+        <p><strong class="rating-text"></strong> <span class="review-count"></span></p>
+      </div>
+      <div class="ticket-price">
+        <span class="price-label">starting from</span>
+        <span class="price"><strong class="price-value"></strong></span>
+      </div>
     </div>
-     <div class="showmore">
-    <p>Show more results</p>
+
+    <!-- Container chứa các chuyến bay (lượt đi/về) -->
+    <div class="flights-container"></div>
+
+    <div class="ticket-actions">
+      <button class="btn-favorite"><img src="assets/image/heart_light.svg" alt="Favorite"></button>
+      <a href="flight-detail-page.html" class="btn-primary"><p>View Deals</p></a>
+    </div>
   </div>
-  </div>
-    </main>
-  </div>
-     <footer class="footer-wrapper">
-      <div class="footer-main">
-        <div class="newsletter-card">
-          <div class="newsletter-content">
-            <h2>Subscribe<br />Newsletter</h2>
-            <div class="newsletter-content__desc">
-              <h4>The Travel</h4>
-              <p>Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
-            </div>
-            <form class="subscribe-form">
-              <input type="email" placeholder="Your email address" required />
-              <button type="submit">Subscribe</button>
-            </form>
+</div>
+</template>
+    <div class="showmore">
+  <p>Show more results</p>
+</div>
+</div>
+  </main>
+</div>
+    <footer class="footer-wrapper">
+    <div class="footer-main">
+      <div class="newsletter-card">
+        <div class="newsletter-content">
+          <h2>Subscribe<br />Newsletter</h2>
+          <div class="newsletter-content__desc">
+            <h4>The Travel</h4>
+            <p>Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
           </div>
-          <div class="newsletter-image">
-            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" />
+          <form class="subscribe-form">
+            <input type="email" placeholder="Your email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="newsletter-image">
+          <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" />
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" />
+          </div>
+          <div class="social-icons">
+            <img src="./assets/image/facebook_light.svg" />
+            <img src="./assets/image/twitter_light.svg" />
+            <img src="./assets/image/youtube_light.svg" />
+            <img src="./assets/image/instagram_lilght.svg" />
           </div>
         </div>
-        <div class="footer-container">
-          <div class="footer-brand">
-            <div class="logo">
-              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" />
-            </div>
-            <div class="social-icons">
-              <img src="./assets/image/facebook_light.svg" />
-              <img src="./assets/image/twitter_light.svg" />
-              <img src="./assets/image/youtube_light.svg" />
-              <img src="./assets/image/instagram_lilght.svg" />
-            </div>
+        <div class="footer-links">
+          <div class="link-column">
+            <h4>Our Destinations</h4>
+            <ul>
+              <li>Canada</li>
+              <li>Alaska</li>
+              <li>France</li>
+              <li>Iceland</li>
+            </ul>
           </div>
-          <div class="footer-links">
-            <div class="link-column">
-              <h4>Our Destinations</h4>
-              <ul>
-                <li>Canada</li>
-                <li>Alaska</li>
-                <li>France</li>
-                <li>Iceland</li>
-              </ul>
-            </div>
 
-            <div class="link-column">
-              <h4>Our Activities</h4>
-              <ul>
-                <li>Northern Lights</li>
-                <li>Cruising & sailing</li>
-                <li>Multi-activities</li>
-                <li>Kayaing</li>
-              </ul>
-            </div>
+          <div class="link-column">
+            <h4>Our Activities</h4>
+            <ul>
+              <li>Northern Lights</li>
+              <li>Cruising & sailing</li>
+              <li>Multi-activities</li>
+              <li>Kayaing</li>
+            </ul>
+          </div>
 
-            <div class="link-column">
-              <h4>Travel Blogs</h4>
-              <ul>
-                <li>Bali Travel Guide</li>
-                <li>Sri Lanks Travel Guide</li>
-                <li>Peru Travel Guide</li>
-                <li>Bali Travel Guide</li>
-              </ul>
-            </div>
+          <div class="link-column">
+            <h4>Travel Blogs</h4>
+            <ul>
+              <li>Bali Travel Guide</li>
+              <li>Sri Lanks Travel Guide</li>
+              <li>Peru Travel Guide</li>
+              <li>Bali Travel Guide</li>
+            </ul>
+          </div>
 
-            <div class="link-column">
-              <h4>About Us</h4>
-              <ul>
-                <li>Our Story</li>
-                <li>Work with us</li>
-              </ul>
-            </div>
+          <div class="link-column">
+            <h4>About Us</h4>
+            <ul>
+              <li>Our Story</li>
+              <li>Work with us</li>
+            </ul>
+          </div>
 
-            <div class="link-column">
-              <h4>Contact Us</h4>
-              <ul>
-                <li>Our Story</li>
-                <li>Work with us</li>
-              </ul>
-            </div>
+          <div class="link-column">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>Our Story</li>
+              <li>Work with us</li>
+            </ul>
           </div>
         </div>
       </div>
-    </footer>
-    <script src="assets/js/flight-listing.js"></script>
+    </div>
+  </footer>
+  <script src="assets/js/flight-listing.js"></script>
+  <script Src="assets/js/hotel-listing.js"></script>
 </body>
