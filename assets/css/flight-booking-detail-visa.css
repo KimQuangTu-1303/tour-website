@@ -1,0 +1,255 @@
+.visa-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.visa-info:has(input[type="radio"]:checked) {
+  background-color: #8dd3bb;
+}
+
+.visa-info__label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.visa-info__label img {
+  margin: 0 0 6px 0;
+  font-size: 32px;
+}
+
+.visa-info__label p {
+  font-size: 16px;
+  color: #111827;
+  display: block;
+  line-height: 1.5;
+}
+
+.visa-info input[type="radio"] {
+  appearance: none;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #111827;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.visa-info input[type="radio"]:checked {
+  border-color: #ffffff;
+}
+
+.visa-info input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.upload-container {
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.upload-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  border: 2px dashed #8DD3BB;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.upload-frame:hover {
+  background-color: #eaf5f0;
+  border-color: #6ab69b;
+}
+
+.upload-content {
+  text-align: center;
+  color: #111827;
+}
+
+.upload-content .icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.upload-content p {
+  font-size: 12px;
+  color: #112211;
+  margin: 0 0 4px 0;
+}
+
+.popup-overlay {
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #ffffff;
+  padding: 36px 40px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 520px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-height: 90vh;
+  overflow-y: auto;
+  /* Cho phép cuộn nếu màn hình nhỏ */
+}
+
+/* --- 2. Nút X đóng popup --- */
+.close-x {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 26px;
+  color: #111827;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-x:hover {
+  color: #6b7280;
+}
+
+/* --- 3. Tiêu đề --- */
+.popup-info h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 24px 0;
+}
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 13px;
+}
+
+.input-group>label {
+  position: absolute;
+  top: -10px;
+  left: 14px;
+  background-color: #ffffff;
+  padding: 0 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4b5563;
+  z-index: 2;
+}
+
+.input-group input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  font-size: 15px;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #8dd3bb;
+}
+
+.visa-info__icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+
+.dropdown-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  font-size: 14px;
+  color: #4b5563;
+  pointer-events: none;
+}
+
+.form-checkbox {
+  display: flex;
+  margin-top: 4px;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #000000;
+  cursor: pointer;
+}
+
+.form-checkbox label {
+  font-size: 14px;
+  color: #112211;
+}
+.btn-add-card {
+  width: 100%;
+  height: 52px;
+  background-color: #8dd3bb;
+  color: #111827;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.btn-add-card:hover {
+  background-color: #7bc1a9;
+}
+
+.form-note {
+  font: size 9px;
+  color: #112211;
+  text-align: center;
+}
