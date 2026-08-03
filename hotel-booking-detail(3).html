@@ -6,11 +6,11 @@
     <title>Golobe - Tour Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="assets/css/hotel-listing.css" />
+    <link rel="stylesheet" href="assets/css/hotel-detail-page.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/hotel-detail-page.css" />
-    <link rel="stylesheet" href="assets/css/hotel-booking-detail.css" />
+    <link rel="stylesheet" href="assets/css/hotel-booking-detail(3).css" />
   </head>
 
   <body>
@@ -127,142 +127,122 @@
         </ol>
       </nav>
 
-      <div class="left-col">
-        <div class="booking-detail">
-          <div class="reservation-info">
-            <header class="reservation-info__header">
-              <h1 class="reservation-info__heading">Superior room - 1 double bed or 2 twin beds</h1>
-              <div class="price-value">
-                <span class="price-amount">$240</span>
-                <span class="price-unit">/night</span>
+      <div class="booking-card">
+        <header class="booking-card__header">
+          <div class="booking-card__info">
+            <h2 class="booking-card__title">CVK Park Bosphorus Hotel Istanbul</h2>
+            <span class="hotel-card__location">
+              <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
+              <span class="hotel-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
+            </span>
+          </div>
+
+          <div class="booking-card__actions">
+            <span class="booking-card__price">$265</span>
+            <button class="hotel-card__actions-favorite">
+              <img src="assets/image/share_light.svg" alt="Share" />
+            </button>
+            <a href="#" class="hotel-card__actions-btn">Download</a>
+          </div>
+        </header>
+
+        <div class="ticket">
+          <div class="ticket__left">
+            <div class="ticket__sidebar">
+              <div class="ticket__data-group">
+                <span class="ticket__date">Thur, Dec 8</span>
+                <span class="ticket__label">Check-In</span>
               </div>
-            </header>
-            <div class="reservation-info__hotel-card">
-              <img src="assets/image/hotel-card-logo.png" alt="" class="reservation-info__hotel-img" />
-              <h2 class="reservation-info__hotel-name">CVK Park Bosphorus Hotel Istanbul</h2>
-              <span class="hotel-card__location">
-                <img src="assets/image/location_light.svg" alt="location" class="location-icon" />
-                <span class="hotel-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
-              </span>
+
+              <div class="ticket__timeline-divider">
+                <img src="assets/image/building-combine.svg" alt="" class="ticket__timeline-icon" />
+              </div>
+
+              <div class="ticket__data-group">
+                <span class="ticket__date">Fri, Dec 9</span>
+                <span class="ticket__label">Check-Out</span>
+              </div>
             </div>
-            <div class="reservation-info__schedule">
-              <div class="reservation-info__check-in">
-                <p class="reservation-info__date">Thursday, Dec 8</p>
-                <p class="reservation-info__desc">Check-In</p>
+
+            <div class="ticket__main">
+              <div class="ticket__guest-banner">
+                <div class="ticket__user">
+                  <img class="ticket__avatar" src="assets/image/user-avt.png" alt="Avatar" />
+                  <span class="ticket__name">James Doe</span>
+                </div>
+                <div class="ticket__room-info">Superior room - 1 double bed<br />or 2 twin beds</div>
               </div>
-              <img src="assets/image/schedule-icon.svg" alt="" class="reservation-info__schedule-icon" />
-              <div class="reservation-info__check-out">
-                <p class="reservation-info__date">Friday, Dec 9</p>
-                <p class="reservation-info__desc">Check-Out</p>
+
+              <div class="ticket__details">
+                <div class="ticket__detail-item">
+                  <img class="ticket__detail-icon" src="assets/image/timer_primary.svg" />
+                  <div class="ticket__detail-text">
+                    <span class="ticket__detail-label">Check-in time</span>
+                    <span class="ticket__detail-value">12:00pm</span>
+                  </div>
+                </div>
+
+                <div class="ticket__detail-item">
+                  <img class="ticket__detail-icon" src="assets/image/timer_primary.svg" />
+                  <div class="ticket__detail-text">
+                    <span class="ticket__detail-label">Check-out time</span>
+                    <span class="ticket__detail-value">11:30pm</span>
+                  </div>
+                </div>
+
+                <div class="ticket__detail-item">
+                  <img class="ticket__detail-icon" src="assets/image/door_primary.svg" />
+                  <div class="ticket__detail-text">
+                    <span class="ticket__detail-label">Room no.</span>
+                    <span class="ticket__detail-value">On arrival</span>
+                  </div>
+                </div>
               </div>
+
+              <div class="ticket__reference">
+                <span class="ticket__flight-code">EK</span>
+                <span class="ticket__booking-id">ABC12345</span>
+              </div>
+              <img class="ticket__barcode" src="assets/image/barcode.png" alt="Barcode" />
             </div>
           </div>
+
+          <aside class="ticket__aside">
+            <img class="ticket__logo" src="assets/image/hotel-card-logo.png" alt="CVK Park Bosphorus Hotel" />
+          </aside>
+        </div>
+      </div>
+
+      <div class="terms">
+        <h2 class="terms__title">Terms and Conditions</h2>
+
+        <div class="terms__group">
+          <h3 class="terms__subtitle">Payments</h3>
+
+          <ul class="terms__list">
+            <li class="terms__item">If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes.</li>
+            <li class="terms__item">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
+            <li class="terms__item">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
+          </ul>
         </div>
 
-        <div class="payment-options">
-          <div class="payment-option payment-option--active">
-            <label class="payment-option__label">
-              <div class="payment-option__content">
-                <p class="payment-option__title">Pay in full</p>
-                <p class="payment-option__desc">Pay the total and you are all set</p>
-              </div>
-              <input type="radio" name="payment_method" class="payment-option__radio" />
-              <span class="radio-icon"></span>
-            </label>
-          </div>
+        <div class="terms__group">
+          <h3 class="terms__subtitle">Contact Us</h3>
 
-          <div class="payment-option">
-            <label class="payment-option__label">
-              <div class="payment-option__content">
-                <p class="payment-option__title">Pay part now, part later</p>
-                <p class="payment-option__desc">Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</p>
-              </div>
-              <input type="radio" name="payment_method" class="payment-option__radio" />
-              <span class="radio-icon"></span>
-            </label>
-            <a href="#" class="payment-options__more-info">More info</a>
-          </div>
-        </div>
+          <div class="terms__content">
+            <p class="terms__text">If you have any questions about our Website or our Terms of Use, please contact:</p>
 
-        <div class="login-card">
-          <form class="login-card__form">
-            <h2 class="login-card__title">Login or Sign up to book</h2>
+            <address class="terms__address">
+              Golobe Group Q.C.S.C<br />
+              Golobe Tower<br />
+              P.O. Box: 22550<br />
+              Doha, State of Qatar
+            </address>
 
-            <input type="tel" class="login-card__input" placeholder="Phone Number" />
-
-            <p class="login-card__hint">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="#" class="login-card__link">Privacy Policy</a></p>
-            <button type="button" class="login-card__btn login-card__btn--primary">Continue</button>
-          </form>
-
-          <div class="login-card__divider">Or</div>
-
-          <div class="login-card__socials">
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/facebook_icon.svg" alt="Facebook" class="login-card__socials-icon" />
-            </button>
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/google_icon.svg" alt="Google" class="login-card__socials-icon" />
-            </button>
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/apple_icon.svg" alt="Apple" class="login-card__socials-icon" />
-            </button>
-
-            <button type="button" class="login-card__btn login-card__btn--outline">
-              <img src="assets/image/mail_light.svg" alt="Email" class="icon-left" />
-              Continue with email
-            </button>
+            <p class="terms__text">Further contact details can be found at <a href="#" class="terms__link">golobe.com/help</a></p>
           </div>
         </div>
       </div>
-      <aside class="booking-summary">
-        <div class="booking-summary__header">
-          <img src="assets/image/cvk-park-bosphorus-hotel.png" alt="" class="booking-summary__img" />
-          <div class="booking-summary__info">
-            <div>
-              <p class="booking-summary__hotel-name">CVK Park Bosphorus Hotel Istanbul</p>
-              <h3 class="booking-summary__room-name">Superior room - 1 double bed or 2 twin beds</h3>
-            </div>
-            <div class="booking-summary__rating">
-              <span class="rating-box__label booking-summary__score">4.2</span>
-              <span class="hotel-card__rating-text"><strong class="booking-summary__status">Very Good</strong> 54 reviews </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="booking-summary__divider"></div>
-
-        <p class="booking-summary__protection">Your booking is protected by <strong>golobe</strong></p>
-
-        <div class="booking-summary__divider"></div>
-
-        <div class="booking-summary__price-details">
-          <h4 class="booking-summary__title">Price Details</h4>
-
-          <div class="booking-summary__row">
-            <span class="booking-summary__label">Base Fare</span>
-            <span class="booking-summary__value">$240</span>
-          </div>
-          <div class="booking-summary__row">
-            <span class="booking-summary__label">Discount</span>
-            <span class="booking-summary__value">$0</span>
-          </div>
-          <div class="booking-summary__row">
-            <span class="booking-summary__label">Taxes</span>
-            <span class="booking-summary__value">$20</span>
-          </div>
-          <div class="booking-summary__row">
-            <span class="booking-summary__label">Service Fee</span>
-            <span class="booking-summary__value">$5</span>
-          </div>
-
-          <div class="booking-summary__divider"></div>
-
-          <div class="booking-summary__row booking-summary__row--total">
-            <span class="booking-summary__label">Total</span>
-            <span class="booking-summary__value">$265</span>
-          </div>
-        </div>
-      </aside>
     </main>
 
     <footer class="footer-wrapper">

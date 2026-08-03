@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/hotel-detail-page.css" />
     <link rel="stylesheet" href="assets/css/hotel-booking-detail.css" />
+    <link rel="stylesheet" href="assets/css/hotel-booking-detail(1).css" />
   </head>
 
   <body>
@@ -184,36 +185,28 @@
           </div>
         </div>
 
-        <div class="login-card">
-          <form class="login-card__form">
-            <h2 class="login-card__title">Login or Sign up to book</h2>
-
-            <input type="tel" class="login-card__input" placeholder="Phone Number" />
-
-            <p class="login-card__hint">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="#" class="login-card__link">Privacy Policy</a></p>
-            <button type="button" class="login-card__btn login-card__btn--primary">Continue</button>
-          </form>
-
-          <div class="login-card__divider">Or</div>
-
-          <div class="login-card__socials">
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/facebook_icon.svg" alt="Facebook" class="login-card__socials-icon" />
-            </button>
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/google_icon.svg" alt="Google" class="login-card__socials-icon" />
-            </button>
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/apple_icon.svg" alt="Apple" class="login-card__socials-icon" />
-            </button>
-
-            <button type="button" class="login-card__btn login-card__btn--outline">
-              <img src="assets/image/mail_light.svg" alt="Email" class="icon-left" />
-              Continue with email
-            </button>
+        <div class="payment-card payment-options">
+          <div class="payment-option payment-option--active">
+            <label class="payment-option__label">
+              <div class="payment-option__content">
+                <img src="assets/image/Visa_light.svg" alt="visa" class="payment-option__img" />
+                <p class="payment-option__title">**** 4321</p>
+                <p class="payment-option__desc">02/27</p>
+              </div>
+              <input type="radio" name="selected_card" class="payment-option__radio" />
+              <span class="radio-icon"></span>
+            </label>
           </div>
+
+          <a href="hotel-booking-detail(2).html" class="add-new-card-link">
+            <div class="add-new-card">
+              <img src="assets/image/add_circle.svg" alt="" class="add-new-card__icon" />
+              <p class="add-new-card__text">Add a new card</p>
+            </div>
+          </a>
         </div>
       </div>
+
       <aside class="booking-summary">
         <div class="booking-summary__header">
           <img src="assets/image/cvk-park-bosphorus-hotel.png" alt="" class="booking-summary__img" />

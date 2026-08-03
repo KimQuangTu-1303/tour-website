@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/hotel-detail-page.css" />
     <link rel="stylesheet" href="assets/css/hotel-booking-detail.css" />
+    <link rel="stylesheet" href="assets/css/hotel-booking-detail(1).css" />
+    <link rel="stylesheet" href="assets/css/hotel-booking-detail(2).css" />
   </head>
 
   <body>
@@ -184,36 +186,25 @@
           </div>
         </div>
 
-        <div class="login-card">
-          <form class="login-card__form">
-            <h2 class="login-card__title">Login or Sign up to book</h2>
-
-            <input type="tel" class="login-card__input" placeholder="Phone Number" />
-
-            <p class="login-card__hint">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="#" class="login-card__link">Privacy Policy</a></p>
-            <button type="button" class="login-card__btn login-card__btn--primary">Continue</button>
-          </form>
-
-          <div class="login-card__divider">Or</div>
-
-          <div class="login-card__socials">
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/facebook_icon.svg" alt="Facebook" class="login-card__socials-icon" />
-            </button>
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/google_icon.svg" alt="Google" class="login-card__socials-icon" />
-            </button>
-            <button type="button" class="login-card__social-btn login-card__btn--outline">
-              <img src="assets/image/apple_icon.svg" alt="Apple" class="login-card__socials-icon" />
-            </button>
-
-            <button type="button" class="login-card__btn login-card__btn--outline">
-              <img src="assets/image/mail_light.svg" alt="Email" class="icon-left" />
-              Continue with email
-            </button>
+        <div class="payment-card payment-options">
+          <div class="payment-option payment-option--active">
+            <label class="payment-option__label">
+              <div class="payment-option__content">
+                <img src="assets/image/Visa_light.svg" alt="visa" class="payment-option__img" />
+                <p class="payment-option__title">**** 4321</p>
+                <p class="payment-option__desc">02/27</p>
+              </div>
+              <input type="radio" name="selected_card" class="payment-option__radio" />
+              <span class="radio-icon"></span>
+            </label>
+          </div>
+          <div class="add-new-card">
+            <img src="assets/image/add_circle.svg" alt="" class="add-new-card__icon" />
+            <p class="add-new-card__text">Add a new card</p>
           </div>
         </div>
       </div>
+
       <aside class="booking-summary">
         <div class="booking-summary__header">
           <img src="assets/image/cvk-park-bosphorus-hotel.png" alt="" class="booking-summary__img" />
@@ -263,6 +254,61 @@
           </div>
         </div>
       </aside>
+
+      <div class="modal-overlay">
+        <div class="modal-content">
+          <button class="modal-close"><img src="assets/image/close_light.svg" alt="close" /></button>
+          <h2 class="modal-title">Add a new card</h2>
+
+          <form class="card-form">
+            <div class="input-group">
+              <label class="input-label">Card Number</label>
+              <input type="text" class="input-field" placeholder="XXXX XXXX XXXX XXXX" />
+              <img src="assets/image/Visa_blue.svg" alt="visa" class="input-icon" />
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label class="input-label">Exp. Date</label>
+                <input type="text" class="input-field" placeholder="mm/dd" />
+              </div>
+              <div class="input-group">
+                <label class="input-label">CVC</label>
+                <input type="password" class="input-field" placeholder="Enter your password" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="input-label">Name on Card</label>
+              <input type="text" class="input-field" placeholder="Enter your Name" />
+            </div>
+
+            <div class="input-group">
+              <label class="input-label">Country or Region</label>
+
+              <!-- <div class="input-dropdown__container">
+                <button class="input-dropdown__trigger" type="button">
+                  <span class="input-dropdown__selected"></span>
+                  <img src="assets/image/chevron_down.svg" alt="" class="input-dropdown__icon" />
+                </button>
+
+                <ul class="input-dropdown__options">
+                  <li class="input-dropdown__option input-dropdown__option--active" data-value="united-states">United States</li>
+                  <li class="input-dropdown__option" data-value="vietnam">Viet Nam</li>
+                </ul>
+              </div> -->
+              <input type="" name="country" class="input-field" value="united-states" />
+            </div>
+
+            <div class="input-save">
+              <input type="checkbox" class="input-save__check-box" />
+              <span class="input-save__label">Securely save my information for 1-click checkout</span>
+            </div>
+          </form>
+          <button class="btn-submit">Add Card</button>
+          <p class="disclaimer-text">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.</p>
+        </div>
+      </div>
     </main>
 
     <footer class="footer-wrapper">
