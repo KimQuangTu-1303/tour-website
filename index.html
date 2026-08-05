@@ -1,299 +1,271 @@
-<!DOCTYPE html>
-<html lang="VI">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Home - Tour Du lịch</title>
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-</head>
-<body>
-<header class="hero-section">
-        <nav class="navbar">
-            <nav class="navbar-left">
-                <a href="find-flight.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxIMMsh4kb3fGk7-AwOayb3R_K7KEE9z2ujRz2xFZPUXNtxWcdbEqMWFyOQYVf_KC5YZ9liB9xHBEqX5Y7ctKkM9MM3SeJbl8mw58LalAnwrnIID2rokywXi7csT2gsQkpGTW7Vka-quFHOaa0MawgcYPnCpnsM9AEFXQZOyF9tj0zqozojfJAdt0IgCw/s23/Vector-plane.png">Find
-                    Flights</a>
-                <a href="find-stays.html"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihOBnb7klNFwSzAaIDa_6t9rOoHEe3Ea-c-bo0PWbDwH1Lz_CjL5DVVC0-bxXB60BAVn9DB7-maeXxydG54J0B3dxyyUUWpKAH45GjcSvZ6bIk0hC32pSD69pDqB_2UfHtOFRaw8Adm7Eo1WVczAsTIzMpNtRO9m97Emg-xBOswQ_BALaYnCHsXSF06Rc/s21/Vector-bed.png"> Find
-                    Stayss</a>
-            </nav>
-            <div class="nav-logo">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFn2WoJNWLyXoVcMSTCwa895sID0lZUrReX8XDJd4l4OwFX7ko6c-xx4v9OoPkp8MGzsWg133FaOotfB7LrwvoJggQ6_jHcp5h3GgHKDlfbYrEZ0YGyjDiGhUeC2yEQqYdIW0K23Kgn2Lz97KRHIUc19v3yTFKGgjhPkry7rnmduBQgZLGGuGJDLn_Tho/s111/logo.home.png">
-            </div>
-            <nav class="navbar-right">
-                <a href="/login.html" class="btn-login"> Login</a>
-                <a href="#" class="btn-signup">Sign Up</a>
-            </nav>
-        </nav>
-
-        <div class="hero-content">
-            <h3>Helping Others</h3>
-            <h1>LIVE & TRAVEL</h1>
-            <p>Special offiers to suit your plan</p>
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header class="hero">
+      <nav class="navbar">
+        <div class="navbar__group navbar__group--left">
+          <a href="find-flight.html" class="navbar__link">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxIMMsh4kb3fGk7-AwOayb3R_K7KEE9z2ujRz2xFZPUXNtxWcdbEqMWFyOQYVf_KC5YZ9liB9xHBEqX5Y7ctKkM9MM3SeJbl8mw58LalAnwrnIID2rokywXi7csT2gsQkpGTW7Vka-quFHOaa0MawgcYPnCpnsM9AEFXQZOyF9tj0zqozojfJAdt0IgCw/s23/Vector-plane.png" alt="Plane" class="navbar__icon" />
+            Find Flights
+          </a>
+          <a href="find-stays.html" class="navbar__link">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihOBnb7klNFwSzAaIDa_6t9rOoHEe3Ea-c-bo0PWbDwH1Lz_CjL5DVVC0-bxXB60BAVn9DB7-maeXxydG54J0B3dxyyUUWpKAH45GjcSvZ6bIk0hC32pSD69pDqB_2UfHtOFRaw8Adm7Eo1WVczAsTIzMpNtRO9m97Emg-xBOswQ_BALaYnCHsXSF06Rc/s21/Vector-bed.png" alt="Bed" class="navbar__icon" />
+            Find Stays
+          </a>
         </div>
-
-        <div class="booking">
-            <div class="booking-card">
-                <div class="booking-option">
-                    <a href="#" class="tab-btn active"><i class="fa-solid fa-plane"></i> Flights</a>
-                    <a href="#" class="tab-btn"><i class="fa-solid fa-bed"></i>Stays</a>
-                </div>
-                <div class="booking-form">
-                    <div class="input-group">
-                        <label>From - To</label>
-                        <select name="from-to">
-                            <option value="">Lahore - Karachi</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label>Trip</label>
-                        <select name="trip">
-                            <option value="">Return</option>
-                            <option value="">One Way</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label>Depart - Return</label>
-                        <input type="text" value="07 Nov 22 - 13 Nov 22">
-                    </div>
-                    <div class="input-group">
-                        <label>Passenger - Class</label>
-                        <input type="text" value="1 Passenger, Economy">
-                    </div>
-                     <div class="booking-action">
-                <button class="btn-promo"><i class="fa-solid fa-plus"></i> Add Promo Code</button>
-                <button class="btn-seach"><i class="fa-solid fa-paper-plane"></i><a href="flight-listing.html"> Show Flights</a></button>
-            </div>
-                </div>
-            </div>
+        <div class="navbar__logo">
+          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFn2WoJNWLyXoVcMSTCwa895sID0lZUrReX8XDJd4l4OwFX7ko6c-xx4v9OoPkp8MGzsWg133FaOotfB7LrwvoJggQ6_jHcp5h3GgHKDlfbYrEZ0YGyjDiGhUeC2yEQqYdIW0K23Kgn2Lz97KRHIUc19v3yTFKGgjhPkry7rnmduBQgZLGGuGJDLn_Tho/s111/logo.home.png" alt="Logo" />
         </div>
+        <div class="navbar__group navbar__group--right">
+          <a href="/login.html" class="btn btn--login">Login</a>
+          <a href="#" class="btn btn--signup">Sign Up</a>
+        </div>
+      </nav>
+
+      <div class="hero__content">
+        <h3 class="hero__subtitle">Helping Others</h3>
+        <h1 class="hero__title">LIVE & TRAVEL</h1>
+        <p class="hero__desc">Special offers to suit your plan</p>
+      </div>
+
+      <div class="booking">
+        <div class="booking__card">
+          <div class="booking__tabs">
+            <a href="#" class="booking__tab booking__tab--active"><i class="fa-solid fa-plane"></i> Flights</a>
+            <a href="#" class="booking__tab"><i class="fa-solid fa-bed"></i> Stays</a>
+          </div>
+          <div class="booking__form">
+            <div class="booking__input-group">
+              <label class="booking__label">From - To</label>
+              <select class="booking__select" name="from-to">
+                <option value="">Lahore - Karachi</option>
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </div>
+            <div class="booking__input-group">
+              <label class="booking__label">Trip</label>
+              <select class="booking__select" name="trip">
+                <option value="">Return</option>
+                <option value="">One Way</option>
+              </select>
+            </div>
+            <div class="booking__input-group">
+              <label class="booking__label">Depart - Return</label>
+              <input class="booking__input" type="text" value="07 Nov 22 - 13 Nov 22" />
+            </div>
+            <div class="booking__input-group">
+              <label class="booking__label">Passenger - Class</label>
+              <input class="booking__input" type="text" value="1 Passenger, Economy" />
+            </div>
+            <div class="booking__actions">
+              <button class="btn btn--promo"><i class="fa-solid fa-plus"></i> Add Promo Code</button>
+              <button class="btn btn--search">
+                <i class="fa-solid fa-paper-plane"></i>
+                <a href="flight-listing.html">Show Flights</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-    <main class="main-container">
-        <section class="section-places">
-            <div>
-                <h2>Plan your perfect trip</h2>
-                <p class="section-subtitle">Search Flights & Hotels to our most popular destinations</p>
-            </div>
-            <button class="btn-outline"> See All Places</button>
-        </section>
 
-        <div class="git">
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlMEXgSn3zItvYXeDonSoiY3sKwJIQlz6_3uhMCrFK3W-GafuE9BtNTFw&s=10"
-                        alt="">
-                </div>
-                <div class="card-info">
-                    <h3>Istanbul, Turkey</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=300&q=80"
-                        alt="">
-                </div>
-                <div class="card-info">
-                    <h3>Sydney, Australia</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0JrYlT7GeyvwSM33PygXG2fZloXuPjbYJyFvut5Nmeg&s=10"
-                        alt="">
-                </div>
-                <div class="card-info">
-                    <h3>Malé, Maldives</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmzp1WvexoJ__Oj9qsPVy0k-6WKnDDhxo74Y1mDd1Gg&s">
-                </div>
-                <div class="card-info">
-                    <h3>London,UK</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUaK0z8UbB0LRObKoaVgGXH6A_4DLkrMFdmXGMu0MDQ&s=10">
-                </div>
-                <div class="card-info">
-                    <h3>Paris, France</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bHCdCjOETKsP8wOloXSfkcLNAeJnDgbzPLN7X6e-sA&s=10">
-                </div>
-                <div class="card-info">
-                    <h3>Tokyo, Japan</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbw-jEFKzY-eAUGLXQ4rKF1FKxAFOzuB7WOeSUusztSg&s=10">
-                </div>
-                <div class="card-info">
-                    <h3>Baku, Azerbaijan</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHP9TOP-RtovEmqpSbgt4yT4_6_IAYc5j-GmXRaVZWaA&s=10">
-                </div>
-                <div class="card-info">
-                    <h3>New York, US</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img">
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7UNh0PmgAmklI-9YKQe6Xabh88ja_D231jbGUoK0PA&s=10">
-                </div>
-                <div class="card-info">
-                    <h3>Dubai,UAE</h3>
-                    <p>Flights • Hotels • Resorts</p>
-                </div>
-            </div>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- Section: Popular Destinations -->
+      <section class="section-header">
+        <div class="section-header__text">
+          <h2 class="section-header__title">Plan your perfect trip</h2>
+          <p class="section-header__subtitle">Search Flights & Hotels to our most popular destinations</p>
         </div>
-        <section class="traval-option">
-            <div class="option"
-                style="background-image: url('https://cdn.prod.website-files.com/668d36b0a5adddf78c78caac/67196a75b7f123a37c8a9ed7_airlines.webp');">
-                <div class="option-content">
-                    <h2 class="option-title">Flight</h2>
-                    <p class="option-des">
-                        Search flight & Places Hire to our most popular destinations
-                    </p>
-                    <button class="btn-outline"><i class="fa.solid-fa-plane"></i><a href="flight-listing.html">Show Flight </a></button>
-                </div>
-            </div>
+        <button class="btn btn--outline">See All Places</button>
+      </section>
 
-            <div class="option"
-                style="background-image: url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/YKb6N1M1xnt0anrR/img-m5K76vyVL1CRPjJO.png');">
-                <div class="option-content">
-                    <h2 class="option-title">Hotels</h2>
-                    <p class="option-des">
-                        Search flight & Places Hire to our most popular destinations
-                    </p>
-                    <button class="btn-outline"><i class="fa-solid fa-stays"></i><a href="hotel-listing.html">Show Stays</a></button>
-                </div>
-            </div>
-        </section>
-        <section class="section-places">
-            <div>
-                <h2>Review</h2>
-                <p class="section-subtitle">What people says about Golobe facilities</p>
-            </div>
-        </section>
-        <div class="review-list">
-            <div class="review-menu" id="menuReview">
-                <button class="arrow left" onclick="scrollMenu(-1)"></button>
-                <div class="review-item">
-                    <div class="review-card">
-                        <h3 class="review-title">“A real sense of community, nurtured”</h3>
-                        <p class="review-text">
-                            Really appreciate the help and support from the staff during these tough times.
-                            Shoutout to Katie for helping me always, even when I was out of the country.
-                            And always available when needed.
-                        </p>
-                        <button class="view-more" onclick="toggleReview(this)">View more</button>
-                        <div class="star">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <p class="user-name">Olga</p>
-                        <small class="user-location">Weave Studios – Kai Tak</small>
-                        <div class="where">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png"
-                                alt="Google">
-                            <p>Google</p>
-                        </div>
-                        <div class="review-img">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxVQG6AOd9zZDFz-HxIJnJl-U2H80M6QXShRYGgXND9uIXYuKujk4a5pqKwmnaKsjlPfF0u3HbaVoSXXlvvisG3pDRm09NoR9YB9kyhh20ZcmtTCpjwuArBpLapc6GfTOBk1gkLMLFHEPUuwpcoMa3vcTQJc6scSkqCfgU5LEB7fonlO7LRRooH88EvQw/s377/review1.png"
-                                alt="Review1">
-                        </div>
-                    </div>
-                </div>
-                <div class="review-item">
-                    <div class="review-card">
-                        <h3 class="review-title">“The facilities are superb. Clean, slick, bright.”</h3>
-                        <p class="review-text">
-                            “A real sense of community, nurtured”Really
-                            appreciate the help and support from the staff during these tough times.
-                            Shoutout to Katie for helping me always, even when I was out of the country.
-                            And always available when needed.View moreOlgaWeave Studios – Kai TakGoogle
-                        </p>
-                        <button class="view-more" onclick="toggleReview(this)">View more</button>
-                        <div class="star">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <p class="user-name">Thomas</p>
-                        <small class="user-location">Weave Studios – Olympic</small>
-                        <div class="where">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png"
-                                alt="Google">
-                            <p>Google</p>
-                        </div>
-                        <div class="review-img">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOi8zDWkAN4Y1B9QQA1Zimt_5CJ9q2w6VrgsIzemTYolmiuu7XUcoYyJQ5gb_BR1ZPqKwSMAjA_bfeeeyiO2AkentwpT3aBRHnc8XKaYm66Xwi1AMmPq-5p9No8tL12Cv4qJhPR34l9pZUFb6KHYo3PHlgKVhHjl-KQi156aiLouoPAiM6d8k81CI6hPc/s377/Rectangle%2036.png"
-                                alt="Review 2">
-                        </div>
-                    </div>
-                </div>
+      <div class="destinations">
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlMEXgSn3zItvYXeDonSoiY3sKwJIQlz6_3uhMCrFK3W-GafuE9BtNTFw&s=10" alt="Istanbul" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">Istanbul, Turkey</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=300&q=80" alt="Sydney" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">Sydney, Australia</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0JrYlT7GeyvwSM33PygXG2fZloXuPjbYJyFvut5Nmeg&s=10" alt="Malé" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">Malé, Maldives</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmzp1WvexoJ__Oj9qsPVy0k-6WKnDDhxo74Y1mDd1Gg&s" alt="London" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">London, UK</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUaK0z8UbB0LRObKoaVgGXH6A_4DLkrMFdmXGMu0MDQ&s=10" alt="Paris" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">Paris, France</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bHCdCjOETKsP8wOloXSfkcLNAeJnDgbzPLN7X6e-sA&s=10" alt="Tokyo" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">Tokyo, Japan</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbw-jEFKzY-eAUGLXQ4rKF1FKxAFOzuB7WOeSUusztSg&s=10" alt="Baku" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">Baku, Azerbaijan</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHP9TOP-RtovEmqpSbgt4yT4_6_IAYc5j-GmXRaVZWaA&s=10" alt="New York" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">New York, US</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+        <div class="destination-card">
+          <div class="destination-card__media">
+            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7UNh0PmgAmklI-9YKQe6Xabh88ja_D231jbGUoK0PA&s=10" alt="Dubai" />
+          </div>
+          <div class="destination-card__info">
+            <h3 class="destination-card__title">Dubai, UAE</h3>
+            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
+          </div>
+        </div>
+      </div>
 
-                <div class="review-item">
-                    <div class="review-card">
-                        <h3 class="review-title">“A real sense of community, nurtured”</h3>
-                        <p class="review-text">
-                           Really appreciate the help and support from the staff during these tough times.
-                           Shoutout to Katie for helping me always, even when I was out of the country.
-                           And always available when needed.
-                        </p>
-                        <button class="view-more" onclick="toggleReview(this)">View more</button>
-                        <div class="star">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <p class="user-name">Eliot</p>
-                        <small class="user-location">Weave Studios – Kai Tak</small>
-                        <div class="where">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png"
-                                alt="Google">
-                            <p>Google</p>
-                        </div>
-                        <div class="review-img">
-                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDr2y2rYojpzLm281ZyVY5zoVUoceYqY0DGr1VMxASPP9Bdknbi7HSZxCwp6ntebSOp36iS-JK5xA937RguSsi0WKk0QRe0GSpFNLVsbrVTynGcVppzjYaX5YlVfZ3bTRPWSKWqd8MZAcj5UdyhMSAKUb-BA9IrDZb7q1tNOcX1u9-oJaZ99GhX_rgzTI/s365/Rectangle%2036%20%281%29.png"
-                                alt="Review 3">
-                        </div>
-                    </div>
-                </div>
-                <button class="arrow right" onclick="scrollMenu(1)"></button>
+      <!-- Section: Travel Options -->
+      <section class="services">
+        <div class="service-card" style="background-image: url(&quot;https://cdn.prod.website-files.com/668d36b0a5adddf78c78caac/67196a75b7f123a37c8a9ed7_airlines.webp&quot;)">
+          <div class="service-card__content">
+            <h2 class="service-card__title">Flight</h2>
+            <p class="service-card__desc">Search flight & Places Hire to our most popular destinations</p>
+            <button class="btn btn--outline"><i class="fa-solid fa-plane"></i><a href="flight-listing.html">Show Flight </a></button>
+          </div>
+        </div>
+
+        <div class="service-card" style="background-image: url(&quot;https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/YKb6N1M1xnt0anrR/img-m5K76vyVL1CRPjJO.png&quot;)">
+          <div class="service-card__content">
+            <h2 class="service-card__title">Hotels</h2>
+            <p class="service-card__desc">Search flight & Places Hire to our most popular destinations</p>
+            <button class="btn btn--outline"><i class="fa-solid fa-bed"></i><a href="hotel-listing.html">Show Stays</a></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section: Reviews -->
+      <section class="section-header">
+        <div class="section-header__text">
+          <h2 class="section-header__title">Review</h2>
+          <p class="section-header__subtitle">What people say about Golobe facilities</p>
+        </div>
+      </section>
+
+      <div class="reviews">
+        <div class="reviews__slider" id="menuReview">
+          <button class="reviews__nav reviews__nav--prev" onclick="scrollMenu(-1)"></button>
+
+          <div class="reviews__item">
+            <div class="review-card">
+              <h3 class="review-card__title">“A real sense of community, nurtured”</h3>
+              <p class="review-card__text">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+              <button class="review-card__btn-more" onclick="toggleReview(this)">View more</button>
+              <div class="review-card__rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="review-card__author">Olga</p>
+              <small class="review-card__location">Weave Studios – Kai Tak</small>
+              <div class="review-card__platform">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png" alt="Google" />
+                <p>Google</p>
+              </div>
+              <div class="review-card__media">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxVQG6AOd9zZDFz-HxIJnJl-U2H80M6QXShRYGgXND9uIXYuKujk4a5pqKwmnaKsjlPfF0u3HbaVoSXXlvvisG3pDRm09NoR9YB9kyhh20ZcmtTCpjwuArBpLapc6GfTOBk1gkLMLFHEPUuwpcoMa3vcTQJc6scSkqCfgU5LEB7fonlO7LRRooH88EvQw/s377/review1.png" alt="Review1" />
+              </div>
             </div>
+          </div>
+
+          <div class="reviews__item">
+            <div class="review-card">
+              <h3 class="review-card__title">“The facilities are superb. Clean, slick, bright.”</h3>
+              <p class="review-card__text">“A real sense of community, nurtured”Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+              <button class="review-card__btn-more" onclick="toggleReview(this)">View more</button>
+              <div class="review-card__rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="review-card__author">Thomas</p>
+              <small class="review-card__location">Weave Studios – Olympic</small>
+              <div class="review-card__platform">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png" alt="Google" />
+                <p>Google</p>
+              </div>
+              <div class="review-card__media">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOi8zDWkAN4Y1B9QQA1Zimt_5CJ9q2w6VrgsIzemTYolmiuu7XUcoYyJQ5gb_BR1ZPqKwSMAjA_bfeeeyiO2AkentwpT3aBRHnc8XKaYm66Xwi1AMmPq-5p9No8tL12Cv4qJhPR34l9pZUFb6KHYo3PHlgKVhHjl-KQi156aiLouoPAiM6d8k81CI6hPc/s377/Rectangle%2036.png" alt="Review 2" />
+              </div>
+            </div>
+          </div>
+
+          <div class="reviews__item">
+            <div class="review-card">
+              <h3 class="review-card__title">“A real sense of community, nurtured”</h3>
+              <p class="review-card__text">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
+              <button class="review-card__btn-more" onclick="toggleReview(this)">View more</button>
+              <div class="review-card__rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="review-card__author">Eliot</p>
+              <small class="review-card__location">Weave Studios – Kai Tak</small>
+              <div class="review-card__platform">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png" alt="Google" />
+                <p>Google</p>
+              </div>
+              <div class="review-card__media">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDr2y2rYojpzLm281ZyVY5zoVUoceYqY0DGr1VMxASPP9Bdknbi7HSZxCwp6ntebSOp36iS-JK5xA937RguSsi0WKk0QRe0GSpFNLVsbrVTynGcVppzjYaX5YlVfZ3bTRPWSKWqd8MZAcj5UdyhMSAKUb-BA9IrDZb7q1tNOcX1u9-oJaZ99GhX_rgzTI/s365/Rectangle%2036%20%281%29.png" alt="Review 3" />
+              </div>
+            </div>
+          </div>
+
+          <button class="reviews__nav reviews__nav--next" onclick="scrollMenu(1)"></button>
         </div>
-        </div>
+      </div>
     </main>
-    <!-- Footer -->
+
+    <!-- FOOTER LẤY TỪ HOTEL-LISTING -->
     <footer class="footer-wrapper">
       <div class="footer-main">
         <div class="newsletter-card">
@@ -374,6 +346,7 @@
         </div>
       </div>
     </footer>
-<script src="assets/js/header.js"></script>
-</body> 
+
+    <script src="assets/js/header.js"></script>
+  </body>
 </html>
