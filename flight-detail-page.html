@@ -1,352 +1,382 @@
 <!doctype html>
-<html lang="VI">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="theme-color" content="#8dd3bb" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="assets/css/base.css" />
-  <link rel="stylesheet" href="assets/css/header.css" />
-  <link rel="stylesheet" href="assets/css/footer.css" />
-  <link rel="stylesheet" href="assets/css/flight-detail-page.css">
-</html>
-<body>
-  <header class="header header--no-margin">
-    <div class="header__container">
-      <!-- Left Menu -->
-      <nav class="navbar">
-        <ul class="navbar__list">
-          <li class="navbar__item navbar__item--active">
-            <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
-            <a href="find-flight.html" class="navbar__link">Find Flight</a>
-          </li>
-          <li class="navbar__item">
-            <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
-            <a href="find-stays.html" class="navbar__link">Find Stays</a>
-          </li>
-        </ul>
-      </nav>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#8dd3bb" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flight Detail - Golobe</title>
 
-      <!-- Logo Center -->
-      <div class="logo">
-        <a href="index.html" class="logo-link">
-          <img src="assets/image/logo-small.png" alt="Golobe" />
-        </a>
-      </div>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/flight-detail-page.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header header--no-margin">
+      <div class="header__container">
+        <!-- Left Menu -->
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item navbar__item--active">
+              <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
+              <a href="find-flight.html" class="navbar__link">Find Flight</a>
+            </li>
+            <li class="navbar__item">
+              <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
+              <a href="find-stays.html" class="navbar__link">Find Stays</a>
+            </li>
+          </ul>
+        </nav>
 
-      <!-- Right Menu -->
-      <div class="user-action">
-        <ul class="user-action__list">
-          <li class="user-action__item">
-            <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
-            <a href="#" class="user-action__link">Favourites</a>
-          </li>
-          <li class="user-action__item user-action__separator">|</li>
-          <li class="user-action__item">
-            <a href="#" class="user-action__link user-action__profile">
-              <div class="header__avatar-wrap">
-                <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
-                <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
-                <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
-              </div>
-              John D.
-            </a>
-            <!-- User Menu -->
-            <div class="user-menu">
-              <div class="user-menu__header">
-                <img src="assets/image/user-avt.svg" alt="John Doe." class="user-menu_avatar" />
-                <div class="user-menu__info">
-                  <span class="user-menu__info-name">John Doe.</span>
-                  <span class="user-menu__info-status">Online</span>
+        <!-- Logo Center -->
+        <div class="logo">
+          <a href="index.html" class="logo__link">
+            <img src="assets/image/logo-small.png" alt="Golobe" class="logo__img" />
+          </a>
+        </div>
+
+        <!-- Right Menu -->
+        <div class="user-action">
+          <ul class="user-action__list">
+            <li class="user-action__item">
+              <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
+              <a href="#" class="user-action__link">Favourites</a>
+            </li>
+            <li class="user-action__item user-action__separator">|</li>
+            <li class="user-action__item">
+              <a href="#" class="user-action__link user-action__profile">
+                <div class="header__avatar-wrap">
+                  <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
+                  <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
+                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
                 </div>
+                John D.
+              </a>
+              <!-- User Menu -->
+              <div class="user-menu">
+                <div class="user-menu__header">
+                  <img src="assets/image/user-avt.svg" alt="John Doe." class="user-menu__avatar" />
+                  <div class="user-menu__info">
+                    <span class="user-menu__info-name">John Doe.</span>
+                    <span class="user-menu__info-status">Online</span>
+                  </div>
+                </div>
+
+                <div class="user-menu__separator"></div>
+
+                <ul class="user-menu__list account-menu">
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/user_light.svg" alt="" class="user-menu__icon" />
+                      My account
+                      <img src="assets/image/chevron-forward.svg" alt="" class="user-menu__icon-arrow" />
+                    </a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/card_light.png" alt="" class="user-menu__icon" />
+                      Payments
+                      <img src="assets/image/chevron-forward.svg" alt="" class="user-menu__icon-arrow" />
+                    </a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/setting_light.png" alt="" class="user-menu__icon" />
+                      Setting
+                      <img src="assets/image/chevron-forward.svg" alt="" class="user-menu__icon-arrow" />
+                    </a>
+                  </li>
+                </ul>
+                <div class="user-menu__separator"></div>
+
+                <ul class="user-menu__list system-menu">
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/support_light.png" alt="" class="user-menu__icon" />
+                      Support
+                      <img src="assets/image/chevron-forward.svg" alt="" class="user-menu__icon-arrow" />
+                    </a>
+                  </li>
+                  <li class="user-menu__item">
+                    <a href="#" class="user-menu__link">
+                      <img src="assets/image/logout_light.png" alt="" class="user-menu__icon" />
+                      Logout
+                    </a>
+                  </li>
+                </ul>
               </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
-              <div class="user-menu__separator"></div>
+    <!-- ================= MAIN CONTENT ================= -->
+    <main class="flight-detail">
+      <!-- 1. FLIGHT HEADER -->
+      <section class="flight-detail__header flight-header">
+        <nav class="flight-header__breadcrumb breadcrumb" aria-label="Breadcrumb">
+          <a href="#" class="breadcrumb__link">Turkey</a>
+          <span class="breadcrumb__separator">></span>
+          <a href="#" class="breadcrumb__link">Istanbul</a>
+          <span class="breadcrumb__separator">></span>
+          <span class="breadcrumb__current">CVK Park Bosphorus Hotel Istanbul</span>
+        </nav>
 
-              <ul class="user-menu__list account-menu">
-                <li class="user-menu__item">
-                  <a href="#" class="user-menu__link">
-                    <img src="assets/image/user_light.svg" alt="#" class="user__icon" />
-                    My account
-                    <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                  </a>
-                </li>
-                <li class="user-menu__item">
-                  <a href="#" class="user-menu__link">
-                    <img src="assets/image/card_light.png" alt="#" class="user__icon" />
-                    Payments
-                    <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                  </a>
-                </li>
-                <li class="user-menu__item">
-                  <a href="#" class="user-menu__link">
-                    <img src="assets/image/setting_light.png" alt="#" class="user__icon" />
-                    Setting
-                    <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                  </a>
-                </li>
+        <div class="flight-header__content">
+          <div class="flight-header__info">
+            <h1 class="flight-header__title">Emirates A380 Airbus</h1>
+            <p class="flight-header__location location">
+              <i class="fa-solid fa-location-dot location__icon"></i>
+              <span class="location__text">Gümüşsuyu Mah. İnönü Cad. No:8, Istanbul 34437</span>
+            </p>
+            <div class="flight-header__rating rating">
+              <span class="rating__score">4.2</span>
+              <span class="rating__status">Very Good</span>
+              <span class="rating__reviews">54 reviews</span>
+            </div>
+          </div>
+
+          <div class="flight-header__action">
+            <span class="flight-header__price">$240</span>
+            <div class="flight-header__buttons">
+              <button class="btn btn--icon" aria-label="Yêu thích">
+                <img src="assets/image/heart_dark.svg" alt="Heart" class="btn__icon" />
+              </button>
+              <button class="btn btn--icon" aria-label="Chia sẻ">
+                <img src="assets/image/share_dark.png" alt="Share" class="btn__icon" />
+              </button>
+              <!-- Thay thế button lồng thẻ a sai quy tắc bằng thẻ a có style dạng button -->
+              <a href="flight-booking-detail.html" class="btn btn--primary">Book now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. HERO IMAGE BANNER -->
+      <section class="flight-detail__banner hero-banner">
+        <img src="assets/image/Rectangle 3.png" alt="Emirates A380 Airbus" class="hero-banner__image" />
+      </section>
+
+      <!-- 3. BASIC ECONOMY FEATURES -->
+      <section class="flight-detail__features features">
+        <div class="features__header">
+          <h2 class="features__title">Basic Economy Features</h2>
+          <div class="features__options">
+            <label class="features__checkbox checkbox">
+              <input type="checkbox" class="checkbox__input" checked />
+              <span class="checkbox__label">Economy</span>
+            </label>
+            <label class="features__checkbox checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__label">First Class</span>
+            </label>
+            <label class="features__checkbox checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__label">Business Class</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="features__gallery gallery">
+          <img src="assets/image/Frame 142.png" alt="Cabin feature 1" class="gallery__image" />
+          <img src="assets/image/Frame 182.png" alt="Cabin feature 2" class="gallery__image" />
+          <img src="assets/image/Frame 183.png" alt="Cabin feature 3" class="gallery__image" />
+          <img src="assets/image/Frame 184.png" alt="Cabin feature 4" class="gallery__image" />
+          <img src="assets/image/Frame 185.png" alt="Cabin feature 5" class="gallery__image" />
+          <img src="assets/image/Frame 186.png" alt="Cabin feature 6" class="gallery__image" />
+          <img src="assets/image/Frame 187.png" alt="Cabin feature 7" class="gallery__image" />
+          <img src="assets/image/Frame 188.png" alt="Cabin feature 8" class="gallery__image" />
+          <img src="assets/image/Frame 189.png" alt="Cabin feature 9" class="gallery__image" />
+        </div>
+      </section>
+
+      <!-- 4. AIRLINE POLICIES -->
+      <section class="flight-detail__policies policies">
+        <h2 class="policies__title">Emirates Airlines Policies</h2>
+        <div class="policies__list">
+          <div class="policies__item policy">
+            <img src="assets/image/ion_stopwatch.png" alt="Stopwatch icon" class="policy__icon" />
+            <span class="policy__text">Pre-flight cleaning, installation of cabin HEPA filters.</span>
+          </div>
+          <div class="policies__item policy">
+            <img src="assets/image/ion_stopwatch.png" alt="Stopwatch icon" class="policy__icon" />
+            <span class="policy__text">Pre-flight health screening questions.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. FLIGHT ITINERARIES (TICKETS) -->
+      <section class="flight-detail__itinerary itinerary">
+        <!-- Chuyến 1 -->
+        <article class="itinerary__card flight-card">
+          <div class="flight-card__header">
+            <h3 class="flight-card__title">Return Wed, Dec 8</h3>
+            <span class="flight-card__duration">2h 28m</span>
+          </div>
+
+          <div class="flight-card__body">
+            <div class="flight-card__airline airline">
+              <img src="assets/image/image 40.png" alt="Emirates Logo" class="airline__logo" />
+              <div class="airline__info">
+                <h4 class="airline__name">Emirates</h4>
+                <p class="airline__model">Airbus A320</p>
+              </div>
+            </div>
+
+            <div class="flight-card__amenities amenities">
+              <i class="fa-solid fa-plane amenities__icon"></i>
+              <i class="fa-solid fa-wifi amenities__icon"></i>
+              <i class="fa-solid fa-clock amenities__icon"></i>
+              <i class="fa-solid fa-utensils amenities__icon"></i>
+              <i class="fa-solid fa-wheelchair amenities__icon"></i>
+            </div>
+
+            <div class="flight-card__schedule schedule">
+              <div class="schedule__point">
+                <span class="schedule__time">12:00 pm</span>
+                <span class="schedule__airport">Newark(EWR)</span>
+              </div>
+              <div class="schedule__route">
+                <span class="schedule__line"></span>
+                <i class="fa-solid fa-plane schedule__icon"></i>
+                <span class="schedule__line"></span>
+              </div>
+              <div class="schedule__point">
+                <span class="schedule__time">12:00 pm</span>
+                <span class="schedule__airport">Newark(EWR)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Chuyến 2 -->
+        <article class="itinerary__card flight-card">
+          <div class="flight-card__header">
+            <h3 class="flight-card__title">Return Wed, Dec 8</h3>
+            <span class="flight-card__duration">2h 28m</span>
+          </div>
+
+          <div class="flight-card__body">
+            <div class="flight-card__airline airline">
+              <img src="assets/image/image 40.png" alt="Emirates Logo" class="airline__logo" />
+              <div class="airline__info">
+                <h4 class="airline__name">Emirates</h4>
+                <p class="airline__model">Airbus A320</p>
+              </div>
+            </div>
+
+            <div class="flight-card__amenities amenities">
+              <i class="fa-solid fa-plane amenities__icon"></i>
+              <i class="fa-solid fa-wifi amenities__icon"></i>
+              <i class="fa-solid fa-clock amenities__icon"></i>
+              <i class="fa-solid fa-utensils amenities__icon"></i>
+              <i class="fa-solid fa-wheelchair amenities__icon"></i>
+            </div>
+
+            <div class="flight-card__schedule schedule">
+              <div class="schedule__point">
+                <span class="schedule__time">12:00 pm</span>
+                <span class="schedule__airport">Newark(EWR)</span>
+              </div>
+              <div class="schedule__route">
+                <span class="schedule__line"></span>
+                <i class="fa-solid fa-plane schedule__icon"></i>
+                <span class="schedule__line"></span>
+              </div>
+              <div class="schedule__point">
+                <span class="schedule__time">12:00 pm</span>
+                <span class="schedule__airport">Newark(EWR)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer-wrapper">
+      <div class="footer-main">
+        <div class="newsletter-card">
+          <div class="newsletter-content">
+            <h2 class="newsletter-content__title">Subscribe<br />Newsletter</h2>
+            <div class="newsletter-content__desc">
+              <h4 class="newsletter-content__subtitle">The Travel</h4>
+              <p class="newsletter-content__text">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+            </div>
+            <form class="subscribe-form">
+              <input type="email" class="subscribe-form__input" placeholder="Your email address" required />
+              <button type="submit" class="btn btn--primary subscribe-form__btn">Subscribe</button>
+            </form>
+          </div>
+          <div class="newsletter-image">
+            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" class="newsletter-image__img" />
+          </div>
+        </div>
+
+        <div class="footer-container">
+          <div class="footer-brand">
+            <div class="logo">
+              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" class="logo__img" />
+            </div>
+            <div class="social-icons">
+              <img src="./assets/image/facebook_light.svg" alt="Facebook" class="social-icons__img" />
+              <img src="./assets/image/twitter_light.svg" alt="Twitter" class="social-icons__img" />
+              <img src="./assets/image/youtube_light.svg" alt="Youtube" class="social-icons__img" />
+              <img src="./assets/image/instagram_lilght.svg" alt="Instagram" class="social-icons__img" />
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="link-column">
+              <h4 class="link-column__title">Our Destinations</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Canada</li>
+                <li class="link-column__item">Alaska</li>
+                <li class="link-column__item">France</li>
+                <li class="link-column__item">Iceland</li>
               </ul>
-              <div class="user-menu__separator"></div>
+            </div>
 
-              <ul class="user-menu__list system-menu">
-                <li class="user-menu__item">
-                  <a href="#" class="user-menu__link">
-                    <img src="assets/image/support_light.png" alt="#" class="user__icon" />
-                    Support
-                    <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                  </a>
-                </li>
-                <li class="user-menu__item">
-                  <a href="#" class="user-menu__link">
-                    <img src="assets/image/logout_light.png" alt="#" class="user__icon" />
-                    Logout
-                  </a>
-                </li>
+            <div class="link-column">
+              <h4 class="link-column__title">Our Activities</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Northern Lights</li>
+                <li class="link-column__item">Cruising & sailing</li>
+                <li class="link-column__item">Multi-activities</li>
+                <li class="link-column__item">Kayaing</li>
               </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <main class="main-ticket">
-    <section class="flight-header">
-      <nav class="breadcrumb">
-        <a href="#">Turkey</a>><a href="#">Istanbul</a> >
-        <span>CVK Park Bosphorus Hotel Istanbul</span>
-      </nav>
 
-      <div class="header-content">
-        <div class="flight-title">
-          <h1>Emirates A380 Airbus</h1>
-          <p class="location"><i class="fa-solid fa-location-dot"></i> Gümüşsuyu Mah. İnönü Cad. No:8, Istanbul 34437</p>
-          <div class="rating-badge">
-            <span class="score">4.2</span>
-            <span class="status">Very Good</span>
-            <span class="reviews">54 reviews</span>
-          </div>
-        </div>
-
-        <div class="flight-action">
-          <span class="price">$240</span>
-          <div class="action-buttons">
-            <button class="btn-icon" aria-label="Yêu thích"><img src="assets/image/heart_dark.svg" /></button>
-            <button class="btn-icon" aria-label="Chia sẻ"><img src="assets/image/share_dark.png" /></button>
-            <button class="btn-book"><a href="flight-booking-detail.html">Book now</a></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. HERO IMAGE BANNER -->
-    <section class="hero-banner">
-      <img src="assets/image/Rectangle 3.png" alt="Emirates A380 Airbus" />
-    </section>
-
-    <!-- 3. BASIC ECONOMY FEATURES -->
-    <section class="features-section">
-      <div class="features-header">
-        <h2>Basic Economy Features</h2>
-        <div class="class-options">
-          <label class="checkbox-label"> <input type="checkbox" checked /> Economy </label>
-          <label class="checkbox-label"> <input type="checkbox" /> First Class </label>
-          <label class="checkbox-label"> <input type="checkbox" /> Business Class </label>
-        </div>
-      </div>
-
-      <div class="gallery-grid">
-        <img src="assets/image/Frame 142.png" alt="Cabin feature 1" />
-        <img src="assets/image/Frame 182.png" alt="Cabin feature 2" />
-        <img src="assets/image/Frame 183.png" alt="Cabin feature 3" />
-        <img src="assets/image/Frame 184.png" alt="Cabin feature 4" />
-        <img src="assets/image/Frame 185.png" alt="Cabin feature 5" />
-        <img src="assets/image/Frame 186.png" alt="Cabin feature 6" />
-        <img src="assets/image/Frame 187.png" alt="Cabin feature 7" />
-        <img src="assets/image/Frame 188.png" alt="Cabin feature 8" />
-        <img src="assets/image/Frame 189.png" alt="Cabin feature 9" />
-      </div>
-    </section>
-
-    <!-- 4. AIRLINE POLICIES Banner -->
-    <section class="policies-card">
-      <h2>Emirates Airlines Policies</h2>
-      <div class="policies-list">
-        <div class="policy-item">
-          <img src="assets/image/ion_stopwatch.png" />
-          <span>Pre-flight cleaning, installation of cabin HEPA filters.</span>
-        </div>
-        <div class="policy-item">
-          <img src="assets/image/ion_stopwatch.png" />
-          <span>Pre-flight health screening questions.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. FLIGHT ITINERARIES (TICKETS) -->
-    <section class="itinerary-list">
-      <!-- Chuyến 1 -->
-      <div class="flight-card">
-        <div class="flight-card-header">
-          <h3>Return Wed, Dec 8</h3>
-          <span class="flight-duration">2h 28m</span>
-        </div>
-
-        <div class="flight-card-body">
-          <div class="airline-info">
-            <img src="assets/image/image 40.png" alt="Emirates Logo" />
-            <div>
-              <h4>Emirates</h4>
-              <p>Airbus A320</p>
+            <div class="link-column">
+              <h4 class="link-column__title">Travel Blogs</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Bali Travel Guide</li>
+                <li class="link-column__item">Sri Lanks Travel Guide</li>
+                <li class="link-column__item">Peru Travel Guide</li>
+                <li class="link-column__item">Bali Travel Guide</li>
+              </ul>
             </div>
-          </div>
 
-          <div class="flight-amenities">
-            <i class="fa-solid fa-plane"></i>
-            <i class="fa-solid fa-wifi"></i>
-            <i class="fa-solid fa-clock"></i>
-            <i class="fa-solid fa-utensils"></i>
-            <i class="fa-solid fa-wheelchair"></i>
-          </div>
+            <div class="link-column">
+              <h4 class="link-column__title">About Us</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Our Story</li>
+                <li class="link-column__item">Work with us</li>
+              </ul>
+            </div>
 
-          <div class="flight-schedule">
-            <div class="time-location">
-              <span class="time">12:00 pm</span>
-              <span class="airport">Newark(EWR)</span>
-            </div>
-            <div class="flight-route">
-              <span class="line"></span>
-              <i class="fa-solid fa-plane"></i>
-              <span class="line"></span>
-            </div>
-            <div class="time-location">
-              <span class="time">12:00 pm</span>
-              <span class="airport">Newark(EWR)</span>
+            <div class="link-column">
+              <h4 class="link-column__title">Contact Us</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Our Story</li>
+                <li class="link-column__item">Work with us</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Chuyến 2 -->
-      <div class="flight-card">
-        <div class="flight-card-header">
-          <h3>Return Wed, Dec 8</h3>
-          <span class="flight-duration">2h 28m</span>
-        </div>
-
-        <div class="flight-card-body">
-          <div class="airline-info">
-            <img src="assets/image/image 40.png" alt="Emirates Logo" />
-            <div>
-              <h4>Emirates</h4>
-              <p>Airbus A320</p>
-            </div>
-          </div>
-
-          <div class="flight-amenities">
-            <i class="fa-solid fa-plane"></i>
-            <i class="fa-solid fa-wifi"></i>
-            <i class="fa-solid fa-clock"></i>
-            <i class="fa-solid fa-utensils"></i>
-            <i class="fa-solid fa-wheelchair"></i>
-          </div>
-
-          <div class="flight-schedule">
-            <div class="time-location">
-              <span class="time">12:00 pm</span>
-              <span class="airport">Newark(EWR)</span>
-            </div>
-            <div class="flight-route">
-              <span class="line"></span>
-              <i class="fa-solid fa-plane"></i>
-              <span class="line"></span>
-            </div>
-            <div class="time-location">
-              <span class="time">12:00 pm</span>
-              <span class="airport">Newark(EWR)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer-wrapper">
-    <div class="footer-main">
-      <div class="newsletter-card">
-        <div class="newsletter-content">
-          <h2>Subscribe<br />Newsletter</h2>
-          <div class="newsletter-content__desc">
-            <h4>The Travel</h4>
-            <p>Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
-          </div>
-          <form class="subscribe-form">
-            <input type="email" placeholder="Your email address" required />
-            <button type="submit">Subscribe</button>
-          </form>
-        </div>
-        <div class="newsletter-image">
-          <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" />
-        </div>
-      </div>
-      <div class="footer-container">
-        <div class="footer-brand">
-          <div class="logo">
-            <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" />
-          </div>
-          <div class="social-icons">
-            <img src="./assets/image/facebook_light.svg" />
-            <img src="./assets/image/twitter_light.svg" />
-            <img src="./assets/image/youtube_light.svg" />
-            <img src="./assets/image/instagram_lilght.svg" />
-          </div>
-        </div>
-        <div class="footer-links">
-          <div class="link-column">
-            <h4>Our Destinations</h4>
-            <ul>
-              <li>Canada</li>
-              <li>Alaska</li>
-              <li>France</li>
-              <li>Iceland</li>
-            </ul>
-          </div>
-
-          <div class="link-column">
-            <h4>Our Activities</h4>
-            <ul>
-              <li>Northern Lights</li>
-              <li>Cruising & sailing</li>
-              <li>Multi-activities</li>
-              <li>Kayaing</li>
-            </ul>
-          </div>
-
-          <div class="link-column">
-            <h4>Travel Blogs</h4>
-            <ul>
-              <li>Bali Travel Guide</li>
-              <li>Sri Lanks Travel Guide</li>
-              <li>Peru Travel Guide</li>
-              <li>Bali Travel Guide</li>
-            </ul>
-          </div>
-
-          <div class="link-column">
-            <h4>About Us</h4>
-            <ul>
-              <li>Our Story</li>
-              <li>Work with us</li>
-            </ul>
-          </div>
-
-          <div class="link-column">
-            <h4>Contact Us</h4>
-            <ul>
-              <li>Our Story</li>
-              <li>Work with us</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
+</html>

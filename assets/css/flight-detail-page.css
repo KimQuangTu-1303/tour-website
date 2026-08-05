@@ -1,395 +1,417 @@
-.main-ticket{
-  padding:20px 120px;
+/* =======================================================
+   LAYOUT CHÍNH
+   ======================================================= */
+.flight-detail {
+  padding: 20px 120px; /*[cite: 3] */
 }
+
+/* =======================================================
+   BREADCRUMB COMPONENT
+   ======================================================= */
 .breadcrumb {
-    font-size: 14px;
-    color: #111827;
-    margin-bottom: 16px;
+  font-size: 14px; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
+  margin-bottom: 16px; /*[cite: 3] */
 }
 
-.breadcrumb a {
-    color: #ff8682;
-    text-decoration: none;
-    font-weight: 500;
+.breadcrumb__link {
+  color: #ff8682; /*[cite: 3] */
+  text-decoration: none; /*[cite: 3] */
+  font-weight: 500; /*[cite: 3] */
 }
 
-.breadcrumb a:hover {
-    text-decoration: underline;
+.breadcrumb__link:hover {
+  text-decoration: underline; /*[cite: 3] */
 }
 
-.breadcrumb span {
-    color: #6b7280;
+.breadcrumb__separator,
+.breadcrumb__current {
+  color: #6b7280; /*[cite: 3] */
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 24px;
+/* =======================================================
+   1. FLIGHT HEADER
+   ======================================================= */
+.flight-header__content {
+  display: flex; /*[cite: 3] */
+  justify-content: space-between; /*[cite: 3] */
+  align-items: flex-start; /*[cite: 3] */
+  gap: 20px; /*[cite: 3] */
+  margin-bottom: 24px; /*[cite: 3] */
 }
 
-.flight-title h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 8px;
+.flight-header__title {
+  font-size: 24px; /*[cite: 3] */
+  font-weight: 700; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
+  margin-bottom: 8px; /*[cite: 3] */
 }
 
-.flight-title .location {
-    font-size: 14px;
-    color: #6b7280;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+/* Location Component */
+.location {
+  font-size: 14px; /*[cite: 3] */
+  color: #6b7280; /*[cite: 3] */
+  margin-bottom: 12px; /*[cite: 3] */
+  display: flex; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  gap: 6px; /*[cite: 3] */
 }
 
-.rating-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 12px;
+/* Rating Component */
+.rating {
+  display: inline-flex; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  gap: 8px; /*[cite: 3] */
+  font-size: 12px; /*[cite: 3] */
 }
 
-.rating-badge .score {
-    border: 1px solid #8dd3bb;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-weight: 700;
-    color: #111827;
+.rating__score {
+  border: 1px solid #8dd3bb; /*[cite: 3] */
+  padding: 4px 8px; /*[cite: 3] */
+  border-radius: 4px; /*[cite: 3] */
+  font-weight: 700; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
-.rating-badge .status {
-    font-weight: 700;
-    color: #111827;
+.rating__status {
+  font-weight: 700; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
-.rating-badge .reviews {
-    color: #6b7280;
+.rating__reviews {
+  color: #6b7280; /*[cite: 3] */
 }
 
 /* Khối bên phải Header: Giá tiền & Nút bấm */
-.flight-action {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
+.flight-header__action {
+  display: flex; /*[cite: 3] */
+  flex-direction: column; /*[cite: 3] */
+  align-items: flex-end; /*[cite: 3] */
+  gap: 12px; /*[cite: 3] */
 }
 
-.flight-action .price {
-    font-size: 32px;
-    font-weight: 700;
-    color: #ff8682;
+.flight-header__price {
+  font-size: 32px; /*[cite: 3] */
+  font-weight: 700; /*[cite: 3] */
+  color: #ff8682; /*[cite: 3] */
 }
 
-.action-buttons {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.flight-header__buttons {
+  display: flex; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  gap: 8px; /*[cite: 3] */
 }
 
-.btn-icon {
-    width: 48px;
-    height: 48px;
-    border: 1px solid #8dd3bb;
-    border-radius: 4px;
-    background: #ffffff;
-    color: #111827;
-    cursor: pointer;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
+/* Button Component (Tái sử dụng chung) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; /*[cite: 3] */
+  transition: all 0.2s ease; /*[cite: 3] */
+  border: none; /*[cite: 3] */
+  text-decoration: none;
+  font-family: inherit;
 }
 
-.btn-icon:hover {
-    background-color: #ebf1ef;
+.btn--icon {
+  width: 48px; /*[cite: 3] */
+  height: 48px; /*[cite: 3] */
+  border: 1px solid #8dd3bb; /*[cite: 3] */
+  border-radius: 4px; /*[cite: 3] */
+  background: #ffffff; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
+  font-size: 16px; /*[cite: 3] */
 }
 
-.btn-book {
-    background-color: #8dd3bb;
-    color: #111827;
-    border: none;
-    padding: 0 24px;
-    height: 48px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+.btn--icon:hover {
+  background-color: #ebf1ef; /*[cite: 3] */
 }
 
-.btn-book:hover {
-    background-color: #72c4a8;
+.btn--primary {
+  background-color: #8dd3bb; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
+  padding: 0 24px; /*[cite: 3] */
+  height: 48px; /*[cite: 3] */
+  border-radius: 4px; /*[cite: 3] */
+  font-weight: 600; /*[cite: 3] */
+  font-size: 14px; /*[cite: 3] */
+}
+
+.btn--primary:hover {
+  background-color: #72c4a8; /*[cite: 3] */
 }
 
 /* =======================================================
    2. HERO BANNER
    ======================================================= */
 .hero-banner {
-    width: 100%;
-    height: 395px;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 32px;
+  width: 100%; /*[cite: 3] */
+  height: 395px; /*[cite: 3] */
+  border-radius: 12px; /*[cite: 3] */
+  overflow: hidden; /*[cite: 3] */
+  margin-bottom: 32px; /*[cite: 3] */
 }
 
-.hero-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* =======================================================
-   3. BASIC ECONOMY FEATURES (MÃU ẢNH THUMBNAILS)
-   ======================================================= */
-.features-section {
-    margin-bottom: 32px;
-}
-
-.features-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.features-header h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #111827;
-}
-
-.class-options {
-    display: flex;
-    gap: 24px;
-}
-
-.checkbox-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: #111827;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-.checkbox-label input[type="checkbox"] {
-    accent-color: #8dd3bb;
-    width: 16px;
-    height: 16px;
-}
-
-/* Lưới 9 tấm ảnh */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 12px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05);
+.hero-banner__image {
+  width: 100%; /*[cite: 3] */
+  height: 100%; /*[cite: 3] */
+  object-fit: cover; /*[cite: 3] */
 }
 
 /* =======================================================
-   4. POLICIES CARD (ĐIỀU KHOẢN AIRLINE)
+   3. BASIC ECONOMY FEATURES
    ======================================================= */
-.policies-card {
-    background-color: #cdeae1;
-    border-radius: 12px;
-    padding: 16px 24px;
-    margin-bottom: 32px;
+.features {
+  margin-bottom: 32px; /*[cite: 3] */
 }
 
-.policies-card h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 16px;
+.features__header {
+  display: flex; /*[cite: 3] */
+  justify-content: space-between; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  margin-bottom: 16px; /*[cite: 3] */
 }
 
-.policies-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+.features__title {
+  font-size: 20px; /*[cite: 3] */
+  font-weight: 700; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
-.policy-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #111827;
+.features__options {
+  display: flex; /*[cite: 3] */
+  gap: 24px; /*[cite: 3] */
+}
+
+/* Checkbox Component */
+.checkbox {
+  font-size: 14px; /*[cite: 3] */
+  font-weight: 600; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
+  display: flex; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  gap: 8px; /*[cite: 3] */
+  cursor: pointer; /*[cite: 3] */
+}
+
+.checkbox__input {
+  accent-color: #8dd3bb; /*[cite: 3] */
+  width: 16px; /*[cite: 3] */
+  height: 16px; /*[cite: 3] */
+}
+
+/* Gallery Component */
+.gallery {
+  display: grid; /*[cite: 3] */
+  grid-template-columns: repeat(9, 1fr); /*[cite: 3] */
+  gap: 12px; /*[cite: 3] */
+}
+
+.gallery__image {
+  width: 100%; /*[cite: 3] */
+  height: 90px; /*[cite: 3] */
+  object-fit: cover; /*[cite: 3] */
+  border-radius: 12px; /*[cite: 3] */
+  cursor: pointer; /*[cite: 3] */
+  transition: transform 0.2s ease; /*[cite: 3] */
+}
+
+.gallery__image:hover {
+  transform: scale(1.05); /*[cite: 3] */
+}
+
+/* =======================================================
+   4. POLICIES (ĐIỀU KHOẢN AIRLINE)
+   ======================================================= */
+.policies {
+  background-color: #cdeae1; /*[cite: 3] */
+  border-radius: 12px; /*[cite: 3] */
+  padding: 16px 24px; /*[cite: 3] */
+  margin-bottom: 32px; /*[cite: 3] */
+}
+
+.policies__title {
+  font-size: 20px; /*[cite: 3] */
+  font-weight: 700; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
+  margin-bottom: 16px; /*[cite: 3] */
+}
+
+.policies__list {
+  display: grid; /*[cite: 3] */
+  grid-template-columns: 1fr 1fr; /*[cite: 3] */
+  gap: 16px; /*[cite: 3] */
+}
+
+.policy {
+  display: flex; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  gap: 12px; /*[cite: 3] */
+  font-size: 14px; /*[cite: 3] */
+  font-weight: 500; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
 /* =======================================================
    5. TICKET CARDS (DANH SÁCH LỊCH TRÌNH CHUYẾN BAY)
    ======================================================= */
-.itinerary-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.itinerary {
+  display: flex; /*[cite: 3] */
+  flex-direction: column; /*[cite: 3] */
+  gap: 24px; /*[cite: 3] */
 }
 
 .flight-card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  background: #ffffff; /*[cite: 3] */
+  border-radius: 12px; /*[cite: 3] */
+  padding: 24px; /*[cite: 3] */
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05); /*[cite: 3] */
 }
 
-.flight-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 24px;
+.flight-card__header {
+  display: flex; /*[cite: 3] */
+  justify-content: space-between; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  margin-bottom: 24px; /*[cite: 3] */
 }
 
-.flight-card-header h3 {
-    font-size: 18px;
-    font-weight: 700;
-    color: #111827;
+.flight-card__title {
+  font-size: 18px; /*[cite: 3] */
+  font-weight: 700; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
-.flight-duration {
-    font-size: 14px;
-    font-weight: 600;
-    color: #111827;
+.flight-card__duration {
+  font-size: 14px; /*[cite: 3] */
+  font-weight: 600; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
-.flight-card-body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.flight-card__body {
+  display: flex; /*[cite: 3] */
+  justify-content: space-between; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
 }
 
-.airline-info {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    border: 1px solid #e5e7eb;
-    padding: 12px 24px;
-    border-radius: 8px;
+/* Airline Component */
+.airline {
+  display: flex; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  gap: 16px; /*[cite: 3] */
+  border: 1px solid #e5e7eb; /*[cite: 3] */
+  padding: 12px 24px; /*[cite: 3] */
+  border-radius: 8px; /*[cite: 3] */
 }
 
-.airline-info img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+.airline__logo {
+  width: 40px; /*[cite: 3] */
+  height: 40px; /*[cite: 3] */
+  object-fit: contain; /*[cite: 3] */
 }
 
-.airline-info h4 {
-    font-size: 16px;
-    font-weight: 700;
-    color: #111827;
+.airline__name {
+  font-size: 16px; /*[cite: 3] */
+  font-weight: 700; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
-.airline-info p {
-    font-size: 12px;
-    color: #6b7280;
+.airline__model {
+  font-size: 12px; /*[cite: 3] */
+  color: #6b7280; /*[cite: 3] */
 }
 
-.flight-amenities {
-    display: flex;
-    gap: 20px;
-    color: #111827;
-    font-size: 16px;
+/* Amenities Component */
+.amenities {
+  display: flex; /*[cite: 3] */
+  gap: 20px; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
+  font-size: 16px; /*[cite: 3] */
 }
 
-.flight-schedule {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+/* Schedule Component */
+.schedule {
+  display: flex; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  gap: 24px; /*[cite: 3] */
 }
 
-.time-location {
-    text-align: center;
+.schedule__point {
+  text-align: center; /*[cite: 3] */
 }
 
-.time-location .time {
-    display: block;
-    font-size: 18px;
-    font-weight: 700;
-    color: #111827;
+.schedule__time {
+  display: block; /*[cite: 3] */
+  font-size: 18px; /*[cite: 3] */
+  font-weight: 700; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
-.time-location .airport {
-    font-size: 12px;
-    color: #6b7280;
+.schedule__airport {
+  font-size: 12px; /*[cite: 3] */
+  color: #6b7280; /*[cite: 3] */
 }
 
-.flight-route {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #111827;
+.schedule__route {
+  display: flex; /*[cite: 3] */
+  align-items: center; /*[cite: 3] */
+  gap: 8px; /*[cite: 3] */
+  color: #111827; /*[cite: 3] */
 }
 
-.flight-route .line {
-    width: 30px;
-    height: 1px;
-    background-color: #111827;
+.schedule__line {
+  width: 30px; /*[cite: 3] */
+  height: 1px; /*[cite: 3] */
+  background-color: #111827; /*[cite: 3] */
 }
 
 /* =======================================================
    6. RESPONSIVE FOR MOBILE (DƯỚI 768PX)
    ======================================================= */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-    }
+  .flight-header__content {
+    flex-direction: column; /*[cite: 3] */
+  }
 
-    .flight-action {
-        align-items: flex-start;
-        width: 100%;
-    }
+  .flight-header__action {
+    align-items: flex-start; /*[cite: 3] */
+    width: 100%; /*[cite: 3] */
+  }
 
-    .action-buttons {
-        width: 100%;
-    }
+  .flight-header__buttons {
+    width: 100%; /*[cite: 3] */
+  }
 
-    .btn-book {
-        flex: 1;
-    }
+  .btn--primary {
+    flex: 1; /*[cite: 3] */
+  }
 
-    .hero-banner {
-        height: 220px;
-    }
+  .hero-banner {
+    height: 220px; /*[cite: 3] */
+  }
 
-    .features-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
+  .features__header {
+    flex-direction: column; /*[cite: 3] */
+    align-items: flex-start; /*[cite: 3] */
+    gap: 12px; /*[cite: 3] */
+  }
 
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* Đưa về 3 cột ảnh */
-    }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /*[cite: 3] */
+  }
 
-    .policies-list {
-        grid-template-columns: 1fr;
-    }
+  .policies__list {
+    grid-template-columns: 1fr; /*[cite: 3] */
+  }
 
-    .flight-card-body {
-        flex-direction: column;
-        gap: 20px;
-        align-items: stretch;
-    }
+  .flight-card__body {
+    flex-direction: column; /*[cite: 3] */
+    gap: 20px; /*[cite: 3] */
+    align-items: stretch; /*[cite: 3] */
+  }
 
-    .flight-schedule {
-        justify-content: space-between;
-    }
+  .schedule {
+    justify-content: space-between; /*[cite: 3] */
+  }
 }
+
