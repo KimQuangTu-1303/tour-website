@@ -1,25 +1,28 @@
 <!doctype html>
-<html lang="VI">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find-flight</title>
+    <title>Find Flight</title>
     <!-- FontAwesome Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/find-stays.css" />
     <link rel="stylesheet" href="assets/css/find-flight.css" />
   </head>
 
   <body>
+    <!-- HEADER -->
     <header class="header header--no-margin">
+      <div class="header__container">
         <!-- Left Menu -->
         <nav class="navbar">
           <ul class="navbar__list">
-            <li class="navbar__item">
+            <li class="navbar__item navbar__item--active">
               <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
-              <a href="find-flight.html" class="navbar__link navbar__item--active">Find Flight</a>
+              <a href="find-flight.html" class="navbar__link">Find Flight</a>
             </li>
             <li class="navbar__item">
               <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
@@ -35,144 +38,162 @@
           </a>
         </div>
 
+        <!-- Right Menu (User Actions) -->
         <div class="user-action">
-          <div class="navbar_list">
-            <a href="" class="btn-login">Login</a>
-            <a href="" class="btn-sign">Sign Up</a>
+          <div class="navbar__group navbar__group--right">
+            <a href="login.html" class="btn btn--login">Login</a>
+            <a href="signup.html" class="btn btn--signup">Sign Up</a>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="banner">
-      <div class="banner-continer">
-        <h1 class="banner-heading">Make your travel whishlist, we’ll do the rest</h1>
-        <p class="banner-desc">Special offers to suit your plan</p>
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+      <div class="hero-banner__container">
+        <h1 class="hero-banner__heading">Make your travel wishlist, we’ll do the rest</h1>
+        <p class="hero-banner__desc">Special offers to suit your plan</p>
       </div>
     </section>
-    <div class="booking-find-flight">
-      <div class="booking-card-find-flight">
-        <h3 class="booking-title-find-flight">Where are you flying?</h3>
 
-        <div class="booking-form-find-flight">
-          <div class="input-group-find-flight">
-            <label>From - To</label>
-            <select name="from-to-find-flight">
+    <!-- BOOKING FORM -->
+    <div class="flight-booking">
+      <div class="flight-booking__card">
+        <h3 class="flight-booking__title">Where are you flying?</h3>
+
+        <div class="flight-booking__form">
+          <div class="flight-booking__input-group">
+            <label class="flight-booking__label">From - To</label>
+            <select class="flight-booking__select" name="from-to">
               <option value="">Lahore - Karachi</option>
-              <option value="">1</option>
-              <option value="">2</option>
+              <option value="1">Ha Noi - Da Nang</option>
+              <option value="2">Ho Chi Minh - Phu Quoc</option>
             </select>
           </div>
 
-          <div class="input-group-find-flight">
-            <label>Trip</label>
-            <select name="trip-find-flight">
-              <option value="">Return</option>
-              <option value="">One Way</option>
+          <div class="flight-booking__input-group">
+            <label class="flight-booking__label">Trip</label>
+            <select class="flight-booking__select" name="trip">
+              <option value="return">Return</option>
+              <option value="one-way">One Way</option>
             </select>
           </div>
 
-          <div class="input-group-find-flight">
-            <label>Depart - Return</label>
-            <input type="text" value="07 Nov 22 - 13 Nov 22" />
+          <div class="flight-booking__input-group">
+            <label class="flight-booking__label">Depart - Return</label>
+            <input class="flight-booking__input" type="text" value="07 Nov 22 - 13 Nov 22" />
           </div>
 
-          <div class="input-group-find-flight">
-            <label>Passenger - Class</label>
-            <input type="text" value="1 Passenger, Economy" />
+          <div class="flight-booking__input-group">
+            <label class="flight-booking__label">Passenger - Class</label>
+            <input class="flight-booking__input" type="text" value="1 Passenger, Economy" />
           </div>
         </div>
 
-        <div class="booking-action-find-flight">
-          <button class="btn-promo-find-flight"><i class="fa-solid fa-plus"></i> Add Promo Code</button>
-          <button class="btn-seach-find-flight"><i class="fa-solid fa-paper-plane"></i><a href="flight-listing.html"> Show Flights</a></button>
+        <div class="flight-booking__actions">
+          <button class="btn btn--promo"><i class="fa-solid fa-plus"></i> Add Promo Code</button>
+          <button class="btn btn--search">
+            <i class="fa-solid fa-paper-plane"></i>
+            <a href="flight-listing.html" style="color: inherit; text-decoration: none"> Show Flights</a>
+          </button>
         </div>
       </div>
     </div>
-    <main class="plan">
-      <section class="plan-section">
-        <div>
-          <h2>Plan your perfect trip</h2>
-          <p class="plan-subtitle">Search Flights & Hotels to our most popular destinations</p>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- Section 1: Map / Destinations Plan -->
+      <section class="section-header" style="display: flex; justify-content: space-between; margin-bottom: 24px">
+        <div class="section-header__text">
+          <h2 class="section-title">Plan your perfect trip</h2>
+          <p class="section-desc">Search Flights & Hotels to our most popular destinations</p>
         </div>
-        <button class="btn-subtitle">See All</button>
+        <button class="section-header__btn">
+          <a class="link-hotel-listing" href="#">See All</a>
+        </button>
       </section>
-    </main>
-    <div class="banner-2"></div>
-    <main class="plan">
-      <section class="plan-section">
-        <div>
-          <h2>Fall into travel</h2>
-          <p class="plan-subtitle">Going somewhere to celebrate this season? Whether you're going home 
-          <br>or somewhere to roam, we've got the travel tools to get you to your destination.</p>
+
+      <div class="map-banner"></div>
+
+      <!-- Section 2: Fall into travel (4 Cards) đồng bộ với find-stays -->
+      <section class="travel-cards">
+        <div class="section-header">
+          <div class="section-header__text">
+            <h2 class="section-title">Fall into travel</h2>
+            <p class="section-desc">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
+          </div>
+          <button class="section-header__btn">
+            <a class="link-hotel-listing" href="flight-listing.html">See All</a>
+          </button>
         </div>
-        <buttion class="btn-subtitle">See all</buttion>
+
+        <div class="travel-cards__list">
+          <div id="Melbourne" class="travel-cards__item" style="background-image: url(&quot;assets/image/Melbourne.png&quot;)">
+            <div class="travel-cards__item-info">
+              <div class="travel-cards__item-name">
+                <h3 class="travel-cards__heading">Melbourne</h3>
+                <p class="travel-cards__desc">An amazing journey</p>
+              </div>
+              <h3 class="travel-cards__cost travel-cards__heading">$700</h3>
+            </div>
+            <button class="travel-cards__btn">
+              <a class="link-hotel-listing" href="flight-listing.html">Book Flight</a>
+            </button>
+          </div>
+
+          <div id="Paris" class="travel-cards__item" style="background-image: url(&quot;assets/image/Paris.png&quot;)">
+            <div class="travel-cards__item-info">
+              <div class="travel-cards__item-name">
+                <h3 class="travel-cards__heading">Paris</h3>
+                <p class="travel-cards__desc">A Paris Adventure</p>
+              </div>
+              <h3 class="travel-cards__cost travel-cards__heading">$600</h3>
+            </div>
+            <button class="travel-cards__btn">
+              <a class="link-hotel-listing" href="flight-listing.html">Book Flight</a>
+            </button>
+          </div>
+
+          <div id="London" class="travel-cards__item" style="background-image: url(&quot;assets/image/London.png&quot;)">
+            <div class="travel-cards__item-info">
+              <div class="travel-cards__item-name">
+                <h3 class="travel-cards__heading">London</h3>
+                <p class="travel-cards__desc">London eye adventure</p>
+              </div>
+              <h3 class="travel-cards__cost travel-cards__heading">$350</h3>
+            </div>
+            <button class="travel-cards__btn">
+              <a class="link-hotel-listing" href="flight-listing.html">Book Flight</a>
+            </button>
+          </div>
+
+          <div id="Columbia" class="travel-cards__item" style="background-image: url(&quot;assets/image/Columbia.png&quot;)">
+            <div class="travel-cards__item-info">
+              <div class="travel-cards__item-name">
+                <h3 class="travel-cards__heading">Columbia</h3>
+                <p class="travel-cards__desc">Amazing streets</p>
+              </div>
+              <h3 class="travel-cards__cost travel-cards__heading">$700</h3>
+            </div>
+            <button class="travel-cards__btn">
+              <a class="link-hotel-listing" href="flight-listing.html">Book Flight</a>
+            </button>
+          </div>
+        </div>
       </section>
-    </main>
-    <section class="travel">
-      <div class="travel-card" style="background-image: url('assets/image/Melbourne.png')">
-        <div class="card-overlay"></div>
-        <div class="card-content">
-          <div class="card-info">
-            <div class="text">
-              <h2 class="title">Melbourne</h2>
-              <p class="des">An amazing journey</p>
-            </div>
-            <div class="price">$ 700</div>
+
+      <!-- Section 3: Backpacking đồng bộ với find-stays -->
+      <section class="travel-destinations">
+        <div class="section-header">
+          <div class="section-header__text">
+            <h2 class="section-title">Fall into travel</h2>
+            <p class="section-desc">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
           </div>
-          <a href="flight-listing.html" class="btn-book">Book Flight</a>
+          <button class="section-header__btn">
+            <a class="link-hotel-listing" href="flight-listing.html">See All</a>
+          </button>
         </div>
-      </div>
-      <div class="travel-card" style="background-image: url('assets/image/Paris.png')">
-        <div class="card-overlay"></div>
-        <div class="card-content">
-          <div class="card-info">
-            <div class="text">
-              <h2 class="title">Paris</h2>
-              <p class="des">A Paris Adventure</p>
-            </div>
-            <div class="price">$ 600</div>
-          </div>
-          <a href="flight-listing.html" class="btn-book">Book Flight</a>
-        </div>
-      </div>
-      <div class="travel-card" style="background-image: url('assets/image/London.png')">
-        <div class="card-overlay"></div>
-        <div class="card-content">
-          <div class="card-info">
-            <div class="text">
-              <h2 class="title">London</h2>
-              <p class="des">London eye adventure</p>
-            </div>
-            <div class="price">$ 350</div>
-          </div>
-          <a href="flight-listing.html" class="btn-book">Book Flight</a>
-        </div>
-      </div>
-      <div class="travel-card" style="background-image: url('assets/image/Columbia.png')">
-        <div class="card-overlay"></div>
-        <div class="card-content">
-          <div class="card-info">
-            <div class="text">
-              <h2 class="title">Columbia</h2>
-              <p class="des">Amazing streets</p>
-            </div>
-            <div class="price">$ 700</div>
-          </div>
-          <a href="flight-listing.html" class="btn-book">Book Flight</a>
-        </div>
-      </div>
-    </section>
-      <main class="plan">
-      <section class="plan-section">
-        <div>
-          <h2>Plan your perfect trip</h2>
-          <p class="plan-subtitle">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.</p>
-        </div>
-        <button class="btn-subtitle">See All</button>
-      </section>
-    </main>
-    <div class="backpacking">
+
         <div class="travel-destinations__layout">
           <div class="travel-destinations__layout-main">
             <div class="travel-destinations__introduce">
@@ -184,19 +205,18 @@
               </div>
             </div>
             <div class="travel-destinations__action">
-              <button class="travel-destinations__action-btn">Book Flight</button>
+              <button class="travel-destinations__action-btn" onclick="window.location.href='flight-listing.html'">Book Flight</button>
             </div>
           </div>
-          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\(1\).png)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\(2\).png)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\(3\).png)"></div>
-          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\(4\).png)"></div>
+          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\\(1\\).png)"></div>
+          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\\(2\\).png)"></div>
+          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\\(3\\).png)"></div>
+          <div class="travel-destinations__picture" style="background-image: url(./assets/image/Sri-Lanka\\(4\\).png)"></div>
         </div>
       </section>
     </main>
-</div>
 
-    <!-- Footer -->
+    <!-- FOOTER LẤY CHUẨN TỪ CÁC FILE TRƯỚC -->
     <footer class="footer-wrapper">
       <div class="footer-main">
         <div class="newsletter-card">
@@ -277,6 +297,7 @@
         </div>
       </div>
     </footer>
+
     <script src="assets/js/header.js"></script>
   </body>
 </html>
