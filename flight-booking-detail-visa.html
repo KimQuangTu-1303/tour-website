@@ -1,354 +1,344 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flight-booking-detail</title>
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/flight-booking-detail.css">
-    <link rel="stylesheet" href="assets/css/flight-booking-detail-visa.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Booking Detail Visa - Golobe</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/flight-booking-detail.css" />
+    <link rel="stylesheet" href="assets/css/flight-booking-detail-visa.css" />
+    <link rel="stylesheet" href="assets/css/hotel-detail-page.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="header__container">
-            <!-- Left Menu -->
-            <nav class="navbar">
-                <ul class="navbar__list">
-                    <li class="navbar__item navbar__item--active">
-                        <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
-                        <a href="find-flight.html" class="navbar__link">Find Flight</a>
-                    </li>
-                    <li class="navbar__item ">
-                        <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
-                        <a href="find-stays.html" class="navbar__link">Find Stays</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Logo Center -->
-            <div class="logo">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/image/logo-small.png" alt="Golobe" />
-                </a>
-            </div>
-
-            <!-- Right Menu -->
-            <div class="user-action">
-                <ul class="user-action__list">
-                    <li class="user-action__item">
-                        <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
-                        <a href="#" class="user-action__link">Favourites</a>
-                    </li>
-                    <li class="user-action__item user-action__separator">|</li>
-                    <li class="user-action__item">
-                        <a href="#" class="user-action__link user-action__profile">
-                            <div class="header__avatar-wrap">
-                                <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
-                                <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
-                                <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
-                            </div>
-                            John D.
-                        </a>
-                        <!-- User Menu -->
-                        <div class="user-menu">
-                            <div class="user-menu__header">
-                                <img src="assets/image/user-avt.svg" alt="John Doe." class="user-menu_avatar" />
-                                <div class="user-menu__info">
-                                    <span class="user-menu__info-name">John Doe.</span>
-                                    <span class="user-menu__info-status">Online</span>
-                                </div>
-                            </div>
-
-                            <div class="user-menu__separator"></div>
-
-                            <ul class="user-menu__list account-menu">
-                                <li class="user-menu__item">
-                                    <a href="#" class="user-menu__link">
-                                        <img src="assets/image/user_light.svg" alt="#" class="user__icon" />
-                                        My account
-                                        <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                                    </a>
-                                </li>
-                                <li class="user-menu__item">
-                                    <a href="#" class="user-menu__link">
-                                        <img src="assets/image/card_light.png" alt="#" class="user__icon" />
-                                        Payments
-                                        <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                                    </a>
-                                </li>
-                                <li class="user-menu__item">
-                                    <a href="#" class="user-menu__link">
-                                        <img src="assets/image/setting_light.png" alt="#" class="user__icon" />
-                                        Setting
-                                        <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                                    </a>
-                                </li>
-                            </ul>
-
-                            <div class="user-menu__separator"></div>
-
-                            <ul class="user-menu__list system-menu">
-                                <li class="user-menu__item">
-                                    <a href="#" class="user-menu__link">
-                                        <img src="assets/image/support_light.png" alt="#" class="user__icon" />
-                                        Support
-                                        <img src="assets/image/chevron-forward.svg" alt="#" class="user__icon-arrow" />
-                                    </a>
-                                </li>
-                                <li class="user-menu__item">
-                                    <a href="#" class="user-menu__link">
-                                        <img src="assets/image/logout_light.png" alt="#" class="user__icon" />
-                                        Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <main class="main-ticket">
-        <nav class="breadcrumb">
-            <a href="#" style="color:#FF8682">Turkey</a>><a href="#" style="color:#FF8682">Istanbul</a> >
-            <span>CVK Park Bosphorus Hotel Istanbul</span>
+      <div class="header__container">
+        <!-- Left Menu -->
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item navbar__item--active">
+              <img src="assets/image/airplane_light.svg" alt="Flight" class="header__icon" />
+              <a href="find-flight.html" class="navbar__link">Find Flight</a>
+            </li>
+            <li class="navbar__item">
+              <img src="assets/image/bed_light.svg" alt="Stays" class="header__icon" />
+              <a href="find-stays.html" class="navbar__link">Find Stays</a>
+            </li>
+          </ul>
         </nav>
-        <div class="left-ticket">
-            <div class="option-1">
-                <div class="header-content">
-                    <div class="flight-title">
-                        <p>Emirates A380 Airbus</p>
-                        <div class="flight-action">
-                            <span class="price">$240</span>
-                        </div>
-                    </div>
-                    <div class="round-trip">
-                        <span><strong>Return Wed, Dec 8</strong></span>
-                        <span>2h 28m</span>
-                    </div>
-                    <div class="airline">
-                        <div class="logo-frem">
-                            <img src="assets/image/image 40.png">
-                            <div class="logo-name">
-                                <p><strong>Emirates</strong></p>
-                                <small>Airbus A320</small>
-                            </div>
-                        </div>
-                        <div class="flight-service">
-                            <li><img src="assets/image/airplane.png" alt="Meal" /></li>
-                            <li><img src="assets/image/wifi_dark.png" alt="WiFi" /></li>
-                            <li><img src="assets/image/ion_stopwatch.png" alt="Power Outlet" /></li>
-                            <li><img src="assets/image/ion_fast-food.png" alt="Entertainment" /></li>
-                            <li><img src="assets/image/Vector (1).png" alt="Meal" /></li>
-                        </div>
-                    </div>
-                </div>
-                <div class="line">
-                    <span class="line-left">
-                        <p>12:00 pm</p>
-                        <small style="font-size: 16px;">Newark(EWR)</small>
-                    </span>
-                    <img src="assets/image/Frame 181.png">
-                    <span class="line-right">
-                        <p>12:00 pm</p>
-                        <small style="font-size: 16px;">Newark(EWR)</small>
-                    </span>
-                </div>
-            </div>
-            <div class="option-2">
-                <label class="pay-full">
-                    <div class="pay-info">
-                        <p><strong>Pay in full</strong></p>
-                        <small>Pay the total and you are all set</small>
-                    </div>
-                    <input type="radio" name="payment" value="full" checked>
-                </label>
-                <label class="pay-later">
-                    <div class="pay-info">
-                        <p><strong>Pay part now, part later</strong></p>
-                        <small>Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment
-                            method on Nov 14, 2022. No extra fees.</small>
-                        <span class="pay-later__btn">More info</span>
-                    </div>
-                    <input type="radio" name="payment" value="later">
-                </label>
-            </div>
-            <div class="option-3">
-                <div class="visa-info">
-                    <label class="visa-info__label">    
-                        <img src="assets/image/visa_light.png" alt="Visa" />
-                        <p><strong>**** 4321</strong> 02/27</p>
-                    </label>
-                    <input type="radio" name="visa" value="visa" checked>
-                </div>
-                <div class="upload-container">
-                    <label for="image-upload" class="upload-frame">
-                        <div class="upload-content">
 
-                            <div class="icon"><img src="assets/image/Add_circle.png" alt="Add Image" /></div>
-                            <p>Add a new card</p>
-                        </div>
-                    </label>
-                    <input type="file" id="image-upload" accept="image/*" hidden>
-                </div>
+        <!-- Logo Center -->
+        <div class="logo">
+          <a href="index.html" class="logo__link">
+            <img src="assets/image/logo-small.png" alt="Golobe" class="logo__img" />
+          </a>
+        </div>
 
-                <div id="upload-popup" class="popup-overlay">
-                    <div class="popup-content">
-                        <span id="close-x" class="close-x">&times;</span>
-                        <div class="popup-info">
-                            <h2>Add a new Card</h2>
-                            <form class="card-form">
-                                <div class="input-group full-width">
-                                    <label for="card-number">Card Number</label>
-                                    <div class="input-field">
-                                        <input type="text" id="card-number" placeholder="4321 4321 4321 4321" >
-                                        <img src="assets/image/Visa.png" alt="Visa" class="visa-info__icon" />
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="input-group">
-                                        <label for="exp-date">Exp. Date</label>
-                                        <input type="text" id="exp-date" placeholder="02/27">
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="cvc">CVC</label>
-                                        <input type="text" id="cvc" placeholder="123">
-                                    </div>
-                                </div>
-                                <div class="input-group">
-                                    <label for="country-region">Country or Region</label>
-                                    <input type="text" id="country-region" placeholder="United States">
-                                    <span class="dropdown-icon">&#9662;</span>
-                                </div>
-                                <div class="form-checkbox">
-                                    <input type="checkbox" id="save-card" name="save-card" checked>
-                                    <label for="save-card">Save this card for future payments</label>
-                                </div>
-                                <button type="submit" class="btn-add-card"><a href="flight-booking-detail-ticket.html">Add Card </a></button>
-                                <div class="form-note">
-                                    By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge
-                                    your card for this payment and future payments in accordance with their terms. You
-                                    can always cancel your subscription.
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+        <!-- Right Menu -->
+        <div class="user-action">
+          <ul class="user-action__list">
+            <li class="user-action__item">
+              <img src="assets/image/heart_light.svg" alt="Heart" class="header__icon" />
+              <a href="#" class="user-action__link">Favourites</a>
+            </li>
+            <li class="user-action__item user-action__separator">|</li>
+            <li class="user-action__item">
+              <a href="#" class="user-action__link user-action__profile">
+                <div class="header__avatar-wrap">
+                  <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
+                  <img src="assets/image/ellipse.svg" alt="" class="user-action__ellipse" />
+                  <img src="assets/image/arrow-down_slamon.svg" alt="" class="user-action__arrow" />
                 </div>
-            </div>
+                John D.
+              </a>
+            </li>
+          </ul>
         </div>
-        <div class="right-ticket">
-            <div class="airline-info">
-                <div class="logo-frem-info">
-                    <img src="assets\image\Frame 186 (1).png">
-                    <div class="logo-info">
-                        <small>Economy </small>
-                        <p>Emirates A380 Airbus</p>
-                        <div class="rating-badge">
-                            <span class="score">4.2</span>
-                            <span class="status">Very Good</span>
-                            <span class="reviews">54 reviews</span>
-                        </div>
-                    </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <nav class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">Turkey</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">Istanbul</a>
+          </li>
+          <li class="breadcrumb__item breadcrumb__item--active">CVK Park Bosphorus Hotel Istanbul</li>
+        </ol>
+      </nav>
+
+      <div class="left-col">
+        <div class="booking-detail">
+          <div class="reservation-info">
+            <header class="reservation-info__header">
+              <h1 class="reservation-info__heading">Emirates A380 Airbus</h1>
+              <div class="price-value">
+                <span class="price-amount" style="color: #ff8682">$240</span>
+              </div>
+            </header>
+
+            <div class="reservation-info__flight-summary">
+              <span class="flight-summary__date"><strong>Return Wed, Dec 8</strong></span>
+              <span class="flight-summary__duration">2h 28m</span>
+            </div>
+
+            <div class="reservation-info__airline-card">
+              <div class="airline-card__brand">
+                <img src="assets/image/image 40.png" alt="Emirates" class="airline-card__logo" />
+                <div class="airline-card__name-wrap">
+                  <p class="airline-card__name"><strong>Emirates</strong></p>
+                  <small class="airline-card__model">Airbus A320</small>
                 </div>
+              </div>
+              <ul class="airline-card__services">
+                <li class="airline-card__service-item"><img src="assets/image/airplane.png" alt="Flight" /></li>
+                <li class="airline-card__service-item"><img src="assets/image/wifi_dark.png" alt="WiFi" /></li>
+                <li class="airline-card__service-item"><img src="assets/image/ion_stopwatch.png" alt="Stopwatch" /></li>
+                <li class="airline-card__service-item"><img src="assets/image/ion_fast-food.png" alt="Food" /></li>
+                <li class="airline-card__service-item"><img src="assets/image/Vector (1).png" alt="Seat" /></li>
+              </ul>
             </div>
-            <div class="lin"></div>
-            <p>Your booking is protected by golobe</p>
-            <div class="lin"></div>
-            <div class="price-table">
-                <img src="D:\DAIHOCMO\Lập trình Web\sản phẩm nộp giữa kỳ\image\Frame 221.png" />
+
+            <div class="reservation-info__schedule">
+              <div class="reservation-info__check-in">
+                <p class="reservation-info__time">12:00 pm</p>
+                <p class="reservation-info__desc">Newark(EWR)</p>
+              </div>
+              <img src="assets/image/Frame 181.png" alt="Flight Route" class="reservation-info__schedule-icon" />
+              <div class="reservation-info__check-out">
+                <p class="reservation-info__time">12:00 pm</p>
+                <p class="reservation-info__desc">Newark(EWR)</p>
+              </div>
             </div>
-            <div class="lin"></div>
-            <div class="price-table">
-                <img src="D:\DAIHOCMO\Lập trình Web\sản phẩm nộp giữa kỳ\image\Frame 223.png">
-            </div>
+          </div>
         </div>
+
+        <div class="payment-options">
+          <div class="payment-option payment-option--active">
+            <label class="payment-option__label">
+              <div class="payment-option__content">
+                <p class="payment-option__title">Pay in full</p>
+                <p class="payment-option__desc">Pay the total and you are all set</p>
+              </div>
+              <input type="radio" name="payment_method" value="full" class="payment-option__radio" checked />
+              <span class="radio-icon"></span>
+            </label>
+          </div>
+
+          <div class="payment-option">
+            <label class="payment-option__label">
+              <div class="payment-option__content">
+                <p class="payment-option__title">Pay part now, part later</p>
+                <p class="payment-option__desc">Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</p>
+              </div>
+              <input type="radio" name="payment_method" value="later" class="payment-option__radio" />
+              <span class="radio-icon"></span>
+            </label>
+            <a href="#" class="payment-options__more-info">More info</a>
+          </div>
+        </div>
+
+        <div class="payment-card payment-options">
+          <div class="payment-option payment-option--active">
+            <label class="payment-option__label">
+              <div class="payment-option__content" style="flex-direction: row; align-items: center; gap: 16px">
+                <img src="assets/image/visa_light.png" alt="visa" class="payment-option__img" />
+                <p class="payment-option__title">**** 4321</p>
+                <p class="payment-option__desc">02/27</p>
+              </div>
+              <input type="radio" name="selected_card" class="payment-option__radio" checked />
+              <span class="radio-icon"></span>
+            </label>
+          </div>
+
+          <div class="upload-container">
+            <label for="image-upload" class="add-new-card-link" style="cursor: pointer; display: block">
+              <div class="add-new-card">
+                <img src="assets/image/Add_circle.png" alt="Add Image" class="add-new-card__icon" />
+                <p class="add-new-card__text">Add a new card</p>
+              </div>
+            </label>
+            <input type="file" id="image-upload" accept="image/*" hidden />
+          </div>
+
+          <div id="upload-popup" class="popup-overlay">
+            <div class="popup-content">
+              <span id="close-x" class="close-x">&times;</span>
+              <div class="popup-info">
+                <h2>Add a new Card</h2>
+                <form class="card-form">
+                  <div class="input-group full-width">
+                    <label for="card-number">Card Number</label>
+                    <div class="input-field">
+                      <input type="text" id="card-number" placeholder="4321 4321 4321 4321" />
+                      <img src="assets/image/Visa.png" alt="Visa" class="visa-info__icon" />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="input-group">
+                      <label for="exp-date">Exp. Date</label>
+                      <input type="text" id="exp-date" placeholder="02/27" />
+                    </div>
+                    <div class="input-group">
+                      <label for="cvc">CVC</label>
+                      <input type="text" id="cvc" placeholder="123" />
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <label for="country-region">Country or Region</label>
+                    <input type="text" id="country-region" placeholder="United States" />
+                    <span class="dropdown-icon">&#9662;</span>
+                  </div>
+                  <div class="form-checkbox">
+                    <input type="checkbox" id="save-card" name="save-card" checked />
+                    <label for="save-card">Save this card for future payments</label>
+                  </div>
+                  <button type="submit" class="btn-add-card">
+                    <a href="flight-booking-detail-ticket.html" style="color: inherit; text-decoration: none">Add Card</a>
+                  </button>
+                  <div class="form-note">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.</div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="booking-summary">
+        <div class="booking-summary__header">
+          <img src="assets\image\Frame 186 (1).png" alt="Airline Cover" class="booking-summary__img" />
+          <div class="booking-summary__info">
+            <div>
+              <p class="booking-summary__hotel-name">Economy</p>
+              <h3 class="booking-summary__room-name">Emirates A380 Airbus</h3>
+            </div>
+            <div class="booking-summary__rating">
+              <span class="rating-box__label booking-summary__score">4.2</span>
+              <span class="hotel-card__rating-text"><strong class="booking-summary__status">Very Good</strong> 54 reviews</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="booking-summary__divider"></div>
+
+        <p class="booking-summary__protection">Your booking is protected by <strong>golobe</strong></p>
+
+        <div class="booking-summary__divider"></div>
+
+        <div class="booking-summary__price-details">
+          <h4 class="booking-summary__title">Price Details</h4>
+
+          <div class="booking-summary__row">
+            <span class="booking-summary__label">Base Fare</span>
+            <span class="booking-summary__value">$400</span>
+          </div>
+          <div class="booking-summary__row">
+            <span class="booking-summary__label">Discount</span>
+            <span class="booking-summary__value">$400</span>
+          </div>
+          <div class="booking-summary__row">
+            <span class="booking-summary__label">Taxes</span>
+            <span class="booking-summary__value">$400</span>
+          </div>
+          <div class="booking-summary__row">
+            <span class="booking-summary__label">Service Fee</span>
+            <span class="booking-summary__value">$400</span>
+          </div>
+
+          <div class="booking-summary__divider"></div>
+
+          <div class="booking-summary__row booking-summary__row--total">
+            <span class="booking-summary__label">Total</span>
+            <span class="booking-summary__value">$400</span>
+          </div>
+        </div>
+      </aside>
     </main>
-
+    <!-- ================= FOOTER ================= -->
     <footer class="footer-wrapper">
-        <div class="footer-main">
-            <div class="newsletter-card">
-                <div class="newsletter-content">
-                    <h2>Subscribe<br />Newsletter</h2>
-                    <div class="newsletter-content__desc">
-                        <h4>The Travel</h4>
-                        <p>Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
-                    </div>
-                    <form class="subscribe-form">
-                        <input type="email" placeholder="Your email address" required />
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-                <div class="newsletter-image">
-                    <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" />
-                </div>
+      <div class="footer-main">
+        <div class="newsletter-card">
+          <div class="newsletter-content">
+            <h2 class="newsletter-content__title">Subscribe<br />Newsletter</h2>
+            <div class="newsletter-content__desc">
+              <h4 class="newsletter-content__subtitle">The Travel</h4>
+              <p class="newsletter-content__text">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
             </div>
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" />
-                    </div>
-                    <div class="social-icons">
-                        <img src="./assets/image/facebook_light.svg" />
-                        <img src="./assets/image/twitter_light.svg" />
-                        <img src="./assets/image/youtube_light.svg" />
-                        <img src="./assets/image/instagram_lilght.svg" />
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <div class="link-column">
-                        <h4>Our Destinations</h4>
-                        <ul>
-                            <li>Canada</li>
-                            <li>Alaska</li>
-                            <li>France</li>
-                            <li>Iceland</li>
-                        </ul>
-                    </div>
-
-                    <div class="link-column">
-                        <h4>Our Activities</h4>
-                        <ul>
-                            <li>Northern Lights</li>
-                            <li>Cruising & sailing</li>
-                            <li>Multi-activities</li>
-                            <li>Kayaing</li>
-                        </ul>
-                    </div>
-
-                    <div class="link-column">
-                        <h4>Travel Blogs</h4>
-                        <ul>
-                            <li>Bali Travel Guide</li>
-                            <li>Sri Lanks Travel Guide</li>
-                            <li>Peru Travel Guide</li>
-                            <li>Bali Travel Guide</li>
-                        </ul>
-                    </div>
-
-                    <div class="link-column">
-                        <h4>About Us</h4>
-                        <ul>
-                            <li>Our Story</li>
-                            <li>Work with us</li>
-                        </ul>
-                    </div>
-
-                    <div class="link-column">
-                        <h4>Contact Us</h4>
-                        <ul>
-                            <li>Our Story</li>
-                            <li>Work with us</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <form class="subscribe-form">
+              <input type="email" class="subscribe-form__input" placeholder="Your email address" required />
+              <button type="submit" class="btn btn--primary subscribe-form__btn">Subscribe</button>
+            </form>
+          </div>
+          <div class="newsletter-image">
+            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" class="newsletter-image__img" />
+          </div>
         </div>
-    </footer>
-    <script src="assets/js/flight-booking-detail-visa.js"></script>
-</body>
 
+        <div class="footer-container">
+          <div class="footer-brand">
+            <div class="logo">
+              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" class="logo__img" />
+            </div>
+            <div class="social-icons">
+              <img src="./assets/image/facebook_light.svg" alt="Facebook" class="social-icons__img" />
+              <img src="./assets/image/twitter_light.svg" alt="Twitter" class="social-icons__img" />
+              <img src="./assets/image/youtube_light.svg" alt="Youtube" class="social-icons__img" />
+              <img src="./assets/image/instagram_lilght.svg" alt="Instagram" class="social-icons__img" />
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="link-column">
+              <h4 class="link-column__title">Our Destinations</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Canada</li>
+                <li class="link-column__item">Alaska</li>
+                <li class="link-column__item">France</li>
+                <li class="link-column__item">Iceland</li>
+              </ul>
+            </div>
+            <div class="link-column">
+              <h4 class="link-column__title">Our Activities</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Northern Lights</li>
+                <li class="link-column__item">Cruising & sailing</li>
+                <li class="link-column__item">Multi-activities</li>
+                <li class="link-column__item">Kayaing</li>
+              </ul>
+            </div>
+            <div class="link-column">
+              <h4 class="link-column__title">Travel Blogs</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Bali Travel Guide</li>
+                <li class="link-column__item">Sri Lanks Travel Guide</li>
+                <li class="link-column__item">Peru Travel Guide</li>
+                <li class="link-column__item">Bali Travel Guide</li>
+              </ul>
+            </div>
+            <div class="link-column">
+              <h4 class="link-column__title">About Us</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Our Story</li>
+                <li class="link-column__item">Work with us</li>
+              </ul>
+            </div>
+            <div class="link-column">
+              <h4 class="link-column__title">Contact Us</h4>
+              <ul class="link-column__list">
+                <li class="link-column__item">Our Story</li>
+                <li class="link-column__item">Work with us</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script chạy Popup Modal giữ nguyên -->
+    <script src="assets/js/flight-booking-detail-visa.js"></script>
+  </body>
 </html>
+

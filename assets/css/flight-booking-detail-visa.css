@@ -1,255 +1,239 @@
-.visa-info {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 24px;
-  border-radius: 8px;
-  cursor: pointer;
+/* =======================================================
+   1. KHU VỰC THANH TOÁN (PAYMENT CARD) - Đồng bộ từ Hotel
+   ======================================================= */
+.payment-card .payment-option__content {
+  flex-direction: row; /*[cite: 11] */
+  align-items: center; /*[cite: 11] */
+  gap: 8px; /*[cite: 11] */
 }
 
-.visa-info:has(input[type="radio"]:checked) {
-  background-color: #8dd3bb;
+.payment-option__img {
+  margin-right: 24px; /*[cite: 11] */
 }
 
-.visa-info__label {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
+/* =======================================================
+   2. KHUNG "ADD A NEW CARD" (Ghi đè upload-frame cũ)
+   ======================================================= */
+.upload-container {
+  margin: 10px 0; /*[cite: 10] */
+  gap: 10px; /*[cite: 10] */
 }
 
-.visa-info__label img {
-  margin: 0 0 6px 0;
-  font-size: 32px;
-}
-
-.visa-info__label p {
-  font-size: 16px;
-  color: #111827;
+.add-new-card-link {
+  text-decoration: none;
   display: block;
-  line-height: 1.5;
 }
 
-.visa-info input[type="radio"] {
-  appearance: none;
-  align-items: center;
-  width: 22px;
-  height: 22px;
-  border: 2px solid #111827;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-  position: relative;
-  flex-shrink: 0;
+.add-new-card {
+  display: flex; /*[cite: 11] */
+  flex-direction: column; /*[cite: 11] */
+  justify-content: center; /*[cite: 11] */
+  align-items: center; /*[cite: 11] */
+  padding: 16px 24px; /*[cite: 11] */
+  height: 190px; /*[cite: 11] */
+  border: 2px dashed #8dd3bb; /*[cite: 11] */
+  border-radius: 15px; /*[cite: 11] */
+  cursor: pointer; /*[cite: 10] */
+  transition: all 0.2s ease;
+}
+
+.add-new-card:hover {
+  background-color: #eaf5f0; /*[cite: 10] */
+  border-color: #6ab69b; /*[cite: 10] */
+}
+
+.add-new-card__icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px; /*[cite: 10] */
+}
+
+.add-new-card__text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #112211; /*[cite: 10] */
   margin: 0;
 }
 
-.visa-info input[type="radio"]:checked {
-  border-color: #ffffff;
-}
-
-.visa-info input[type="radio"]:checked::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.upload-container {
-  margin: 10px 0;
-  gap: 10px;
-}
-
-.upload-frame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 180px;
-  border: 2px dashed #8DD3BB;
-  border-radius: 12px;
-  cursor: pointer;
-}
-
-.upload-frame:hover {
-  background-color: #eaf5f0;
-  border-color: #6ab69b;
-}
-
-.upload-content {
-  text-align: center;
-  color: #111827;
-}
-
-.upload-content .icon {
-  font-size: 32px;
-  margin-bottom: 12px;
-}
-
-.upload-content p {
-  font-size: 12px;
-  color: #112211;
-  margin: 0 0 4px 0;
-}
-
+/* =======================================================
+   3. POPUP MODAL (Giữ nguyên từ code cũ để JS hoạt động)
+   ======================================================= */
 .popup-overlay {
-  display:none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
+  display: none; /*[cite: 10] */
+  position: fixed; /*[cite: 10] */
+  top: 0; /*[cite: 10] */
+  left: 0; /*[cite: 10] */
+  width: 100%; /*[cite: 10] */
+  height: 100%; /*[cite: 10] */
+  background-color: rgba(0, 0, 0, 0.5); /*[cite: 10] */
+  z-index: 9999; /*[cite: 10] */
+  align-items: center; /*[cite: 10] */
+  justify-content: center; /*[cite: 10] */
 }
 
 .popup-content {
-  background: #ffffff;
-  padding: 36px 40px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 520px;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-height: 90vh;
-  overflow-y: auto;
-  /* Cho phép cuộn nếu màn hình nhỏ */
+  background: #ffffff; /*[cite: 10] */
+  padding: 36px 40px; /*[cite: 10] */
+  border-radius: 20px; /*[cite: 10] */
+  width: 90%; /*[cite: 10] */
+  max-width: 520px; /*[cite: 10] */
+  position: relative; /*[cite: 10] */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /*[cite: 10] */
+  max-height: 90vh; /*[cite: 10] */
+  overflow-y: auto; /*[cite: 10] */
 }
 
-/* --- 2. Nút X đóng popup --- */
+/* Nút X đóng popup */
 .close-x {
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  font-size: 26px;
-  color: #111827;
-  cursor: pointer;
-  line-height: 1;
+  position: absolute; /*[cite: 10] */
+  top: 20px; /*[cite: 10] */
+  right: 24px; /*[cite: 10] */
+  font-size: 26px; /*[cite: 10] */
+  color: #111827; /*[cite: 10] */
+  cursor: pointer; /*[cite: 10] */
+  line-height: 1; /*[cite: 10] */
 }
 
 .close-x:hover {
-  color: #6b7280;
+  color: #6b7280; /*[cite: 10] */
 }
 
-/* --- 3. Tiêu đề --- */
+/* Tiêu đề Popup */
 .popup-info h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #111827;
-  margin: 0 0 24px 0;
+  font-size: 28px; /*[cite: 10] */
+  font-weight: 700; /*[cite: 10] */
+  color: #111827; /*[cite: 10] */
+  margin: 0 0 24px 0; /*[cite: 10] */
 }
 
+/* Form Add Card */
 .card-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: flex; /*[cite: 10] */
+  flex-direction: column; /*[cite: 10] */
+  gap: 20px; /*[cite: 10] */
 }
 
 .form-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px
+  display: flex; /*[cite: 10] */
+  justify-content: space-between; /*[cite: 10] */
+  gap: 10px; /*[cite: 10] */
 }
 
 .input-group {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin-top: 13px;
+  position: relative; /*[cite: 10] */
+  display: flex; /*[cite: 10] */
+  flex-direction: column; /*[cite: 10] */
+  margin-top: 13px; /*[cite: 10] */
+  width: 100%;
 }
 
-.input-group>label {
-  position: absolute;
-  top: -10px;
-  left: 14px;
-  background-color: #ffffff;
-  padding: 0 6px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #4b5563;
-  z-index: 2;
+.input-group > label {
+  position: absolute; /*[cite: 10] */
+  top: -10px; /*[cite: 10] */
+  left: 14px; /*[cite: 10] */
+  background-color: #ffffff; /*[cite: 10] */
+  padding: 0 6px; /*[cite: 10] */
+  font-size: 13px; /*[cite: 10] */
+  font-weight: 500; /*[cite: 10] */
+  color: #4b5563; /*[cite: 10] */
+  z-index: 2; /*[cite: 10] */
 }
 
 .input-group input {
-  width: 100%;
-  height: 52px;
-  padding: 0 16px;
-  font-size: 15px;
-  color: #111827;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  outline: none;
-  box-sizing: border-box;
+  width: 100%; /*[cite: 10] */
+  height: 52px; /*[cite: 10] */
+  padding: 0 16px; /*[cite: 10] */
+  font-size: 15px; /*[cite: 10] */
+  color: #111827; /*[cite: 10] */
+  border: 1px solid #d1d5db; /*[cite: 10] */
+  border-radius: 8px; /*[cite: 10] */
+  outline: none; /*[cite: 10] */
+  box-sizing: border-box; /*[cite: 10] */
 }
 
 .input-group input:focus {
-  border-color: #8dd3bb;
+  border-color: #8dd3bb; /*[cite: 10] */
+}
+
+.input-field {
+  position: relative;
+  width: 100%;
 }
 
 .visa-info__icon {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 32px;
-  height: auto;
-  object-fit: contain;
-  pointer-events: none;
+  position: absolute; /*[cite: 10] */
+  right: 16px; /*[cite: 10] */
+  top: 50%; /*[cite: 10] */
+  transform: translateY(-50%); /*[cite: 10] */
+  width: 32px; /*[cite: 10] */
+  height: auto; /*[cite: 10] */
+  object-fit: contain; /*[cite: 10] */
+  pointer-events: none; /*[cite: 10] */
 }
 
-
 .dropdown-icon {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  font-size: 14px;
-  color: #4b5563;
-  pointer-events: none;
+  position: absolute; /*[cite: 10] */
+  right: 16px; /*[cite: 10] */
+  top: 50%; /*[cite: 10] */
+  transform: translateY(-50%);
+  font-size: 14px; /*[cite: 10] */
+  color: #4b5563; /*[cite: 10] */
+  pointer-events: none; /*[cite: 10] */
 }
 
 .form-checkbox {
-  display: flex;
-  margin-top: 4px;
-  gap: 10px;
-  align-items: center;
+  display: flex; /*[cite: 10] */
+  margin-top: 4px; /*[cite: 10] */
+  gap: 10px; /*[cite: 10] */
+  align-items: center; /*[cite: 10] */
 }
 
 .form-checkbox input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  accent-color: #000000;
-  cursor: pointer;
+  width: 20px; /*[cite: 10] */
+  height: 20px; /*[cite: 10] */
+  accent-color: #000000; /*[cite: 10] */
+  cursor: pointer; /*[cite: 10] */
 }
 
 .form-checkbox label {
-  font-size: 14px;
-  color: #112211;
+  font-size: 14px; /*[cite: 10] */
+  color: #112211; /*[cite: 10] */
 }
+
 .btn-add-card {
-  width: 100%;
-  height: 52px;
-  background-color: #8dd3bb;
+  width: 100%; /*[cite: 10] */
+  height: 52px; /*[cite: 10] */
+  background-color: #8dd3bb; /*[cite: 10] */
+  border: none; /*[cite: 10] */
+  border-radius: 8px; /*[cite: 10] */
+  font-size: 16px; /*[cite: 10] */
+  font-weight: 600; /*[cite: 10] */
+  cursor: pointer; /*[cite: 10] */
+  margin-top: 4px; /*[cite: 10] */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-add-card a {
   color: #111827;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 4px;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-add-card:hover {
-  background-color: #7bc1a9;
+  background-color: #7bc1a9; /*[cite: 10] */
 }
 
 .form-note {
-  font: size 9px;
-  color: #112211;
-  text-align: center;
+  font-size: 12px;
+  color: #112211; /*[cite: 10] */
+  text-align: center; /*[cite: 10] */
+  line-height: 1.4;
+  margin-top: 8px;
 }
+
