@@ -1,114 +1,115 @@
 .main-ticket {
-    display: flex;
-    flex-direction: column; 
-    gap: 24px;            
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .breadcrumb {
-    width: 100%;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
+  width: 100%;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
 }
 
 .breadcrumb a {
-    color: #112211;
-    text-decoration: none;
+  color: #112211;
+  text-decoration: none;
 }
 
 .breadcrumb span {
-    color:#686c68;
-    font-weight: 500;
+  color: #686c68;
+  font-weight: 500;
 }
-.plane{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
-    color:#112211;
-    gap: 16px;
+.plane {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  color: #112211;
+  gap: 16px;
 }
-.left-plane , .right-plane  {
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
+.left-plane,
+.right-plane {
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
 }
-.left-plane h2{
-    color:#112211;
-    font-size:24px;
-    margin-bottom: 16px;
+.left-plane h2 {
+  color: #112211;
+  font-size: 24px;
+  margin-bottom: 16px;
 }
-.left-plane img{
-    width: 18px;
-    height: auto;
-    margin-right:8px;
+.left-plane img {
+  width: 18px;
+  height: auto;
+  margin-right: 8px;
 }
-.left-plane span{
-    color:#112211;
-    font-size:14px;
+.left-plane span {
+  color: #112211;
+  font-size: 14px;
 }
 .right-plane {
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-end;   
-    gap: 12px;             
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
 }
 
-.right-plane  p {
-    font-size: 32px;
-    font-weight: 700;
-    color: #111827;      
-    margin: 0;
+.right-plane p {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
 }
 
 .btn-plane {
-    display: flex;
-    align-items: center;
-    gap: 12px;            
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .btn-share {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border: 1px solid #8dd3bb;
-    border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #8dd3bb;
+  border-radius: 4px;
 }
 
 .btn-share:hover {
-    background-color: #f0f7f4;
+  background-color: #f0f7f4;
 }
 
 .btn-share img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .btn-download {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 50px;
-    background-color: #8DD3BB;
-    border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 50px;
+  background-color: #8dd3bb;
+  border-radius: 4px;
 }
 
 .btn-download:hover {
-    background-color: #7bc1a9;
+  background-color: #7bc1a9;
 }
 
 .btn-download p {
-    font-size: 15px;
-    font-weight: 600;
-    color: #111827;
-    margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
 }
 /* --- TỔNG THỂ --- */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif; /* Font chữ chuẩn UI */
+  font-family: "Segoe UI", Arial, sans-serif; /* Font chữ chuẩn UI */
 }
 
 .ticket-wrapper {
@@ -126,10 +127,10 @@ body {
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid #eaeaea;
-  
-  /* Lệnh này rất quan trọng: Giúp mảng màu xanh của header 
+
+  /* Lệnh này rất quan trọng: Giúp mảng màu xanh của header
      tự động bo góc theo khung ngoài mà không bị tràn chữ nhật */
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 /* Cột thời gian (Bên trái) */
@@ -140,9 +141,9 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-width: 180px;
-  
+
   /* Tạo đường nét đứt mờ chia cắt hai phần của vé */
-  border-right: 1px dashed #cbd5e1; 
+  border-right: 1px dashed #cbd5e1;
 }
 
 .ticket-time__item h3 {
@@ -244,14 +245,13 @@ body {
   width: fit-content;
   margin: 20px auto;
   width: 100%;
-
 }
 .ticket-time {
   padding: 32px 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start; 
+  align-items: flex-start;
   min-width: 170px;
   border-radius: 16px 0 0 16px;
   border-right: 1px;
@@ -292,7 +292,7 @@ body {
   min-width: 520px;
   border-radius: 0 16px 16px 0;
   overflow: hidden;
-  border: 1px ;
+  border: 1px;
 }
 .ticket-header {
   background-color: #75cbaf;
@@ -336,7 +336,6 @@ body {
   font-size: 14px;
 }
 
-
 .flight-code h2 {
   font-size: 32px;
   font-weight: 800;
@@ -376,28 +375,28 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
 }
 .ticket-service li {
   display: grid;
-  grid-template-columns: auto 1fr; 
+  grid-template-columns: auto 1fr;
   column-gap: 12px;
   row-gap: 4px;
   align-items: center;
 }
 .ticket-service li img {
   grid-column: 1;
-  width: 44px; 
+  width: 44px;
   height: 44px;
   object-fit: contain;
 }
 .ticket-service li p {
-  grid-column: 2; 
-  grid-row: 1; 
+  grid-column: 2;
+  grid-row: 1;
   margin: 0;
   font-size: 13px;
-  color: #112211; 
+  color: #112211;
   font-weight: 500;
   line-height: 1;
 }
@@ -407,11 +406,10 @@ body {
   grid-row: 2;
   margin: 0;
   font-size: 14px;
-  color: #112211; 
+  color: #112211;
   font-weight: 600;
   line-height: 1;
 }
-
 
 .ticket-name {
   grid-column: 1;
@@ -436,7 +434,7 @@ body {
 .ticket-qr {
   grid-column: 2;
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 .ticket-qr img {
@@ -445,7 +443,7 @@ body {
 .conditions h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #112211; 
+  color: #112211;
   margin-top: 0;
   margin-bottom: 40px;
 }
@@ -463,21 +461,21 @@ body {
 }
 .conditions__content li {
   position: relative;
-  padding-left: 18px; 
-  margin-bottom: 24px; 
+  padding-left: 18px;
+  margin-bottom: 24px;
 }
 .conditions__content li::before {
   position: absolute;
   left: 0;
   top: 0;
   font-size: 30px;
-  line-height: 14px; 
+  line-height: 14px;
   color: #112211;
 }
-.conditions__content li p{
+.conditions__content li p {
   margin: 0;
   font-size: 15px;
-  color: #112211; 
+  color: #112211;
   line-height: 1.6;
   font-weight: 400;
 }
@@ -496,3 +494,4 @@ body {
   line-height: 1.6;
   font-weight: 400;
 }
+
