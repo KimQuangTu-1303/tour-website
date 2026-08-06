@@ -1,497 +1,405 @@
-.main-ticket {
+/* --- TỔNG THỂ --- */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
-.breadcrumb {
-  width: 100%;
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
+
+.breadcrumb__item.breadcrumb__item--active {
+  opacity: 0.4;
 }
 
-.breadcrumb a {
-  color: #112211;
-  text-decoration: none;
-}
-
-.breadcrumb span {
-  color: #686c68;
+.breadcrumb__link {
+  font-size: 1.4rem;
   font-weight: 500;
+  color: var(--blackish-green-color);
 }
-.plane {
+
+/* =========================================
+   1. BOOKING CARD HEADER (Kế thừa từ cấu trúc Hotel)
+   ========================================= */
+.booking-card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.booking-card__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  color: #112211;
+}
+
+.booking-card__info {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
-.left-plane,
-.right-plane {
+
+.booking-card__title {
+  font-size: 2.4rem; /* Hoặc 32px */
+  font-weight: 700;
+  line-height: 1;
+  color: #112211;
+  margin: 0;
+}
+
+.booking-card__location {
+  display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 16px;
-}
-.left-plane h2 {
-  color: #112211;
-  font-size: 24px;
-  margin-bottom: 16px;
-}
-.left-plane img {
-  width: 18px;
-  height: auto;
-  margin-right: 8px;
-}
-.left-plane span {
   color: #112211;
   font-size: 14px;
 }
-.right-plane {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
+
+.booking-card__location-icon {
+  width: 18px;
+  height: auto;
 }
 
-.right-plane p {
-  font-size: 32px;
+/* Chỉnh lại Grid cho phần action (Giá + Nút) */
+.booking-card__actions {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.booking-card__price {
+  font-size: 3.2rem; /* Hoặc 32px */
   font-weight: 700;
-  color: #111827;
+  line-height: 1;
+  color: #ff8682; /* Salmon color chuẩn */
+  justify-self: end;
+  grid-column: span 2;
   margin: 0;
 }
 
-.btn-plane {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.btn-share {
+.booking-card__btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.booking-card__btn--icon {
   width: 48px;
   height: 48px;
   border: 1px solid #8dd3bb;
-  border-radius: 4px;
+  background-color: transparent;
 }
 
-.btn-share:hover {
+.booking-card__btn--icon:hover {
   background-color: #f0f7f4;
 }
 
-.btn-share img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-}
-
-.btn-download {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 50px;
+.booking-card__btn--primary {
+  padding: 15px 40px;
   background-color: #8dd3bb;
-  border-radius: 4px;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-.btn-download:hover {
+.booking-card__btn--primary:hover {
   background-color: #7bc1a9;
 }
 
-.btn-download p {
-  font-size: 15px;
-  font-weight: 600;
-  color: #111827;
-  margin: 0;
-}
-/* --- TỔNG THỂ --- */
-body {
-  font-family: "Segoe UI", Arial, sans-serif; /* Font chữ chuẩn UI */
-}
-
-.ticket-wrapper {
+/* =========================================
+   2. TICKET SECTION
+   ========================================= */
+.ticket {
   display: flex;
-  gap: 16px; /* Khoảng cách giữa thẻ vé chính và thẻ bản đồ */
-  padding: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
+  height: 310px; /* Cố định chiều cao như bản thiết kế Hotel */
 }
 
-/* --- KHỐI 1: TẤM VÉ CHÍNH --- */
-.ticket-card {
+/* -- KHỐI TRÁI: CHỨA TIMELINE + THÔNG TIN VÉ -- */
+.ticket__left {
   display: flex;
   flex: 1;
   background-color: #ffffff;
   border-radius: 16px;
   border: 1px solid #eaeaea;
-
-  /* Lệnh này rất quan trọng: Giúp mảng màu xanh của header
-     tự động bo góc theo khung ngoài mà không bị tràn chữ nhật */
   overflow: hidden;
 }
 
-/* Cột thời gian (Bên trái) */
-.ticket-time {
-  background-color: #edf6f2; /* Màu xanh lá cực nhạt */
-  padding: 24px 30px;
+/* Cột Sidebar / Timeline */
+.ticket__sidebar {
+  background-color: #edf6f2;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 180px;
-
-  /* Tạo đường nét đứt mờ chia cắt hai phần của vé */
-  border-right: 1px dashed #cbd5e1;
 }
 
-.ticket-time__item h3 {
-  font-size: 26px;
-  font-weight: 700;
-  color: #111;
-  margin: 0 0 4px 0;
-}
-
-.ticket-time__item p {
-  font-size: 13px;
-  color: #888;
-  margin: 0;
-}
-
-.ticket-path-vertical {
-  text-align: center;
-  margin: 15px 0;
-}
-
-/* Cột thông tin chính (Ở giữa) */
-.ticket-main {
-  flex: 1;
+.ticket__data-group {
   display: flex;
   flex-direction: column;
+  gap: 4px;
 }
 
-/* Header mảng màu xanh mint */
-.ticket-header {
-  background-color: #8cd4b9; /* Xanh mint chuẩn hình */
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.ticket-header-left {
-  display: flex;
-  align-items: center;
-}
-
-.user-action__avt {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 12px;
-  border: 2px solid #ffffff; /* Viền trắng quanh avatar */
-}
-
-.user-info p {
-  font-weight: 600;
-  color: #111;
-  margin: 0;
-  font-size: 16px;
-}
-
-.user-info small {
-  color: #3b5a4d; /* Chữ phụ hơi tối màu hơn nền */
-  font-size: 12px;
-}
-
-.ticket-header-right p {
-  font-weight: 700;
-  color: #111;
-  margin: 0;
-  font-size: 14px;
-}
-
-/* Khu vực thông tin chi tiết */
-.ticket-details {
-  display: flex;
-  justify-content: space-between;
-  padding: 24px;
-  flex: 1; /* Đẩy phần footer xuống mép dưới */
-}
-
-.detail-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.detail-label {
-  font-size: 12px;
-  color: #888;
-  margin-bottom: 6px;
-  font-weight: 500;
-}
-
-.detail-value {
-  font-size: 14px;
-  font-weight: 700;
-  color: #111;
-}
-.ticket {
-  display: flex;
-  align-items: stretch;
-  color: #111827;
-  width: fit-content;
-  margin: 20px auto;
-  width: 100%;
-}
-.ticket-time {
-  padding: 32px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  min-width: 170px;
-  border-radius: 16px 0 0 16px;
-  border-right: 1px;
-}
-
-.ticket-time__item h3 {
-  font-size: 26px;
+.ticket__time {
+  font-size: 24px;
   font-weight: 700;
   color: #111827;
-  margin: 0 0 4px 0;
-  line-height: 1.1;
+  margin: 0;
+  line-height: 1;
 }
 
-.ticket-time__item p {
-  font-size: 13px;
+.ticket__label {
+  font-size: 14px;
   color: #6b7280;
   margin: 0;
   font-weight: 500;
 }
 
-.ticket-path-icon {
+.ticket__timeline-divider {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 100%;
-  margin: 16px 0;
+  align-items: center;
+  flex: 1;
 }
 
-.ticket-path-icon img {
-  height: 60px;
-  width: auto;
-  opacity: 0.6;
-}
-.ticket-main {
+/* Cột Thông Tin Chính */
+.ticket__main {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-width: 520px;
-  border-radius: 0 16px 16px 0;
-  overflow: hidden;
-  border: 1px;
+  position: relative; /* Quan trọng: Để absolute mã vạch/code */
+  background-color: #ffffff;
 }
-.ticket-header {
-  background-color: #75cbaf;
-  padding: 18px 24px;
+
+.ticket__guest-banner {
+  background-color: #8cd4b9;
+  padding: 20px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.ticket-header-left {
+.ticket__user {
   display: flex;
   align-items: center;
 }
 
-.user-action__avt {
-  width: 46px;
-  height: 46px;
+.ticket__avatar {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 14px;
+  margin-right: 16px;
   border: 2px solid #ffffff;
 }
 
-.user-info p {
-  font-weight: 700;
-  color: #111827;
-  margin: 0 0 2px 0;
-  font-size: 18px;
+.ticket__user-info {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
 }
 
-.user-info small {
+.ticket__name {
+  font-weight: 700;
+  color: #111827;
+  font-size: 20px;
+  margin: 0;
+}
+
+.ticket__pass {
   color: #2f4f44;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
 }
 
-.ticket-header-right p {
+.ticket__class {
   font-weight: 700;
   color: #111827;
-  margin: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.flight-code h2 {
+/* Lưới chi tiết vé (Nằm ngang) */
+.ticket__details {
+  display: flex;
+  gap: 40px;
+  padding: 24px;
+}
+
+.ticket__detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ticket__detail-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.ticket__detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ticket__detail-label {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.ticket__detail-value {
+  margin: 0;
+  font-size: 16px;
+  color: #112211;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* Reference (Góc dưới trái) */
+.ticket__reference {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ticket__flight-code {
   font-size: 32px;
   font-weight: 800;
-  margin: 0 0 2px 0;
   color: #112211;
   line-height: 1;
 }
 
-.flight-code span {
-  font-size: 12px;
-  color: #112211;
+.ticket__booking-id {
+  font-size: 14px;
+  color: #888;
   font-weight: 500;
 }
 
-.ticket-map {
+/* Barcode (Góc dưới phải) */
+.ticket__barcode {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* -- KHỐI PHẢI: BẢN ĐỒ -- */
+.ticket__aside {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
   border-radius: 16px;
-  padding: 16px;
+  padding: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 260px;
-  margin-left: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  min-width: 320px;
 }
 
-.map-image {
+.ticket__side-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 12px;
-}
-.ticket-service {
-  padding: 24px 20px;
-}
-.ticket-service ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.ticket-service li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 12px;
-  row-gap: 4px;
-  align-items: center;
-}
-.ticket-service li img {
-  grid-column: 1;
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-}
-.ticket-service li p {
-  grid-column: 2;
-  grid-row: 1;
-  margin: 0;
-  font-size: 13px;
-  color: #112211;
-  font-weight: 500;
-  line-height: 1;
 }
 
-.ticket-service li small {
-  grid-column: 2;
-  grid-row: 2;
-  margin: 0;
-  font-size: 14px;
-  color: #112211;
-  font-weight: 600;
-  line-height: 1;
-}
-
-.ticket-name {
-  grid-column: 1;
-  padding: 10px 0 24px 24px;
+/* =========================================
+   3. TERMS AND CONDITIONS SECTION
+   ========================================= */
+.terms {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  gap: 32px;
+  margin-top: 24px;
 }
 
-.ticket-name p {
-  margin: 0 0 4px 0;
-  font-size: 28px;
-  font-weight: 800;
-  color: #112211;
-  line-height: 1;
-}
-
-.ticket-name span {
-  font-size: 12px;
-  color: #888;
-}
-.ticket-qr {
-  grid-column: 2;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.ticket-qr img {
-  padding: 16px 36px;
-}
-.conditions h2 {
-  font-size: 32px;
+.terms__title {
+  font-size: 2.4rem; /* ~24px */
   font-weight: 700;
   color: #112211;
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-.conditions__content h3 {
-  font-size: 20px;
-  font-weight: 600;
-  color: #112211;
-  margin-top: 0;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
-.conditions__content ul {
+.terms__group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.terms__subtitle {
+  font-size: 2rem; /* ~20px */
+  font-weight: 600;
+  color: #112211;
+  margin: 0;
+}
+
+.terms__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
-.conditions__content li {
+
+.terms__item {
   position: relative;
-  padding-left: 18px;
-  margin-bottom: 24px;
+  padding-left: 12px;
+  font-size: 1.5rem; /* ~15px */
+  color: #112211;
+  line-height: 1.6;
 }
-.conditions__content li::before {
+
+.terms__item::before {
+  content: "";
   position: absolute;
   left: 0;
-  top: 0;
-  font-size: 30px;
-  line-height: 14px;
-  color: #112211;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  background-color: #112211;
+  border-radius: 50%;
 }
-.conditions__content li p {
+
+.terms__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.terms__text {
   margin: 0;
-  font-size: 15px;
+  font-size: 1.5rem;
   color: #112211;
   line-height: 1.6;
-  font-weight: 400;
 }
-.contact-section h3 {
-  font-size: 20px;
+
+.terms__address {
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #112211;
+  line-height: 1.6;
+}
+
+.terms__link {
+  color: #112211;
   font-weight: 600;
-  color: #112211;
-  margin-top: 0;
-  margin-bottom: 20px;
+  text-decoration: underline;
 }
-
-.contact-section p {
-  margin: 0;
-  font-size: 15px;
-  color: #112211;
-  line-height: 1.6;
-  font-weight: 400;
-}
-

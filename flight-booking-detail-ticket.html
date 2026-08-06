@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/hotel-detail-page.css" />
     <link rel="stylesheet" href="assets/css/flight-booking-detail-ticket.css" />
   </head>
 
@@ -110,118 +111,154 @@
         </div>
       </div>
     </header>
-    <main class="main-ticket">
+
+    <main class="main-content">
+      <!-- Breadcrumb -->
       <nav class="breadcrumb">
-        <a href="#">Turkey</a>><a href="#">Istanbul</a> >
-        <span>CVK Park Bosphorus Hotel Istanbul</span>
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">Turkey</a>
+          </li>
+          <li class="breadcrumb__item">
+            <a href="#" class="breadcrumb__link">Istanbul</a>
+          </li>
+          <li class="breadcrumb__item breadcrumb__item--active">CVK Park Bosphorus Hotel Istanbul</li>
+        </ol>
       </nav>
-      <div class="plane">
-        <div class="left-plane">
-          <h2>Emirates A380 Airbus</h2>
-          <span><img src="assets/image/location_light.svg" alt="Location" /> Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
-        </div>
-        <div class="right-plane">
-          <p>$240</p>
-          <div class="btn-plane">
-            <a href="#" class="btn-share"><img src="assets/image/share_light.png" alt="Share" /></a>
-            <a href="#" class="btn-download">
-              <p>Download</p>
-            </a>
+
+      <!-- Booking Card Wrap (Đồng bộ với Hotel) -->
+      <div class="booking-card">
+        <!-- Header Info -->
+        <header class="booking-card__header">
+          <div class="booking-card__info">
+            <h2 class="booking-card__title">Emirates A380 Airbus</h2>
+            <span class="booking-card__location">
+              <img src="assets/image/location_light.svg" alt="Location" class="booking-card__location-icon" />
+              <span class="booking-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
+            </span>
           </div>
+
+          <div class="booking-card__actions">
+            <span class="booking-card__price">$240</span>
+            <button class="booking-card__btn booking-card__btn--icon">
+              <img src="assets/image/share_light.png" alt="Share" />
+            </button>
+            <a href="#" class="booking-card__btn booking-card__btn--primary">Download</a>
+          </div>
+        </header>
+
+        <!-- Ticket Section -->
+        <div class="ticket">
+          <div class="ticket__left">
+            <!-- Sidebar / Timeline -->
+            <div class="ticket__sidebar">
+              <div class="ticket__data-group">
+                <span class="ticket__time">12:00 PM</span>
+                <span class="ticket__label">Newark(EWR)</span>
+              </div>
+
+              <div class="ticket__timeline-divider">
+                <img src="assets/image/Frame 286.png" alt="Flight Path" class="ticket__timeline-icon" />
+              </div>
+
+              <div class="ticket__data-group">
+                <span class="ticket__time">12:00 PM</span>
+                <span class="ticket__label">Newark(EWR)</span>
+              </div>
+            </div>
+
+            <!-- Main Ticket Body -->
+            <div class="ticket__main">
+              <!-- Guest Banner -->
+              <div class="ticket__guest-banner">
+                <div class="ticket__user">
+                  <img src="assets/image/user-avt.png" alt="John D." class="ticket__avatar" />
+                  <div class="ticket__user-info">
+                    <span class="ticket__name">John D.</span>
+                    <span class="ticket__pass">Boarding Pass N’123</span>
+                  </div>
+                </div>
+                <div class="ticket__class">Business Class</div>
+              </div>
+
+              <!-- Ticket Details -->
+              <div class="ticket__details">
+                <div class="ticket__detail-item">
+                  <img src="assets\image\Frame 2608694.png" alt="Date Icon" class="ticket__detail-icon" />
+                  <div class="ticket__detail-text">
+                    <span class="ticket__detail-label">Date</span>
+                    <span class="ticket__detail-value">Newark(EWR)</span>
+                  </div>
+                </div>
+                <div class="ticket__detail-item">
+                  <img src="assets\image\Frame 2608697.png" alt="Flight Time Icon" class="ticket__detail-icon" />
+                  <div class="ticket__detail-text">
+                    <span class="ticket__detail-label">Flight time</span>
+                    <span class="ticket__detail-value">12:00</span>
+                  </div>
+                </div>
+                <div class="ticket__detail-item">
+                  <img src="assets\image\Frame 2608695.png" alt="Gate Icon" class="ticket__detail-icon" />
+                  <div class="ticket__detail-text">
+                    <span class="ticket__detail-label">Gate</span>
+                    <span class="ticket__detail-value">12A</span>
+                  </div>
+                </div>
+                <div class="ticket__detail-item">
+                  <img src="assets\image\Frame 2608698.png" alt="Seat Icon" class="ticket__detail-icon" />
+                  <div class="ticket__detail-text">
+                    <span class="ticket__detail-label">Seat</span>
+                    <span class="ticket__detail-value">128</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ticket Reference & Barcode -->
+              <div class="ticket__reference">
+                <span class="ticket__flight-code">EK</span>
+                <span class="ticket__booking-id">ABC12345</span>
+              </div>
+
+              <!-- Dùng ảnh mã vạch thay cho QR (như thiết kế hoặc giữ lại QR nhưng đổi class theo barcode) -->
+              <img class="ticket__barcode" src="assets/image/Frame 2608686.png" alt="Barcode/QR Code" />
+            </div>
+          </div>
+
+          <!-- Aside / Map (Đồng bộ với Hotel) -->
+          <aside class="ticket__aside">
+            <img class="ticket__side-image" src="assets/image/Frame 2608715.png" alt="Ticket Map Path" />
+          </aside>
         </div>
       </div>
 
-      <div class="ticket">
-        <div class="ticket-time">
-          <div class="ticket-time__item">
-            <h3>12:00 PM</h3>
-            <p>Departure</p>
-          </div>
-          <img src="assets/image/Frame 286.png" alt="Flight Path" />
-          <div class="ticket-time__item">
-            <h3>12:00 PM</h3>
-            <p>Arrival</p>
-          </div>
-        </div>
-        <div class="ticket-main">
-          <div class="ticket-header">
-            <div class="ticket-header-left">
-              <img src="assets/image/user-avt.png" alt="John D." class="user-action__avt" />
-              <div class="user-info">
-                <p>John D.</p>
-                <small>Boarding Pass N’123</small>
-              </div>
-            </div>
-            <div class="ticket-header-right">
-              <p>Business Class</p>
-            </div>
-          </div>
-          <div class="ticket-service">
-            <ul>
-              <li>
-                <img src="assets\image\Frame 2608694.png" alt="Service Icon" />
-                <p>Date</p>
-                <small>Newark(EWR)</small>
-              </li>
-              <li>
-                <img src="assets\image\Frame 2608697.png" alt="Service Icon" />
-                <p>Flight time</p>
-                <small>12:00</small>
-              </li>
-              <li>
-                <img src="assets\image\Frame 2608695.png" alt="Service Icon" />
-                <p>Gate</p>
-                <small>12A</small>
-              </li>
-              <li>
-                <img src="assets\image\Frame 2608698.png" alt="Service Icon" />
-                <p>Seat</p>
-                <small>128</small>
-              </li>
-            </ul>
-          </div>
-          <div class="ticket-name">
-            <p>EK</p>
-            <span>ABC12345</span>
-          </div>
-          <div class="ticket-qr">
-            <img src="assets/image/Frame 2608686.png" alt="QR Code" />
-          </div>
-        </div>
-        <div class="ticket-line">
-          <img src="assets/image/Frame 2608715.png" alt="Ticket Line" />
-        </div>
-      </div>
-      <div class="conditions">
-        <h2>Terms and Conditions</h2>
-        <div class="conditions__content">
-          <h3>Payments</h3>
-          <ul>
-            <li>
-              <p>If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes.</p>
-            </li>
-            <li>
-              <p>If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</p>
-            </li>
-            <li>
-              <p>Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</p>
-            </li>
+      <!-- Terms and Conditions Section (Đồng bộ cấu trúc .terms từ Hotel) -->
+      <div class="terms">
+        <h2 class="terms__title">Terms and Conditions</h2>
+
+        <div class="terms__group">
+          <h3 class="terms__subtitle">Payments</h3>
+          <ul class="terms__list">
+            <li class="terms__item">If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes.</li>
+            <li class="terms__item">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
+            <li class="terms__item">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
           </ul>
         </div>
-        <div class="contact-section">
-          <h3>Contact Us</h3>
-          <p>
-            If you have any questions about our Website or our Terms of Use, please contact:<br />
-            Golobe Group Q.C.S.C<br />
-            Golobe Tower<br />
-            P.O. Box: 22550<br />
-            Doha, State of Qatar<br />
-            Further contact details can be found at <a href="#">golobe.com/help</a>
-          </p>
+
+        <div class="terms__group">
+          <h3 class="terms__subtitle">Contact Us</h3>
+          <div class="terms__content">
+            <p class="terms__text">If you have any questions about our Website or our Terms of Use, please contact:</p>
+            <address class="terms__address">
+              Golobe Group Q.C.S.C<br />
+              Golobe Tower<br />
+              P.O. Box: 22550<br />
+              Doha, State of Qatar
+            </address>
+            <p class="terms__text">Further contact details can be found at <a href="#" class="terms__link">golobe.com/help</a></p>
+          </div>
         </div>
       </div>
     </main>
-
     <footer class="footer-wrapper">
       <div class="footer-main">
         <div class="newsletter-card">
@@ -304,4 +341,3 @@
     </footer>
   </body>
 </html>
-
