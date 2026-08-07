@@ -1,0 +1,24 @@
+.navbar__item--active::after {
+  bottom: -22px; /* Điều chỉnh khoảng cách này để thanh gạch chân vừa khít sát đáy của thanh header */
+}
+
+.favorites__title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0px auto;
+  max-width: 1232px;
+}
+
+.hotel-listing {
+  display: block;
+}
+
+.hotel-listing__tabs {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hotel-listing__tab:nth-child(2) {
+  border-left: 2px solid rgba(215, 226, 238, 1);
+  border-right: none;
+}
