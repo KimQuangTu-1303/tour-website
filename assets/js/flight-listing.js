@@ -37,9 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 2. XỬ LÝ TIME SLIDER (Departure Time) ---
   const timeMin = document.getElementById("slider-min-time");
   const timeMax = document.getElementById("slider-max-time");
-  // Sửa lại ID trỏ đúng vào thẻ span hiển thị label trong HTML
+  const timeFill = document.getElementById("slider-fill-time"); // Thêm biến trỏ tới thanh fill
   const timeMinText = document.getElementById("label-min-time");
   const timeMaxText = document.getElementById("label-max-time");
+  const minTimeGap = 180;
 
   function formatMinutesToTime(totalMinutes) {
     const hours24 = Math.floor(totalMinutes / 60);
@@ -48,25 +49,41 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${hours12}:${minutes < 10 ? "0" : ""}${minutes} ${hours24 >= 12 ? "pm" : "am"}`;
   }
 
-  function updateTimeSeries() {
+  function updateTimeSeries(e) {
     if (!timeMin || !timeMax) return;
     let minVal = parseInt(timeMin.value);
     let maxVal = parseInt(timeMax.value);
 
-    if (minVal > maxVal) {
-      [timeMin.value, timeMax.value] = [maxVal, minVal];
+    // Chặn minGap: Buộc khoảng cách giữa 2 cục trượt ít nhất là 60 phút
+    if (maxVal - minVal < minTimeGap) {
+      // Xác định xem người dùng đang kéo thanh nào để đẩy thanh còn lại đi
+      if (e && e.target === timeMin) {
+        timeMin.value = maxVal - minTimeGap;
+      } else {
+        timeMax.value = minVal + minTimeGap;
+      }
+      minVal = parseInt(timeMin.value);
+      maxVal = parseInt(timeMax.value);
     }
 
-    if (timeMinText) timeMinText.textContent = formatMinutesToTime(parseInt(timeMin.value));
-    if (timeMaxText) timeMaxText.textContent = formatMinutesToTime(parseInt(timeMax.value));
+    if (timeMinText) timeMinText.textContent = formatMinutesToTime(minVal);
+    if (timeMaxText) timeMaxText.textContent = formatMinutesToTime(maxVal);
+
+    // Tính toán % để fill màu đen cho thanh trượt
+    if (timeFill) {
+      const minPercent = ((minVal - timeMin.min) / (timeMin.max - timeMin.min)) * 100;
+      const maxPercent = ((maxVal - timeMax.min) / (timeMax.max - timeMax.min)) * 100;
+
+      timeFill.style.left = minPercent + "%";
+      timeFill.style.width = maxPercent - minPercent + "%";
+    }
   }
 
   if (timeMin && timeMax) {
     timeMin.addEventListener("input", updateTimeSeries);
     timeMax.addEventListener("input", updateTimeSeries);
-    updateTimeSeries();
+    updateTimeSeries(); // Khởi tạo chạy lần đầu khi load trang
   }
-
   // --- 3. XỬ LÝ TABS (Active Switch) ---
   // Cập nhật class theo BEM
   const tabItems = document.querySelectorAll(".flight-results__tab");
@@ -181,26 +198,33 @@ document.addEventListener("DOMContentLoaded", () => {
       const flightsContainer = clone.querySelector(".ticket-card__flights");
       ticket.flights.forEach((flight) => {
         const flightRow = document.createElement("div");
-        flightRow.className = "flight-card__row"; // Đổi sang class BEM
+
+        // Thay thế class flight-card__row bằng hệ thống Grid của Tailwind (chia 4 cột)
+        flightRow.className = "grid grid-cols-[24px_1.5fr_1fr_1fr] items-center gap-4";
+
+        // Thay thế toàn bộ các class text cũ bằng class quy định màu và font size của Tailwind
         flightRow.innerHTML = `
-          <input type="checkbox" class="flight-card__check">
-          <div class="flight-card__time">
-            <strong class="flight-card__time-strong">${flight.time}</strong>
-            <span class="flight-card__time-span">${flight.airline}</span>
+          <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green/40 rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" >
+
+          <div class="flex flex-col justify-center">
+            <strong class="text-[14px] md:text-base text-blackish-green font-semibold leading-tight">${flight.time}</strong>
+            <span class="text-[12px] md:text-sm text-blackish-green opacity-40 mt-1">${flight.airline}</span>
           </div>
-          <div class="flight-card__type">${flight.type}</div>
-          <div class="flight-card__duration">
-            <strong class="flight-card__duration-strong">${flight.duration}</strong>
-            <span class="flight-card__duration-span">${flight.route}</span>
+
+          <div class="text-[13px] md:text-sm font-medium text-blackish-green">
+            ${flight.type}
+          </div>
+
+          <div class="flex flex-col justify-center">
+            <strong class="text-[14px] md:text-base text-blackish-green font-semibold leading-tight">${flight.duration}</strong>
+            <span class="text-[12px] md:text-sm text-blackish-green opacity-40 mt-1">${flight.route}</span>
           </div>
         `;
         flightsContainer.appendChild(flightRow);
       });
-
       container.appendChild(clone);
     });
   }
 
   fetchFlightTickets();
 });
-
