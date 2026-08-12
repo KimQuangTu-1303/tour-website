@@ -9,7 +9,7 @@
 
   <body>
     <!-- HEADER -->
-    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-8 bg-white">
       <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
         <nav class="flex flex-1">
@@ -63,7 +63,7 @@
                   </div>
                 </div>
 
-                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
+                <div class="h-px w-full bg-blackish-green opacity-25"></div>
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
@@ -89,7 +89,7 @@
                   </li>
                 </ul>
 
-                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
+                <div class="h-px w-full bg-blackish-green opacity-25"></div>
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
@@ -114,49 +114,49 @@
     </header>
 
     <!-- HOTEL SEARCH SECTION -->
-    <section class="max-w-7xl mx-auto mb-12">
+    <section class="max-w-308 mx-auto mb-12">
       <form class="bg-white rounded-2xl shadow-md p-6" action="hotel-listing.html" method="get">
         <!-- Áp dụng chia 14 cột thay vì dùng flex tỉ lệ lẻ -->
         <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
           <!-- Destination (Chiếm 4/14 cột) -->
-          <div class="relative flex items-center border border-blackish-green/25 rounded-lg px-4 h-16 lg:col-span-4 focus-within:border-mint-green transition-colors">
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors">
             <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="destination">Enter Destination</label>
             <div class="flex items-center gap-3 w-full">
-              <img src="assets/image/bed_light.svg" alt="bed icon" class="w-5 h-5 shrink-0" />
+              <img src="assets/image/bed_light.svg" alt="bed icon" class="w-6 h-6 shrink-0" />
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
             </div>
           </div>
 
           <!-- Check In (Chiếm 3/14 cột) -->
-          <div class="relative flex items-center border border-blackish-green/25 rounded-lg px-4 h-16 lg:col-span-3 focus-within:border-mint-green transition-colors">
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
             <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="checkin">Check In</label>
             <div class="flex items-center justify-between w-full gap-3">
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="checkin" type="text" name="checkin" value="Fri 12/2" placeholder="dd/mm/yy" />
-              <img src="assets/image/calendar_light.svg" alt="calendar icon" class="w-5 h-5 shrink-0" />
+              <img src="assets/image/calendar_light.svg" alt="calendar icon" class="w-6 h-6 shrink-0" />
             </div>
           </div>
 
           <!-- Check Out (Chiếm 3/14 cột) -->
-          <div class="relative flex items-center border border-blackish-green/25 rounded-lg px-4 h-16 lg:col-span-3 focus-within:border-mint-green transition-colors">
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
             <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="checkout">Check Out</label>
             <div class="flex items-center justify-between w-full gap-3">
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="checkout" type="text" name="checkout" value="Sun 10/4" placeholder="dd/mm/yy" />
-              <img src="assets/image/calendar_light.svg" alt="calendar icon" class="w-5 h-5 shrink-0" />
+              <img src="assets/image/calendar_light.svg" alt="calendar icon" class="w-6 h-6 shrink-0" />
             </div>
           </div>
 
           <!-- Rooms & Guests (Chiếm 3/14 cột) -->
-          <div class="relative flex items-center border border-blackish-green/25 rounded-lg px-4 h-16 lg:col-span-3 focus-within:border-mint-green transition-colors">
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
             <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="guests">Rooms & Guests</label>
             <div class="flex items-center gap-3 w-full">
-              <img src="assets/image/user_light.svg" alt="user icon" class="w-5 h-5 shrink-0" />
+              <img src="assets/image/user_light.svg" alt="user icon" class="w-6 h-6 shrink-0" />
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50 cursor-pointer" id="guests" type="text" name="guests" value="1 room, 2 guests" readonly />
-              <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-5 h-5 shrink-0" />
+              <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0" />
             </div>
           </div>
 
           <!-- Submit Button (Chiếm 1/14 cột) -->
-          <button class="bg-mint-green hover:bg-mint-green/80 text-blackish-green h-16 rounded-lg flex items-center justify-center transition-colors lg:col-span-1 w-full" type="submit" aria-label="Search Hotels">
+          <button class="bg-mint-green hover:bg-mint-green/80 text-blackish-green h-14 rounded-lg flex items-center justify-center transition-colors lg:col-span-1 w-full" type="submit" aria-label="Search Hotels">
             <img src="assets/image/search_light.svg" alt="search" class="w-6 h-6" />
           </button>
         </div>
@@ -164,7 +164,7 @@
     </section>
 
     <!-- MAIN CONTENT -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-8 my-8">
+    <div class="max-w-308 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-8 my-8">
       <!-- CỘT 1: FILTERS (Chiếm 3/12 cột) -->
       <aside class="flex flex-col gap-8 lg:col-span-3">
         <h2 class="text-xl font-semibold text-blackish-green leading-tight">Filters</h2>
@@ -611,18 +611,18 @@
       </main>
     </div>
     <!-- Grid riêng cho nút, đồng bộ tỷ lệ với Main Content ở trên -->
-    <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 mb-12 lg:gap-8">
+    <div class="max-w-308 mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 mb-12 lg:gap-8">
       <!-- Căn nút bắt đầu từ cột thứ 4, chiếm 9 cột và đẩy lề pl-8 để thẳng hàng tuyệt đối với thẻ khách sạn -->
       <div class="lg:col-span-9 lg:col-start-4 lg:pl-8">
         <button class="w-full py-4 bg-blackish-green hover:opacity-90 text-white text-sm font-semibold leading-none rounded transition-opacity cursor-pointer border-none text-center">Show more results</button>
       </div>
     </div>
+
     <!-- FOOTER -->
     <footer class="w-full bg-white">
       <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
         <!-- Newsletter Card -->
-        <!-- w-11/12 = ~91%, max-w-7xl = 1280px -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-7xl bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
           <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
             <!-- text-4xl = 36px, lg:text-5xl = 48px -->
             <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
@@ -645,7 +645,7 @@
         </div>
 
         <!-- Footer Container (Chứa Brand và Links) -->
-        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-7xl mx-auto gap-8 lg:gap-0">
+        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
             <div class="logo">
