@@ -63,7 +63,7 @@
                   </div>
                 </div>
 
-                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
+                <div class="h-px w-full bg-blackish-green opacity-25"></div>
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
@@ -89,7 +89,7 @@
                   </li>
                 </ul>
 
-                <div class="h-px w-full bg-blackish-green opacity-25 my-5"></div>
+                <div class="h-px w-full bg-blackish-green opacity-25"></div>
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
@@ -114,8 +114,7 @@
     </header>
 
     <!-- HOTEL SEARCH & BANNER -->
-    <!-- Dùng mb-32 để chừa không gian phía dưới cho Form đang bị đẩy xuống (translate-y) -->
-    <section class="relative mb-32">
+    <section class="relative">
       <!-- BANNER -->
       <section class="relative w-full h-134 bg-[url('../image/banner.png')] bg-cover bg-center bg-no-repeat pt-20 pr-44 pb-32 pl-32 overflow-hidden">
         <!-- Lớp phủ Gradient đồng bộ màu blackish-green từ input.css -->
@@ -128,52 +127,49 @@
       </section>
 
       <!-- SEARCH FORM -->
-      <!-- Dùng bottom-0 translate-y-1/2 để canh form nằm ngay vạch giao nhau của mép banner -->
-      <form class="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 flex flex-col max-w-7xl w-11/12 xl:w-full bg-white py-8 px-6 gap-8 rounded-2xl shadow-xl z-20" action="hotel-listing.html" method="get">
+      <form class="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-3/4 flex flex-col max-w-308 w-11/12 xl:w-full bg-white py-8 px-6 gap-8 rounded-2xl shadow-xl z-20" action="hotel-listing.html" method="get">
         <h2 class="m-0 text-xl leading-none font-semibold select-none font-trade-gothic text-blackish-green">Where are you flying?</h2>
 
-        <div class="flex flex-col md:flex-row gap-4">
-          <!-- Destination -->
-          <div class="relative flex-1">
-            <label class="absolute left-2.5 top-0 -translate-y-1/2 text-sm font-normal p-1 bg-white font-montserrat text-blackish-green" for="destination">Enter Destination</label>
-            <!-- Đồng bộ viền dùng blackish-green có opacity 40% -->
-            <div class="flex items-center px-2.5 border border-blackish-green/40 rounded gap-2.5">
-              <img src="assets/image/bed_light.svg" alt="bed" />
-              <input class="flex-1 h-full text-base font-normal leading-none border-none outline-none bg-transparent mt-1 py-4 px-0 w-full min-w-0 font-montserrat text-blackish-green" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
+        <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
+          <!-- Destination (Chiếm 5/14 cột) -->
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-5 focus-within:border-mint-green transition-colors">
+            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="destination">Enter Destination</label>
+            <div class="flex items-center justify-between w-full gap-2.5">
+              <img src="assets/image/bed_light.svg" alt="bed" class="shrink-0" />
+              <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
             </div>
           </div>
 
-          <!-- Check In -->
-          <div class="relative flex-1 md:flex-none">
-            <label class="absolute left-2.5 top-0 -translate-y-1/2 text-sm font-normal p-1 bg-white font-montserrat text-blackish-green" for="checkin">Check In</label>
-            <div class="flex items-center px-2.5 border border-blackish-green/40 rounded gap-2.5">
-              <input class="flex-1 h-full text-base font-normal leading-none border-none outline-none bg-transparent mt-1 py-4 px-0 w-full min-w-0 font-montserrat text-blackish-green" id="checkin" type="text" name="checkin" value="Fri 12/2" placeholder="dd/mm/yy" />
-              <img src="assets/image/calendar_light.svg" alt="calendar" />
+          <!-- Check In (Chiếm 3/14 cột) -->
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
+            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="checkin">Check In</label>
+            <div class="flex items-center justify-between w-full gap-2.5">
+              <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="checkin" type="text" name="checkin" value="Fri 12/2" placeholder="dd/mm/yy" />
+              <img src="assets/image/calendar_light.svg" alt="calendar" class="shrink-0" />
             </div>
           </div>
 
-          <!-- Check Out -->
-          <div class="relative flex-1 md:flex-none">
-            <label class="absolute left-2.5 top-0 -translate-y-1/2 text-sm font-normal p-1 bg-white font-montserrat text-blackish-green" for="checkout">Check Out</label>
-            <div class="flex items-center px-2.5 border border-blackish-green/40 rounded gap-2.5">
-              <input class="flex-1 h-full text-base font-normal leading-none border-none outline-none bg-transparent mt-1 py-4 px-0 w-full min-w-0 font-montserrat text-blackish-green" id="checkout" type="text" name="checkout" value="Sun 12/4" placeholder="dd/mm/yy" />
-              <img src="assets/image/calendar_light.svg" alt="calendar" />
+          <!-- Check Out (Chiếm 3/14 cột) -->
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
+            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="checkout">Check Out</label>
+            <div class="flex items-center justify-between w-full gap-2.5">
+              <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="checkout" type="text" name="checkout" value="Sun 12/4" placeholder="dd/mm/yy" />
+              <img src="assets/image/calendar_light.svg" alt="calendar" class="shrink-0" />
             </div>
           </div>
 
-          <!-- Rooms & Guests -->
-          <div class="relative flex-1 md:flex-none">
-            <label class="absolute left-2.5 top-0 -translate-y-1/2 text-sm font-normal p-1 bg-white font-montserrat text-blackish-green" for="guests">Rooms & Guests</label>
-            <div class="flex items-center px-2.5 border border-blackish-green/40 rounded gap-2.5">
-              <img src="assets/image/user_light.svg" alt="user" />
-              <input class="flex-1 h-full text-base font-normal leading-none border-none outline-none bg-transparent mt-1 py-4 px-0 w-full min-w-0 font-montserrat text-blackish-green" id="guests" type="text" name="guests" value="1 room, 2 guests" />
-              <img src="assets/image/chevron_down.svg" alt="" />
+          <!-- Rooms & Guests (Chiếm 3/14 cột) -->
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
+            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="guests">Rooms & Guests</label>
+            <div class="flex items-center justify-between w-full gap-2.5">
+              <img src="assets/image/user_light.svg" alt="user" class="shrink-0" />
+              <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="guests" type="text" name="guests" value="1 room, 2 guests" />
+              <img src="assets/image/chevron_down.svg" alt="" class="shrink-0" />
             </div>
           </div>
         </div>
-
         <!-- Actions / Buttons -->
-        <div class="flex justify-end h-11 gap-6 mt-2">
+        <div class="flex justify-end h-11 gap-6">
           <!-- Đã thêm bg-mint-cream khi hover nút Promo theo chuẩn input.css -->
           <button type="button" class="flex items-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
             <img src="assets/image/plus.svg" alt="plus" />
@@ -190,7 +186,7 @@
     </section>
 
     <!-- MAIN CONTENT -->
-    <main class="flex flex-col max-w-7xl w-full mx-auto mt-64 gap-20">
+    <main class="flex flex-col max-w-308 w-full mx-auto mt-64 gap-20">
       <!-- 1. RECENT SEARCHES -->
       <section class="flex flex-col gap-8">
         <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Your recent searches</h2>
@@ -336,12 +332,12 @@
         </div>
       </section>
     </main>
+
     <!-- FOOTER -->
     <footer class="w-full bg-white">
       <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
         <!-- Newsletter Card -->
-        <!-- w-11/12 = ~91%, max-w-7xl = 1280px -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-7xl bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
           <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
             <!-- text-4xl = 36px, lg:text-5xl = 48px -->
             <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
@@ -364,7 +360,7 @@
         </div>
 
         <!-- Footer Container (Chứa Brand và Links) -->
-        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-7xl mx-auto gap-8 lg:gap-0">
+        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
             <div class="logo">
