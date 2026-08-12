@@ -4,9 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>flight-booking-detail</title>
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/hotel-detail-page.css" />
-    <link rel="stylesheet" href="assets/css/flight-booking-detail-ticket.css" />
     <link rel="stylesheet" href="assets/css/input.css" />
   </head>
 
@@ -41,7 +38,7 @@
           <ul class="m-0 flex list-none p-0 gap-8">
             <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
               <img src="assets/image/heart_light.svg" alt="Heart" />
-              <a href="#" class="text-blackish-green no-underline">Favourites</a>
+              <a href="favorites.html" class="text-blackish-green no-underline">Favourites</a>
             </li>
             <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
 
@@ -116,227 +113,259 @@
       </div>
     </header>
 
-    <main class="main-content">
-      <!-- Breadcrumb -->
-      <nav class="breadcrumb">
-        <ol class="breadcrumb__list">
-          <li class="breadcrumb__item">
-            <a href="#" class="breadcrumb__link">Turkey</a>
+    <!-- MAIN CONTENT -->
+    <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-y-8 lg:gap-y-10 items-start mb-16">
+      <!-- BREADCRUMB -->
+      <nav class="flex items-center w-full">
+        <ol class="flex items-center gap-2 m-0 p-0 list-none flex-wrap">
+          <li><a href="#" class="text-sm font-medium text-blackish-green no-underline hover:opacity-75 transition-opacity">Turkey</a></li>
+          <li class="flex items-center justify-center">
+            <img src="assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" />
           </li>
-          <li class="breadcrumb__item">
-            <a href="#" class="breadcrumb__link">Istanbul</a>
+          <li><a href="#" class="text-sm font-medium text-blackish-green no-underline hover:opacity-75 transition-opacity">Istanbul</a></li>
+          <li class="flex items-center justify-center">
+            <img src="assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" />
           </li>
-          <li class="breadcrumb__item breadcrumb__item--active">CVK Park Bosphorus Hotel Istanbul</li>
+          <!-- Áp dụng opacity-40 theo chuẩn file CSS -->
+          <li class="text-sm font-medium text-blackish-green opacity-40">CVK Park Bosphorus Hotel Istanbul</li>
         </ol>
       </nav>
 
-      <!-- Booking Card Wrap (Đồng bộ với Hotel) -->
-      <div class="booking-card">
+      <!-- BOOKING CARD WRAP -->
+      <div class="flex flex-col gap-10 w-full">
         <!-- Header Info -->
-        <header class="booking-card__header">
-          <div class="booking-card__info">
-            <h2 class="booking-card__title">Emirates A380 Airbus</h2>
-            <span class="booking-card__location">
-              <img src="assets/image/location_light.svg" alt="Location" class="booking-card__location-icon" />
-              <span class="booking-card__location-text">Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div class="flex flex-col gap-4">
+            <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Emirates A380 Airbus</h2>
+            <span class="flex items-center gap-2 text-sm font-medium text-blackish-green/75">
+              <img src="assets/image/location_light.svg" alt="Location" class="w-4 h-4 shrink-0" />
+              <span>Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
             </span>
           </div>
 
-          <div class="booking-card__actions">
-            <span class="booking-card__price">$240</span>
-            <button class="booking-card__btn booking-card__btn--icon">
-              <img src="assets/image/share_light.png" alt="Share" />
+          <!-- Actions & Price -->
+          <div class="grid grid-cols-[auto_auto] gap-4 items-center w-full md:w-auto">
+            <span class="col-span-2 text-right text-3xl font-bold leading-none text-slamon m-0">$240</span>
+            <button class="w-12 h-12 flex items-center justify-center border border-solid border-mint-green rounded hover:bg-mint-green/20 transition-colors bg-transparent cursor-pointer shrink-0">
+              <img src="assets/image/share_light.png" alt="Share" class="w-5 h-5 object-contain" />
             </button>
-            <a href="#" class="booking-card__btn booking-card__btn--primary">Download</a>
+            <a href="#" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-[15px] font-semibold rounded px-10 py-4 transition-colors no-underline">Download</a>
           </div>
         </header>
 
         <!-- Ticket Section -->
-        <div class="ticket">
-          <div class="ticket__left">
+        <div class="flex flex-col lg:flex-row w-full lg:h-78">
+          <!-- Left Ticket Box -->
+          <div class="flex flex-col md:flex-row flex-1 bg-white rounded-2xl border border-[#eaeaea] overflow-hidden">
             <!-- Sidebar / Timeline -->
-            <div class="ticket__sidebar">
-              <div class="ticket__data-group">
-                <span class="ticket__time">12:00 PM</span>
-                <span class="ticket__label">Newark(EWR)</span>
+            <div class="flex flex-col justify-between p-6 md:p-8 bg-[#edf6f2] min-w-45 shrink-0">
+              <div class="flex flex-col gap-1">
+                <span class="text-3xl font-bold leading-none text-blackish-green m-0">12:00 PM</span>
+                <span class="text-sm font-medium leading-none text-blackish-green/60">Newark(EWR)</span>
               </div>
 
-              <div class="ticket__timeline-divider">
-                <img src="assets/image/Frame 286.png" alt="Flight Path" class="ticket__timeline-icon" />
+              <div class="flex items-center flex-1">
+                <img src="assets/image/Frame 286.png" alt="Flight Path" class="h-auto object-contain" />
               </div>
 
-              <div class="ticket__data-group">
-                <span class="ticket__time">12:00 PM</span>
-                <span class="ticket__label">Newark(EWR)</span>
+              <div class="flex flex-col gap-1">
+                <span class="text-3xl font-bold leading-none text-blackish-green m-0">12:00 PM</span>
+                <span class="text-sm font-medium leading-none text-blackish-green/60">Newark(EWR)</span>
               </div>
             </div>
 
             <!-- Main Ticket Body -->
-            <div class="ticket__main">
+            <div class="relative bg-white flex-1 flex flex-col">
               <!-- Guest Banner -->
-              <div class="ticket__guest-banner">
-                <div class="ticket__user">
-                  <img src="assets/image/user-avt.png" alt="John D." class="ticket__avatar" />
-                  <div class="ticket__user-info">
-                    <span class="ticket__name">John D.</span>
-                    <span class="ticket__pass">Boarding Pass N’123</span>
+              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#8cd4b9] py-5 px-6 gap-2 sm:gap-0">
+                <div class="flex items-center">
+                  <img src="assets/image/user-avt.png" alt="John D." class="w-12 h-12 rounded-full object-cover border-2 border-white mr-4 shrink-0" />
+                  <div class="flex flex-col">
+                    <span class="font-bold text-blackish-green text-xl m-0">John D.</span>
+                    <span class="text-blackish-green text-[13px] font-medium">Boarding Pass N’123</span>
                   </div>
                 </div>
-                <div class="ticket__class">Business Class</div>
+                <div class="font-bold text-blackish-green text-base">Business Class</div>
               </div>
 
-              <!-- Ticket Details -->
-              <div class="ticket__details">
-                <div class="ticket__detail-item">
-                  <img src="assets\image\Frame 2608694.png" alt="Date Icon" class="ticket__detail-icon" />
-                  <div class="ticket__detail-text">
-                    <span class="ticket__detail-label">Date</span>
-                    <span class="ticket__detail-value">Newark(EWR)</span>
+              <!-- Ticket Details Grid -->
+              <div class="flex flex-wrap gap-x-10 gap-y-6 p-6">
+                <!-- Detail Item: Date -->
+                <div class="flex items-center gap-3">
+                  <img src="assets/image/Frame 2608694.png" alt="Date Icon" class="w-8 h-8 object-contain shrink-0" />
+                  <div class="flex flex-col gap-1">
+                    <span class="text-sm font-semibold leading-none text-blackish-green/60">Date</span>
+                    <span class="text-xs font-medium leading-none text-blackish-green m-0">Newark(EWR)</span>
                   </div>
                 </div>
-                <div class="ticket__detail-item">
-                  <img src="assets\image\Frame 2608697.png" alt="Flight Time Icon" class="ticket__detail-icon" />
-                  <div class="ticket__detail-text">
-                    <span class="ticket__detail-label">Flight time</span>
-                    <span class="ticket__detail-value">12:00</span>
+
+                <!-- Detail Item: Flight time -->
+                <div class="flex items-center gap-3">
+                  <img src="assets/image/Frame 2608697.png" alt="Flight Time Icon" class="w-8 h-8 object-contain shrink-0" />
+                  <div class="flex flex-col gap-1">
+                    <span class="text-sm font-semibold leading-none text-blackish-green/60">Flight time</span>
+                    <span class="text-xs font-medium leading-none text-blackish-green m-0">12:00</span>
                   </div>
                 </div>
-                <div class="ticket__detail-item">
-                  <img src="assets\image\Frame 2608695.png" alt="Gate Icon" class="ticket__detail-icon" />
-                  <div class="ticket__detail-text">
-                    <span class="ticket__detail-label">Gate</span>
-                    <span class="ticket__detail-value">12A</span>
+
+                <!-- Detail Item: Gate -->
+                <div class="flex items-center gap-3">
+                  <img src="assets/image/Frame 2608695.png" alt="Gate Icon" class="w-8 h-8 object-contain shrink-0" />
+                  <div class="flex flex-col gap-1">
+                    <span class="text-sm font-semibold leading-none text-blackish-green/60">Gate</span>
+                    <span class="text-xs font-medium leading-none text-blackish-green m-0">12A</span>
                   </div>
                 </div>
-                <div class="ticket__detail-item">
-                  <img src="assets\image\Frame 2608698.png" alt="Seat Icon" class="ticket__detail-icon" />
-                  <div class="ticket__detail-text">
-                    <span class="ticket__detail-label">Seat</span>
-                    <span class="ticket__detail-value">128</span>
+
+                <!-- Detail Item: Seat -->
+                <div class="flex items-center gap-3">
+                  <img src="assets/image/Frame 2608698.png" alt="Seat Icon" class="w-8 h-8 object-contain shrink-0" />
+                  <div class="flex flex-col gap-1">
+                    <span class="text-sm font-semibold leading-none text-blackish-green/60">Seat</span>
+                    <span class="text-xs font-medium leading-none text-blackish-green m-0">128</span>
                   </div>
                 </div>
               </div>
 
-              <!-- Ticket Reference & Barcode -->
-              <div class="ticket__reference">
-                <span class="ticket__flight-code">EK</span>
-                <span class="ticket__booking-id">ABC12345</span>
+              <!-- Bottom Area: Reference & Barcode -->
+              <div class="static md:absolute bottom-6 left-6 flex flex-col gap-1 pl-6 pb-6 md:p-0">
+                <span class="text-3xl font-extrabold leading-none text-blackish-green m-0">EK</span>
+                <span class="text-sm font-medium leading-none text-blackish-green/60 m-0">ABC12345</span>
               </div>
 
-              <!-- Dùng ảnh mã vạch thay cho QR (như thiết kế hoặc giữ lại QR nhưng đổi class theo barcode) -->
-              <img class="ticket__barcode" src="assets/image/Frame 2608686.png" alt="Barcode/QR Code" />
+              <img class="static md:absolute bottom-0 right-0 h-20 w-auto object-contain pl-6 pb-6 md:p-0" src="assets/image/Frame 2608686.png" alt="Barcode/QR Code" />
             </div>
           </div>
 
-          <!-- Aside / Map (Đồng bộ với Hotel) -->
-          <aside class="ticket__aside">
-            <img class="ticket__side-image" src="assets/image/Frame 2608715.png" alt="Ticket Map Path" />
+          <!-- Aside / Map Box -->
+          <aside class="bg-white border border-[#eaeaea] rounded-2xl p-6 flex items-center justify-center shrink-0 min-w-[320px]">
+            <img class="w-full h-full object-contain max-h-65" src="assets/image/Frame 2608715.png" alt="Ticket Map Path" />
           </aside>
         </div>
       </div>
 
-      <!-- Terms and Conditions Section (Đồng bộ cấu trúc .terms từ Hotel) -->
-      <div class="terms">
-        <h2 class="terms__title">Terms and Conditions</h2>
+      <!-- TERMS AND CONDITIONS -->
+      <div class="flex flex-col gap-8 text-blackish-green w-full">
+        <h2 class="font-trade-gothic text-2xl font-semibold leading-none m-0">Terms and Conditions</h2>
 
-        <div class="terms__group">
-          <h3 class="terms__subtitle">Payments</h3>
-          <ul class="terms__list">
-            <li class="terms__item">If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes.</li>
-            <li class="terms__item">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
-            <li class="terms__item">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
+        <div class="flex flex-col">
+          <h3 class="text-xl font-medium leading-none m-0 mb-4">Payments</h3>
+          <ul class="flex flex-col list-none p-0 m-0 gap-4">
+            <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes.</li>
+            <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
+            <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
           </ul>
         </div>
 
-        <div class="terms__group">
-          <h3 class="terms__subtitle">Contact Us</h3>
-          <div class="terms__content">
-            <p class="terms__text">If you have any questions about our Website or our Terms of Use, please contact:</p>
-            <address class="terms__address">
+        <div class="flex flex-col">
+          <h3 class="text-xl font-medium leading-none m-0 mb-4">Contact Us</h3>
+          <div class="text-sm font-normal leading-5 flex flex-col gap-4">
+            <p class="m-0">If you have any questions about our Website or our Terms of Use, please contact:</p>
+            <address class="not-italic m-0">
               Golobe Group Q.C.S.C<br />
               Golobe Tower<br />
               P.O. Box: 22550<br />
               Doha, State of Qatar
             </address>
-            <p class="terms__text">Further contact details can be found at <a href="#" class="terms__link">golobe.com/help</a></p>
+            <p class="m-0">Further contact details can be found at <a href="#" class="text-blackish-green underline">golobe.com/help</a></p>
           </div>
         </div>
       </div>
     </main>
-    <footer class="footer-wrapper">
-      <div class="footer-main">
-        <div class="newsletter-card">
-          <div class="newsletter-content">
-            <h2>Subscribe<br />Newsletter</h2>
-            <div class="newsletter-content__desc">
-              <h4>The Travel</h4>
-              <p>Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
+
+    <footer class="w-full bg-white">
+      <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
+        <!-- Newsletter Card -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
+          <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
+            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
+            <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
+
+            <div class="flex flex-col gap-2 mb-3">
+              <h4 class="font-trade-gothic text-xl font-bold text-blackish-green opacity-80">The Travel</h4>
+              <p class="font-montserrat text-base font-medium text-blackish-green leading-none opacity-70">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
             </div>
-            <form class="subscribe-form">
-              <input type="email" placeholder="Your email address" required />
-              <button type="submit">Subscribe</button>
+
+            <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
+              <input type="email" placeholder="Your email address" required class="flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green" />
+              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
+              <button type="submit" class="font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80">Subscribe</button>
             </form>
           </div>
-          <div class="newsletter-image">
-            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" />
+
+          <div class="hidden md:block self-end">
+            <img src="./assets/image/mailbox.svg" alt="Mailbox Illustration" class="max-w-sm h-auto block" />
           </div>
         </div>
-        <div class="footer-container">
-          <div class="footer-brand">
+
+        <!-- Footer Container (Chứa Brand và Links) -->
+        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-7xl mx-auto gap-8 lg:gap-0">
+          <!-- Footer Brand -->
+          <div class="flex flex-col gap-6">
             <div class="logo">
-              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" />
+              <!-- h-9 = 36px -->
+              <img src="./assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
-            <div class="social-icons">
-              <img src="./assets/image/facebook_light.svg" />
-              <img src="./assets/image/twitter_light.svg" />
-              <img src="./assets/image/youtube_light.svg" />
-              <img src="./assets/image/instagram_lilght.svg" />
+            <div class="flex justify-between md:gap-4">
+              <img src="./assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="./assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
             </div>
           </div>
-          <div class="footer-links">
-            <div class="link-column">
-              <h4>Our Destinations</h4>
-              <ul>
-                <li>Canada</li>
-                <li>Alaska</li>
-                <li>France</li>
-                <li>Iceland</li>
+
+          <!-- Footer Links -->
+          <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
+            <!-- Link Column 1 -->
+            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Destinations</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Canada</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Alaska</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">France</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Iceland</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Our Activities</h4>
-              <ul>
-                <li>Northern Lights</li>
-                <li>Cruising & sailing</li>
-                <li>Multi-activities</li>
-                <li>Kayaing</li>
+            <!-- Link Column 2 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Activities</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Northern Lights</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Cruising & sailing</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Multi-activities</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Kayaing</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Travel Blogs</h4>
-              <ul>
-                <li>Bali Travel Guide</li>
-                <li>Sri Lanks Travel Guide</li>
-                <li>Peru Travel Guide</li>
-                <li>Bali Travel Guide</li>
+            <!-- Link Column 3 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Travel Blogs</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Sri Lanks Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Peru Travel Guide</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>About Us</h4>
-              <ul>
-                <li>Our Story</li>
-                <li>Work with us</li>
+            <!-- Link Column 4 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">About Us</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
               </ul>
             </div>
 
-            <div class="link-column">
-              <h4>Contact Us</h4>
-              <ul>
-                <li>Our Story</li>
-                <li>Work with us</li>
+            <!-- Link Column 5 -->
+            <div class="w-5/12 lg:w-44">
+              <h4 class="text-lg font-bold text-blackish-green mb-4">Contact Us</h4>
+              <ul class="flex flex-col gap-4 list-none p-0 m-0">
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
+                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
               </ul>
             </div>
           </div>
