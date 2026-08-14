@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set New Password</title>
+
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/setpass.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left">
+        <img src="../img/logo.png" class="logo" alt="Logo" />
+
+        <h2>Create New Password</h2>
+
+        <p class="subtitle">Your new password must be different from the previous one.</p>
+
+        <form>
+          <label>New Password</label>
+
+          <div class="password">
+            <input type="password" id="newPassword" placeholder="Enter new password" />
+
+            <span class="toggle">👁</span>
+          </div>
+
+          <label>Confirm Password</label>
+
+          <div class="password">
+            <input type="password" id="confirmPassword" placeholder="Confirm password" />
+
+            <span class="toggle">👁</span>
+          </div>
+
+          <div class="strength">
+            <div class="bar"></div>
+          </div>
+
+          <small class="strength-text"> Password strength </small>
+
+          <button type="submit">Reset Password</button>
+        </form>
+
+        <p class="bottom">
+          Remember your password?
+
+          <a href="login.html"> Login </a>
+        </p>
+      </div>
+
+      <div class="right">
+        <img src="../img/signup.png" alt="Hotel" />
+
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span class="active"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
+
