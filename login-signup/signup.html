@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - Golobe</title>
+    <link rel="stylesheet" href="../assets/css/input.css" />
+  </head>
+
+  <body class="bg-white m-0 p-0 font-montserrat min-h-screen flex items-center justify-center">
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-308 w-full mx-auto p-4 md:p-8 flex flex-col lg:flex-row gap-12 lg:gap-24">
+      <!-- BANNER SLIDER -->
+      <div class="hidden lg:flex relative w-full max-w-150 h-200 shrink-0 rounded-[40px] shadow-lg overflow-hidden">
+        <div id="login-slider" class="flex w-full h-full transition-transform duration-700 ease-in-out transform translate-x-0">
+          <img src="../assets/image/stay-slide.png" alt="Banner View 1" class="w-full h-full object-cover shrink-0" />
+          <img src="../assets/image/flight-slide.png" alt="Banner View 2" class="w-full h-full object-cover shrink-0" />
+          <img src="../assets/image/login-banner.png" alt="Banner View 3" class="w-full h-full object-cover shrink-0" />
+        </div>
+
+        <!-- Slider Indicators -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2.5 bg-blackish-green/60 backdrop-blur-md px-4 py-2 rounded-full z-10">
+          <div class="slider-dot w-6 h-2 bg-mint-green rounded-full cursor-pointer transition-all duration-300" data-slide="0"></div>
+          <div class="slider-dot w-2 h-2 bg-white/70 hover:bg-white rounded-full cursor-pointer transition-all duration-300" data-slide="1"></div>
+          <div class="slider-dot w-2 h-2 bg-white/70 hover:bg-white rounded-full cursor-pointer transition-all duration-300" data-slide="2"></div>
+        </div>
+      </div>
+
+      <!-- FORM SIGN UP -->
+      <div class="w-full lg:w-125 flex flex-col gap-16">
+        <!-- Logo -->
+        <a href="../index.html">
+          <img src="../assets/image/logo-small.png" alt="Golobe Logo" class="h-8 w-auto" />
+        </a>
+
+        <!-- FORM -->
+        <form class="flex flex-col gap-12 w-full">
+          <!-- 1. Header -->
+          <div class="flex flex-col gap-4">
+            <h2 class="text-[40px] font-bold text-blackish-green font-trade-gothic m-0 leading-none">Sign up</h2>
+            <p class="text-base font-normal text-blackish-green/75 m-0">Let's get you all set up so you can access your personal account.</p>
+          </div>
+
+          <div class="flex flex-col gap-10">
+            <!-- 2. Input & Options -->
+            <div class="flex flex-col gap-6">
+              <!-- First Name & Last Name -->
+              <div class="flex flex-col md:flex-row gap-6 w-full">
+                <div class="relative flex-1 flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                  <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">First Name</label>
+                  <input type="text" value="John" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                </div>
+                <div class="relative flex-1 flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                  <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Last Name</label>
+                  <input type="text" value="Doe" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                </div>
+              </div>
+
+              <!-- Email & Phone Number -->
+              <div class="flex flex-col md:flex-row gap-6 w-full">
+                <div class="relative flex-1 flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                  <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Email</label>
+                  <input type="email" value="john.doe@gmail.com" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                </div>
+                <div class="relative flex-1 flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                  <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Phone Number</label>
+                  <input type="tel" value="0123456789" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                </div>
+              </div>
+
+              <!-- Password Input -->
+              <div class="relative flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Password</label>
+                <input type="password" value="............" class="w-full border-none outline-none text-base font-bold tracking-widest text-blackish-green bg-transparent" />
+                <button type="button" class="ml-2 w-6 h-6 flex items-center justify-center cursor-pointer shrink-0 border-none bg-transparent">
+                  <img src="../assets/image/eye-off_light.svg" alt="Toggle Password" class="w-full h-full opacity-75 hover:opacity-100 transition-opacity" />
+                </button>
+              </div>
+
+              <!-- Confirm Password Input -->
+              <div class="relative flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Confirm Password</label>
+                <input type="password" value="............" class="w-full border-none outline-none text-base font-bold tracking-widest text-blackish-green bg-transparent" />
+                <button type="button" class="ml-2 w-6 h-6 flex items-center justify-center cursor-pointer shrink-0 border-none bg-transparent">
+                  <img src="../assets/image/eye-off_light.svg" alt="Toggle Password" class="w-full h-full opacity-75 hover:opacity-100 transition-opacity" />
+                </button>
+              </div>
+
+              <!-- Options: Agree to Terms -->
+              <div class="flex items-center">
+                <label class="flex items-center gap-2 cursor-pointer group">
+                  <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:bg-[url('../image/checkbox_light.svg')] bg-center bg-no-repeat transition-all cursor-pointer" />
+                  <span class="text-sm font-medium text-blackish-green mt-0.5">I agree to all the <a href="#" class="text-slamon hover:underline no-underline">Terms</a> and <a href="#" class="text-slamon hover:underline no-underline">Privacy Policies</a></span>
+                </label>
+              </div>
+            </div>
+
+            <!-- 3. Button & Login -->
+            <div class="flex flex-col gap-4">
+              <button type="submit" class="w-full h-12 bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors cursor-pointer border-none">Create account</button>
+
+              <p class="text-sm font-medium text-blackish-green text-center m-0">
+                Already have an account?
+                <a href="login.html" class="font-semibold text-slamon hover:underline no-underline">Login</a>
+              </p>
+            </div>
+
+            <!-- 4. OR -->
+            <div class="flex items-center gap-4 w-full">
+              <div class="flex-1 h-px bg-blackish-green/20"></div>
+              <span class="text-sm font-normal text-blackish-green/50 px-2 whitespace-nowrap">Or Sign up with</span>
+              <div class="flex-1 h-px bg-blackish-green/20"></div>
+            </div>
+
+            <!-- 5. Button Social -->
+            <div class="grid grid-cols-3 gap-4 w-full">
+              <button type="button" class="flex items-center justify-center h-14 bg-transparent border border-solid border-mint-green rounded hover:bg-mint-cream transition-colors w-full cursor-pointer">
+                <img src="../assets/image/facebook_icon.svg" alt="Facebook" class="w-6 h-6" />
+              </button>
+
+              <button type="button" class="flex items-center justify-center h-14 bg-transparent border border-solid border-mint-green rounded hover:bg-mint-cream transition-colors w-full cursor-pointer">
+                <img src="../assets/image/google_icon.svg" alt="Google" class="w-6 h-6" />
+              </button>
+
+              <button type="button" class="flex items-center justify-center h-14 bg-transparent border border-solid border-mint-green rounded hover:bg-mint-cream transition-colors w-full cursor-pointer">
+                <img src="../assets/image/apple_icon.svg" alt="Apple" class="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>
