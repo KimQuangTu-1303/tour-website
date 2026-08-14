@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Payment Method - Golobe</title>
+    <!-- Giữ lại link Tailwind -->
+    <link rel="stylesheet" href="../assets/css/input.css" />
+  </head>
+
+  <body class="bg-white m-0 p-0 font-montserrat min-h-screen flex items-center justify-center">
+    <!-- CONTAINER CHÍNH -->
+    <div class="max-w-308 w-full mx-auto p-4 md:p-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+      <!-- CỘT TRÁI: ẢNH SLIDER -->
+      <div class="hidden lg:flex relative w-full max-w-122 h-200 shrink-0 mr-auto rounded-[40px] shadow-lg overflow-hidden">
+        <!-- Khung Track chứa chuỗi ảnh -->
+        <div id="login-slider" class="flex w-full h-full transition-transform duration-700 ease-in-out transform translate-x-0">
+          <img src="../assets/image/stay-slide.png" alt="Hotel View 1" class="max-w-122 h-full object-cover shrink-0" />
+          <img src="../assets/image/flight-slide.png" alt="Hotel View 2" class="max-w-122 h-full object-cover shrink-0" />
+          <img src="../assets/image/home-slide.png" alt="Hotel View 3" class="max-w-122 h-full object-cover shrink-0" />
+        </div>
+
+        <!-- Thanh chấm tròn Slider -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2.5 bg-blackish-green/60 backdrop-blur-md px-4 py-2 rounded-full z-10">
+          <div class="slider-dot w-6 h-2 bg-mint-green rounded-full cursor-pointer transition-all duration-300" data-slide="0"></div>
+          <div class="slider-dot w-2 h-2 bg-white/70 hover:bg-white rounded-full cursor-pointer transition-all duration-300" data-slide="1"></div>
+          <div class="slider-dot w-2 h-2 bg-white/70 hover:bg-white rounded-full cursor-pointer transition-all duration-300" data-slide="2"></div>
+        </div>
+      </div>
+
+      <!-- CỘT PHẢI: FORM ADD PAYMENT -->
+      <div class="w-full lg:w-160 flex flex-col gap-10">
+        <!-- Logo -->
+        <a href="../index.html">
+          <img src="../assets/image/logo-small.png" alt="Golobe Logo" class="h-8 w-auto" />
+        </a>
+
+        <!-- Nút Back -->
+        <a href="signup.html" class="flex items-center text-sm font-medium text-blackish-green hover:opacity-80 transition-opacity no-underline w-fit">
+          <img src="../assets/image/chevron-back_light.svg" alt="Back" class="w-6 h-6" />
+          Back
+        </a>
+
+        <!-- FORM CHÍNH -->
+        <form class="flex flex-col gap-8 w-full -mt-4">
+          <!-- Tiêu đề -->
+          <div class="flex flex-col gap-4">
+            <h2 class="text-[40px] font-bold text-blackish-green font-trade-gothic m-0 leading-none">Add a payment method</h2>
+            <p class="text-base font-normal text-blackish-green/75 m-0">Let's get you all set up so you can access your personal account.</p>
+          </div>
+
+          <!-- Các trường Input -->
+          <div class="flex flex-col gap-6">
+            <!-- Card Number -->
+            <div class="relative flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Card Number</label>
+              <input type="text" value="4321 4321 4321 4321" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+              <img src="../assets/image/Visa_blue.svg" alt="Visa" class="w-10 h-auto object-contain shrink-0" />
+            </div>
+
+            <!-- Exp. Date & CVC -->
+            <div class="flex flex-col md:flex-row gap-6 w-full">
+              <!-- Exp. Date -->
+              <div class="relative flex-1 flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Exp. Date</label>
+                <input type="text" value="02/27" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+              </div>
+
+              <!-- CVC -->
+              <div class="relative flex-1 flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">CVC</label>
+                <input type="password" value="123" class="w-full border-none outline-none text-base font-medium text-blackish-green tracking-widest bg-transparent" />
+              </div>
+            </div>
+
+            <!-- Name on Card -->
+            <div class="relative flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Name on Card</label>
+              <input type="text" value="John Doe" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+            </div>
+
+            <!-- Country or Region (Sử dụng Select) -->
+            <div class="relative flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Country or Region</label>
+              <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none pr-8">
+                <option value="us">United States</option>
+                <option value="vn">Vietnam</option>
+              </select>
+              <!-- Icon mũi tên sổ xuống -->
+              <img src="../assets/image/chevron_down.svg" alt="Dropdown" class="absolute right-3 w-5 h-5 pointer-events-none" />
+            </div>
+
+            <!-- Tùy chọn lưu thẻ -->
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <input type="checkbox" checked class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:bg-[url('../image/checkbox_light.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
+              <span class="text-sm font-medium text-blackish-green leading-tight">Securely save my information for 1-click checkout</span>
+            </label>
+          </div>
+
+          <!-- Nút Submit và Ghi chú -->
+          <div class="flex flex-col gap-4">
+            <button type="submit" class="w-full h-12 bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors cursor-pointer border-none">Add payment method</button>
+
+            <p class="text-xs font-normal text-blackish-green/75 text-center leading-relaxed m-0 mt-2">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>
