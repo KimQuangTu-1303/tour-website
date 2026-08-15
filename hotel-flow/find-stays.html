@@ -133,7 +133,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
           <!-- Destination (Chiếm 5/14 cột) -->
           <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-5 focus-within:border-mint-green transition-colors">
-            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="destination">Enter Destination</label>
+            <label class="floating-label" for="destination">Enter Destination</label>
             <div class="flex items-center justify-between w-full gap-2.5">
               <img src="../assets/image/bed_light.svg" alt="bed" class="shrink-0" />
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="destination" type="text" name="destination" value="Istanbul, Turkey" placeholder="name city" />
@@ -141,8 +141,8 @@
           </div>
 
           <!-- Check In (Chiếm 3/14 cột) -->
-          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
-            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="checkin">Check In</label>
+          <div class="input-group lg:col-span-3">
+            <label class="floating-label" for="checkin">Check In</label>
             <div class="flex items-center justify-between w-full gap-2.5">
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="checkin" type="text" name="checkin" value="Fri 12/2" placeholder="dd/mm/yy" />
               <img src="../assets/image/calendar_light.svg" alt="calendar" class="shrink-0" />
@@ -150,8 +150,8 @@
           </div>
 
           <!-- Check Out (Chiếm 3/14 cột) -->
-          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
-            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="checkout">Check Out</label>
+          <div class="input-group lg:col-span-3">
+            <label class="floating-label" for="checkout">Check Out</label>
             <div class="flex items-center justify-between w-full gap-2.5">
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="checkout" type="text" name="checkout" value="Sun 12/4" placeholder="dd/mm/yy" />
               <img src="../assets/image/calendar_light.svg" alt="calendar" class="shrink-0" />
@@ -159,8 +159,8 @@
           </div>
 
           <!-- Rooms & Guests (Chiếm 3/14 cột) -->
-          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-3 focus-within:border-mint-green transition-colors">
-            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="guests">Rooms & Guests</label>
+          <div class="input-group lg:col-span-3">
+            <label class="floating-label" for="guests">Rooms & Guests</label>
             <div class="flex items-center justify-between w-full gap-2.5">
               <img src="../assets/image/user_light.svg" alt="user" class="shrink-0" />
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="guests" type="text" name="guests" value="1 room, 2 guests" />
