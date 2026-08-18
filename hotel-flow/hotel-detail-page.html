@@ -9,12 +9,12 @@
 
   <body>
     <!-- HEADER -->
-    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-8 bg-white">
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
       <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
         <nav class="flex flex-1">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
+            <!-- Active item -->
             <li class="nav-item">
               <img src="../assets/image/airplane_light.svg" alt="Flight" />
               <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
@@ -162,26 +162,25 @@
 
             <div class="flex gap-4 w-full md:w-auto">
               <!-- Favorite -->
-              <label class="relative flex items-center justify-center w-12 h-12 border border-mint-green rounded cursor-pointer hover:bg-mint-green/20 transition-colors shrink-0 group">
+              <label class="btn-favorite group">
                 <input type="checkbox" class="peer hidden" />
                 <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:[background-image:url('../image/heart_light.svg')] transition-all"></div>
               </label>
               <!-- Share -->
-              <button class="w-12 h-12 flex items-center justify-center border border-solid border-mint-green rounded hover:bg-mint-green/20 transition-colors shrink-0 cursor-pointer bg-transparent">
+              <button class="btn-icon-outline">
                 <img src="../assets/image/share_light.svg" alt="Share" class="w-5 h-5" />
               </button>
               <!-- Book Now -->
-              <a href="hotel-booking-detail.html" class="flex-1 md:flex-none flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-8 transition-colors no-underline"> Book now </a>
+              <a href="hotel-booking-detail.html" class="btn-primary px-8 flex-1"> Book now </a>
             </div>
           </div>
         </section>
 
-        <!-- Gallery (Grid phức hợp 1 to, 4 nhỏ) -->
+        <!-- Gallery -->
         <section class="grid grid-cols-1 lg:grid-cols-2 gap-2 rounded-xl overflow-hidden">
-          <!-- Ảnh chính -->
+          <!-- Main Image -->
           <img src="../assets/image/cvk-park-bosphorus-hotel-istanbul_612x550.png" alt="" class="w-full h-full object-cover min-h-[300px]" />
 
-          <!-- 4 ảnh phụ lưới 2x2 -->
           <div class="grid grid-cols-2 gap-2">
             <img src="../assets/image/bed(1).png" alt="" class="w-full h-full object-cover" />
             <img src="../assets/image/eresin-hotel-sultanahmet(3)_302x271.png" alt="" class="w-full h-full object-cover" />
@@ -199,7 +198,7 @@
         <p class="text-base font-medium text-blackish-green/75 leading-none m-0 text-justify">Located in Taksim Gmsuyu, the heart of Istanbul, the CVK Park Bosphorus Hotel Istanbul has risen from the ashes of the historic Park Hotel, which also served as Foreign Affairs Palace 120 years ago and is hosting its guests by assuming this hospitality mission. With its 452 luxurious rooms and suites, 8500 m2 SPA and fitness area, 18 meeting rooms including 4 dividable ones and 3 terraces with Bosphorus view, Istanbuls largest terrace with Bosphorus view (4500 m2) and latest technology infrastructure, CVK Park Bosphorus Hotel Istanbul is destined to be the popular attraction point of the city. Room and suite categories at various sizes with city and Bosphorus view, as well as 68 separate luxury suites, are offered to its special guests as a wide variety of selection.</p>
 
         <div class="flex flex-wrap gap-4 mt-4">
-          <!-- Card 1: Rating (Nền xanh đặc, chữ bố trí trên/dưới) -->
+          <!-- Card 1: Rating -->
           <div class="flex flex-col justify-between p-4 border border-mint-green rounded-xl bg-mint-green w-40 h-36 shrink-0">
             <span class="text-4xl font-bold text-blackish-green leading-none">4.2</span>
             <div class="flex flex-col gap-1">
@@ -251,7 +250,7 @@
                 <span class="text-2xl font-bold leading-none">$240</span>
                 <span class="text-sm font-medium leading-none">/night</span>
               </div>
-              <a href="hotel-booking-detail.html" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors no-underline">Book now</a>
+              <a href="hotel-booking-detail.html" class="btn-primary px-6 py-3">Book now</a>
             </div>
           </li>
 
@@ -266,7 +265,7 @@
                 <span class="text-2xl font-bold leading-none">$280</span>
                 <span class="text-sm font-medium leading-none">/night</span>
               </div>
-              <a href="hotel-booking-detail.html" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors no-underline">Book now</a>
+              <a href="hotel-booking-detail.html" class="btn-primary px-6 py-3">Book now</a>
             </div>
           </li>
 
@@ -281,7 +280,7 @@
                 <span class="text-2xl font-bold leading-none">$320</span>
                 <span class="text-sm font-medium leading-none">/night</span>
               </div>
-              <a href="hotel-booking-detail.html" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors no-underline">Book now</a>
+              <a href="hotel-booking-detail.html" class="btn-primary px-6 py-3">Book now</a>
             </div>
           </li>
 
@@ -296,7 +295,7 @@
                 <span class="text-2xl font-bold leading-none">$350</span>
                 <span class="text-sm font-medium leading-none">/night</span>
               </div>
-              <a href="hotel-booking-detail.html" class="flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors no-underline">Book now</a>
+              <a href="hotel-booking-detail.html" class="btn-primary px-6 py-3">Book now</a>
             </div>
           </li>
         </ul>
@@ -308,9 +307,8 @@
       <div class="flex flex-col gap-8">
         <header class="flex justify-between items-center">
           <h2 class="font-trade-gothic text-xl font-bold text-blackish-green m-0">Location/Map</h2>
-          <button class="bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors cursor-pointer border-none">View on google maps</button>
+          <button class="btn-primary px-6 py-3">View on google maps</button>
         </header>
-        <!-- Cụm bản đồ & địa chỉ gắn kết -->
         <div class="flex flex-col gap-2">
           <img src="../assets/image/location-picture.png" alt="Map Location" class="w-full rounded-xl object-cover" />
 
@@ -327,7 +325,6 @@
       <div class="flex flex-col gap-8">
         <h2 class="font-trade-gothic text-xl font-bold text-blackish-green m-0">Amenities</h2>
 
-        <!-- Cập nhật Grid: Mobile 1 cột, Desktop chia 2 cột dọc (5 hàng) -->
         <ul class="grid grid-cols-1 md:grid-rows-5 md:grid-flow-col gap-y-4 md:gap-x-32 m-0 p-0 list-none md:w-fit">
           <li class="flex items-center gap-4">
             <img src="../assets/image/pool_light.svg" alt="" class="w-6 h-6" />
@@ -375,7 +372,6 @@
           </li>
 
           <li class="flex items-center gap-4">
-            <!-- Nút +24 more đẩy một khoảng bằng chiều ngang của icon (24px) để canh thẳng hàng chữ -->
             <span class="text-sm font-semibold text-slamon cursor-pointer ml-10">+24 more</span>
           </li>
         </ul>
@@ -386,7 +382,7 @@
       <div class="flex flex-col gap-8">
         <header class="flex justify-between items-center">
           <h2 class="font-trade-gothic text-xl font-bold text-blackish-green m-0">Reviews</h2>
-          <button class="bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-6 py-3 transition-colors cursor-pointer border-none">Give your review</button>
+          <button class="btn-primary px-6 py-3">Give your review</button>
         </header>
 
         <div class="flex items-center gap-4">
@@ -440,7 +436,7 @@
 
           <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <!-- Review 3 (Mới thêm) -->
+          <!-- Review 3 -->
           <li class="flex gap-4">
             <img src="../assets/image/user-avt_45x45(1).png" alt="" class="w-12 h-12 rounded-full object-cover shrink-0" />
             <div class="flex flex-col gap-2 w-full">
@@ -460,7 +456,7 @@
 
           <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <!-- Review 4 (Mới thêm) -->
+          <!-- Review 4 -->
           <li class="flex gap-4">
             <img src="../assets/image/user-avt_45x45(2).png" alt="" class="w-12 h-12 rounded-full object-cover shrink-0" />
             <div class="flex flex-col gap-2 w-full">
@@ -480,7 +476,7 @@
 
           <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <!-- Review 5 (Mới thêm) -->
+          <!-- Review 5 -->
           <li class="flex gap-4">
             <img src="../assets/image/user-avt_45x45(3).png" alt="" class="w-12 h-12 rounded-full object-cover shrink-0" />
             <div class="flex flex-col gap-2 w-full">
@@ -498,10 +494,8 @@
             </div>
           </li>
 
-          <!-- Đường gạch dưới cuối cùng để ngăn cách với phân trang -->
           <div class="h-px w-full bg-blackish-green/25"></div>
 
-          <!-- Nút phân trang (Pagination) - Đã xóa border -->
           <li class="flex justify-center items-center gap-4 mt-4">
             <button class="w-10 h-10 flex justify-center items-center rounded bg-transparent border-none cursor-pointer hover:bg-gray-50 transition-colors">
               <img src="../assets/image/chevron-back_light.svg" alt="Previous" class="w-5 h-5" />
@@ -522,7 +516,6 @@
         <!-- Newsletter Card -->
         <div class="newsletter-card">
           <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
-            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
             <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
 
             <div class="flex flex-col gap-2 mb-3">
@@ -532,7 +525,6 @@
 
             <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
               <input type="email" placeholder="Your email address" required class="input-email" />
-              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
               <button type="submit" class="btn-subscribe">Subscribe</button>
             </form>
           </div>
@@ -542,30 +534,27 @@
           </div>
         </div>
 
-        <!-- Footer Container (Chứa Brand và Links) -->
+        <!-- Footer Container -->
         <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
             <div class="logo">
-              <!-- h-9 = 36px -->
               <img src="../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
             <div class="flex justify-between md:gap-4">
-              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="social-icon" />
+              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="social-icon" />
+              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="social-icon" />
+              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="social-icon" />
             </div>
           </div>
 
           <!-- Footer Links -->
           <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
             <!-- Link Column 1 -->
-            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
             <div class="w-5/12 lg:w-44">
               <h4 class="footer-title">Our Destinations</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
                 <li><a href="#" class="footer-link">Canada</a></li>
                 <li><a href="#" class="footer-link">Alaska</a></li>
                 <li><a href="#" class="footer-link">France</a></li>

@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickets / Bookings - Flights</title>
-    <!-- Chỉ giữ lại link input.css -->
     <link rel="stylesheet" href="../assets/css/input.css" />
   </head>
 
   <body>
     <!-- HEADER -->
-    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-8 bg-white">
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
       <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
         <nav class="flex flex-1">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <!-- Active item -->
+            <li class="nav-item">
               <img src="../assets/image/airplane_light.svg" alt="Flight" />
               <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="nav-item">
               <img src="../assets/image/bed_light.svg" alt="Stays" />
               <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
@@ -36,14 +36,14 @@
         <!-- Right Menu -->
         <div class="flex flex-1 justify-end">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="nav-item">
               <img src="../assets/image/heart_light.svg" alt="Heart" />
               <a href="#" class="text-blackish-green no-underline">Favourites</a>
             </li>
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
+            <li class="nav-item text-blackish-green">|</li>
 
             <!-- Dropdown Container -->
-            <li class="group relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="group nav-item">
               <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
                 <div class="relative inline-flex">
                   <img src="../assets/image/user-avt.png" alt="John D." />
@@ -67,21 +67,21 @@
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/user_light.svg" alt="#" />
                       My account
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/card_light.png" alt="#" />
                       Payments
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/setting_light.png" alt="#" />
                       Setting
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
@@ -93,14 +93,14 @@
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/support_light.png" alt="#" />
                       Support
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/logout_light.png" alt="#" />
                       Logout
                     </a>
@@ -114,19 +114,19 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-308 w-11/12 mx-auto flex flex-col font-montserrat">
+    <main class="max-w-7xl w-11/12 mx-auto flex flex-col font-montserrat">
       <!-- Cover Section -->
       <section class="relative w-full">
         <img src="../assets/image/background-avt.png" alt="Cover Image" class="w-full h-80 md:h-88 rounded-3xl object-cover" />
 
-        <button class="absolute right-4 md:right-8 bottom-4 md:bottom-8 flex items-center gap-2 bg-mint-green py-2.5 px-4 rounded font-medium text-sm text-blackish-green transition-transform hover:-translate-y-1 shadow-sm">
+        <button class="absolute right-4 md:right-8 bottom-4 md:bottom-8 flex items-center gap-2 bg-mint-green py-2.5 px-4 rounded font-medium text-sm text-blackish-green transition-transform hover:-translate-y-1 shadow-sm z-10">
           <img src="../assets/image/upload_light.svg" alt="Upload Icon" />
           Upload new cover
         </button>
       </section>
 
       <!-- Profile Card Section -->
-      <section class="relative z-10 flex flex-col items-center -mt-20">
+      <section class="relative flex flex-col items-center -mt-20">
         <div class="relative">
           <img src="../assets/image/user-avt_225x225.png" alt="John Doe" class="w-40 h-40 rounded-full border-4 border-slamon object-cover bg-white shadow-sm" />
           <button class="absolute bottom-1 right-1 w-10 h-10 bg-slamon rounded-full flex items-center justify-center border-4 border-white transition-transform hover:-translate-y-1">
@@ -191,7 +191,7 @@
 
         <!-- 3. Ticket List Container -->
         <div class="flex flex-col gap-4 w-full">
-          <!-- ================= TICKET 1 ================= -->
+          <!-- TICKET 1 -->
           <div class="bg-white rounded-xl p-6 flex flex-col xl:flex-row items-center gap-8 shadow-sm">
             <!-- BLOCK 1: Avatar -->
             <div class="w-20 h-20 rounded-lg border border-mint-green flex items-center justify-center p-1 shrink-0">
@@ -266,7 +266,7 @@
             </div>
           </div>
 
-          <!-- ================= TICKET 2 ================= -->
+          <!-- TICKET 2 -->
           <div class="bg-white rounded-xl p-6 flex flex-col xl:flex-row items-center gap-6 shadow-sm">
             <!-- BLOCK 1: Avatar -->
             <div class="w-20 h-20 rounded-lg border border-mint-green flex items-center justify-center p-1 shrink-0">
@@ -341,7 +341,7 @@
             </div>
           </div>
 
-          <!-- ================= TICKET 3 ================= -->
+          <!-- TICKET 3 -->
           <div class="bg-white rounded-xl p-6 flex flex-col xl:flex-row items-center gap-6 shadow-sm">
             <!-- BLOCK 1: Avatar -->
             <div class="w-20 h-20 rounded-lg border border-mint-green flex items-center justify-center p-1 shrink-0">
@@ -448,7 +448,6 @@
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
             <div class="logo">
-              <!-- h-9 = 36px -->
               <img src="../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
             <div class="flex justify-between md:gap-4">

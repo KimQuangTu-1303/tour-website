@@ -9,19 +9,19 @@
 
   <body>
     <!-- HEADER -->
-    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-8 bg-white">
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
       <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
         <nav class="flex flex-1">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
+            <!-- Active item -->
             <li class="nav-item">
               <img src="../assets/image/airplane_light.svg" alt="Flight" />
               <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
             <li class="nav-item after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
               <img src="../assets/image/bed_light.svg" alt="Stays" />
-              <a href="find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
+              <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
           </ul>
         </nav>
@@ -130,7 +130,6 @@
       <div class="lg:col-span-3 flex flex-col gap-10">
         <!-- 1. RESERVATION INFO -->
         <div class="flex flex-col">
-          <!-- Cố định padding py-8 px-6 để text vừa khít lề Breadcrumb -->
           <div class="bg-white py-8 px-6 rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full">
             <header class="flex justify-between items-start mb-4">
               <h1 class="font-trade-gothic text-2xl font-bold text-blackish-green leading-none max-w-122">Superior room - 1 double bed or 2 twin beds</h1>
@@ -155,7 +154,6 @@
                 <p class="text-sm font-medium text-blackish-green/75 leading-none">Check-In</p>
               </div>
 
-              <!-- Giữ nguyên icon schedule theo yêu cầu -->
               <img src="../assets/image/schedule-icon.svg" alt="Schedule" />
 
               <div class="flex flex-col text-right">
@@ -169,14 +167,13 @@
         <!-- 2. PAYMENT OPTIONS -->
         <div class="flex flex-col p-4 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-4">
           <!-- Option 1: Pay in full -->
-          <label class="relative flex flex-col justify-between w-full rounded-xl cursor-pointer hover:bg-mint-green/20 transition-all duration-300 group has-[:checked]:bg-mint-green">
+          <label class="radio-card group has-[:checked]:bg-mint-green">
             <input type="radio" name="payment_method" class="hidden" checked />
             <div class="flex justify-between items-center p-4">
               <div class="flex flex-col gap-2">
                 <p class="text-base font-bold text-blackish-green">Pay in full</p>
                 <p class="text-sm font-normal text-blackish-green">Pay the total and you are all set</p>
               </div>
-              <!-- Logic icon Radio xịn sò, không dính LSP Warning -->
               <div class="relative w-6 h-6 shrink-0">
                 <div class="absolute inset-0 bg-[url('../image/none-checked.svg')] bg-contain bg-no-repeat group-has-[:checked]:hidden"></div>
                 <div class="absolute inset-0 bg-[url('../image/checked.svg')] bg-contain bg-no-repeat hidden group-has-[:checked]:block"></div>
@@ -204,11 +201,11 @@
         <!-- 3. VISA CARD / ADD NEW CARD -->
         <div class="flex flex-col p-4 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-4">
           <!-- Visa Option -->
-          <label class="relative flex flex-col justify-between w-full rounded-xl cursor-pointer hover:bg-mint-green/20 transition-all duration-300 group has-[:checked]:bg-mint-green">
+          <label class="radio-card group has-[:checked]:bg-mint-green">
             <input type="radio" name="selected_card" class="hidden" checked />
             <div class="flex justify-between items-center p-4">
               <div class="flex items-center gap-4 md:gap-6">
-                <img src="../assets/image/Visa_light.svg" alt="visa" class="w-12 h-auto object-contain shrink-0" />
+                <img src="../assets/image/Visa_light.svg" alt="visa" class="w-8 h-auto object-contain shrink-0" />
                 <p class="text-base font-bold text-blackish-green">**** 4321</p>
                 <p class="text-sm font-normal text-blackish-green">02/27</p>
               </div>
@@ -219,14 +216,13 @@
             </div>
           </label>
 
-          <!-- Add new card (Click để mở Popup) -->
+          <!-- Add new card -->
           <label for="image-upload" class="block cursor-pointer">
             <div class="flex flex-col justify-center items-center py-4 px-6 h-48 border-2 border-dashed border-mint-green rounded-[15px] hover:bg-mint-green/10 transition-colors">
               <img src="../assets/image/add_circle.svg" alt="Add" class="w-12 h-12 mb-3 shrink-0" />
               <p class="text-sm font-medium text-blackish-green">Add a new card</p>
             </div>
           </label>
-          <!-- Input file ẩn để trigger JS -->
           <input type="file" id="image-upload" accept="image/*" class="hidden" />
         </div>
       </div>
@@ -277,7 +273,6 @@
 
           <div class="flex justify-between items-center">
             <span class="font-medium">Total</span>
-            <!-- Đồng bộ text-2xl cho giá tiền -->
             <span class="font-semibold text-2xl">$265</span>
           </div>
         </div>
@@ -287,7 +282,7 @@
       <div id="upload-popup" class="hidden fixed inset-0 bg-black/50 items-center justify-center z-1000">
         <!-- MODAL CONTENT -->
         <div class="flex flex-col relative bg-white p-16 w-full max-w-160 rounded-xl overflow-y-auto max-h-[90vh]">
-          <!-- Nút đóng (Đã gắn class close-x cho JS) -->
+          <!-- Nút đóng -->
           <button class="close-x self-end bg-transparent border-none cursor-pointer hover:opacity-75 transition-opacity">
             <img src="../assets/image/close_light.svg" alt="close" class="w-4 h-4 pointer-events-none" />
           </button>
@@ -296,30 +291,30 @@
 
           <form class="flex flex-col gap-6">
             <div class="relative">
-              <label class="absolute -top-2 left-3 bg-white px-1 text-sm font-normal text-blackish-green z-10">Card Number</label>
+              <label class="floating-label">Card Number</label>
               <input type="text" class="modal-input" placeholder="XXXX XXXX XXXX XXXX" />
               <img src="../assets/image/Visa_blue.svg" alt="visa" class="absolute top-1/2 right-3 -translate-y-1/2" />
             </div>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-between">
               <div class="relative w-full">
-                <label class="absolute -top-2 left-3 bg-white px-1 text-sm font-normal text-blackish-green z-10">Exp. Date</label>
+                <label class="floating-label">Exp. Date</label>
                 <input type="text" class="modal-input" placeholder="mm/dd" />
               </div>
 
               <div class="relative w-full">
-                <label class="absolute -top-2 left-3 bg-white px-1 text-sm font-normal text-blackish-green z-10">CVC</label>
+                <label class="floating-label">CVC</label>
                 <input type="password" class="modal-input" placeholder="Enter your password" />
               </div>
             </div>
 
             <div class="relative">
-              <label class="absolute -top-2 left-3 bg-white px-1 text-sm font-normal text-blackish-green z-10">Name on Card</label>
+              <label class="floating-label">Name on Card</label>
               <input type="text" class="modal-input" placeholder="Enter your Name" />
             </div>
 
             <div class="relative">
-              <label class="absolute -top-2 left-3 bg-white px-1 text-sm font-normal text-blackish-green z-10">Country or Region</label>
+              <label class="floating-label">Country or Region</label>
               <input type="text" name="country" class="modal-input" value="United-States" />
             </div>
 
@@ -330,7 +325,7 @@
           </form>
 
           <!-- Nút Add Card -->
-          <a href="hotel-booking-detail-ticket.html" class="block w-full py-4 text-center mt-10 mb-4 bg-mint-green hover:bg-mint-green/80 text-blackish-green text-base font-semibold rounded-lg transition-colors no-underline">Add Card</a>
+          <a href="hotel-booking-detail-ticket.html" class="btn-primary py-4 mt-10 mb-4">Add Card</a>
           <p class="text-xs font-normal leading-tight text-center opacity-75 text-blackish-green">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.</p>
         </div>
       </div>
@@ -341,7 +336,6 @@
         <!-- Newsletter Card -->
         <div class="newsletter-card">
           <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
-            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
             <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
 
             <div class="flex flex-col gap-2 mb-3">
@@ -351,7 +345,6 @@
 
             <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
               <input type="email" placeholder="Your email address" required class="input-email" />
-              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
               <button type="submit" class="btn-subscribe">Subscribe</button>
             </form>
           </div>
@@ -361,7 +354,7 @@
           </div>
         </div>
 
-        <!-- Footer Container (Chứa Brand và Links) -->
+        <!-- Footer Container -->
         <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
@@ -380,11 +373,9 @@
           <!-- Footer Links -->
           <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
             <!-- Link Column 1 -->
-            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
             <div class="w-5/12 lg:w-44">
               <h4 class="footer-title">Our Destinations</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
                 <li><a href="#" class="footer-link">Canada</a></li>
                 <li><a href="#" class="footer-link">Alaska</a></li>
                 <li><a href="#" class="footer-link">France</a></li>
@@ -436,7 +427,6 @@
       </div>
     </footer>
 
-    <!-- Script chạy Popup Modal giữ nguyên -->
     <script src="../assets/js/hotel-booking-detail-visa.js"></script>
   </body>
 </html>

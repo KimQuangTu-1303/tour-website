@@ -9,19 +9,19 @@
 
   <body>
     <!-- HEADER -->
-    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-8 bg-white">
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
       <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
         <nav class="flex flex-1">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
+            <!-- Active item -->
             <li class="nav-item">
               <img src="../assets/image/airplane_light.svg" alt="Flight" />
               <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
             <li class="nav-item after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
               <img src="../assets/image/bed_light.svg" alt="Stays" />
-              <a href="find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
+              <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
           </ul>
         </nav>
@@ -155,7 +155,6 @@
                 <p class="text-sm font-medium text-blackish-green/75 leading-none m-0">Check-In</p>
               </div>
 
-              <!-- Giữ nguyên icon schedule theo yêu cầu -->
               <img src="../assets/image/schedule-icon.svg" alt="Schedule" />
 
               <div class="flex flex-col text-right">
@@ -176,7 +175,6 @@
                 <p class="text-base font-bold text-blackish-green m-0">Pay in full</p>
                 <p class="text-sm font-normal text-blackish-green m-0">Pay the total and you are all set</p>
               </div>
-              <!-- Logic icon Radio xịn sò, không dính LSP Warning -->
               <div class="relative w-6 h-6 shrink-0">
                 <div class="absolute inset-0 bg-[url('../image/none-checked.svg')] bg-contain bg-no-repeat group-has-[:checked]:hidden"></div>
                 <div class="absolute inset-0 bg-[url('../image/checked.svg')] bg-contain bg-no-repeat hidden group-has-[:checked]:block"></div>
@@ -205,9 +203,9 @@
         <div class="flex flex-col p-6 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-6">
           <form class="flex flex-col gap-4">
             <h2 class="font-trade-gothic text-xl font-bold text-blackish-green leading-snug m-0">Login or Sign up to book</h2>
-            <input type="tel" class="text-base font-normal text-blackish-green p-4 border border-input-border rounded outline-none focus:border-mint-green transition-colors" placeholder="Phone Number" />
+            <input type="tel" class="modal-input" placeholder="Phone Number" />
             <p class="text-sm font-normal text-blackish-green mb-2 mt-0">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="#" class="font-semibold text-blackish-green no-underline hover:underline">Privacy Policy</a></p>
-            <button type="button" class="text-base font-medium text-blackish-green bg-mint-green py-3.5 px-4 rounded hover:bg-mint-green/80 transition-colors w-full cursor-pointer border-none">Continue</button>
+            <button type="button" class="btn-primary w-full py-3.5">Continue</button>
           </form>
 
           <div class="flex items-center text-base font-medium text-blackish-green text-center before:content-[''] before:flex-1 before:h-px before:bg-blackish-green/25 before:mr-6 after:content-[''] after:flex-1 after:h-px after:bg-blackish-green/25 after:ml-6">Or</div>
@@ -277,7 +275,6 @@
 
           <div class="flex justify-between items-center">
             <span class="font-medium">Total</span>
-            <!-- Đồng bộ text-2xl cho giá tiền -->
             <span class="font-semibold text-2xl">$265</span>
           </div>
         </div>
@@ -289,7 +286,6 @@
         <!-- Newsletter Card -->
         <div class="newsletter-card">
           <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
-            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
             <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
 
             <div class="flex flex-col gap-2 mb-3">
@@ -299,7 +295,6 @@
 
             <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
               <input type="email" placeholder="Your email address" required class="input-email" />
-              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
               <button type="submit" class="btn-subscribe">Subscribe</button>
             </form>
           </div>
@@ -309,30 +304,27 @@
           </div>
         </div>
 
-        <!-- Footer Container (Chứa Brand và Links) -->
+        <!-- Footer Container -->
         <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
             <div class="logo">
-              <!-- h-9 = 36px -->
               <img src="../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
             <div class="flex justify-between md:gap-4">
-              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="social-icon" />
+              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="social-icon" />
+              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="social-icon" />
+              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="social-icon" />
             </div>
           </div>
 
           <!-- Footer Links -->
           <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
             <!-- Link Column 1 -->
-            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
             <div class="w-5/12 lg:w-44">
               <h4 class="footer-title">Our Destinations</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
                 <li><a href="#" class="footer-link">Canada</a></li>
                 <li><a href="#" class="footer-link">Alaska</a></li>
                 <li><a href="#" class="footer-link">France</a></li>

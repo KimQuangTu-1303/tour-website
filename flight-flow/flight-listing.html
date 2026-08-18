@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="../assets/css/input.css" />
   </head>
 
-  <body class="font-montserrat text-blackish-green bg-white">
+  <body>
     <!-- HEADER -->
-    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-8 bg-white">
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
       <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
         <nav class="flex flex-1">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
+            <!-- Active item -->
+            <li class="nav-item after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
               <img src="../assets/image/airplane_light.svg" alt="Flight" />
-              <a href="find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
+              <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="nav-item">
               <img src="../assets/image/bed_light.svg" alt="Stays" />
               <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
@@ -36,14 +36,14 @@
         <!-- Right Menu -->
         <div class="flex flex-1 justify-end">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="nav-item">
               <img src="../assets/image/heart_light.svg" alt="Heart" />
-              <a href="favourites.html" class="text-blackish-green no-underline">Favourites</a>
+              <a href="#" class="text-blackish-green no-underline">Favourites</a>
             </li>
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
+            <li class="nav-item text-blackish-green">|</li>
 
             <!-- Dropdown Container -->
-            <li class="group relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="group nav-item">
               <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
                 <div class="relative inline-flex">
                   <img src="../assets/image/user-avt.png" alt="John D." />
@@ -67,21 +67,21 @@
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/user_light.svg" alt="#" />
                       My account
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/card_light.png" alt="#" />
                       Payments
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/setting_light.png" alt="#" />
                       Setting
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
@@ -93,14 +93,14 @@
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/support_light.png" alt="#" />
                       Support
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/logout_light.png" alt="#" />
                       Logout
                     </a>
@@ -116,9 +116,7 @@
     <!-- SEARCH SECTION -->
     <section class="max-w-308 mx-auto mb-8 mt-4 lg:mt-0">
       <form class="bg-white rounded-2xl shadow-md p-6" action="#" method="get">
-        <!-- Áp dụng chia 14 cột giống hotel-listing -->
         <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
-          <!-- From - To (Chiếm 4/14 cột) -->
           <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors">
             <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="from-to">From - To</label>
             <div class="flex items-center justify-between w-full gap-2">
@@ -160,7 +158,6 @@
 
           <!-- Submit Button (Chiếm 1/14 cột) -->
           <button class="bg-mint-green hover:bg-mint-green/80 text-blackish-green h-14 rounded-lg flex items-center justify-center transition-colors lg:col-span-1 w-full cursor-pointer border-none" type="submit" aria-label="Search Flights">
-            <!-- Dùng lại icon kính lúp của flight-listing -->
             <img src="../assets/image/Search.png" alt="Search" class="w-6 h-6 object-contain" />
           </button>
         </div>
@@ -169,11 +166,11 @@
 
     <!-- MAIN LAYOUT -->
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-8 my-8 px-4 md:px-8">
-      <!-- CỘT BÊN TRÁI: FILTERS (Chiếm 3/12 cột) -->
+      <!-- LEFT COLUMN (Chiếm 3/12 cột) -->
       <aside class="flex flex-col gap-8 lg:col-span-3">
         <h2 class="text-xl font-semibold text-blackish-green leading-tight">Filters</h2>
 
-        <!-- Lọc Giá (Price) -->
+        <!-- Price -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Price</h3>
@@ -181,9 +178,7 @@
           </div>
 
           <div class="relative w-full h-12">
-            <!-- Thanh nền xám (Track) -->
             <div class="absolute top-3 w-full h-0.5 rounded bg-blackish-green/10"></div>
-            <!-- Thanh fill màu xanh -->
             <div id="slider-fill" class="absolute top-3 h-0.5 rounded bg-blackish-green"></div>
 
             <!-- Range inputs -->
@@ -199,7 +194,7 @@
         </div>
         <div class="h-px w-full bg-blackish-green/25"></div>
 
-        <!-- Lọc Giờ Khởi Hành (Departure Time) -->
+        <!-- Departure Time -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Departure Time</h3>
@@ -221,7 +216,7 @@
         </div>
         <div class="h-px w-full bg-blackish-green/25"></div>
 
-        <!-- Lọc Đánh Giá (Rating) -->
+        <!-- Rating Filter -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Rating</h3>
@@ -230,107 +225,104 @@
           <div class="grid grid-cols-5 gap-2">
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="0" class="peer hidden" />
-              <span class="block border border-mint-green rounded text-blackish-green text-xs font-medium py-2 transition-colors hover:bg-mint-green/20 peer-checked:bg-mint-green peer-checked:text-white">0+</span>
+              <span class="filter-rating-btn">0+</span>
             </label>
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="1" class="peer hidden" />
-              <span class="block border border-mint-green rounded text-blackish-green text-xs font-medium py-2 transition-colors hover:bg-mint-green/20 peer-checked:bg-mint-green peer-checked:text-white">1+</span>
+              <span class="filter-rating-btn">1+</span>
             </label>
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="2" class="peer hidden" />
-              <span class="block border border-mint-green rounded text-blackish-green text-xs font-medium py-2 transition-colors hover:bg-mint-green/20 peer-checked:bg-mint-green peer-checked:text-white">2+</span>
+              <span class="filter-rating-btn">2+</span>
             </label>
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="3" class="peer hidden" />
-              <span class="block border border-mint-green rounded text-blackish-green text-xs font-medium py-2 transition-colors hover:bg-mint-green/20 peer-checked:bg-mint-green peer-checked:text-white">3+</span>
+              <span class="filter-rating-btn">3+</span>
             </label>
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="4" class="peer hidden" />
-              <span class="block border border-mint-green rounded text-blackish-green text-xs font-medium py-2 transition-colors hover:bg-mint-green/20 peer-checked:bg-mint-green peer-checked:text-white">4+</span>
+              <span class="filter-rating-btn">4+</span>
             </label>
           </div>
         </div>
         <div class="h-px w-full bg-blackish-green/25"></div>
 
-        <!-- Lọc Hãng Bay (Airlines) -->
+        <!-- Airlines Filter -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Airlines</h3>
             <img class="cursor-pointer" src="../assets/image/chevron_up.svg" alt="toggle" />
           </div>
           <div class="flex flex-col gap-2">
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
-              <span class="text-sm font-medium text-blackish-green mt-0.5">Emirates</span>
+            <label class="filter-label group">
+              <input type="checkbox" class="filter-checkbox" />
+              <span class="filter-text">Emirates</span>
             </label>
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
-              <span class="text-sm font-medium text-blackish-green mt-0.5">Fly Dubai</span>
+            <label class="filter-label group">
+              <input type="checkbox" class="filter-checkbox" />
+              <span class="filter-text">Fly Dubai</span>
             </label>
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
-              <span class="text-sm font-medium text-blackish-green mt-0.5">Qatar</span>
+            <label class="filter-label group">
+              <input type="checkbox" class="filter-checkbox" />
+              <span class="filter-text">Qatar</span>
             </label>
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
-              <span class="text-sm font-medium text-blackish-green mt-0.5">Etihad</span>
+            <label class="filter-label group">
+              <input type="checkbox" class="filter-checkbox" />
+              <span class="filter-text">Etihad</span>
             </label>
           </div>
         </div>
         <div class="h-px w-full bg-blackish-green/25"></div>
 
-        <!-- Lọc Chuyến bay (Trips) -->
+        <!-- Trips Filter -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Trips</h3>
             <img class="cursor-pointer" src="../assets/image/chevron_up.svg" alt="toggle" />
           </div>
           <div class="flex flex-col gap-2">
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
-              <span class="text-sm font-medium text-blackish-green mt-0.5">Round trip</span>
+            <label class="filter-label group">
+              <input type="checkbox" class="filter-checkbox" />
+              <span class="filter-text">Round trip</span>
             </label>
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
-              <span class="text-sm font-medium text-blackish-green mt-0.5">One Way</span>
+            <label class="filter-label group">
+              <input type="checkbox" class="filter-checkbox" />
+              <span class="filter-text">One Way</span>
             </label>
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
-              <span class="text-sm font-medium text-blackish-green mt-0.5">Multi - City</span>
+            <label class="filter-label group">
+              <input type="checkbox" class="filter-checkbox" />
+              <span class="filter-text">Multi - City</span>
             </label>
-            <label class="flex items-center gap-2 cursor-pointer group">
-              <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
-              <span class="text-sm font-medium text-blackish-green mt-0.5">My Dates Are Flexible</span>
+            <label class="filter-label group">
+              <input type="checkbox" class="filter-checkbox" />
+              <span class="filter-text">My Dates Are Flexible</span>
             </label>
           </div>
         </div>
       </aside>
 
-      <!-- CỘT BÊN PHẢI: KẾT QUẢ TÌM KIẾM (Chiếm 9/12 cột, có thanh dọc chia ngăn) -->
+      <!-- RIGHT COLUMN (Chiếm 9/12 cột) -->
       <main class="flex flex-col lg:col-span-9 gap-8 lg:border-l lg:border-blackish-green/25 lg:pl-8">
-        <!-- Thanh Tabs Lọc -->
         <header class="relative flex bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4 overflow-hidden w-full">
-          <!-- Lưu ý: Cập nhật lại class hotel-listing__tab thành flight-results__tab để JS nhận diện -->
           <button class="hotel-listing__tab hotel-listing__tab--active flex-1 flex flex-col items-start px-6 gap-2 bg-transparent border-r border-solid border-blackish-green/10 cursor-pointer">
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Cheapest</h3>
-            <p class="text-sm font-normal text-[#79747e] leading-none m-0">$99 . 2h 18m</p>
+            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">$99 . 2h 18m</p>
           </button>
 
           <button class="hotel-listing__tab flex-1 flex flex-col items-start px-6 gap-2 bg-transparent border-r border-solid border-blackish-green/10 cursor-pointer">
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Best</h3>
-            <p class="text-sm font-normal text-[#79747e] leading-none m-0">$99 . 2h 18m</p>
+            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">$99 . 2h 18m</p>
           </button>
 
           <button class="hotel-listing__tab flex-1 flex flex-col items-start px-6 gap-2 bg-transparent border-r border-solid border-blackish-green/10 cursor-pointer">
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Quickest</h3>
-            <p class="text-sm font-normal text-[#79747e] leading-none m-0">$99 . 2h 18m</p>
+            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">$99 . 2h 18m</p>
           </button>
 
           <div class="flex-none px-6 flex items-center gap-2 font-semibold text-sm cursor-pointer text-blackish-green">
             <img src="../assets/image/menu.svg" alt="menu" class="w-6 h-6 object-contain" />
             Other sort
           </div>
-          <!-- Thanh chạy Indicator -->
           <div class="slide-indicator absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-transform duration-300 ease-out"></div>
         </header>
 
@@ -346,7 +338,7 @@
                 <img src="../assets/image/chevron_down.svg" alt="" class="w-4 h-4 transition-transform duration-200 group-[.is-open]:rotate-180" />
               </button>
 
-              <ul class="sort-dropdown__options absolute top-[calc(100%+8px)] right-0 bg-white rounded-lg shadow-md py-2 min-w-[180px] m-0 z-50 opacity-0 invisible -translate-y-2 transition-all duration-200 group-[.is-open]:opacity-100 group-[.is-open]:visible group-[.is-open]:translate-y-0">
+              <ul class="sort-dropdown__options absolute top-[calc(100%+8px)] right-0 bg-white rounded-lg shadow-md py-2 min-w-45 m-0 z-50 opacity-0 invisible -translate-y-2 transition-all duration-200 group-[.is-open]:opacity-100 group-[.is-open]:visible group-[.is-open]:translate-y-0">
                 <li class="sort-dropdown__option sort-dropdown__option--active px-4 py-2 cursor-pointer text-sm font-semibold text-mint-green hover:bg-gray-100 transition-colors" data-value="recommended">Recommended</li>
                 <li class="sort-dropdown__option px-4 py-2 cursor-pointer text-sm text-blackish-green hover:bg-gray-100 transition-colors" data-value="ascending">Ascending</li>
                 <li class="sort-dropdown__option px-4 py-2 cursor-pointer text-sm text-blackish-green hover:bg-gray-100 transition-colors" data-value="descending">Descending</li>
@@ -356,18 +348,17 @@
           </div>
         </div>
 
-        <!-- Container chứa các thẻ ticket -->
+        <!-- Container ticket -->
         <div id="ticket-list" class="flex flex-col gap-6 m-0 p-0 list-none"></div>
 
-        <!-- TEMPLATE ĐỂ RENDER VÉ TỪ JS -->
         <template id="ticket-template">
           <article class="flex flex-col md:flex-row bg-white rounded-xl shadow-sm p-6 gap-4">
-            <!-- Logo Hãng Bay -->
+            <!-- Logo Airline -->
             <div class="w-40 mx-auto md:mx-0">
               <img class="ticket-card__airline-logo w-full object-contain" src="" alt="Airline Logo" />
             </div>
 
-            <!-- Thông tin chuyến bay -->
+            <!-- Info Ticket -->
             <div class="flex-1 flex flex-col justify-between gap-6">
               <!-- Header -->
               <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-0">
@@ -378,7 +369,7 @@
                     <span class="ticket-card__review-count font-normal"></span>
                   </p>
                 </div>
-                <!-- Giá tiền -->
+                <!-- Price -->
                 <div class="flex flex-col items-start md:items-end gap-1">
                   <span class="text-xs font-medium text-blackish-green/75">starting from</span>
                   <div class="flex items-baseline text-slamon">
@@ -388,23 +379,21 @@
                 </div>
               </div>
 
-              <!-- Container chứa các chuyến bay -->
+              <!-- Container ticket -->
               <div class="ticket-card__flights flex flex-col gap-4"></div>
 
-              <!-- Phân cách -->
+              <!-- Break -->
               <div class="w-full h-px bg-blackish-green/25 mt-2"></div>
 
               <!-- Actions -->
               <div class="flex gap-4">
-                <!-- Nút Favorite CSS-Only (Checkbox thay vì Button) -->
-                <label class="relative flex items-center justify-center w-12 h-12 border border-mint-green rounded cursor-pointer hover:bg-mint-green/20 transition-colors shrink-0 group">
+                <label class="btn-favorite group">
                   <input type="checkbox" class="peer hidden" />
                   <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
                   <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
                 </label>
 
-                <!-- Nút View Deals -->
-                <a href="flight-detail-page.html" class="flex-1 flex justify-center items-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-4 transition-colors no-underline"> View Deals </a>
+                <a href="flight-detail-page.html" class="btn-view-place">View Deals</a>
               </div>
             </div>
           </article>
@@ -412,7 +401,6 @@
       </main>
     </div>
 
-    <!-- Grid căn thẳng nút Show More với Main Content -->
     <div class="max-w-7xl mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-12 mb-12 lg:gap-8">
       <div class="lg:col-span-9 lg:col-start-4 lg:pl-8">
         <button class="w-full py-4 bg-blackish-green hover:opacity-90 text-white text-sm font-semibold leading-none rounded transition-opacity cursor-pointer border-none text-center">Show more results</button>
@@ -421,11 +409,10 @@
 
     <!-- FOOTER -->
     <footer class="w-full bg-white">
-      <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
+      <div class="relative bg-mint-green pt-40 mt-44 lg:mt-64 pb-8 lg:pt-56 lg:pb-16">
         <!-- Newsletter Card -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
+        <div class="newsletter-card">
           <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
-            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
             <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
 
             <div class="flex flex-col gap-2 mb-3">
@@ -434,9 +421,8 @@
             </div>
 
             <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
-              <input type="email" placeholder="Your email address" required class="flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green" />
-              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
-              <button type="submit" class="font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80">Subscribe</button>
+              <input type="email" placeholder="Your email address" required class="input-email" />
+              <button type="submit" class="btn-subscribe">Subscribe</button>
             </form>
           </div>
 
@@ -445,74 +431,71 @@
           </div>
         </div>
 
-        <!-- Footer Container (Chứa Brand và Links) -->
-        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-7xl mx-auto gap-8 lg:gap-0">
+        <!-- Footer Container -->
+        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
             <div class="logo">
-              <!-- h-9 = 36px -->
               <img src="../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
             <div class="flex justify-between md:gap-4">
-              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="social-icon" />
+              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="social-icon" />
+              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="social-icon" />
+              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="social-icon" />
             </div>
           </div>
 
           <!-- Footer Links -->
           <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
             <!-- Link Column 1 -->
-            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Destinations</h4>
+              <h4 class="footer-title">Our Destinations</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Canada</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Alaska</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">France</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Iceland</a></li>
+                <li><a href="#" class="footer-link">Canada</a></li>
+                <li><a href="#" class="footer-link">Alaska</a></li>
+                <li><a href="#" class="footer-link">France</a></li>
+                <li><a href="#" class="footer-link">Iceland</a></li>
               </ul>
             </div>
 
             <!-- Link Column 2 -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Activities</h4>
+              <h4 class="footer-title">Our Activities</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Northern Lights</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Cruising & sailing</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Multi-activities</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Kayaing</a></li>
+                <li><a href="#" class="footer-link">Northern Lights</a></li>
+                <li><a href="#" class="footer-link">Cruising & sailing</a></li>
+                <li><a href="#" class="footer-link">Multi-activities</a></li>
+                <li><a href="#" class="footer-link">Kayaing</a></li>
               </ul>
             </div>
 
             <!-- Link Column 3 -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Travel Blogs</h4>
+              <h4 class="footer-title">Travel Blogs</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Sri Lanks Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Peru Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
+                <li><a href="#" class="footer-link">Bali Travel Guide</a></li>
+                <li><a href="#" class="footer-link">Sri Lanks Travel Guide</a></li>
+                <li><a href="#" class="footer-link">Peru Travel Guide</a></li>
+                <li><a href="#" class="footer-link">Bali Travel Guide</a></li>
               </ul>
             </div>
 
             <!-- Link Column 4 -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">About Us</h4>
+              <h4 class="footer-title">About Us</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
+                <li><a href="#" class="footer-link">Our Story</a></li>
+                <li><a href="#" class="footer-link">Work with us</a></li>
               </ul>
             </div>
 
             <!-- Link Column 5 -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Contact Us</h4>
+              <h4 class="footer-title">Contact Us</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
+                <li><a href="#" class="footer-link">Our Story</a></li>
+                <li><a href="#" class="footer-link">Work with us</a></li>
               </ul>
             </div>
           </div>

@@ -4,12 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login - Golobe</title>
-    <!-- Giữ lại link Tailwind -->
     <link rel="stylesheet" href="../assets/css/input.css" />
   </head>
 
   <body class="bg-white m-0 p-0 font-montserrat min-h-screen flex items-center justify-center">
-    <!-- CONTAINER CHÍNH -->
+    <!-- MAIN CONTAINER-->
     <div class="max-w-308 w-full mx-auto p-4 md:p-8 flex flex-col lg:flex-row gap-12 lg:gap-24">
       <!-- FORM LOGIN -->
       <div class="w-full lg:w-125 flex flex-col gap-16">
@@ -27,7 +26,6 @@
           </div>
 
           <div class="flex flex-col gap-10">
-            <!-- 2. Phần Input & Tùy chọn (Bọc trong 1 khối để dễ quản lý gap) -->
             <div class="flex flex-col gap-6">
               <!-- Email Input -->
               <div class="relative flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
@@ -54,26 +52,24 @@
                 <a href="forgotpass.html" class="text-sm font-medium text-slamon hover:underline no-underline">Forgot Password</a>
               </div>
             </div>
-            <!-- 3. Nút bấm và Đăng ký -->
+            <!-- 3. Button Login & Signup -->
             <div class="flex flex-col gap-4">
-              <!-- Nút Login chính -->
               <button type="submit" class="w-full h-12 bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors cursor-pointer border-none">Login</button>
 
-              <!-- Đăng ký -->
               <p class="text-sm font-medium text-blackish-green text-center m-0">
                 Don't have an account?
                 <a href="signup.html" class="font-semibold text-slamon hover:underline no-underline">Sign up</a>
               </p>
             </div>
 
-            <!-- 4. Đường kẻ OR -->
+            <!-- 4. OR -->
             <div class="flex items-center gap-4 w-full">
               <div class="flex-1 h-px bg-blackish-green/20"></div>
               <span class="text-sm font-normal text-blackish-green/50 px-2">Or login with</span>
               <div class="flex-1 h-px bg-blackish-green/20"></div>
             </div>
 
-            <!-- 5. Các nút Social -->
+            <!-- 5. Social Button -->
             <div class="grid grid-cols-3 gap-4 w-full">
               <!-- Facebook -->
               <button type="button" class="flex items-center justify-center h-14 bg-transparent border border-solid border-mint-green rounded hover:bg-mint-cream transition-colors w-full cursor-pointer">
@@ -102,9 +98,8 @@
           <img src="../assets/image/login-banner.png" alt="Banner View 3" class="w-full h-full object-cover shrink-0" />
         </div>
 
-        <!-- Thanh chấm tròn Slider (Indicators) nền mờ -->
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2.5 bg-blackish-green/60 backdrop-blur-md px-4 py-2 rounded-full z-10">
-          <!-- Dot 1 (Active mặc định) -->
+          <!-- Dot 1 (Active) -->
           <div class="slider-dot w-6 h-2 bg-mint-green rounded-full cursor-pointer transition-all duration-300" data-slide="0"></div>
           <!-- Dot 2 -->
           <div class="slider-dot w-2 h-2 bg-white/70 hover:bg-white rounded-full cursor-pointer transition-all duration-300" data-slide="1"></div>

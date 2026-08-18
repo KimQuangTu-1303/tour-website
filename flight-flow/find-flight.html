@@ -14,12 +14,12 @@
         <!-- Left Menu -->
         <nav class="flex flex-1">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
+            <!-- Active item -->
+            <li class="nav-item after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
               <img src="../assets/image/airplane_light.svg" alt="Flight" />
-              <a href="find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
+              <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="nav-item">
               <img src="../assets/image/bed_light.svg" alt="Stays" />
               <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
@@ -36,14 +36,14 @@
         <!-- Right Menu -->
         <div class="flex flex-1 justify-end">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="nav-item">
               <img src="../assets/image/heart_light.svg" alt="Heart" />
               <a href="#" class="text-blackish-green no-underline">Favourites</a>
             </li>
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
+            <li class="nav-item text-blackish-green">|</li>
 
             <!-- Dropdown Container -->
-            <li class="group relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="group nav-item">
               <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
                 <div class="relative inline-flex">
                   <img src="../assets/image/user-avt.png" alt="John D." />
@@ -67,21 +67,21 @@
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/user_light.svg" alt="#" />
                       My account
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/card_light.png" alt="#" />
                       Payments
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/setting_light.png" alt="#" />
                       Setting
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
@@ -93,14 +93,14 @@
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/support_light.png" alt="#" />
                       Support
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/logout_light.png" alt="#" />
                       Logout
                     </a>
@@ -132,8 +132,8 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
           <!-- From - To (Chiếm 4/14 cột) -->
-          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors">
-            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="from-to">From - To</label>
+          <div class="input-group col-span-4">
+            <label class="floating-label" for="from-to">From - To</label>
             <div class="flex items-center justify-between w-full gap-2">
               <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none" id="from-to" name="from-to">
                 <option value="">Lahore - Karachi</option>
@@ -145,7 +145,7 @@
 
           <!-- Trip (Chiếm 2/14 cột) -->
           <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-2 focus-within:border-mint-green transition-colors">
-            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="trip">Trip</label>
+            <label class="floating-label" for="trip">Trip</label>
             <div class="flex items-center justify-between w-full gap-3">
               <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none" id="trip" name="trip">
                 <option value="">Return</option>
@@ -156,16 +156,16 @@
           </div>
 
           <!-- Depart - Return (Chiếm 4/14 cột) -->
-          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors">
-            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="depart-return">Depart - Return</label>
+          <div class="input-group col-span-4">
+            <label class="floating-label" for="depart-return">Depart - Return</label>
             <div class="flex items-center justify-between w-full gap-3">
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="depart-return" type="text" name="depart-return" value="07 Nov 22 - 13 Nov 22" />
             </div>
           </div>
 
           <!-- Passenger - Class (Chiếm 4/14 cột) -->
-          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors">
-            <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green" for="passenger-class">Passenger - Class</label>
+          <div class="input-group col-span-4">
+            <label class="floating-label" for="passenger-class">Passenger - Class</label>
             <div class="flex items-center justify-between w-full gap-3">
               <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="passenger-class" type="text" name="passenger-class" value="1 Passenger, Economy" />
             </div>
@@ -278,7 +278,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-11 grid-rows-2 gap-6">
-          <!-- Main Card (Chiếm 5 cột, 2 hàng trên desktop) -->
+          <!-- Main Card -->
           <div class="col-span-1 md:col-span-5 row-span-2 flex flex-col justify-between bg-mint-green rounded-[20px] p-6 relative">
             <div class="relative">
               <h3 class="text-[40px] font-bold leading-none m-0 mb-6 font-trade-gothic text-blackish-green">Backpacking<br />Sri Lanka</h3>
@@ -295,7 +295,6 @@
             </div>
           </div>
 
-          <!-- Grid Pictures (Mỗi ảnh chiếm 3 cột, bám sát chiều cao min-h-48) -->
           <div class="col-span-1 md:col-span-3 min-h-50 border-2 border-mint-green rounded-xl bg-cover bg-center bg-no-repeat bg-[url('../image/Sri-Lanka(1).png')]"></div>
           <div class="col-span-1 md:col-span-3 min-h-50 border-2 border-mint-green rounded-xl bg-cover bg-center bg-no-repeat bg-[url('../image/Sri-Lanka(2).png')]"></div>
           <div class="col-span-1 md:col-span-3 min-h-50 border-2 border-mint-green rounded-xl bg-cover bg-center bg-no-repeat bg-[url('../image/Sri-Lanka(3).png')]"></div>
@@ -305,11 +304,10 @@
     </main>
 
     <footer class="w-full bg-white">
-      <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
+      <div class="relative bg-mint-green pt-40 mt-44 lg:mt-64 pb-8 lg:pt-56 lg:pb-16">
         <!-- Newsletter Card -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
+        <div class="newsletter-card">
           <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
-            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
             <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
 
             <div class="flex flex-col gap-2 mb-3">
@@ -318,85 +316,81 @@
             </div>
 
             <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
-              <input type="email" placeholder="Your email address" required class="flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green" />
-              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
-              <button type="submit" class="font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80">Subscribe</button>
+              <input type="email" placeholder="Your email address" required class="input-email" />
+              <button type="submit" class="btn-subscribe">Subscribe</button>
             </form>
           </div>
 
           <div class="hidden md:block self-end">
-            <img src="./../assets/image/mailbox.svg" alt="Mailbox Illustration" class="max-w-sm h-auto block" />
+            <img src="../assets/image/mailbox.svg" alt="Mailbox Illustration" class="max-w-sm h-auto block" />
           </div>
         </div>
 
-        <!-- Footer Container (Chứa Brand và Links) -->
+        <!-- Footer Container -->
         <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
             <div class="logo">
-              <!-- h-9 = 36px -->
-              <img src="./../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
+              <img src="../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
             <div class="flex justify-between md:gap-4">
-              <img src="./../assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="./../assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="./../assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="./../assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="social-icon" />
+              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="social-icon" />
+              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="social-icon" />
+              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="social-icon" />
             </div>
           </div>
 
           <!-- Footer Links -->
           <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
             <!-- Link Column 1 -->
-            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Destinations</h4>
+              <h4 class="footer-title">Our Destinations</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Canada</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Alaska</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">France</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Iceland</a></li>
+                <li><a href="#" class="footer-link">Canada</a></li>
+                <li><a href="#" class="footer-link">Alaska</a></li>
+                <li><a href="#" class="footer-link">France</a></li>
+                <li><a href="#" class="footer-link">Iceland</a></li>
               </ul>
             </div>
 
             <!-- Link Column 2 -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Activities</h4>
+              <h4 class="footer-title">Our Activities</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Northern Lights</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Cruising & sailing</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Multi-activities</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Kayaing</a></li>
+                <li><a href="#" class="footer-link">Northern Lights</a></li>
+                <li><a href="#" class="footer-link">Cruising & sailing</a></li>
+                <li><a href="#" class="footer-link">Multi-activities</a></li>
+                <li><a href="#" class="footer-link">Kayaing</a></li>
               </ul>
             </div>
 
             <!-- Link Column 3 -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Travel Blogs</h4>
+              <h4 class="footer-title">Travel Blogs</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Sri Lanks Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Peru Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
+                <li><a href="#" class="footer-link">Bali Travel Guide</a></li>
+                <li><a href="#" class="footer-link">Sri Lanks Travel Guide</a></li>
+                <li><a href="#" class="footer-link">Peru Travel Guide</a></li>
+                <li><a href="#" class="footer-link">Bali Travel Guide</a></li>
               </ul>
             </div>
 
             <!-- Link Column 4 -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">About Us</h4>
+              <h4 class="footer-title">About Us</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
+                <li><a href="#" class="footer-link">Our Story</a></li>
+                <li><a href="#" class="footer-link">Work with us</a></li>
               </ul>
             </div>
 
             <!-- Link Column 5 -->
             <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Contact Us</h4>
+              <h4 class="footer-title">Contact Us</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
+                <li><a href="#" class="footer-link">Our Story</a></li>
+                <li><a href="#" class="footer-link">Work with us</a></li>
               </ul>
             </div>
           </div>

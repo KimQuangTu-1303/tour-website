@@ -9,18 +9,19 @@
 
   <body>
     <!-- HEADER -->
-    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-8 bg-white">
+    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
       <div class="flex justify-between items-center h-9 w-full">
         <!-- Left Menu -->
         <nav class="flex flex-1">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <!-- Active item -->
+            <li class="nav-item">
               <img src="../assets/image/airplane_light.svg" alt="Flight" />
               <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="nav-item">
               <img src="../assets/image/bed_light.svg" alt="Stays" />
-              <a href="find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
+              <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
           </ul>
         </nav>
@@ -35,14 +36,14 @@
         <!-- Right Menu -->
         <div class="flex flex-1 justify-end">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="nav-item">
               <img src="../assets/image/heart_light.svg" alt="Heart" />
               <a href="#" class="text-blackish-green no-underline">Favourites</a>
             </li>
-            <li class="relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap text-blackish-green">|</li>
+            <li class="nav-item text-blackish-green">|</li>
 
             <!-- Dropdown Container -->
-            <li class="group relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap">
+            <li class="group nav-item">
               <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
                 <div class="relative inline-flex">
                   <img src="../assets/image/user-avt.png" alt="John D." />
@@ -66,21 +67,21 @@
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/user_light.svg" alt="#" />
                       My account
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/card_light.png" alt="#" />
                       Payments
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/setting_light.png" alt="#" />
                       Setting
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
@@ -92,14 +93,14 @@
 
                 <ul class="flex flex-col list-none p-0 gap-4">
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/support_light.png" alt="#" />
                       Support
                       <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="flex no-underline leading-none font-medium text-blackish-green items-center gap-4">
+                    <a href="#" class="dropdown-link">
                       <img src="../assets/image/logout_light.png" alt="#" />
                       Logout
                     </a>
@@ -118,14 +119,14 @@
       <section class="relative w-full">
         <img src="../assets/image/background-avt.png" alt="Cover Image" class="w-full h-80 md:h-88 rounded-3xl object-cover" />
 
-        <button class="absolute right-4 md:right-8 bottom-4 md:bottom-8 flex items-center gap-2 bg-mint-green py-2.5 px-4 rounded font-medium text-sm text-blackish-green transition-transform hover:-translate-y-1 shadow-sm">
+        <button class="absolute right-4 md:right-8 bottom-4 md:bottom-8 flex items-center gap-2 bg-mint-green py-2.5 px-4 rounded font-medium text-sm text-blackish-green transition-transform hover:-translate-y-1 shadow-sm z-10">
           <img src="../assets/image/upload_light.svg" alt="Upload Icon" />
           Upload new cover
         </button>
       </section>
 
       <!-- Profile Card Section -->
-      <section class="relative z-10 flex flex-col items-center -mt-20">
+      <section class="relative flex flex-col items-center -mt-20">
         <div class="relative">
           <img src="../assets/image/user-avt_225x225.png" alt="John Doe" class="w-40 h-40 rounded-full border-4 border-slamon object-cover bg-white shadow-sm" />
           <button class="absolute bottom-1 right-1 w-10 h-10 bg-slamon rounded-full flex items-center justify-center border-4 border-white transition-transform hover:-translate-y-1">
@@ -139,7 +140,7 @@
 
       <!-- Tabs Navigation -->
       <div class="relative grid grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4 mt-10 w-full text-left">
-        <!-- Account Tab (Đã thêm class hotel-listing__tab và hotel-listing__tab--active) -->
+        <!-- Account Tab -->
         <button class="hotel-listing__tab hotel-listing__tab--active flex items-center px-6 h-12 text-blackish-green" data-target="account-section">
           <h3 class="text-base font-semibold leading-none m-0">Account</h3>
         </button>
@@ -154,14 +155,14 @@
           <h3 class="text-base font-semibold leading-none m-0">Payment methods</h3>
         </button>
 
-        <!-- Active Indicator (Đổi tên thành slide-indicator để file JS nhận diện) -->
+        <!-- Active Indicator -->
         <div class="slide-indicator absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-all duration-300 ease-out"></div>
       </div>
       <!-- Account Details Box -->
       <section class="mt-10" id="account-section">
         <h2 class="text-[32px] font-bold text-blackish-green mb-6 font-trade-gothic">Account</h2>
 
-        <!-- Container dùng flex-col và gap-8 thay cho border/padding từng dòng -->
+        <!-- Container -->
         <div class="bg-white rounded-2xl shadow-sm p-6 md:p-8 flex flex-col gap-8">
           <!-- Name -->
           <div class="flex flex-col md:flex-row justify-between md:items-center">
@@ -250,7 +251,6 @@
         <!-- Newsletter Card -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
           <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
-            <!-- text-4xl = 36px, lg:text-5xl = 48px -->
             <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
 
             <div class="flex flex-col gap-2 mb-3">
@@ -260,7 +260,6 @@
 
             <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
               <input type="email" placeholder="Your email address" required class="flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green" />
-              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
               <button type="submit" class="font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80">Subscribe</button>
             </form>
           </div>
@@ -275,7 +274,6 @@
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
             <div class="logo">
-              <!-- h-9 = 36px -->
               <img src="../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
             <div class="flex justify-between md:gap-4">
@@ -289,11 +287,9 @@
           <!-- Footer Links -->
           <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
             <!-- Link Column 1 -->
-            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
             <div class="w-5/12 lg:w-44">
               <h4 class="text-lg font-bold text-blackish-green mb-4">Our Destinations</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <!-- text-blackish-green/80 dùng opacity 80% để tạo màu nhạt hơn thay vì mã HEX lạ -->
                 <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Canada</a></li>
                 <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Alaska</a></li>
                 <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">France</a></li>

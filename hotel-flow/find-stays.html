@@ -14,14 +14,14 @@
         <!-- Left Menu -->
         <nav class="flex flex-1">
           <ul class="m-0 flex list-none p-0 gap-8">
-            <!-- Active item (Đang đặt ở Find Flight. Nếu bạn đang ở trang Find Stays, hãy cắt đoạn class "after:..." dán xuống thẻ <li> bên dưới) -->
+            <!-- Active item -->
             <li class="nav-item">
               <img src="../assets/image/airplane_light.svg" alt="Flight" />
               <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
             </li>
             <li class="nav-item after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green">
               <img src="../assets/image/bed_light.svg" alt="Stays" />
-              <a href="find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
+              <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
             </li>
           </ul>
         </nav>
@@ -117,7 +117,6 @@
     <section class="relative">
       <!-- BANNER -->
       <section class="relative w-full h-134 bg-[url('../image/banner.png')] bg-cover bg-center bg-no-repeat pt-20 pr-44 pb-32 pl-32 overflow-hidden">
-        <!-- Lớp phủ Gradient đồng bộ màu blackish-green từ input.css -->
         <div class="absolute inset-0 bg-linear-to-r from-navy-blue/63 to-navy-blue/0"></div>
 
         <div class="relative z-10 flex flex-col max-w-md h-auto gap-2">
@@ -170,13 +169,11 @@
         </div>
         <!-- Actions / Buttons -->
         <div class="flex justify-end h-11 gap-6">
-          <!-- Đã thêm bg-mint-cream khi hover nút Promo theo chuẩn input.css -->
           <button type="button" class="flex items-center gap-2.5 p-2 bg-transparent text-sm font-medium leading-none border-none rounded cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green">
             <img src="../assets/image/plus.svg" alt="plus" />
             Add Promo Code
           </button>
 
-          <!-- Dùng biến bg-mint-green thay cho mã css riêng -->
           <button type="submit" class="flex items-center gap-2.5 py-2 px-4 bg-mint-green text-sm font-medium leading-none border-none rounded cursor-pointer transition-opacity hover:opacity-80 font-montserrat text-blackish-green">
             <img src="../assets/image/building(16x16)_light.svg" alt="building" />
             Show Places
@@ -193,7 +190,7 @@
 
         <div class="flex justify-between flex-wrap gap-4">
           <!-- Item 1 -->
-          <div class="flex gap-4 items-center flex-1 min-w-60">
+          <div class="recent-search-card">
             <img class="w-24 h-24 rounded-lg object-cover" src="../assets/image/Istanbul, Turkey.png" alt="Istanbul, Turkey" />
             <div class="flex flex-col justify-center gap-2">
               <h3 class="text-base font-semibold leading-none text-blackish-green m-0 font-montserrat">Istanbul, Turkey</h3>
@@ -202,7 +199,7 @@
           </div>
 
           <!-- Item 2 -->
-          <div class="flex gap-4 items-center flex-1 min-w-60">
+          <div class="recent-search-card">
             <img class="w-24 h-24 rounded-lg object-cover" src="../assets/image/Sydney, Australia.png" alt="Sydney, Australia" />
             <div class="flex flex-col justify-center gap-2">
               <h3 class="text-base font-semibold leading-none text-blackish-green m-0 font-montserrat">Sydney, Australia</h3>
@@ -211,7 +208,7 @@
           </div>
 
           <!-- Item 3 -->
-          <div class="flex gap-4 items-center flex-1 min-w-60">
+          <div class="recent-search-card">
             <img class="w-24 h-24 rounded-lg object-cover" src="../assets/image/Baku, Azerbajian.png" alt="Baku, Azerbaijan" />
             <div class="flex flex-col justify-center gap-2">
               <h3 class="text-base font-semibold leading-none text-blackish-green m-0 font-montserrat">Bakku, Azerbajian</h3>
@@ -220,7 +217,7 @@
           </div>
 
           <!-- Item 4 -->
-          <div class="flex gap-4 items-center flex-1 min-w-60">
+          <div class="recent-search-card">
             <img class="w-24 h-24 rounded-lg object-cover" src="../assets/image/Malé, Maldives.png" alt="Malé, Maldives" />
             <div class="flex flex-col justify-center gap-2">
               <h3 class="text-base font-semibold leading-none text-blackish-green m-0 font-montserrat">Malé, Maldivé</h3>
@@ -242,7 +239,7 @@
 
         <div class="flex flex-wrap justify-between gap-4">
           <!-- Melbourne -->
-          <div id="Melbourne" class="flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Melbourne.png')]">
+          <div id="Melbourne" class="travel-card bg-[url('../image/Melbourne.png')]">
             <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
             <div class="relative z-10 flex justify-between items-end">
               <div class="flex flex-col gap-1">
@@ -255,7 +252,7 @@
           </div>
 
           <!-- Paris -->
-          <div id="Paris" class="flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Paris.png')]">
+          <div id="Paris" class="travel-card bg-[url('../image/Paris.png')]">
             <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
             <div class="relative z-10 flex justify-between items-end">
               <div class="flex flex-col gap-1">
@@ -268,7 +265,7 @@
           </div>
 
           <!-- London -->
-          <div id="London" class="flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/London.png')]">
+          <div id="London" class="travel-card bg-[url('../image/London.png')]">
             <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
             <div class="relative z-10 flex justify-between items-end">
               <div class="flex flex-col gap-1">
@@ -281,7 +278,7 @@
           </div>
 
           <!-- Columbia -->
-          <div id="Columbia" class="flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Columbia.png')]">
+          <div id="Columbia" class="travel-card bg-[url('../image/Columbia.png')]">
             <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
             <div class="relative z-10 flex justify-between items-end">
               <div class="flex flex-col gap-1">
@@ -305,9 +302,8 @@
           <a class="flex items-center justify-center h-10 w-20 rounded border border-mint-green bg-transparent transition-colors hover:bg-mint-cream shrink-0 font-montserrat text-blackish-green no-underline font-medium text-sm" href="hotel-listing.html"> See All </a>
         </div>
 
-        <!-- Chuyển sang grid 11 cột chuẩn Tailwind -->
         <div class="grid grid-cols-11 grid-rows-2 gap-6">
-          <!-- Main Card (Chiếm 5 cột, 2 hàng) -->
+          <!-- Main Card -->
           <div class="col-span-5 row-span-2 flex flex-col justify-between bg-mint-green rounded-2xl p-6 relative">
             <div class="relative">
               <h3 class="text-4xl font-bold leading-none m-0 mb-6 font-trade-gothic text-blackish-green">Backpacking<br />Sri Lanka</h3>
@@ -324,7 +320,6 @@
             </div>
           </div>
 
-          <!-- Grid Pictures (Mỗi ảnh chiếm 3 cột, bám sát chiều cao min-h-48 tương đương 192px) -->
           <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka(1).png')]"></div>
           <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka(2).png')]"></div>
           <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka(3).png')]"></div>
@@ -349,7 +344,6 @@
 
             <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
               <input type="email" placeholder="Your email address" required class="input-email" />
-              <!-- Đổi màu nền nút submit sang blackish-green thay vì mã HEX lạ -->
               <button type="submit" class="btn-subscribe">Subscribe</button>
             </form>
           </div>
@@ -359,7 +353,7 @@
           </div>
         </div>
 
-        <!-- Footer Container (Chứa Brand và Links) -->
+        <!-- Footer Container -->
         <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
           <!-- Footer Brand -->
           <div class="flex flex-col gap-6">
@@ -368,17 +362,16 @@
               <img src="../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
             </div>
             <div class="flex justify-between md:gap-4">
-              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
+              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="social-icon" />
+              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="social-icon" />
+              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="social-icon" />
+              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="social-icon" />
             </div>
           </div>
 
           <!-- Footer Links -->
           <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
             <!-- Link Column 1 -->
-            <!-- w-5/12 (khoảng 41%) cho mobile, lg:w-44 (176px) cho desktop -->
             <div class="w-5/12 lg:w-44">
               <h4 class="footer-title">Our Destinations</h4>
               <ul class="flex flex-col gap-4 list-none p-0 m-0">
