@@ -94,25 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // --- 4. XỬ LÝ NÚT FAVORITE (Dùng Event Delegation) ---
-  // Vì các vé được render bằng JS, ta cần gắn sự kiện vào container cha
-  const ticketListContainer = document.getElementById("ticket-list");
-  if (ticketListContainer) {
-    ticketListContainer.addEventListener("click", function (e) {
-      const btnFavorite = e.target.closest(".ticket-card__btn-favorite");
-      if (btnFavorite) {
-        btnFavorite.classList.toggle("active");
-      }
-    });
-  }
-
-  // --- 5. RENDER DANH SÁCH VÉ (TICKETS) ---
+  // --- 4. RENDER DANH SÁCH VÉ (TICKETS) ---
   async function fetchFlightTickets() {
     try {
       const mockApiData = [
         {
           airlineName: "Emirates",
-          airlineLogo: "assets/image/image 40.png",
+          airlineLogo: "../assets/image/image 40.png",
           rating: 4.2,
           ratingText: "Very Good",
           reviewsCount: 54,
@@ -125,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           airlineName: "Flydubai",
-          airlineLogo: "assets/image/image 41.png",
+          airlineLogo: "../assets/image/image 41.png",
           rating: 4.2,
           ratingText: "Verygood",
           reviewsCount: 54,
@@ -138,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           airlineName: "Qatar Airways",
-          airlineLogo: "assets/image/image 43.png",
+          airlineLogo: "../assets/image/image 43.png",
           rating: 4.2,
           ratingText: "Verygood",
           reviewsCount: 54,
@@ -151,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           airlineName: "Etihad",
-          airlineLogo: "assets/image/image 45.png",
+          airlineLogo: "../assets/image/image 45.png",
           rating: 4.2,
           ratingText: "Verygood",
           reviewsCount: 54,
