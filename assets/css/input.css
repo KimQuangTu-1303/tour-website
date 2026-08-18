@@ -33,9 +33,9 @@
 }
 
 @layer components {
-  /* =========================================
+  /* =================================
      1. HEADER & NAVIGATION COMPONENTS
-     ========================================= */
+     ================================= */
 
   .nav-item {
     @apply relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap;
@@ -49,9 +49,9 @@
     @apply opacity-75 hover:opacity-100 transition-opacity text-slamon no-underline;
   }
 
-  /* =========================================
+  /* =================================
      2. FOOTER & NEWSLETTER COMPONENTS
-     ========================================= */
+     ================================= */
 
   .newsletter-card {
     @apply absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg;
@@ -73,9 +73,9 @@
     @apply text-blackish-green/80 text-sm font-medium hover:text-blackish-green;
   }
 
-  /* =========================================
+  /* ==========================
      3. FORM & INPUT COMPONENTS
-     ========================================= */
+     ========================== */
 
   .input-group {
     @apply relative flex items-center border border-input-border rounded-lg px-4 h-14 focus-within:border-mint-green transition-colors;
@@ -86,12 +86,12 @@
   }
 
   .modal-input {
-    @apply w-full p-4 border border-[#79747E] rounded text-base font-normal text-blackish-green outline-none focus:border-mint-green focus:ring-1 focus:ring-mint-green transition-all bg-transparent;
+    @apply w-full p-4 border border-input-border rounded text-base font-normal text-blackish-green outline-none focus:border-mint-green focus:ring-1 focus:ring-mint-green transition-all bg-transparent;
   }
 
-  /* =========================================
+  /* ========================
      4. BUTTONS & UI CONTROLS
-     ========================================= */
+     ======================== */
 
   .btn-primary {
     @apply flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors no-underline cursor-pointer border-none;
@@ -101,12 +101,66 @@
     @apply w-12 h-12 flex items-center justify-center border border-solid border-mint-green rounded hover:bg-mint-green/20 transition-colors shrink-0 cursor-pointer bg-transparent;
   }
 
-  /* Đã gỡ bỏ 'group' và 'has-[:checked]:bg-mint-green' để tránh lỗi */
   .radio-card {
     @apply relative flex flex-col justify-between w-full rounded-xl cursor-pointer hover:bg-mint-green/20 transition-all duration-300;
   }
 
   .filter-checkbox {
     @apply appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0;
+  }
+
+  /* =====================
+     5. CARDS & LIST ITEMS
+     ===================== */
+
+  .recent-search-card {
+    @apply flex gap-4 items-center flex-1 min-w-60;
+  }
+
+  .recent-search-title {
+    @apply text-base font-semibold leading-none text-blackish-green m-0 font-montserrat;
+  }
+  .recent-search-subtitle {
+    @apply text-xs font-normal leading-none text-blackish-green/75 m-0 font-montserrat;
+  }
+
+  .travel-card {
+    @apply flex-1 min-w-72 h-96 rounded-2xl p-6 bg-cover bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden;
+  }
+
+  .hotel-card {
+    @apply grid grid-cols-1 md:grid-cols-12 bg-white rounded-xl shadow-sm;
+  }
+
+  /* ====================
+     6. FILTER COMPONENTS
+     ==================== */
+
+  .filter-label {
+    @apply flex items-center gap-2 cursor-pointer;
+  }
+
+  .filter-text {
+    @apply text-sm font-medium text-blackish-green mt-0.5;
+  }
+
+  .filter-rating-btn {
+    @apply block border border-mint-green rounded text-blackish-green text-xs font-medium py-2 transition-colors hover:bg-mint-green/20 peer-checked:bg-mint-green peer-checked:text-white;
+  }
+
+  /* ===========================
+     7. SPECIFIC BUTTONS & ICONS
+     =========================== */
+
+  .social-icon {
+    @apply cursor-pointer transition-opacity hover:opacity-80;
+  }
+
+  .btn-favorite {
+    @apply relative flex items-center justify-center w-12 h-12 border border-mint-green rounded cursor-pointer hover:bg-mint-green/20 transition-colors shrink-0;
+  }
+
+  .btn-view-place {
+    @apply flex-1 flex justify-center items-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded px-4 transition-colors;
   }
 }
