@@ -31,3 +31,82 @@
     @apply text-inherit no-underline;
   }
 }
+
+@layer components {
+  /* =========================================
+     1. HEADER & NAVIGATION COMPONENTS
+     ========================================= */
+
+  .nav-item {
+    @apply relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap;
+  }
+
+  .dropdown-link {
+    @apply flex no-underline leading-none font-medium text-blackish-green items-center gap-4;
+  }
+
+  .breadcrumb-link {
+    @apply opacity-75 hover:opacity-100 transition-opacity text-slamon no-underline;
+  }
+
+  /* =========================================
+     2. FOOTER & NEWSLETTER COMPONENTS
+     ========================================= */
+
+  .newsletter-card {
+    @apply absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg;
+  }
+
+  .input-email {
+    @apply flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green;
+  }
+
+  .btn-subscribe {
+    @apply font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80;
+  }
+
+  .footer-title {
+    @apply text-lg font-bold text-blackish-green mb-4;
+  }
+
+  .footer-link {
+    @apply text-blackish-green/80 text-sm font-medium hover:text-blackish-green;
+  }
+
+  /* =========================================
+     3. FORM & INPUT COMPONENTS
+     ========================================= */
+
+  .input-group {
+    @apply relative flex items-center border border-input-border rounded-lg px-4 h-14 focus-within:border-mint-green transition-colors;
+  }
+
+  .floating-label {
+    @apply absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10;
+  }
+
+  .modal-input {
+    @apply w-full p-4 border border-[#79747E] rounded text-base font-normal text-blackish-green outline-none focus:border-mint-green focus:ring-1 focus:ring-mint-green transition-all bg-transparent;
+  }
+
+  /* =========================================
+     4. BUTTONS & UI CONTROLS
+     ========================================= */
+
+  .btn-primary {
+    @apply flex items-center justify-center bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors no-underline cursor-pointer border-none;
+  }
+
+  .btn-icon-outline {
+    @apply w-12 h-12 flex items-center justify-center border border-solid border-mint-green rounded hover:bg-mint-green/20 transition-colors shrink-0 cursor-pointer bg-transparent;
+  }
+
+  /* Đã gỡ bỏ 'group' và 'has-[:checked]:bg-mint-green' để tránh lỗi */
+  .radio-card {
+    @apply relative flex flex-col justify-between w-full rounded-xl cursor-pointer hover:bg-mint-green/20 transition-all duration-300;
+  }
+
+  .filter-checkbox {
+    @apply appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0;
+  }
+}
