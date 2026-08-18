@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password - Golobe</title>
+    <link rel="stylesheet" href="../assets/css/input.css" />
+  </head>
+
+  <body class="bg-white m-0 p-0 font-montserrat min-h-screen flex items-center justify-center">
+    <!-- MAIN CONTAINER-->
+    <div class="max-w-308 w-full mx-auto p-4 md:p-8 flex flex-col lg:flex-row gap-12 lg:gap-24">
+      <!-- FORM VERIFY CODE -->
+      <div class="w-full lg:w-125 flex flex-col gap-16">
+        <!-- Logo -->
+        <a href="../index.html">
+          <img src="../assets/image/logo-small.png" alt="Golobe Logo" class="h-8 w-auto" />
+        </a>
+
+        <!-- FORM -->
+        <form class="flex flex-col gap-12 w-full">
+          <!-- 1. Header & Back to Login -->
+          <div class="flex flex-col gap-4">
+            <!-- Button Back -->
+            <a href="login.html" class="flex items-center text-sm font-medium text-blackish-green hover:opacity-80 transition-opacity no-underline w-fit">
+              <img src="../assets/image/chevron-back_light.svg" alt="Back" class="w-6 h-6" />
+              Back to login
+            </a>
+
+            <h2 class="text-[40px] font-bold text-blackish-green font-trade-gothic m-0 leading-none">Verify code</h2>
+            <p class="text-base font-normal text-blackish-green/75 m-0 leading-relaxed pr-10">An authentication code has been sent to your email.</p>
+          </div>
+
+          <div class="flex flex-col gap-8">
+            <!-- 2. Input Code -->
+            <div class="flex flex-col gap-4">
+              <!-- Code Input -->
+              <div class="relative flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
+                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Enter code</label>
+                <input type="text" value="7789BM6X" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                <!-- Icon Eye -->
+                <button type="button" class="ml-2 w-6 h-6 flex items-center justify-center cursor-pointer shrink-0 border-none bg-transparent">
+                  <img src="../assets/image/eye-on_light.svg" alt="Toggle Password Visibility" class="w-full h-full opacity-75 hover:opacity-100 transition-opacity" />
+                </button>
+              </div>
+
+              <p class="text-sm font-medium text-blackish-green m-0">
+                Didn't receive the code?
+                <a href="#" class="font-semibold text-slamon hover:underline no-underline">Resend</a>
+              </p>
+            </div>
+
+            <!-- 3. Button Verify -->
+            <div class="flex flex-col gap-4 -mt-2">
+              <button type="submit" class="w-full h-12 bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors cursor-pointer border-none">Verify</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- BANNER SLIDER -->
+      <div class="hidden lg:flex relative w-full max-w-150 h-200 shrink-0 ml-auto rounded-[40px] shadow-lg overflow-hidden">
+        <div id="login-slider" class="flex w-full h-full transition-transform duration-700 ease-in-out transform translate-x-0">
+          <img src="../assets/image/stay-slide.png" alt="Banner View 1" class="w-full h-full object-cover shrink-0" />
+          <img src="../assets/image/flight-slide.png" alt="Banner View 2" class="w-full h-full object-cover shrink-0" />
+          <img src="../assets/image/home-slide.png" alt="Banner View 3" class="w-full h-full object-cover shrink-0" />
+        </div>
+
+        <!-- Indicators  -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2.5 bg-blackish-green/60 backdrop-blur-md px-4 py-2 rounded-full z-10">
+          <!-- Dot 1 -->
+          <div class="slider-dot w-6 h-2 bg-mint-green rounded-full cursor-pointer transition-all duration-300" data-slide="0"></div>
+          <!-- Dot 2 -->
+          <div class="slider-dot w-2 h-2 bg-white/70 hover:bg-white rounded-full cursor-pointer transition-all duration-300" data-slide="1"></div>
+          <!-- Dot 3 -->
+          <div class="slider-dot w-2 h-2 bg-white/70 hover:bg-white rounded-full cursor-pointer transition-all duration-300" data-slide="2"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>
