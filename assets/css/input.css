@@ -38,7 +38,7 @@
      ================================= */
 
   .nav-item {
-    @apply relative text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap;
+    @apply relative h-9 text-sm font-semibold inline-flex items-center gap-1 whitespace-nowrap;
   }
 
   .dropdown-link {
@@ -50,7 +50,7 @@
   }
 
   .nav-active {
-    @apply after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green;
+    @apply after:absolute after:content-[''] after:-bottom-6.5 after:left-0 after:w-full after:h-1 after:bg-mint-green;
   }
 
   /* =================================
