@@ -42,7 +42,7 @@
   }
 
   .dropdown-link {
-    @apply flex no-underline leading-none font-medium text-blackish-green items-center gap-4;
+    @apply flex no-underline leading-none font-medium text-blackish-green items-center p-2 gap-4 hover:bg-mint-cream hover:rounded-lg;
   }
 
   .breadcrumb-link {
