@@ -49,6 +49,10 @@
     @apply opacity-75 hover:opacity-100 transition-opacity text-slamon no-underline;
   }
 
+  .nav-active {
+    @apply after:absolute after:content-[''] after:-bottom-8 after:left-0 after:w-full after:h-1 after:bg-mint-green;
+  }
+
   /* =================================
      2. FOOTER & NEWSLETTER COMPONENTS
      ================================= */
