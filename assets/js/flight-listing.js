@@ -1,3 +1,8 @@
+import logoEmirates from "../image/image 40.png";
+import logoFlydubai from "../image/image 41.png";
+import logoQatar from "../image/image 43.png";
+import logoEtihad from "../image/image 45.png";
+
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. XỬ LÝ PRICE SLIDER ---
   const priceMin = document.getElementById("slider-min");
@@ -100,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const mockApiData = [
         {
           airlineName: "Emirates",
-          airlineLogo: "../assets/image/image 40.png",
+          airlineLogo: logoEmirates,
           rating: 4.2,
           ratingText: "Very Good",
           reviewsCount: 54,
@@ -113,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           airlineName: "Flydubai",
-          airlineLogo: "../assets/image/image 41.png",
+          airlineLogo: logoFlydubai,
           rating: 4.2,
           ratingText: "Verygood",
           reviewsCount: 54,
@@ -126,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           airlineName: "Qatar Airways",
-          airlineLogo: "../assets/image/image 43.png",
+          airlineLogo: logoQatar,
           rating: 4.2,
           ratingText: "Verygood",
           reviewsCount: 54,
@@ -139,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           airlineName: "Etihad",
-          airlineLogo: "../assets/image/image 45.png",
+          airlineLogo: logoEtihad,
           rating: 4.2,
           ratingText: "Verygood",
           reviewsCount: 54,
@@ -151,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ],
         },
       ];
-
       renderTickets(mockApiData);
     } catch (error) {
       console.error("Lỗi khi tải dữ liệu chuyến bay:", error);
