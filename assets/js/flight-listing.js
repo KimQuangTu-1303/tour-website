@@ -182,6 +182,8 @@ document.addEventListener("DOMContentLoaded", () => {
         priceUnitEl.textContent = ticket.priceUnit ? ` ${ticket.priceUnit}` : "";
       }
 
+     
+
       // Render mảng flights bên trong mỗi vé
       const flightsContainer = clone.querySelector(".ticket-card__flights");
       ticket.flights.forEach((flight) => {
