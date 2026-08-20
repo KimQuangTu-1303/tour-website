@@ -1,8 +1,8 @@
-<header class="flex py-3 px-4 md:py-5 md:px-24 h-16 md:h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] {{ mb_class }} bg-white">
+<header class="relative flex py-3 px-4 md:py-5 md:px-24 h-16 md:h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] {{ mb_class }} bg-white z-50">
   <div class="flex justify-between items-center h-9 w-full">
     <!-- Mobile Menu Toggle -->
     <div class="flex md:hidden">
-      <button class="text-blackish-green focus:outline-none hover:opacity-80 transition-opacity cursor-pointer">
+      <button aria-controls="nav-mobile" aria-expanded="false" aria-label="Open menu" class="text-blackish-green focus:outline-none hover:opacity-80 transition-opacity cursor-pointer">
         <img src="../assets/image/hamburger-menu.svg" alt="menu" />
       </button>
     </div>
@@ -34,25 +34,26 @@
       <!-- logged in -->
       {{#if is_logged_in}}
       <ul class="m-0 flex list-none p-0 gap-4 md:gap-8 items-center">
-        <li class="nav-item {{ favourites_active }} hidden sm:flex">
+        <li class="nav-item {{ favourites_active }} hidden md:flex">
           <img src="../assets/image/heart_light.svg" alt="Heart" />
-          <a href="../favorites.html" class="text-blackish-green no-underline hidden lg:block">Favourites</a>
+          <a href="../favorites.html" class="text-blackish-green no-underline block">Favourites</a>
         </li>
+
         <li class="nav-item text-blackish-green hidden md:block">|</li>
 
         <!-- Dropdown Container -->
         <li class="group nav-item">
-          <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
+          <button id="user-menu-button" aria-expanded="false" class="text-blackish-green no-underline flex items-center h-auto gap-2">
             <div class="relative inline-flex">
               <img src="../assets/image/user-avt.png" alt="John D." class="w-8 h-8 md:w-auto md:h-auto rounded-full" />
               <img src="../assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px hidden md:block" />
               <img src="../assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0 hidden md:block" />
             </div>
             <span class="hidden md:block">John D.</span>
-          </a>
+          </button>
 
           <!-- User Menu -->
-          <div class="hidden group-hover:flex flex-col absolute p-6 right-0 top-full mt-5 w-72 max-w-xs rounded-xl z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)] before:content-[''] before:w-full before:h-6 before:block before:absolute before:-top-5 before:left-0">
+          <div id="user-dropdown" class="hidden flex-col absolute p-6 right-0 top-5 md:top-full mt-5 w-72 max-w-xs rounded-xl z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)]">
             <div class="flex items-center gap-4 py-2">
               <img src="../assets/image/user-avt.svg" alt="John Doe." />
               <div class="flex flex-col w-full gap-1">
@@ -117,4 +118,31 @@
       {{/if}}
     </div>
   </div>
+
+  <!-- Mobile Dropdown Menu Container -->
+  <nav id="nav-mobile" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 z-40">
+    <ul class="flex flex-col m-0 p-4 list-none gap-2">
+      <li>
+        <a href="../flight-flow/find-flight.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if flight_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
+          <img src="../assets/image/airplane_light.svg" alt="Flight" class="w-5 h-5" />
+          Find Flight
+        </a>
+      </li>
+      <li>
+        <a href="../hotel-flow/find-stays.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if stays_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
+          <img src="../assets/image/bed_light.svg" alt="Stays" class="w-5 h-5" />
+          Find Stays
+        </a>
+      </li>
+      <!-- Favourites link visible on mobile if logged in -->
+      {{#if is_logged_in}}
+      <li>
+        <a href="../favorites.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if favourites_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
+          <img src="../assets/image/heart_light.svg" alt="Heart" class="w-5 h-5" />
+          Favourites
+        </a>
+      </li>
+      {{/if}}
+    </ul>
+  </nav>
 </header>
