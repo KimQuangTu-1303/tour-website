@@ -19,23 +19,23 @@
     {{> header stays_active="nav-active" mb_class="mb-0" is_logged_in=true }}
 
     <!-- HOTEL SEARCH & BANNER -->
-    <section class="relative">
+    <section class="relative flex flex-col items-center lg:block mb-12 lg:mb-40 w-full">
       <!-- BANNER -->
-      <section class="relative w-full h-134 bg-[url('../image/banner.png')] bg-cover bg-center bg-no-repeat pt-20 pr-44 pb-32 pl-32 overflow-hidden">
+      <section class="relative w-full min-h-100 lg:h-134 bg-[url('../image/banner.png')] bg-cover bg-center bg-no-repeat px-6 py-20 md:px-16 md:py-24 lg:pt-20 lg:pr-44 lg:pb-32 lg:pl-32 overflow-hidden">
         <div class="absolute inset-0 bg-linear-to-r from-navy-blue/63 to-navy-blue/0"></div>
 
         <div class="relative z-10 flex flex-col max-w-md h-auto gap-2">
-          <h1 class="font-trade-gothic text-white leading-none text-5xl font-bold m-0 select-none">Make your travel whishlist, we'll do the rest</h1>
-          <p class="font-montserrat text-white leading-none font-medium text-xl m-0 select-none">Special offers to suit your plan</p>
+          <h1 class="font-trade-gothic text-white leading-none text-4xl lg:text-5xl font-bold m-0 select-none">Make your travel whishlist, we'll do the rest</h1>
+          <p class="font-montserrat text-white leading-none font-medium text-lg lg:text-xl m-0 select-none">Special offers to suit your plan</p>
         </div>
       </section>
 
       <!-- SEARCH FORM -->
-      <form class="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-3/4 flex flex-col max-w-308 w-11/12 xl:w-full bg-white py-8 px-6 gap-8 rounded-2xl shadow-xl z-20" action="hotel-listing.html" method="get">
+      <form class="relative lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-0 lg:translate-y-1/2 w-11/12 xl:w-full max-w-308 flex flex-col bg-white py-6 px-4 lg:py-8 lg:px-6 gap-6 lg:gap-8 rounded-2xl shadow-xl z-20 -mt-12 lg:mt-0" action="hotel-listing.html" method="get">
         <h2 class="m-0 text-xl leading-none font-semibold select-none font-trade-gothic text-blackish-green">Where are you flying?</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
-          <!-- Destination (Chiếm 5/14 cột) -->
+          <!-- Destination -->
           <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-5 focus-within:border-mint-green transition-colors">
             <label class="floating-label" for="destination">Enter Destination</label>
             <div class="flex items-center justify-between w-full gap-2.5">
@@ -44,7 +44,7 @@
             </div>
           </div>
 
-          <!-- Check In (Chiếm 3/14 cột) -->
+          <!-- Check In -->
           <div class="input-group lg:col-span-3">
             <label class="floating-label" for="checkin">Check In</label>
             <div class="flex items-center justify-between w-full gap-2.5">
@@ -53,7 +53,7 @@
             </div>
           </div>
 
-          <!-- Check Out (Chiếm 3/14 cột) -->
+          <!-- Check Out -->
           <div class="input-group lg:col-span-3">
             <label class="floating-label" for="checkout">Check Out</label>
             <div class="flex items-center justify-between w-full gap-2.5">
@@ -62,7 +62,7 @@
             </div>
           </div>
 
-          <!-- Rooms & Guests (Chiếm 3/14 cột) -->
+          <!-- Rooms & Guests -->
           <div class="input-group lg:col-span-3">
             <label class="floating-label" for="guests">Rooms & Guests</label>
             <div class="flex items-center justify-between w-full gap-2.5">
@@ -88,7 +88,7 @@
     </section>
 
     <!-- MAIN CONTENT -->
-    <main class="flex flex-col max-w-308 w-full mx-auto mt-64 gap-20">
+    <main class="flex flex-col max-w-308 w-full mx-auto gap-20">
       <!-- 1. RECENT SEARCHES -->
       <section class="flex flex-col gap-8">
         <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Your recent searches</h2>

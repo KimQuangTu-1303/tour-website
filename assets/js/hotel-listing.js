@@ -83,39 +83,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-// ==========================================
-// 3. XỬ LÝ TAB & SLIDE INDICATOR
-// ==========================================
-const tabs = document.querySelectorAll(".hotel-listing__tab");
-const indicator = document.querySelector(".slide-indicator");
-
-function moveIndicator(tab) {
-  if (!indicator) return; // Bảo vệ nếu không có thanh indicator
-
-  const tabStyle = window.getComputedStyle(tab);
-  const paddingLeft = parseFloat(tabStyle.paddingLeft);
-  const paddingRight = parseFloat(tabStyle.paddingRight);
-
-  const contentWidth = tab.clientWidth - paddingLeft - paddingRight;
-  const tabLeft = tab.offsetLeft + paddingLeft;
-
-  indicator.style.width = `${contentWidth}px`;
-  indicator.style.transform = `translateX(${tabLeft}px)`;
-}
-
-// Chạy khởi tạo vị trí sau khi toàn bộ giao diện, font chữ, layout đã load xong
-window.addEventListener("load", function () {
-  const activeTab = document.querySelector(".hotel-listing__tab--active");
-  if (activeTab) {
-    moveIndicator(activeTab);
-  }
-});
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", function () {
-    tabs.forEach((t) => t.classList.remove("hotel-listing__tab--active"));
-    this.classList.add("hotel-listing__tab--active");
-    moveIndicator(this);
-  });
-});
