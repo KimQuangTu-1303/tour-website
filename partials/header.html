@@ -3,7 +3,7 @@
     <!-- Mobile Menu Toggle -->
     <div class="flex md:hidden">
       <button aria-controls="nav-mobile" aria-expanded="false" aria-label="Open menu" class="text-blackish-green focus:outline-none hover:opacity-80 transition-opacity cursor-pointer">
-        <img src="../assets/image/hamburger-menu.svg" alt="menu" />
+        <img src="/assets/image/hamburger-menu.svg" alt="menu" />
       </button>
     </div>
 
@@ -12,11 +12,11 @@
       <ul class="m-0 flex list-none p-0 gap-8">
         <!-- Active item -->
         <li class="nav-item {{ flight_active }}">
-          <img src="../assets/image/airplane_light.svg" alt="Flight" />
+          <img src="/assets/image/airplane_light.svg" alt="Flight" />
           <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
         </li>
         <li class="nav-item {{ stays_active }}">
-          <img src="../assets/image/bed_light.svg" alt="Stays" />
+          <img src="/assets/image/bed_light.svg" alt="Stays" />
           <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
         </li>
       </ul>
@@ -25,7 +25,7 @@
     <!-- Logo Center -->
     <div class="flex shrink-0 items-center">
       <a href="../index.html" class="flex items-center">
-        <img src="../assets/image/logo-small.png" alt="Golobe" class="h-6 md:h-auto" />
+        <img src="/assets/image/logo-small.png" alt="Golobe" class="h-6 md:h-auto" />
       </a>
     </div>
 
@@ -35,7 +35,7 @@
       {{#if is_logged_in}}
       <ul class="m-0 flex list-none p-0 gap-4 md:gap-8 items-center">
         <li class="nav-item {{ favourites_active }} hidden md:flex">
-          <img src="../assets/image/heart_light.svg" alt="Heart" />
+          <img src="/assets/image/heart_light.svg" alt="Heart" />
           <a href="../favorites.html" class="text-blackish-green no-underline block">Favourites</a>
         </li>
 
@@ -45,9 +45,9 @@
         <li class="group nav-item">
           <button id="user-menu-button" aria-expanded="false" class="text-blackish-green no-underline flex items-center h-auto gap-2">
             <div class="relative inline-flex">
-              <img src="../assets/image/user-avt.png" alt="John D." class="w-8 h-8 md:w-auto md:h-auto rounded-full" />
-              <img src="../assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px hidden md:block" />
-              <img src="../assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0 hidden md:block" />
+              <img src="/assets/image/user-avt.png" alt="John D." class="w-8 h-8 md:w-auto md:h-auto rounded-full" />
+              <img src="/assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px hidden md:block" />
+              <img src="/assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0 hidden md:block" />
             </div>
             <span class="hidden md:block">John D.</span>
           </button>
@@ -55,7 +55,7 @@
           <!-- User Menu -->
           <div id="user-dropdown" class="hidden flex-col absolute p-6 right-0 top-5 md:top-full mt-5 w-72 max-w-xs rounded-xl z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)]">
             <div class="flex items-center gap-4 py-2">
-              <img src="../assets/image/user-avt.svg" alt="John Doe." />
+              <img src="/assets/image/user-avt.svg" alt="John Doe." />
               <div class="flex flex-col w-full gap-1">
                 <span class="text-base font-semibold text-blackish-green">John Doe.</span>
                 <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
@@ -67,23 +67,23 @@
             <ul class="flex flex-col list-none p-0">
               <li>
                 <a href="../login-signup/account.html" class="dropdown-link">
-                  <img src="../assets/image/user_light.svg" alt="#" />
+                  <img src="/assets/image/user_light.svg" alt="#" />
                   My account
-                  <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                  <img src="/assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                 </a>
               </li>
               <li>
                 <a href="../login-signup/account_payment-methods.html" class="dropdown-link">
-                  <img src="../assets/image/card_light.png" alt="#" />
+                  <img src="/assets/image/card_light.png" alt="#" />
                   Payments
-                  <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                  <img src="/assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                 </a>
               </li>
               <li>
                 <a href="#" class="dropdown-link">
-                  <img src="../assets/image/setting_light.png" alt="#" />
+                  <img src="/assets/image/setting_light.png" alt="#" />
                   Setting
-                  <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                  <img src="/assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                 </a>
               </li>
             </ul>
@@ -93,14 +93,14 @@
             <ul class="flex flex-col list-none p-0">
               <li>
                 <a href="#" class="dropdown-link">
-                  <img src="../assets/image/support_light.png" alt="#" />
+                  <img src="/assets/image/support_light.png" alt="#" />
                   Support
-                  <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
+                  <img src="/assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
                 </a>
               </li>
               <li>
                 <a href="../login-signup/login.html" class="dropdown-link">
-                  <img src="../assets/image/logout_light.png" alt="#" />
+                  <img src="/assets/image/logout_light.png" alt="#" />
                   Logout
                 </a>
               </li>
@@ -124,13 +124,13 @@
     <ul class="flex flex-col m-0 p-4 list-none gap-2">
       <li>
         <a href="../flight-flow/find-flight.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if flight_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
-          <img src="../assets/image/airplane_light.svg" alt="Flight" class="w-5 h-5" />
+          <img src="/assets/image/airplane_light.svg" alt="Flight" class="w-5 h-5" />
           Find Flight
         </a>
       </li>
       <li>
         <a href="../hotel-flow/find-stays.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if stays_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
-          <img src="../assets/image/bed_light.svg" alt="Stays" class="w-5 h-5" />
+          <img src="/assets/image/bed_light.svg" alt="Stays" class="w-5 h-5" />
           Find Stays
         </a>
       </li>
@@ -138,7 +138,7 @@
       {{#if is_logged_in}}
       <li>
         <a href="../favorites.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if favourites_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
-          <img src="../assets/image/heart_light.svg" alt="Heart" class="w-5 h-5" />
+          <img src="/assets/image/heart_light.svg" alt="Heart" class="w-5 h-5" />
           Favourites
         </a>
       </li>
