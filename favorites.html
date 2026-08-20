@@ -6,7 +6,7 @@
     <meta name="description" content="View and manage your favorite saved hotels, flights, and dream travel destinations on Golobe." />
     <meta property="og:title" content="Favorites - Golobe Tour Website" />
     <meta property="og:description" content="View and manage your favorite saved hotels, flights, and dream travel destinations on Golobe." />
-    <meta property="og:image" content="assets/image/cvk-park-bosphorus-hotel.png" /> 
+    <meta property="og:image" content="assets/image/cvk-park-bosphorus-hotel.png" />
     <meta property="og:url" content="https://yourdomain.com/favorites.html" />
     <meta property="og:type" content="website" />
 
@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    {{> header favourites_active="nav-active" mb_class="mb-12" }}
+    {{> header favourites_active="nav-active" mb_class="mb-12" is_logged_in=true }}
 
     <!-- FAVORITES CONTENT -->
     <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-8">
@@ -229,6 +229,8 @@
 
     <!-- FOOTER -->
     {{> footer }}
+
+    <script type="module" src="../assets/js/main.js"></script>
     <script src="assets/js/hotel-listing.js"></script>
   </body>
 </html>
