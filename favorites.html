@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://yourdomain.com/favorites.html" />
     <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="assets/css/input.css" />
+    <link rel="stylesheet" href="./assets/css/input.css" />
   </head>
 
   <body>
@@ -24,19 +24,19 @@
 
       <!-- TABS HEADER -->
       <header class="relative grid grid-cols-2 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4">
-        <!-- Tab 1: Flights -->
+        <!-- Tab 1: Flights (Inactive) -->
         <button class="hotel-listing__tab relative flex flex-col items-start px-8 gap-2 border-none bg-transparent cursor-pointer group" data-target="flights-list">
           <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Flights</h3>
           <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">2 marked</p>
         </button>
 
-        <!-- Tab 2: Places (Inactive) -->
+        <!-- Tab 2: Places (Active) -->
         <button class="hotel-listing__tab hotel-listing__tab--active relative flex flex-col items-start px-8 gap-2 border-l-2 border-solid border-[#D7E2EE] bg-transparent cursor-pointer group" data-target="places-list">
           <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Places</h3>
           <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">3 marked</p>
+          <!-- Thanh tĩnh mặc định ở tab active -->
+          <div class="absolute -bottom-4 left-8 right-8 h-1 bg-mint-green rounded-full"></div>
         </button>
-
-        <div class="slide-indicator absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-all duration-300 ease-out origin-left pointer-events-none"></div>
       </header>
 
       <!-- FAVORITES LISTING -->
@@ -45,7 +45,7 @@
         <li>
           <article class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] overflow-hidden">
             <div class="relative w-full h-64 md:h-full min-h-60">
-              <img src="assets/image/cvk-park-bosphorus-hotel.png" alt="CVK Park" class="absolute inset-0 w-full h-full object-cover" />
+              <img src="/assets/image/cvk-park-bosphorus-hotel.png" alt="CVK Park" class="absolute inset-0 w-full h-full object-cover" />
               <span class="absolute top-4 right-4 flex items-center justify-center px-2 py-1 bg-white/75 backdrop-blur-sm rounded text-xs font-semibold text-blackish-green leading-none">9 images</span>
             </div>
 
@@ -57,17 +57,17 @@
                   <h2 class="text-2xl font-bold text-blackish-green leading-none m-0 pr-4">CVK Park Bosphorus Hotel Istanbul</h2>
 
                   <span class="flex items-center gap-1 text-sm font-medium text-blackish-green/75">
-                    <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
+                    <img src="/assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
                     Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
                   </span>
 
                   <div class="flex items-center gap-6 mt-1">
                     <span class="flex items-center gap-1 text-sm font-medium text-blackish-green">
-                      <img src="assets/image/5-stars.svg" alt="5 star" class="w-16" />
+                      <img src="/assets/image/5-stars.svg" alt="5 star" class="w-16" />
                       5 Star Hotel
                     </span>
                     <span class="flex items-center gap-2 text-sm font-medium text-blackish-green">
-                      <img src="assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
+                      <img src="/assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
                       <strong>20+</strong> Amenities
                     </span>
                   </div>
@@ -97,7 +97,7 @@
                     <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
                     <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
                   </label>
-                  <a href="hotel-detail-page.html" class="btn-view-place no-underline"> View Place </a>
+                  <a href="./hotel-flow/hotel-detail-page.html" class="btn-view-place no-underline">View Place</a>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@
           <article class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] overflow-hidden">
             <div class="relative w-full h-64 md:h-full min-h-60">
               <!-- Image 1: Eresin Hotels -->
-              <img src="assets/image/eresin-hotels-sultanahmet(1).png" alt="Eresin Hotels Sultanahmet" class="absolute inset-0 w-full h-full object-cover" />
+              <img src="/assets/image/eresin-hotels-sultanahmet(1).png" alt="Eresin Hotels Sultanahmet" class="absolute inset-0 w-full h-full object-cover" />
               <span class="absolute top-4 right-4 flex items-center justify-center px-2 py-1 bg-white/75 backdrop-blur-sm rounded text-xs font-semibold text-blackish-green leading-none">9 images</span>
             </div>
 
@@ -119,17 +119,17 @@
                   <h2 class="text-2xl font-bold text-blackish-green leading-none m-0 pr-4">Eresin Hotels Sultanahmet - Boutique Class</h2>
 
                   <span class="flex items-center gap-1 text-sm font-medium text-blackish-green/75">
-                    <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
+                    <img src="/assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
                     Kucukayasofya No. 40 Sultanahmet, Istanbul 34022
                   </span>
 
                   <div class="flex items-center gap-6 mt-1">
                     <span class="flex items-center gap-1 text-sm font-medium text-blackish-green">
-                      <img src="assets/image/5-stars.svg" alt="5 star" class="w-16" />
+                      <img src="/assets/image/5-stars.svg" alt="5 star" class="w-16" />
                       5 Star Hotel
                     </span>
                     <span class="flex items-center gap-2 text-sm font-medium text-blackish-green">
-                      <img src="assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
+                      <img src="/assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
                       <strong>20+</strong> Amenities
                     </span>
                   </div>
@@ -158,7 +158,7 @@
                     <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
                     <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
                   </label>
-                  <a href="hotel-detail-page.html" class="btn-view-place no-underline"> View Place </a>
+                  <a href="./hotel-flow/hotel-detail-page.html" class="btn-view-place no-underline">View Place</a>
                 </div>
               </div>
             </div>
@@ -170,7 +170,7 @@
           <article class="grid grid-cols-1 md:grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] overflow-hidden">
             <div class="relative w-full h-64 md:h-full min-h-60">
               <!-- Image 2: Eresin Hotels -->
-              <img src="assets/image/eresin-hotels-sultanahmet(2).png" alt="Eresin Hotels Sultanahmet" class="absolute inset-0 w-full h-full object-cover" />
+              <img src="/assets/image/eresin-hotels-sultanahmet(2).png" alt="Eresin Hotels Sultanahmet" class="absolute inset-0 w-full h-full object-cover" />
               <span class="absolute top-4 right-4 flex items-center justify-center px-2 py-1 bg-white/75 backdrop-blur-sm rounded text-xs font-semibold text-blackish-green leading-none">9 images</span>
             </div>
 
@@ -180,17 +180,17 @@
                   <h2 class="text-2xl font-bold text-blackish-green leading-none m-0 pr-4">Eresin Hotels Sultanahmet - Boutique Class</h2>
 
                   <span class="flex items-center gap-1 text-sm font-medium text-blackish-green/75">
-                    <img src="assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
+                    <img src="/assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
                     Kucukayasofya No. 40 Sultanahmet, Istanbul 34022
                   </span>
 
                   <div class="flex items-center gap-6 mt-1">
                     <span class="flex items-center gap-1 text-sm font-medium text-blackish-green">
-                      <img src="assets/image/5-stars.svg" alt="5 star" class="w-16" />
+                      <img src="/assets/image/5-stars.svg" alt="5 star" class="w-16" />
                       5 Star Hotel
                     </span>
                     <span class="flex items-center gap-2 text-sm font-medium text-blackish-green">
-                      <img src="assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
+                      <img src="/assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4 shrink-0" />
                       <strong>20+</strong> Amenities
                     </span>
                   </div>
@@ -219,7 +219,7 @@
                     <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
                     <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
                   </label>
-                  <a href="hotel-detail-page.html" class="btn-view-place no-underline"> View Place </a>
+                  <a href="./hotel-flow/hotel-detail-page.html" class="btn-view-place no-underline">View Place</a>
                 </div>
               </div>
             </div>
@@ -231,7 +231,6 @@
     <!-- FOOTER -->
     {{> footer }}
 
-    <script type="module" src="../assets/js/main.js"></script>
-    <script src="assets/js/hotel-listing.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
   </body>
 </html>
