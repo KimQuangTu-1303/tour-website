@@ -59,9 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let minVal = parseInt(timeMin.value);
     let maxVal = parseInt(timeMax.value);
 
-    // Chặn minGap: Buộc khoảng cách giữa 2 cục trượt ít nhất là 60 phút
     if (maxVal - minVal < minTimeGap) {
-      // Xác định xem người dùng đang kéo thanh nào để đẩy thanh còn lại đi
       if (e && e.target === timeMin) {
         timeMin.value = maxVal - minTimeGap;
       } else {
@@ -74,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (timeMinText) timeMinText.textContent = formatMinutesToTime(minVal);
     if (timeMaxText) timeMaxText.textContent = formatMinutesToTime(maxVal);
 
-    // Tính toán % để fill màu đen cho thanh trượt
     if (timeFill) {
       const minPercent = ((minVal - timeMin.min) / (timeMin.max - timeMin.min)) * 100;
       const maxPercent = ((maxVal - timeMax.min) / (timeMax.max - timeMax.min)) * 100;
@@ -90,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateTimeSeries(); // Khởi tạo chạy lần đầu khi load trang
   }
   // --- 3. XỬ LÝ TABS (Active Switch) ---
-  // Cập nhật class theo BEM
   const tabItems = document.querySelectorAll(".flight-results__tab");
   tabItems.forEach((tab) => {
     tab.addEventListener("click", () => {
@@ -172,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ticketsData.forEach((ticket) => {
       const clone = template.content.cloneNode(true);
 
-      // Cập nhật các selectors để query chuẩn xác các class BEM
       clone.querySelector(".ticket-card__airline-logo").src = ticket.airlineLogo;
       clone.querySelector(".ticket-card__airline-logo").alt = ticket.airlineName;
       clone.querySelector(".ticket-card__score").textContent = ticket.rating;
@@ -180,38 +175,35 @@ document.addEventListener("DOMContentLoaded", () => {
       clone.querySelector(".ticket-card__review-count").textContent = `${ticket.reviewsCount} reviews`;
       clone.querySelector(".ticket-card__price-value").textContent = `$${ticket.price}`;
 
-      // Xử lý logic nếu HTML có thẻ span chứa unit (Ví dụ /night)
       const priceUnitEl = clone.querySelector(".ticket-card__price-unit");
       if (priceUnitEl) {
         priceUnitEl.textContent = ticket.priceUnit ? ` ${ticket.priceUnit}` : "";
       }
 
-      // Render mảng flights bên trong mỗi vé
       const flightsContainer = clone.querySelector(".ticket-card__flights");
       ticket.flights.forEach((flight) => {
         const flightRow = document.createElement("div");
 
-        // Thay thế class flight-card__row bằng hệ thống Grid của Tailwind (chia 4 cột)
-        flightRow.className = "grid grid-cols-[24px_1.5fr_1fr_1fr] items-center gap-4";
+        flightRow.className = "flex justify-between md:justify-start gap-2 md:gap-10 w-full";
 
-        // Thay thế toàn bộ các class text cũ bằng class quy định màu và font size của Tailwind
         flightRow.innerHTML = `
-          <input type="checkbox" class="appearance-none w-5 h-5 border-2 border-blackish-green/40 rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" >
+    <input type="checkbox" class="appearance-none w-4 h-4 md:w-5 md:h-5 border-2 border-blackish-green/40 rounded-sm checked:border-mint-green checked:bg-mint-green checked:bg-[url('../image/check_success.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" >
 
-          <div class="flex flex-col justify-center">
-            <strong class="text-[14px] md:text-base text-blackish-green font-semibold leading-tight">${flight.time}</strong>
-            <span class="text-[12px] md:text-sm text-blackish-green opacity-40 mt-1">${flight.airline}</span>
-          </div>
+    <div class="flex flex-col justify-center flex-1 md:flex-none">
+      <strong class="text-[11px] sm:text-[14px] md:text-base text-blackish-green font-semibold leading-tight">${flight.time}</strong>
+      <span class="text-[10px] sm:text-[12px] md:text-sm text-blackish-green/50 mt-1">${flight.airline}</span>
+    </div>
 
-          <div class="text-[13px] md:text-sm font-medium text-blackish-green">
-            ${flight.type}
-          </div>
+    <div class="text-[10px] sm:text-[13px] md:text-sm font-semibold text-blackish-green/75 shrink-0 text-center px-1">
+      ${flight.type}
+    </div>
 
-          <div class="flex flex-col justify-center">
-            <strong class="text-[14px] md:text-base text-blackish-green font-semibold leading-tight">${flight.duration}</strong>
-            <span class="text-[12px] md:text-sm text-blackish-green opacity-40 mt-1">${flight.route}</span>
-          </div>
-        `;
+    <div class="flex flex-col justify-center flex-1 md:flex-none text-right md:text-left">
+      <strong class="text-[11px] sm:text-[14px] md:text-base text-blackish-green font-semibold leading-tight">${flight.duration}</strong>
+      <span class="text-[10px] sm:text-[12px] md:text-sm text-blackish-green/50 mt-1">${flight.route}</span>
+    </div>
+  `;
+
         flightsContainer.appendChild(flightRow);
       });
       container.appendChild(clone);
