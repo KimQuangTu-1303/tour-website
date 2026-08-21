@@ -9,7 +9,7 @@
 
   <body>
     <!-- HEADER -->
-    {{> header stays_active="nav-active" mb_class="mb-12" is_logged_in=true }}
+    {{> header stays_active="nav-active" mb_class="mb-12" }}
 
     <!-- MAIN CONTENT -->
     <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-5 gap-y-8 gap-x-10 items-start">
@@ -28,7 +28,6 @@
       <div class="lg:col-span-3 flex flex-col gap-10">
         <!-- 1. RESERVATION INFO -->
         <div class="flex flex-col">
-          <!-- Cố định padding py-8 px-6 để text vừa khít lề Breadcrumb -->
           <div class="bg-white py-8 px-6 rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full">
             <header class="flex justify-between items-start mb-4">
               <h1 class="font-trade-gothic text-2xl font-bold text-blackish-green leading-none max-w-[490px] m-0">Superior room - 1 double bed or 2 twin beds</h1>
@@ -47,17 +46,19 @@
               </span>
             </div>
 
-            <div class="flex justify-between items-center">
-              <div class="flex flex-col">
-                <p class="text-xl font-semibold text-blackish-green leading-none m-0 mb-2">Thursday, Dec 8</p>
-                <p class="text-sm font-medium text-blackish-green/75 leading-none m-0">Check-In</p>
+            <div class="flex items-center justify-between gap-6 w-full">
+              <div class="flex flex-col gap-1 md:gap-2">
+                <p class="text-xl lg:text-2xl font-bold text-blackish-green">Thursday, Dec 8</p>
+                <p class="text-xs md:text-sm font-medium text-blackish-green/75">Check-In</p>
               </div>
 
-              <img src="../assets/image/schedule-icon.svg" alt="Schedule" />
+              <div class="flex items-center justify-center md:py-0">
+                <img src="../assets/image/schedule-icon.svg" alt="Schedule" class="h-12 w-auto" />
+              </div>
 
-              <div class="flex flex-col text-right">
-                <p class="text-xl font-semibold text-blackish-green leading-none m-0 mb-2">Friday, Dec 9</p>
-                <p class="text-sm font-medium text-blackish-green/75 leading-none m-0">Check-Out</p>
+              <div class="flex flex-col gap-1 md:gap-2">
+                <span class="text-xl lg:text-2xl font-bold text-blackish-green">Friday, Dec 9</span>
+                <span class="text-xs md:text-sm font-medium text-blackish-green/75">Check-Out</span>
               </div>
             </div>
           </div>
@@ -103,7 +104,7 @@
             <h2 class="font-trade-gothic text-xl font-bold text-blackish-green leading-snug m-0">Login or Sign up to book</h2>
             <input type="tel" class="modal-input" placeholder="Phone Number" />
             <p class="text-sm font-normal text-blackish-green mb-2 mt-0">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="#" class="font-semibold text-blackish-green no-underline hover:underline">Privacy Policy</a></p>
-            <button type="button" class="btn-primary w-full py-3.5">Continue</button>
+            <a href="hotel-booking-detail-visa.html" class="btn-primary w-full py-3.5 block text-center no-underline">Continue</a>
           </form>
 
           <div class="flex items-center text-base font-medium text-blackish-green text-center before:content-[''] before:flex-1 before:h-px before:bg-blackish-green/25 before:mr-6 after:content-[''] after:flex-1 after:h-px after:bg-blackish-green/25 after:ml-6">Or</div>

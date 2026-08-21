@@ -16,7 +16,7 @@
 
   <body>
     <!-- HEADER -->
-    {{> header stays_active="nav-active" mb_class="mb-0" is_logged_in=true }}
+    {{> header stays_active="nav-active" is_logged_in=true }}
 
     <!-- HOTEL SEARCH & BANNER -->
     <section class="relative flex flex-col items-center lg:block mb-12 lg:mb-40 w-full">
@@ -136,99 +136,101 @@
       <section class="flex flex-col gap-8">
         <div class="flex items-center justify-between">
           <div class="flex flex-col w-full gap-4">
-            <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Fall into travel</h2>
+            <h2 class="font-trade-gothic text-[32px] font-bold leading-none text-blackish-green m-0">Fall into travel</h2>
             <p class="text-base font-normal text-blackish-green/80 m-0 font-montserrat">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
           </div>
-          <a class="flex items-center justify-center h-10 w-20 rounded border border-mint-green bg-transparent transition-colors hover:bg-mint-cream shrink-0 font-montserrat text-blackish-green no-underline font-medium text-sm" href="hotel-listing.html"> See All </a>
+          <a class="flex items-center justify-center h-10 px-4 rounded border border-mint-green bg-transparent transition-colors hover:bg-mint-cream shrink-0 font-montserrat text-blackish-green no-underline font-medium text-sm" href="flight-listing.html">See All</a>
         </div>
 
         <div class="flex flex-wrap justify-between gap-4">
           <!-- Melbourne -->
-          <div id="Melbourne" class="travel-card bg-[url('../image/Melbourne.png')]">
-            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
+          <div class="flex-1 min-w-70 h-105 rounded-xl p-6 bg-cover bg-center bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Melbourne.png')]">
+            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/85 via-blackish-green/40 to-transparent z-0"></div>
             <div class="relative z-10 flex justify-between items-end">
               <div class="flex flex-col gap-1">
-                <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">Melbourne</h3>
-                <p class="text-sm font-normal leading-none text-white m-0 select-none font-montserrat">An amazing journey</p>
+                <h3 class="text-2xl font-semibold leading-none text-white m-0 font-trade-gothic">Melbourne</h3>
+                <p class="text-sm font-normal leading-none text-white m-0 font-montserrat">An amazing journey</p>
               </div>
-              <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">$700</h3>
+              <h3 class="text-2xl font-semibold leading-none text-white m-0 font-trade-gothic">$700</h3>
             </div>
-            <a class="relative z-10 flex items-center justify-center text-sm font-medium leading-none bg-mint-green rounded py-3 px-4 transition-opacity hover:opacity-80 font-montserrat text-blackish-green w-full no-underline" href="hotel-listing.html"> Book a Hotel </a>
+            <a class="relative z-10 flex items-center justify-center text-sm font-semibold leading-[2.23] bg-mint-green rounded py-2 px-4 transition-colors hover:bg-mint-green-light font-montserrat text-blackish-green w-full no-underline text-center" href="flight-listing.html"> Book Flight </a>
           </div>
 
           <!-- Paris -->
-          <div id="Paris" class="travel-card bg-[url('../image/Paris.png')]">
-            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
+          <div class="flex-1 min-w-70 h-105 rounded-xl p-6 bg-cover bg-center bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Paris.png')]">
+            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/85 via-blackish-green/40 to-transparent z-0"></div>
             <div class="relative z-10 flex justify-between items-end">
               <div class="flex flex-col gap-1">
-                <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">Paris</h3>
-                <p class="text-sm font-normal leading-none text-white m-0 select-none font-montserrat">A Paris Adventure</p>
+                <h3 class="text-2xl font-semibold leading-none text-white m-0 font-trade-gothic">Paris</h3>
+                <p class="text-sm font-normal leading-none text-white m-0 font-montserrat">A Paris Adventure</p>
               </div>
-              <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">$600</h3>
+              <h3 class="text-2xl font-semibold leading-none text-white m-0 font-trade-gothic">$600</h3>
             </div>
-            <a class="relative z-10 flex items-center justify-center text-sm font-medium leading-none bg-mint-green rounded py-3 px-4 transition-opacity hover:opacity-80 font-montserrat text-blackish-green w-full no-underline" href="hotel-listing.html"> Book a Hotel </a>
+            <a class="relative z-10 flex items-center justify-center text-sm font-semibold leading-[2.23] bg-mint-green rounded py-2 px-4 transition-colors hover:bg-mint-green-light font-montserrat text-blackish-green w-full no-underline text-center" href="flight-listing.html"> Book Flight </a>
           </div>
 
           <!-- London -->
-          <div id="London" class="travel-card bg-[url('../image/London.png')]">
-            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
+          <div class="flex-1 min-w-70 h-105 rounded-xl p-6 bg-cover bg-center bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/London.png')]">
+            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/85 via-blackish-green/40 to-transparent z-0"></div>
             <div class="relative z-10 flex justify-between items-end">
               <div class="flex flex-col gap-1">
-                <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">London</h3>
-                <p class="text-sm font-normal leading-none text-white m-0 select-none font-montserrat">London eye adventure</p>
+                <h3 class="text-2xl font-semibold leading-none text-white m-0 font-trade-gothic">London</h3>
+                <p class="text-sm font-normal leading-none text-white m-0 font-montserrat">London eye adventure</p>
               </div>
-              <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">$350</h3>
+              <h3 class="text-2xl font-semibold leading-none text-white m-0 font-trade-gothic">$350</h3>
             </div>
-            <a class="relative z-10 flex items-center justify-center text-sm font-medium leading-none bg-mint-green rounded py-3 px-4 transition-opacity hover:opacity-80 font-montserrat text-blackish-green w-full no-underline" href="hotel-listing.html"> Book a Hotel </a>
+            <a class="relative z-10 flex items-center justify-center text-sm font-semibold leading-[2.23] bg-mint-green rounded py-2 px-4 transition-colors hover:bg-mint-green-light font-montserrat text-blackish-green w-full no-underline text-center" href="flight-listing.html"> Book Flight </a>
           </div>
 
           <!-- Columbia -->
-          <div id="Columbia" class="travel-card bg-[url('../image/Columbia.png')]">
-            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/70 via-transparent to-transparent"></div>
+          <div class="flex-1 min-w-70 h-105 rounded-xl p-6 bg-cover bg-center bg-no-repeat flex flex-col justify-end gap-4 relative overflow-hidden bg-[url('../image/Columbia.png')]">
+            <div class="absolute inset-0 bg-linear-to-t from-blackish-green/85 via-blackish-green/40 to-transparent z-0"></div>
             <div class="relative z-10 flex justify-between items-end">
               <div class="flex flex-col gap-1">
-                <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">Columbia</h3>
-                <p class="text-sm font-normal leading-none text-white m-0 select-none font-montserrat">Amazing streets</p>
+                <h3 class="text-2xl font-semibold leading-none text-white m-0 font-trade-gothic">Columbia</h3>
+                <p class="text-sm font-normal leading-none text-white m-0 font-montserrat">Amazing streets</p>
               </div>
-              <h3 class="text-2xl font-semibold leading-none text-white m-0 select-none font-trade-gothic">$700</h3>
+              <h3 class="text-2xl font-semibold leading-none text-white m-0 font-trade-gothic">$700</h3>
             </div>
-            <a class="relative z-10 flex items-center justify-center text-sm font-medium leading-none bg-mint-green rounded py-3 px-4 transition-opacity hover:opacity-80 font-montserrat text-blackish-green w-full no-underline" href="hotel-listing.html"> Book a Hotel </a>
+            <a class="relative z-10 flex items-center justify-center text-sm font-semibold leading-[2.23] bg-mint-green rounded py-2 px-4 transition-colors hover:bg-mint-green-light font-montserrat text-blackish-green w-full no-underline text-center" href="flight-listing.html"> Book Flight </a>
           </div>
         </div>
       </section>
 
       <!-- 3. TRAVEL DESTINATIONS (Sri Lanka Grid) -->
-      <section class="flex flex-col gap-6">
-        <div class="flex items-center justify-between">
-          <div class="flex flex-col w-full gap-4">
-            <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Fall into travel</h2>
-            <p class="text-base font-normal text-blackish-green/80 m-0 font-montserrat">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got<br />the travel tools to get you to your destination</p>
+      <section class="flex flex-col gap-6 px-5 md:px-0">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-0">
+          <div class="flex flex-col w-full md:w-8/12 gap-2 md:gap-4">
+            <h2 class="font-trade-gothic text-2xl md:text-[32px] font-bold leading-none text-blackish-green m-0">Fall into travel</h2>
+            <p class="text-sm md:text-base font-normal text-blackish-green/80 m-0 font-montserrat">Going somewhere to celebrate this season? Whether you’re going home or somewhere to roam, we’ve got the travel tools to get you to your destination.</p>
           </div>
-          <a class="flex items-center justify-center h-10 w-20 rounded border border-mint-green bg-transparent transition-colors hover:bg-mint-cream shrink-0 font-montserrat text-blackish-green no-underline font-medium text-sm" href="hotel-listing.html"> See All </a>
+          <a class="flex items-center justify-center h-10 px-4 w-fit rounded border border-mint-green bg-transparent transition-colors hover:bg-mint-cream shrink-0 font-montserrat text-blackish-green no-underline font-medium text-sm" href="hotel-listing.html"> See All </a>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-11 grid-rows-2 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-11 md:grid-rows-2 gap-4 md:gap-6">
           <!-- Main Card -->
-          <div class="col-span-5 row-span-2 flex flex-col justify-between bg-mint-green rounded-2xl p-6 relative">
-            <div class="relative">
-              <h3 class="text-4xl font-bold leading-none m-0 mb-6 font-trade-gothic text-blackish-green">Backpacking<br />Sri Lanka</h3>
-              <p class="text-sm font-normal leading-normal text-blackish-green/80 m-0 font-montserrat">Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life. It helps us to forget about our problems, frustrations, and fears at home. During our journey, we experience life in different ways. We explore new places, cultures, cuisines, traditions, and ways of living.</p>
+          <div class="col-span-1 sm:col-span-2 md:col-span-5 md:row-span-2 flex flex-col justify-between bg-mint-green rounded-2xl md:rounded-[20px] p-5 md:p-6 mt-6 md:mt-0">
+            <div class="w-full">
+              <div class="flex justify-between items-start gap-4 mb-4 md:mb-6 w-full">
+                <h3 class="flex-1 min-w-0 text-3xl md:text-[40px] font-bold leading-none m-0 font-trade-gothic text-blackish-green break-words">Backpacking<br />Sri Lanka</h3>
 
-              <div class="flex flex-col items-center bg-white p-2 rounded-lg gap-1 absolute top-0 right-0 shadow-sm">
-                <span class="text-sm font-normal leading-none text-blackish-green/75 font-montserrat">From</span>
-                <span class="text-xl font-semibold leading-none text-blackish-green font-trade-gothic">$700</span>
+                <div class="flex flex-col items-center bg-white p-2 rounded-lg gap-1 shadow-sm shrink-0">
+                  <span class="text-xs md:text-sm font-normal leading-none text-blackish-green/75 font-montserrat">From</span>
+                  <span class="text-lg md:text-[20px] font-semibold leading-none text-blackish-green font-trade-gothic">$700</span>
+                </div>
               </div>
+
+              <p class="text-xs md:text-sm font-normal leading-relaxed text-blackish-green/80 m-0 font-montserrat">Traveling is a unique experience as it's the best way to unplug from the pushes and pulls of daily life. It helps us to forget about our problems, frustrations, and fears at home. During our journey, we experience life in different ways. We explore new places, cultures, cuisines, traditions, and ways of living.</p>
             </div>
 
-            <div>
-              <button class="text-sm font-medium leading-none bg-white border-none rounded w-full py-3 cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green shadow-sm">Book Flight</button>
+            <div class="mt-6 md:mt-0">
+              <button onclick="window.location.href='flight-listing.html'" class="text-sm font-medium leading-loose md:leading-none bg-white border-none rounded w-full py-3 cursor-pointer transition-colors hover:bg-mint-cream font-montserrat text-blackish-green shadow-sm">Book Flight</button>
             </div>
           </div>
-
-          <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka-1.png')]"></div>
-          <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka-2.png')]"></div>
-          <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka-3.png')]"></div>
-          <div class="col-span-3 min-h-48 border-2 border-mint-green rounded-xl bg-cover bg-no-repeat bg-[url('../image/Sri-Lanka-4.png')]"></div>
+          <div class="col-span-1 md:col-span-3 h-60 md:h-50 border-2 border-mint-green rounded-xl bg-cover bg-center bg-no-repeat bg-[url('../image/Sri-Lanka-1.png')]"></div>
+          <div class="col-span-1 md:col-span-3 h-60 md:h-50 border-2 border-mint-green rounded-xl bg-cover bg-center bg-no-repeat bg-[url('../image/Sri-Lanka-2.png')]"></div>
+          <div class="col-span-1 md:col-span-3 h-60 md:h-50 border-2 border-mint-green rounded-xl bg-cover bg-center bg-no-repeat bg-[url('../image/Sri-Lanka-3.png')]"></div>
+          <div class="col-span-1 md:col-span-3 h-60 md:h-50 border-2 border-mint-green rounded-xl bg-cover bg-center bg-no-repeat bg-[url('../image/Sri-Lanka-4.png')]"></div>
         </div>
       </section>
     </main>

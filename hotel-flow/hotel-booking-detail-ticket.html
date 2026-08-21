@@ -19,9 +19,9 @@
     {{> header stays_active="nav-active" mb_class="mb-12" is_logged_in=true }}
 
     <!-- MAIN CONTENT -->
-    <main class="flex flex-col w-full max-w-308 mx-auto px-4 lg:px-8">
+    <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-y-8 lg:gap-y-10 items-start mb-16">
       <!-- BREADCRUMB -->
-      <nav class="flex items-center mb-8 text-sm font-medium text-blackish-green">
+      <nav class="flex items-center md:mb-8 text-sm font-medium text-blackish-green">
         <ol class="flex items-center gap-2 p-0 list-none">
           <li><a href="#" class="breadcrumb-link text-blackish-green">Turkey</a></li>
           <li class="flex items-center justify-center"><img src="../assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" /></li>
@@ -30,6 +30,7 @@
           <li class="font-medium opacity-40">CVK Park Bosphorus Hotel Istanbul</li>
         </ol>
       </nav>
+
       <!-- BOOKING CARD WRAP -->
       <div class="flex flex-col gap-10 lg:mb-16">
         <!-- Header Info -->
@@ -53,78 +54,80 @@
         </header>
 
         <!-- Ticket Section -->
-        <div class="flex flex-col lg:flex-row lg:max-h-80 w-full">
+        <div class="flex flex-col lg:flex-row w-full">
           <!-- Left Ticket Box -->
           <div class="flex flex-col md:flex-row flex-1 rounded-2xl overflow-hidden border border-[#eaeaea]">
             <!-- Sidebar / Timeline -->
-            <div class="flex flex-col justify-between p-6 bg-mint-cream gap-4 shrink-0">
-              <div class="flex flex-col gap-1">
-                <span class="text-3xl font-semibold leading-none text-blackish-green">Thur, Dec 8</span>
+            <div class="flex flex-row md:flex-col justify-between items-center md:items-start p-4 md:p-6 bg-mint-cream gap-4 shrink-0">
+              <div class="flex flex-col gap-1 text-center md:text-left">
+                <span class="text-xl md:text-3xl font-semibold leading-none text-blackish-green">Thur, Dec 8</span>
                 <span class="text-xs font-medium leading-none text-blackish-green opacity-60">Check-In</span>
               </div>
 
-              <div class="flex justify-center items-center py-2">
-                <img src="../assets/image/building-combine.svg" alt="Combine" class="h-auto" />
+              <div class="flex justify-center items-center py-2 shrink-0">
+                <img src="../assets/image/building-combine.svg" alt="Combine" class="w-8 md:w-auto h-auto rotate-90 md:rotate-0" />
               </div>
 
-              <div class="flex flex-col gap-1">
-                <span class="text-3xl font-semibold leading-none text-blackish-green">Fri, Dec 9</span>
+              <div class="flex flex-col gap-1 text-center md:text-left">
+                <span class="text-xl md:text-3xl font-semibold leading-none text-blackish-green">Fri, Dec 9</span>
                 <span class="text-xs font-medium leading-none text-blackish-green opacity-60">Check-Out</span>
               </div>
             </div>
 
             <!-- Main Ticket Body -->
-            <div class="relative bg-white flex-1 flex flex-col">
-              <!-- Guest Banner -->
-              <div class="flex justify-between items-center bg-mint-green p-6 h-22 shrink-0">
-                <div class="flex items-center gap-4">
-                  <img src="../assets/image/user-avt.png" alt="Avatar" class="border border-white rounded-full w-12 h-12 object-cover" />
-                  <span class="font-trade-gothic text-xl font-bold leading-none text-blackish-green">James Doe</span>
+            <div class="bg-white flex-1 flex flex-col justify-between min-h-full">
+              <div>
+                <!-- Guest Banner -->
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 bg-mint-green p-4 md:p-6 sm:h-22 shrink-0">
+                  <div class="flex items-center gap-4 shrink-0">
+                    <img src="../assets/image/user-avt.png" alt="Avatar" class="border border-white rounded-full w-12 h-12 object-cover shrink-0" />
+                    <span class="font-trade-gothic text-xl font-bold leading-none text-blackish-green">James Doe</span>
+                  </div>
+                  <div class="font-trade-gothic text-sm sm:text-right font-bold leading-tight text-blackish-green">Superior room - 1 double bed<br class="hidden sm:block" />or 2 twin beds</div>
                 </div>
-                <div class="font-trade-gothic text-sm font-bold leading-tight text-right text-blackish-green">Superior room - 1 double bed<br />or 2 twin beds</div>
-              </div>
 
-              <!-- Ticket Details -->
-              <div class="flex flex-wrap gap-8 p-6">
-                <div class="flex gap-2 items-center">
-                  <img src="../assets/image/timer_primary.svg" alt="Timer" class="w-8 h-8" />
-                  <div class="flex flex-col gap-1">
-                    <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Check-in time</span>
-                    <span class="text-base font-medium leading-none text-blackish-green">12:00pm</span>
+                <!-- Ticket Details -->
+                <div class="flex flex-wrap gap-4 md:gap-8 p-4 md:p-6">
+                  <div class="flex gap-2 items-center min-w-[120px]">
+                    <img src="../assets/image/timer_primary.svg" alt="Timer" class="w-8 h-8 shrink-0" />
+                    <div class="flex flex-col gap-1">
+                      <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Check-in time</span>
+                      <span class="text-base font-medium leading-none text-blackish-green">12:00pm</span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-2 items-center min-w-[120px]">
+                    <img src="../assets/image/timer_primary.svg" alt="Timer" class="w-8 h-8 shrink-0" />
+                    <div class="flex flex-col gap-1">
+                      <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Check-out time</span>
+                      <span class="text-base font-medium leading-none text-blackish-green">11:30pm</span>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-2 items-center min-w-[120px]">
+                    <img src="../assets/image/door_primary.svg" alt="Door" class="w-8 h-8 shrink-0" />
+                    <div class="flex flex-col gap-1">
+                      <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Room no.</span>
+                      <span class="text-base font-medium leading-none text-blackish-green">On arrival</span>
+                    </div>
                   </div>
                 </div>
-
-                <div class="flex gap-2 items-center">
-                  <img src="../assets/image/timer_primary.svg" alt="Timer" class="w-8 h-8" />
-                  <div class="flex flex-col gap-1">
-                    <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Check-out time</span>
-                    <span class="text-base font-medium leading-none text-blackish-green">11:30pm</span>
-                  </div>
-                </div>
-
-                <div class="flex gap-2 items-center">
-                  <img src="../assets/image/door_primary.svg" alt="Door" class="w-8 h-8" />
-                  <div class="flex flex-col gap-1">
-                    <span class="text-xs font-semibold leading-none text-blackish-green opacity-60">Room no.</span>
-                    <span class="text-base font-medium leading-none text-blackish-green">On arrival</span>
-                  </div>
-                </div>
               </div>
 
-              <!-- Ticket Reference -->
-              <div class="absolute bottom-[10%] left-[4%] flex flex-col gap-1">
-                <span class="text-3xl font-semibold leading-none text-blackish-green">EK</span>
-                <span class="text-xs font-medium leading-none text-blackish-green opacity-60">ABC12345</span>
+              <!-- Ticket Reference & Barcode (Đã xóa absolute, dùng Flex mt-auto) -->
+              <div class="flex justify-between items-end p-4 md:p-6 mt-auto">
+                <div class="flex flex-col gap-1">
+                  <span class="text-3xl font-semibold leading-none text-blackish-green">EK</span>
+                  <span class="text-xs font-medium leading-none text-blackish-green opacity-60">ABC12345</span>
+                </div>
+                <img class="w-28 sm:w-32 lg:w-auto h-auto object-contain shrink-0" src="../assets/image/barcode.png" alt="Barcode" />
               </div>
-
-              <!-- Barcode -->
-              <img class="absolute right-0 bottom-0 max-w-30 lg:max-w-none object-contain" src="../assets/image/barcode.png" alt="Barcode" />
             </div>
           </div>
 
           <!-- Aside / Map -->
-          <aside class="py-2 px-8 lg:px-28 bg-white border border-[#eaeaea] rounded-2xl flex items-center justify-center shrink-0">
-            <img class="max-w-40 h-auto" src="../assets/image/hotel-card-logo.png" alt="CVK Park Bosphorus Hotel" />
+          <aside class="py-6 px-8 lg:px-28 bg-white border border-[#eaeaea] rounded-2xl flex items-center justify-center shrink-0">
+            <img class="max-w-[120px] md:max-w-40 h-auto" src="../assets/image/hotel-card-logo.png" alt="CVK Park Bosphorus Hotel" />
           </aside>
         </div>
       </div>
