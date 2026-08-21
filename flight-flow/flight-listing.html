@@ -14,7 +14,7 @@
   </head>
 
   <body>
-    {{> header flight_active="nav-active" mb_class="mb-12" is_logged_in=true }}
+    {{> header flight_active="nav-active" mb_class="lg:mb-12" is_logged_in=true }}
 
     <section class="max-w-308 mx-auto mb-8 mt-4 lg:mt-0">
       <form class="bg-white rounded-2xl shadow-md p-6" action="#" method="get">
@@ -187,29 +187,32 @@
       </aside>
 
       <main class="flex flex-col lg:col-span-9 gap-8 lg:border-l lg:border-blackish-green/25 lg:pl-8">
-        <header class="relative flex bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4 overflow-hidden w-full">
-          <button class="hotel-listing__tab hotel-listing__tab--active relative flex-1 flex flex-col items-start px-6 gap-2 bg-transparent border-r border-solid border-blackish-green/10 cursor-pointer">
+        <header class="relative flex bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4 overflow-x-auto w-full [&::-webkit-scrollbar]:hidden">
+          <!-- Tab: Cheapest -->
+          <button class="flight-results__tab flight-results__tab--active group relative flex-1 flex flex-col items-start px-6 gap-2 bg-transparent cursor-pointer min-w-[110px] shrink-0 border-none outline-none">
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Cheapest</h3>
-            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">$99 . 2h 18m</p>
-            <div class="absolute -bottom-4 left-6 right-6 h-1 bg-mint-green rounded-full"></div>
+            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0 whitespace-nowrap">$99 . 2h 18m</p>
           </button>
 
-          <button class="hotel-listing__tab flex-1 flex flex-col items-start px-6 gap-2 bg-transparent border-r border-solid border-blackish-green/10 cursor-pointer">
+          <!-- Tab: Best -->
+          <button class="flight-results__tab group relative flex-1 flex flex-col items-start px-6 gap-2 bg-transparent border-0 border-x border-solid border-[#D7E2EE] cursor-pointer min-w-[110px] shrink-0 outline-none">
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Best</h3>
-            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">$99 . 2h 18m</p>
+            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0 whitespace-nowrap">$99 . 2h 18m</p>
+            <div class="absolute -bottom-4 left-6 right-6 h-1 bg-mint-green"></div>
           </button>
 
-          <button class="hotel-listing__tab flex-1 flex flex-col items-start px-6 gap-2 bg-transparent border-r border-solid border-blackish-green/10 cursor-pointer">
+          <!-- Tab: Quickest -->
+          <button class="flight-results__tab group relative flex-1 flex flex-col items-start px-6 gap-2 bg-transparent cursor-pointer min-w-[110px] shrink-0 border-none outline-none">
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Quickest</h3>
-            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">$99 . 2h 18m</p>
+            <p class="text-sm font-normal text-blackish-green/40 leading-none m-0 whitespace-nowrap">$99 . 2h 18m</p>
           </button>
 
-          <div class="flex-none px-6 flex items-center gap-2 font-semibold text-sm cursor-pointer text-blackish-green">
+          <!-- Other sort -->
+          <div class="flex-none flex items-center px-6 gap-2 font-semibold text-sm cursor-pointer text-blackish-green bg-transparent border-0 border-l border-solid border-[#D7E2EE] shrink-0 min-w-[110px]">
             <img src="../assets/image/menu.svg" alt="menu" class="w-6 h-6 object-contain" />
-            Other sort
+            <span class="whitespace-nowrap">Other sort</span>
           </div>
         </header>
-
         <div class="flex justify-between items-center">
           <p class="text-sm font-semibold text-blackish-green leading-none">Showing 4 of <span class="text-slamon">257 places</span></p>
 
@@ -234,41 +237,52 @@
         <div id="ticket-list" class="flex flex-col gap-6 m-0 p-0 list-none"></div>
 
         <template id="ticket-template">
-          <article class="flex flex-col md:flex-row bg-white rounded-xl shadow-sm p-6 gap-4">
-            <div class="w-40 mx-auto md:mx-0">
-              <img class="ticket-card__airline-logo w-full object-contain" src="" alt="Airline Logo" />
+          <!-- Article Container -->
+          <article class="flex flex-col md:flex-row bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] p-4 md:p-6 gap-4 md:gap-6 relative overflow-hidden">
+            <!-- Left Logo Section (Bỏ nền xám) -->
+            <div class="w-24 md:w-40 mx-auto md:mx-0 shrink-0 flex items-center justify-center">
+              <img class="ticket-card__airline-logo w-full object-contain max-h-16" src="" alt="Airline Logo" />
             </div>
 
-            <div class="flex-1 flex flex-col justify-between gap-6">
-              <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-0">
+            <!-- Main Content Section -->
+            <div class="flex-1 flex flex-col justify-between gap-4 md:gap-6 min-w-0">
+              <!-- Header Row: Rating & Price -->
+              <div class="flex flex-col sm:flex-row justify-between gap-3 sm:gap-0">
+                <!-- Rating Box -->
                 <div class="flex items-center gap-2">
                   <span class="ticket-card__score border border-mint-green text-blackish-green text-xs font-bold px-3 py-1.5 rounded"></span>
-                  <p class="m-0 text-xs font-medium text-blackish-green">
+                  <p class="m-0 text-xs font-medium text-blackish-green flex flex-wrap gap-1">
                     <strong class="ticket-card__rating-text"></strong>
-                    <span class="ticket-card__review-count font-normal"></span>
+                    <span class="ticket-card__review-count font-normal opacity-75"></span>
                   </p>
                 </div>
-                <div class="flex flex-col items-start md:items-end gap-1">
+
+                <!-- Price Box -->
+                <div class="flex flex-col items-start sm:items-end gap-1">
                   <span class="text-xs font-medium text-blackish-green/75">starting from</span>
                   <div class="flex items-baseline text-slamon">
-                    <span class="ticket-card__price-value text-2xl font-bold leading-none"></span>
-                    <span class="ticket-card__price-unit text-sm font-bold leading-none"></span>
+                    <span class="ticket-card__price-value text-xl md:text-2xl font-bold leading-none"></span>
+                    <span class="ticket-card__price-unit text-sm font-bold leading-none ml-1"></span>
                   </div>
                 </div>
               </div>
 
+              <!-- Flights Container (Render ngang bởi JS) -->
               <div class="ticket-card__flights flex flex-col gap-4"></div>
 
-              <div class="w-full h-px bg-blackish-green/25 mt-2"></div>
+              <!-- Divider -->
+              <div class="w-full h-px bg-blackish-green/25 mt-2 mb-1 md:my-0"></div>
 
-              <div class="flex gap-4">
-                <label class="btn-favorite group">
+              <!-- Actions: Nút tim và View Deals LUÔN NẰM NGANG -->
+              <div class="flex flex-row gap-4 items-stretch">
+                <!-- Nút tim -->
+                <label class="btn-favorite group relative flex justify-center items-center h-12 w-12 border border-mint-green rounded cursor-pointer shrink-0">
                   <input type="checkbox" class="peer hidden" />
-                  <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
-                  <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
+                  <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all z-10"></div>
                 </label>
 
-                <a href="flight-detail-page.html" class="btn-view-place">View Deals</a>
+                <!-- Nút Book -->
+                <a href="flight-detail-page.html" class="flex-1 flex justify-center items-center h-12 bg-mint-green hover:opacity-80 transition-opacity rounded text-blackish-green text-sm font-semibold no-underline"> View Deals </a>
               </div>
             </div>
           </article>
@@ -286,5 +300,6 @@
 
     <script type="module" src="../assets/js/main.js"></script>
     <script type="module" src="../assets/js/flight-listing.js"></script>
+    <script type="module" src="../assets/js/hotel-listing.js"></script>
   </body>
 </html>
