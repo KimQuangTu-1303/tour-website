@@ -1,4 +1,4 @@
-<header class="relative flex py-3 px-4 md:py-5 md:px-24 h-16 md:h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] {{ mb_class }} bg-white z-50">
+<header class="relative flex py-3 px-4 md:py-5 lg:px-24 h-16 md:h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-0 {{ mb_class }} bg-white z-50">
   <div class="flex justify-between items-center h-9 w-full">
     <!-- Mobile Menu Toggle -->
     <div class="flex md:hidden">
@@ -33,13 +33,13 @@
     <div class="flex items-center">
       <!-- logged in -->
       {{#if is_logged_in}}
-      <ul class="m-0 flex list-none p-0 gap-4 md:gap-8 items-center">
+      <ul class="m-0 flex list-none p-0 md:gap-8 items-center">
         <li class="nav-item {{ favourites_active }} hidden md:flex">
           <img src="/assets/image/heart_light.svg" alt="Heart" />
           <a href="../favorites.html" class="text-blackish-green no-underline block">Favourites</a>
         </li>
 
-        <li class="nav-item text-blackish-green hidden md:block">|</li>
+        <li class="nav-item text-blackish-green hidden md:block bg-blackish-green w-0.5 h-4"></li>
 
         <!-- Dropdown Container -->
         <li class="group nav-item">
