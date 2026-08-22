@@ -4,25 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golobe - Tour Website</title>
-    <meta name="description" content="Explore top destinations, book flights and hotels easily, and enjoy your dream vacation with Golobe travel agency website." />
-    <meta property="og:title" content="Golobe - Tour Website" />
-    <meta property="og:description" content="Explore top destinations, book flights and hotels easily, and enjoy your dream vacation with Golobe." />
-    <meta property="og:image" content="../assets/image/banner.png" /> 
-    <meta property="og:url" content="https://yourdomain.com/index.html" />
-    <meta property="og:type" content="website" />
-
     <link rel="stylesheet" href="../assets/css/input.css" />
   </head>
 
   <body>
-    <!-- HEADER -->
-    {{> header stays_active="nav-active" mb_class="mb-12"}}
+    {{> header stays_active="nav-active" mb_class="mb-12" is_logged_in=true }}
 
-    <!-- HOTEL SEARCH SECTION -->
     <section class="max-w-308 mx-auto mb-12">
       <form class="bg-white rounded-2xl shadow-md p-6" action="hotel-listing.html" method="get">
         <div class="grid grid-cols-1 lg:grid-cols-14 gap-4 lg:gap-6 items-center">
-          <!-- Destination (Chiếm 4/14 cột) -->
           <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors">
             <label class="floating-label" for="destination">Enter Destination</label>
             <div class="flex items-center gap-3 w-full">
@@ -31,7 +21,6 @@
             </div>
           </div>
 
-          <!-- Check In (Chiếm 3/14 cột) -->
           <div class="input-group lg:col-span-3">
             <label class="floating-label" for="checkin">Check In</label>
             <div class="flex items-center justify-between w-full gap-3">
@@ -40,7 +29,6 @@
             </div>
           </div>
 
-          <!-- Check Out (Chiếm 3/14 cột) -->
           <div class="input-group lg:col-span-3">
             <label class="floating-label" for="checkout">Check Out</label>
             <div class="flex items-center justify-between w-full gap-3">
@@ -49,7 +37,6 @@
             </div>
           </div>
 
-          <!-- Rooms & Guests (Chiếm 3/14 cột) -->
           <div class="input-group lg:col-span-3">
             <label class="floating-label" for="guests">Rooms & Guests</label>
             <div class="flex items-center gap-3 w-full">
@@ -59,7 +46,6 @@
             </div>
           </div>
 
-          <!-- Submit Button (Chiếm 1/14 cột) -->
           <button class="bg-mint-green hover:bg-mint-green/80 text-blackish-green h-14 rounded-lg flex items-center justify-center transition-colors lg:col-span-1 w-full" type="submit" aria-label="Search Hotels">
             <img src="../assets/image/search_light.svg" alt="search" class="w-6 h-6" />
           </button>
@@ -67,13 +53,10 @@
       </form>
     </section>
 
-    <!-- MAIN CONTENT -->
-    <div class="max-w-308 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-8 my-8">
-      <!-- CỘT 1: FILTERS (Chiếm 3/12 cột) -->
+    <div class="max-w-308 mx-auto grid grid-cols-1 lg:grid-cols-12 gap-y-8 lg:gap-8 my-8 px-4">
       <aside class="flex flex-col gap-8 lg:col-span-3">
         <h2 class="text-xl font-semibold text-blackish-green leading-tight">Filters</h2>
 
-        <!-- Price Filter -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Price</h3>
@@ -82,14 +65,9 @@
 
           <div class="relative w-full h-12">
             <div class="absolute top-3 w-full h-0.5 rounded bg-blackish-green/10"></div>
-
             <div id="slider-fill" class="absolute top-3 h-0.5 rounded bg-blackish-green"></div>
-
-            <!-- Range inputs -->
             <input type="range" id="slider-min" class="absolute top-0 w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-mint-green [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-md m-0" min="50" max="1200" value="50" step="10" />
             <input type="range" id="slider-max" class="absolute top-0 w-full appearance-none bg-transparent pointer-events-none [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-mint-green [&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-md m-0" min="50" max="1200" value="1200" step="10" />
-
-            <!-- Labels -->
             <div class="flex justify-between absolute top-8 w-full">
               <span id="label-min" class="text-xs font-medium text-blackish-green">$50</span>
               <span id="label-max" class="text-xs font-medium text-blackish-green">$1200</span>
@@ -98,7 +76,6 @@
         </div>
         <div class="h-px w-full bg-blackish-green/25"></div>
 
-        <!-- Rating Filter -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Rating</h3>
@@ -110,22 +87,18 @@
               <input type="checkbox" name="rating" value="0" class="peer hidden" />
               <span class="filter-rating-btn">0+</span>
             </label>
-
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="1" class="peer hidden" />
               <span class="filter-rating-btn">1+</span>
             </label>
-
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="2" class="peer hidden" />
               <span class="filter-rating-btn">2+</span>
             </label>
-
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="3" class="peer hidden" />
               <span class="filter-rating-btn">3+</span>
             </label>
-
             <label class="cursor-pointer text-center">
               <input type="checkbox" name="rating" value="4" class="peer hidden" />
               <span class="filter-rating-btn">4+</span>
@@ -134,7 +107,6 @@
         </div>
         <div class="h-px w-full bg-blackish-green/25"></div>
 
-        <!-- Freebies Filter -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Freebies</h3>
@@ -167,7 +139,6 @@
 
         <div class="h-px w-full bg-blackish-green/25"></div>
 
-        <!-- Amenities Filter -->
         <div class="flex flex-col">
           <div class="flex justify-between items-center mb-4">
             <h3 class="text-base font-semibold text-blackish-green leading-tight">Amenities</h3>
@@ -197,16 +168,15 @@
         </div>
       </aside>
 
-      <!-- CỘT 2: MAIN CONTENT (Chiếm 9/12 cột) -->
       <main class="flex flex-col lg:col-span-9 gap-8 lg:border-l lg:border-blackish-green/25 lg:pl-8">
-        <!-- 1. Tabs Header -->
         <header class="relative grid grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4">
-          <button class="hotel-listing__tab hotel-listing__tab--active flex flex-col items-start px-6 gap-2" data-target="hotels-list">
+          <button class="hotel-listing__tab hotel-listing__tab--active relative flex flex-col items-start px-6 gap-2" data-target="hotels-list">
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Hotels</h3>
             <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">257 places</p>
+            <div class="absolute -bottom-4 left-6 right-6 h-1 bg-mint-green rounded-full"></div>
           </button>
 
-          <button class="hotel-listing__tab flex flex-col items-start px-6 gap-2 border-x border-solid border-blackish-green/10" data-target="motels-list">
+          <button class="hotel-listing__tab flex flex-col items-start px-6 gap-2 border-x border-solid border-[#D7E2EE]" data-target="motels-list">
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Motels</h3>
             <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">51 places</p>
           </button>
@@ -215,11 +185,8 @@
             <h3 class="text-base font-semibold text-blackish-green leading-none m-0">Resorts</h3>
             <p class="text-sm font-normal text-blackish-green/40 leading-none m-0">72 places</p>
           </button>
-
-          <div class="slide-indicator absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-transform duration-300 ease-out"></div>
         </header>
 
-        <!-- 2. Controls & Sort -->
         <div class="flex justify-between items-center">
           <p class="text-sm font-semibold text-blackish-green leading-none">Showing 4 of <span class="text-slamon">257 places</span></p>
 
@@ -232,7 +199,6 @@
                 <img src="../assets/image/chevron_down.svg" alt="" class="w-4 h-4 transition-transform duration-200 group-[.is-open]:rotate-180" />
               </button>
 
-              <!-- Dropdown Options -->
               <ul class="sort-dropdown__options absolute top-[calc(100%+8px)] right-0 bg-white rounded-lg shadow-md py-2 min-w-[180px] m-0 z-50 opacity-0 invisible -translate-y-2 transition-all duration-200 group-[.is-open]:opacity-100 group-[.is-open]:visible group-[.is-open]:translate-y-0">
                 <li class="sort-dropdown__option sort-dropdown__option--active px-4 py-2 cursor-pointer text-sm font-semibold text-mint-green hover:bg-gray-100 transition-colors" data-value="recommended">Recommended</li>
                 <li class="sort-dropdown__option px-4 py-2 cursor-pointer text-sm text-blackish-green hover:bg-gray-100 transition-colors" data-value="ascending">Ascending</li>
@@ -243,20 +209,15 @@
           </div>
         </div>
 
-        <!-- 3. Hotel List -->
         <ul class="flex flex-col gap-6 m-0 p-0 list-none">
-          <!-- Hotel Card -->
           <li>
             <article class="hotel-card">
-              <!-- Image (4/12 cột) -->
               <div class="relative md:col-span-4 h-64 md:h-auto">
                 <img src="../assets/image/cvk-park-bosphorus-hotel.png" alt="CVK Park" class="w-full h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
                 <span class="absolute top-2 right-2 flex items-center justify-center px-2 py-1 bg-white/50 backdrop-blur-sm rounded-lg text-sm font-medium text-blackish-green leading-none"> 9 images </span>
               </div>
 
-              <!-- Body Content (8/12 cột) -->
               <div class="md:col-span-8 flex flex-col justify-between p-6 gap-6">
-                <!-- Info Top -->
                 <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-0">
                   <div class="flex flex-col gap-3">
                     <h2 class="text-2xl font-bold text-blackish-green leading-none m-0">CVK Park Bosphorus Hotel Istanbul</h2>
@@ -283,7 +244,6 @@
                     </span>
                   </div>
 
-                  <!-- Price -->
                   <div class="flex flex-col items-start md:items-end gap-1">
                     <span class="text-xs font-medium text-blackish-green/75">starting from</span>
                     <div class="flex items-baseline text-slamon">
@@ -296,11 +256,9 @@
 
                 <div class="w-full h-px bg-blackish-green/25"></div>
 
-                <!-- Actions -->
                 <div class="flex gap-4">
                   <label class="btn-favorite group">
                     <input type="checkbox" class="peer hidden" />
-                    <!-- Icon Heart -->
                     <div class="w-5 h-5 bg-[url('../image/heart_dark.svg')] bg-center bg-contain bg-no-repeat peer-checked:bg-[url('../image/heart_light.svg')] transition-all"></div>
                     <div class="absolute inset-0 bg-mint-green rounded -z-10 opacity-0 peer-checked:opacity-100 transition-opacity"></div>
                   </label>
@@ -312,13 +270,11 @@
           </li>
           <li>
             <article class="hotel-card">
-              <!-- Image (4/12 cột) -->
               <div class="relative md:col-span-4 h-64 md:h-auto">
                 <img src="../assets/image/eresin-hotels-sultanahmet(1).png" alt="Eresin Hotels Sultanahmet" class="w-full h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
                 <span class="absolute top-2 right-2 flex items-center justify-center px-2 py-1 bg-white/50 backdrop-blur-sm rounded-lg text-sm font-medium text-blackish-green leading-none"> 9 images </span>
               </div>
 
-              <!-- Body Content (8/12 cột) -->
               <div class="md:col-span-8 flex flex-col justify-between p-6 gap-6">
                 <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-0">
                   <div class="flex flex-col gap-3">
@@ -346,7 +302,6 @@
                     </span>
                   </div>
 
-                  <!-- Price -->
                   <div class="flex flex-col items-start md:items-end gap-1">
                     <span class="text-xs font-medium text-blackish-green/75">starting from</span>
                     <div class="flex items-baseline text-slamon">
@@ -359,7 +314,6 @@
 
                 <div class="w-full h-px bg-blackish-green/25"></div>
 
-                <!-- Actions -->
                 <div class="flex gap-4">
                   <label class="btn-favorite group">
                     <input type="checkbox" class="peer hidden" />
@@ -373,16 +327,13 @@
             </article>
           </li>
 
-          <!-- Eresin Hotels - 2 -->
           <li>
             <article class="hotel-card">
-              <!-- Image (4/12 cột) -->
               <div class="relative md:col-span-4 h-64 md:h-auto">
                 <img src="../assets/image/eresin-hotels-sultanahmet(2).png" alt="Eresin Hotels Sultanahmet" class="w-full h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
                 <span class="absolute top-2 right-2 flex items-center justify-center px-2 py-1 bg-white/50 backdrop-blur-sm rounded-lg text-sm font-medium text-blackish-green leading-none"> 9 images </span>
               </div>
 
-              <!-- Body Content (8/12 cột) -->
               <div class="md:col-span-8 flex flex-col justify-between p-6 gap-6">
                 <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-0">
                   <div class="flex flex-col gap-3">
@@ -410,7 +361,6 @@
                     </span>
                   </div>
 
-                  <!-- Price -->
                   <div class="flex flex-col items-start md:items-end gap-1">
                     <span class="text-xs font-medium text-blackish-green/75">starting from</span>
                     <div class="flex items-baseline text-slamon">
@@ -423,7 +373,6 @@
 
                 <div class="w-full h-px bg-blackish-green/25"></div>
 
-                <!-- Actions -->
                 <div class="flex gap-4">
                   <label class="btn-favorite group">
                     <input type="checkbox" class="peer hidden" />
@@ -437,16 +386,13 @@
             </article>
           </li>
 
-          <!-- Eresin Hotels -->
           <li>
             <article class="hotel-card">
-              <!-- Image (4/12 cột) -->
               <div class="relative md:col-span-4 h-64 md:h-auto">
                 <img src="../assets/image/eresin-hotels-sultanahmet(3).png" alt="Eresin Hotels Sultanahmet" class="w-full h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
                 <span class="absolute top-2 right-2 flex items-center justify-center px-2 py-1 bg-white/50 backdrop-blur-sm rounded-lg text-sm font-medium text-blackish-green leading-none"> 9 images </span>
               </div>
 
-              <!-- Body Content (8/12 cột) -->
               <div class="md:col-span-8 flex flex-col justify-between p-6 gap-6">
                 <div class="flex flex-col md:flex-row justify-between gap-4 md:gap-0">
                   <div class="flex flex-col gap-3">
@@ -474,7 +420,6 @@
                     </span>
                   </div>
 
-                  <!-- Price -->
                   <div class="flex flex-col items-start md:items-end gap-1">
                     <span class="text-xs font-medium text-blackish-green/75">starting from</span>
                     <div class="flex items-baseline text-slamon">
@@ -487,7 +432,6 @@
 
                 <div class="w-full h-px bg-blackish-green/25"></div>
 
-                <!-- Actions -->
                 <div class="flex gap-4">
                   <label class="btn-favorite group">
                     <input type="checkbox" class="peer hidden" />
@@ -509,9 +453,9 @@
       </div>
     </div>
 
-    <!-- FOOTER -->
     {{> footer }}
 
-    <script src="../assets/js/hotel-listing.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/hotel-listing.js"></script>
   </body>
 </html>

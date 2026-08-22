@@ -15,7 +15,7 @@
 
   <body>
     <!-- HEADER -->
-    {{> header stays_active="nav-active" mb_class="mb-12"}}
+    {{> header stays_active="nav-active" mb_class="mb-12" is_logged_in=true }}
 
     <!-- MAIN CONTENT -->
     <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-5 gap-y-8 gap-x-10 items-start">
@@ -36,7 +36,7 @@
         <div class="flex flex-col">
           <div class="bg-white py-8 px-6 rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full">
             <header class="flex justify-between items-start mb-4">
-              <h1 class="font-trade-gothic text-2xl font-bold text-blackish-green leading-none max-w-122">Superior room - 1 double bed or 2 twin beds</h1>
+              <h1 class="font-trade-gothic text-2xl font-bold text-blackish-green leading-none max-w-[490px] m-0">Superior room - 1 double bed or 2 twin beds</h1>
               <div class="flex items-baseline text-slamon shrink-0">
                 <span class="text-3xl font-bold leading-none">$240</span>
                 <span class="text-sm font-bold leading-none">/night</span>
@@ -45,29 +45,30 @@
 
             <div class="grid grid-cols-[max-content_1fr] grid-rows-2 items-center gap-x-6 py-4 px-8 my-10 border border-mint-green rounded-lg">
               <img src="../assets/image/hotel-card-logo.png" alt="" class="w-16 h-16 object-cover rounded-xl row-span-2" />
-              <h2 class="font-trade-gothic text-2xl font-semibold text-blackish-green leading-none">CVK Park Bosphorus Hotel Istanbul</h2>
+              <h2 class="font-trade-gothic text-2xl font-semibold text-blackish-green leading-none m-0">CVK Park Bosphorus Hotel Istanbul</h2>
               <span class="flex items-center gap-2 text-sm font-medium text-blackish-green/75 mt-1">
                 <img src="../assets/image/location_light.svg" alt="location" class="w-4 h-4 shrink-0" />
                 Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437
               </span>
             </div>
 
-            <div class="flex justify-between items-center">
-              <div class="flex flex-col">
-                <p class="text-xl font-semibold text-blackish-green leading-none mb-2">Thursday, Dec 8</p>
-                <p class="text-sm font-medium text-blackish-green/75 leading-none">Check-In</p>
+            <div class="flex items-center justify-between gap-6 w-full">
+              <div class="flex flex-col gap-1 md:gap-2">
+                <p class="text-xl lg:text-2xl font-bold text-blackish-green">Thursday, Dec 8</p>
+                <p class="text-xs md:text-sm font-medium text-blackish-green/75">Check-In</p>
               </div>
 
-              <img src="../assets/image/schedule-icon.svg" alt="Schedule" />
+              <div class="flex items-center justify-center md:py-0">
+                <img src="../assets/image/schedule-icon.svg" alt="Schedule" class="h-12 w-auto" />
+              </div>
 
-              <div class="flex flex-col text-right">
-                <p class="text-xl font-semibold text-blackish-green leading-none mb-2">Friday, Dec 9</p>
-                <p class="text-sm font-medium text-blackish-green/75 leading-none">Check-Out</p>
+              <div class="flex flex-col gap-1 md:gap-2">
+                <span class="text-xl lg:text-2xl font-bold text-blackish-green">Friday, Dec 9</span>
+                <span class="text-xs md:text-sm font-medium text-blackish-green/75">Check-Out</span>
               </div>
             </div>
           </div>
         </div>
-
         <!-- 2. PAYMENT OPTIONS -->
         <div class="flex flex-col p-4 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-4">
           <!-- Option 1: Pay in full -->
@@ -183,10 +184,9 @@
       </aside>
 
       <!-- MODAL OVERLAY -->
-      <div id="upload-popup" class="hidden fixed inset-0 bg-black/50 items-center justify-center z-1000">
+      <div id="upload-popup" class="hidden p-2 fixed inset-0 bg-blackish-green/50 items-center justify-center z-1000">
         <!-- MODAL CONTENT -->
-        <div class="flex flex-col relative bg-white p-16 w-full max-w-160 rounded-xl overflow-y-auto max-h-[90vh]">
-          <!-- Nút đóng -->
+        <div class="flex flex-col relative bg-white p-10 md:p-16 w-full max-w-160 rounded-xl overflow-y-auto max-h-[90vh]">
           <button class="close-x self-end bg-transparent border-none cursor-pointer hover:opacity-75 transition-opacity">
             <img src="../assets/image/close_light.svg" alt="close" class="w-4 h-4 pointer-events-none" />
           </button>
@@ -239,6 +239,6 @@
     {{> footer }}
 
     <script type="module" src="../assets/js/main.js"></script>
-    <script src="../assets/js/hotel-booking-detail-visa.js"></script>
+    <script type="module" src="../assets/js/hotel-booking-detail-visa.js"></script>
   </body>
 </html>

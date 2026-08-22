@@ -10,24 +10,24 @@
     <meta property="og:image" content="./assets/image/banner.png" />
     <meta property="og:url" content="https://ten-mien-website-cua-ban.com/" />
     <meta property="og:type" content="website" />
-    <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/input.css" />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/input.css" />
   </head>
 
   <body>
     <!-- HEADER -->
-    {{> header flight_active="nav-active" mb_class="mb-12"}}
+    {{> header flight_active="nav-active" mb_class="mb-12" is_logged_in=true }}
 
     <!-- MAIN CONTENT -->
     <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-y-8 lg:gap-y-10 items-start mb-16">
       <!-- BREADCRUMB -->
-      <nav class="lg:col-span-5 w-full flex items-center text-sm font-medium text-blackish-green lg:ml-6 mb-4 lg:mb-0">
-        <ol class="flex items-center gap-2 m-0 p-0 list-none flex-wrap">
+      <nav class="flex items-center md:mb-8 text-sm font-medium text-blackish-green">
+        <ol class="flex items-center gap-2 p-0 list-none">
           <li><a href="#" class="breadcrumb-link text-blackish-green">Turkey</a></li>
           <li class="flex items-center justify-center"><img src="../assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" /></li>
           <li><a href="#" class="breadcrumb-link text-blackish-green">Istanbul</a></li>
           <li class="flex items-center justify-center"><img src="../assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" /></li>
-          <li class="font-medium opacity-75">CVK Park Bosphorus Hotel Istanbul</li>
+          <li class="font-medium opacity-40">CVK Park Bosphorus Hotel Istanbul</li>
         </ol>
       </nav>
 
@@ -54,92 +54,95 @@
         </header>
 
         <!-- Ticket Section -->
-        <div class="flex flex-col lg:flex-row w-full lg:h-78">
+        <div class="flex flex-col lg:flex-row w-full">
           <!-- Left Ticket Box -->
           <div class="flex flex-col md:flex-row flex-1 bg-white rounded-2xl border border-[#eaeaea] overflow-hidden">
             <!-- Sidebar / Timeline -->
-            <div class="flex flex-col justify-between p-6 md:p-8 bg-[#edf6f2] min-w-45 shrink-0">
-              <div class="flex flex-col gap-1">
-                <span class="text-3xl font-bold leading-none text-blackish-green m-0">12:00 PM</span>
-                <span class="text-sm font-medium leading-none text-blackish-green/60">Newark(EWR)</span>
+            <div class="flex flex-row md:flex-col justify-between items-center md:items-start p-4 md:p-8 bg-[#edf6f2] shrink-0 md:min-w-45">
+              <div class="flex flex-col gap-1 text-center md:text-left">
+                <span class="text-xl md:text-3xl font-bold leading-none text-blackish-green m-0">12:00 PM</span>
+                <span class="text-xs md:text-sm font-medium leading-none text-blackish-green/60">Newark(EWR)</span>
               </div>
 
-              <div class="flex items-center flex-1">
-                <img src="../assets/image/Frame 286.png" alt="Flight Path" class="h-auto object-contain" />
+              <div class="flex items-center justify-center py-2 md:py-0 shrink-0 md:flex-1">
+                <img src="../assets/image/Frame 286.png" alt="Flight Path" class="w-10 md:w-auto h-auto object-contain rotate-270 md:rotate-0" />
               </div>
 
-              <div class="flex flex-col gap-1">
-                <span class="text-3xl font-bold leading-none text-blackish-green m-0">12:00 PM</span>
-                <span class="text-sm font-medium leading-none text-blackish-green/60">Newark(EWR)</span>
+              <div class="flex flex-col gap-1 text-center md:text-left">
+                <span class="text-xl md:text-3xl font-bold leading-none text-blackish-green m-0">12:00 PM</span>
+                <span class="text-xs md:text-sm font-medium leading-none text-blackish-green/60">Newark(EWR)</span>
               </div>
             </div>
 
             <!-- Main Ticket Body -->
-            <div class="relative bg-white flex-1 flex flex-col">
-              <!-- Guest Banner -->
-              <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#8cd4b9] py-5 px-6 gap-2 sm:gap-0">
-                <div class="flex items-center">
-                  <img src="../assets/image/user-avt.png" alt="John D." class="w-12 h-12 rounded-full object-cover border-2 border-white mr-4 shrink-0" />
-                  <div class="flex flex-col">
-                    <span class="font-bold text-blackish-green text-xl m-0">John D.</span>
-                    <span class="text-blackish-green text-[13px] font-medium">Boarding Pass N’123</span>
+            <div class="bg-white flex-1 flex flex-col justify-between min-h-full">
+              <div>
+                <!-- Guest Banner -->
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#8cd4b9] py-4 px-4 md:py-5 md:px-6 gap-3 sm:gap-0">
+                  <div class="flex items-center">
+                    <img src="../assets/image/user-avt.png" alt="John D." class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-white mr-3 md:mr-4 shrink-0" />
+                    <div class="flex flex-col">
+                      <span class="font-bold text-blackish-green text-lg md:text-xl m-0">John D.</span>
+                      <span class="text-blackish-green text-xs md:text-[13px] font-medium">Boarding Pass N’123</span>
+                    </div>
                   </div>
-                </div>
-                <div class="font-bold text-blackish-green text-base">Business Class</div>
-              </div>
-
-              <!-- Ticket Details Grid -->
-              <div class="flex flex-wrap gap-x-10 gap-y-6 p-6">
-                <!-- Detail Item: Date -->
-                <div class="flex items-center gap-3">
-                  <img src="../assets/image/calendar_primary.svg" alt="Date Icon" class="w-8 h-8 object-contain shrink-0" />
-                  <div class="flex flex-col gap-1">
-                    <span class="text-sm font-semibold leading-none text-blackish-green/60">Date</span>
-                    <span class="text-xs font-medium leading-none text-blackish-green m-0">Newark(EWR)</span>
-                  </div>
+                  <div class="font-bold text-blackish-green text-sm md:text-base">Business Class</div>
                 </div>
 
-                <!-- Detail Item: Flight time -->
-                <div class="flex items-center gap-3">
-                  <img src="../assets/image/timer_primary.svg" alt="Flight Time Icon" class="w-8 h-8 object-contain shrink-0" />
-                  <div class="flex flex-col gap-1">
-                    <span class="text-sm font-semibold leading-none text-blackish-green/60">Flight time</span>
-                    <span class="text-xs font-medium leading-none text-blackish-green m-0">12:00</span>
+                <!-- Ticket Details Grid -->
+                <div class="flex flex-wrap justify-between gap-y-4 md:gap-y-6 p-4 md:p-6">
+                  <!-- Detail Item: Date -->
+                  <div class="flex items-center gap-2 md:gap-3 min-w-28">
+                    <img src="../assets/image/calendar_primary.svg" alt="Date Icon" class="w-6 h-6 md:w-8 md:h-8 object-contain shrink-0" />
+                    <div class="flex flex-col gap-1">
+                      <span class="text-xs md:text-sm font-semibold leading-none text-blackish-green/60">Date</span>
+                      <span class="text-xs md:text-sm font-medium leading-none text-blackish-green m-0">Newark(EWR)</span>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Detail Item: Gate -->
-                <div class="flex items-center gap-3">
-                  <img src="../assets/image/door_primary.svg" alt="Gate Icon" class="w-8 h-8 object-contain shrink-0" />
-                  <div class="flex flex-col gap-1">
-                    <span class="text-sm font-semibold leading-none text-blackish-green/60">Gate</span>
-                    <span class="text-xs font-medium leading-none text-blackish-green m-0">12A</span>
+                  <!-- Detail Item: Flight time -->
+                  <div class="flex items-center gap-2 md:gap-3 min-w-28">
+                    <img src="../assets/image/timer_primary.svg" alt="Flight Time Icon" class="w-6 h-6 md:w-8 md:h-8 object-contain shrink-0" />
+                    <div class="flex flex-col gap-1">
+                      <span class="text-xs md:text-sm font-semibold leading-none text-blackish-green/60">Flight time</span>
+                      <span class="text-xs md:text-sm font-medium leading-none text-blackish-green m-0">12:00</span>
+                    </div>
                   </div>
-                </div>
 
-                <!-- Detail Item: Seat -->
-                <div class="flex items-center gap-3">
-                  <img src="../assets/image/airplane-seat_primary.svg" alt="Seat Icon" class="w-8 h-8 object-contain shrink-0" />
-                  <div class="flex flex-col gap-1">
-                    <span class="text-sm font-semibold leading-none text-blackish-green/60">Seat</span>
-                    <span class="text-xs font-medium leading-none text-blackish-green m-0">128</span>
+                  <!-- Detail Item: Gate -->
+                  <div class="flex items-center gap-2 md:gap-3 min-w-28">
+                    <img src="../assets/image/door_primary.svg" alt="Gate Icon" class="w-6 h-6 md:w-8 md:h-8 object-contain shrink-0" />
+                    <div class="flex flex-col gap-1">
+                      <span class="text-xs md:text-sm font-semibold leading-none text-blackish-green/60">Gate</span>
+                      <span class="text-xs md:text-sm font-medium leading-none text-blackish-green m-0">12A</span>
+                    </div>
+                  </div>
+
+                  <!-- Detail Item: Seat -->
+                  <div class="flex items-center gap-2 md:gap-3 min-w-28">
+                    <img src="../assets/image/airplane-seat_primary.svg" alt="Seat Icon" class="w-6 h-6 md:w-8 md:h-8 object-contain shrink-0" />
+                    <div class="flex flex-col gap-1">
+                      <span class="text-xs md:text-sm font-semibold leading-none text-blackish-green/60">Seat</span>
+                      <span class="text-xs md:text-sm font-medium leading-none text-blackish-green m-0">128</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <!-- Bottom Area: Reference & Barcode -->
-              <div class="static md:absolute bottom-6 left-6 flex flex-col gap-1 pl-6 pb-6 md:p-0">
-                <span class="text-3xl font-extrabold leading-none text-blackish-green m-0">EK</span>
-                <span class="text-sm font-medium leading-none text-blackish-green/60 m-0">ABC12345</span>
+              <div class="flex justify-between items-end p-4 md:p-6 mt-auto">
+                <div class="flex flex-col gap-1">
+                  <span class="text-2xl md:text-3xl font-extrabold leading-none text-blackish-green m-0">EK</span>
+                  <span class="text-xs md:text-sm font-medium leading-none text-blackish-green/60 m-0">ABC12345</span>
+                </div>
+                <img class="h-12 md:h-20 w-auto object-contain shrink-0" src="../assets/image/Frame 2608686.png" alt="Barcode/QR Code" />
               </div>
-
-              <img class="static md:absolute bottom-0 right-0 h-20 w-auto object-contain pl-6 pb-6 md:p-0" src="../assets/image/Frame 2608686.png" alt="Barcode/QR Code" />
             </div>
           </div>
 
           <!-- Aside / Map Box -->
-          <aside class="bg-white border border-[#eaeaea] rounded-2xl p-6 flex items-center justify-center shrink-0 min-w-[320px]">
-            <img class="w-full h-full object-contain max-h-65" src="../assets/image/Frame 2608715.png" alt="Ticket Map Path" />
+          <aside class="bg-white border border-[#eaeaea] rounded-2xl p-4 md:p-6 flex items-center justify-center shrink-0 w-full lg:w-[320px]">
+            <img class="w-full h-full object-contain max-h-[250px] lg:max-h-65" src="../assets/image/Frame 2608715.png" alt="Ticket Map Path" />
           </aside>
         </div>
       </div>
