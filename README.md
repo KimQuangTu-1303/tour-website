@@ -22,7 +22,7 @@ Thiết kế Web - nhóm 14
 * Tham Khảo:**[https://www.figma.com/design/2ghT8MC6VqBr1MlUWSYKFY/Golobe---Travel-agency-website--Community-?node-id=108-18842&t=RLMFAw7fIIUbDT6j-0]
 * Triển khai dự án: vercel.
 * Lưu trử dự Source code dự án: GitHub.
-### 4. Sơ đồ trang web
+<pre>
 Trang chủ (Index)
 │
 ├── Tìm chuyến bay (Find Flight)
@@ -39,3 +39,4 @@ Trang chủ (Index)
 └── Quản lý Tài khoản (Account)
     ├── Lịch sử giao dịch (History)
     └── Phương thức thanh toán (Payment Methods)
+</pre>
