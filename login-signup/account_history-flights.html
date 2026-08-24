@@ -147,17 +147,17 @@
       <!-- Tabs Navigation -->
       <div class="relative grid grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4 mt-10 w-full text-left">
         <!-- Account Tab -->
-        <button class="main-tab flex items-center px-6 h-12 text-blackish-green hover:text-blackish-green transition-colors" data-target="account-section">
+        <button onclick="window.location.href='account.html'" class="main-tab flex items-center px-6 h-12 text-blackish-green hover:text-blackish-green transition-colors" data-target="account-section">
           <h3 class="text-base font-semibold leading-none m-0">Account</h3>
         </button>
 
         <!-- History Tab (Active) -->
-        <button class="main-tab main-tab--active flex items-center px-6 h-12 border-x border-solid border-blackish-green/10 text-blackish-green" data-target="history-section">
+        <button onclick="window.location.href='account_history-flights.html'" class="main-tab main-tab--active flex items-center px-6 h-12 border-x border-solid border-blackish-green/10 text-blackish-green" data-target="history-section">
           <h3 class="text-base font-semibold leading-none m-0">History</h3>
         </button>
 
         <!-- Payment methods Tab -->
-        <button class="main-tab flex items-center px-6 h-12 text-blackish-green hover:text-blackish-green transition-colors" data-target="payment-section">
+        <button onclick="window.location.href='account_payment-methods.html'" class="main-tab flex items-center px-6 h-12 text-blackish-green hover:text-blackish-green transition-colors" data-target="payment-section">
           <h3 class="text-base font-semibold leading-none m-0">Payment methods</h3>
         </button>
 
@@ -186,7 +186,7 @@
           </button>
 
           <!-- Stays Tab -->
-          <button class="sub-tab flex items-center px-6 h-12 gap-2 border-l border-solid border-blackish-green/10 text-blackish-green font-semibold bg-transparent transition-colors hover:bg-mint-cream" data-target="stays-list">
+          <button onclick="window.location.href='account_history-stays.html'" class="sub-tab flex items-center px-6 h-12 gap-2 border-l border-solid border-blackish-green/10 text-blackish-green font-semibold bg-transparent transition-colors hover:bg-mint-cream" data-target="stays-list">
             <img src="../assets/image/bed_light.svg" alt="Stays" class="w-6 h-6" />
             Stays
           </button>
