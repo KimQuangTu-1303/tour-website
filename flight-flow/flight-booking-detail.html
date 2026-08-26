@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>flight-booking-detail</title>
+    <title>Flight Booking Detail - Golobe</title>
     <meta name="description" content="View your complete flight booking details, flight schedule, and passenger information securely on Golobe." />
     <meta property="og:title" content="Flight Booking Detail - Golobe" />
     <meta property="og:description" content="View your complete flight booking details and flight schedule securely on Golobe." />
@@ -18,9 +18,9 @@
     {{> header flight_active="nav-active" mb_class="mb-12" }}
 
     <!-- MAIN CONTENT -->
-    <main class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-y-8 gap-x-10 items-start">
+    <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-y-8 items-start mb-16 relative">
       <!-- BREADCRUMB -->
-      <nav class="lg:col-span-5 w-full flex items-center text-sm font-medium text-blackish-green lg:ml-6 mb-4 lg:mb-0">
+      <nav class="w-full flex items-center text-sm font-medium text-blackish-green lg:ml-6 mb-4 lg:mb-0">
         <ol class="flex items-center gap-2 m-0 p-0 list-none flex-wrap">
           <li><a href="#" class="breadcrumb-link">Turkey</a></li>
           <li class="flex items-center justify-center"><img src="../assets/image/chevron-forward.svg" alt=">" class="w-4 h-4" /></li>
@@ -30,10 +30,18 @@
         </ol>
       </nav>
 
-      <!-- LEFT COLUMN (Chiếm 3/5 không gian) -->
-      <div class="lg:col-span-3 flex flex-col gap-10">
-        <!-- 1. RESERVATION INFO (Flight) -->
-        <div class="flex flex-col">
+      <!-- BOOKING PROGRESS -->
+      <div class="flex flex-wrap items-center justify-between gap-y-4 w-full mb-4 pb-4 border-b border-blackish-green/25" id="booking-progress">
+        <div class="step-indicator flex items-center gap-1 md:gap-2 text-mint-green font-bold text-xs sm:text-sm md:text-base transition-colors" data-step="1">1. Login / Sign Up</div>
+        <div class="step-indicator flex items-center gap-1 md:gap-2 text-blackish-green/50 font-medium text-xs sm:text-sm md:text-base transition-colors" data-step="2">2. Payment Method</div>
+        <div class="step-indicator flex items-center gap-1 md:gap-2 text-blackish-green/50 font-medium text-xs sm:text-sm md:text-base transition-colors" data-step="3">3. Ticket</div>
+      </div>
+
+      <!-- WRAPPER STEP 1 & 2 -->
+      <div id="step-wrapper-12" class="grid grid-cols-1 lg:grid-cols-5 gap-y-8 gap-x-10 items-start w-full">
+        <!-- LEFT COLUMN -->
+        <div class="lg:col-span-3 flex flex-col gap-10">
+          <!-- MUTUAL BLOCK: RESERVATION INFO (Flight) -->
           <div class="bg-white py-6 px-4 md:py-8 md:px-8 rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full flex flex-col gap-6">
             <!-- Header -->
             <header class="flex flex-col md:flex-row md:justify-between items-start gap-4">
@@ -51,7 +59,6 @@
 
             <!-- Airline Card -->
             <div class="flex flex-row justify-between items-center gap-2 md:gap-6 w-full overflow-x-auto pb-1">
-              <!-- Airline Box -->
               <div class="flex items-center gap-2 md:gap-4 border border-mint-green/50 py-2 px-3 md:py-3 md:px-6 rounded-lg shrink-0">
                 <img src="../assets/image/image 40.png" alt="Emirates Logo" class="w-8 h-8 md:w-12 md:h-12 object-contain shrink-0" />
                 <div class="flex flex-col">
@@ -87,12 +94,10 @@
                 <span class="text-xl lg:text-2xl font-bold text-blackish-green">12:00 pm</span>
                 <span class="text-xs md:text-sm font-medium text-blackish-green/75">Newark(EWR)</span>
               </div>
-
               <!-- Route Line -->
               <div class="flex items-center justify-center py-2 md:py-0">
                 <img src="../assets/image/airplane-combine_light.svg" alt="Plane route" class="h-6 md:h-12 w-auto" />
               </div>
-
               <!-- Arrival -->
               <div class="flex flex-col md:flex-row items-center md:items-baseline gap-1 md:gap-2">
                 <span class="text-xl lg:text-2xl font-bold text-blackish-green">12:00 pm</span>
@@ -100,122 +105,287 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- 2. PAYMENT OPTIONS -->
-        <div class="flex flex-col p-4 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-4">
-          <!-- Option 1: Pay in full -->
-          <label class="radio-card group has-[:checked]:bg-mint-green">
-            <input type="radio" name="payment_method" value="full" class="hidden" checked />
-            <div class="flex justify-between items-center p-4">
-              <div class="flex flex-col gap-2">
-                <p class="text-base font-bold text-blackish-green m-0">Pay in full</p>
-                <p class="text-sm font-normal text-blackish-green m-0">Pay the total and you are all set</p>
-              </div>
-              <div class="relative w-6 h-6 shrink-0">
-                <div class="absolute inset-0 border-2 border-blackish-green rounded-full group-has-[:checked]:border-white transition-colors"></div>
-                <div class="absolute inset-0 m-auto w-3 h-3 bg-white rounded-full hidden group-has-[:checked]:block"></div>
-              </div>
-            </div>
-          </label>
+          <!-- STEP 1: LOGIN CARD -->
+          <div id="step-1" class="step-content flex flex-col w-full gap-4">
+            <div class="flex flex-col p-6 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-6">
+              <form id="booking-phone-form" class="flex flex-col gap-4">
+                <h2 class="font-trade-gothic text-xl font-bold text-blackish-green leading-snug m-0">Login or Sign up to book</h2>
+                <input type="tel" id="booking-phone" class="modal-input" placeholder="Phone Number" required pattern="[0-9]{10,11}" title="Vui lòng nhập đúng số điện thoại gồm 10 hoặc 11 chữ số" />
+                <p class="text-sm font-normal text-blackish-green mb-2 mt-0">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="#" class="font-semibold text-blackish-green no-underline hover:underline">Privacy Policy</a></p>
 
-          <!-- Option 2: Pay part now -->
-          <label class="radio-card group has-[:checked]:bg-mint-green">
-            <input type="radio" name="payment_method" value="later" class="hidden" />
-            <div class="flex justify-between items-center p-4">
-              <div class="flex flex-col gap-2">
-                <p class="text-base font-bold text-blackish-green m-0">Pay part now, part later</p>
-                <p class="text-sm font-normal text-blackish-green m-0 leading-relaxed pr-4">Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</p>
-              </div>
-              <div class="relative w-6 h-6 shrink-0">
-                <div class="absolute inset-0 border-2 border-blackish-green rounded-full group-has-[:checked]:border-white transition-colors"></div>
-                <div class="absolute inset-0 m-auto w-3 h-3 bg-white rounded-full hidden group-has-[:checked]:block"></div>
+                <button type="submit" id="btn-next-to-step2" class="btn-primary w-full py-3.5 block text-center border-none cursor-pointer">Continue</button>
+              </form>
+
+              <div class="flex items-center text-base font-medium text-blackish-green text-center before:content-[''] before:flex-1 before:h-px before:bg-blackish-green/25 before:mr-6 after:content-[''] after:flex-1 after:h-px after:bg-blackish-green/25 after:ml-6">Or</div>
+
+              <div class="grid grid-cols-3 gap-4">
+                <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer"><img src="../assets/image/facebook_icon.svg" alt="Facebook" class="w-6 h-6" /></button>
+                <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer"><img src="../assets/image/google_icon.svg" alt="Google" class="w-6 h-6" /></button>
+                <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer"><img src="../assets/image/apple_icon.svg" alt="Apple" class="w-6 h-6" /></button>
+                <button type="button" class="col-span-3 flex justify-center items-center gap-4 py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors text-base font-medium text-blackish-green cursor-pointer"><img src="../assets/image/mail_light.svg" alt="Email" class="w-6 h-6" /> Continue with email</button>
               </div>
             </div>
-            <a href="#" class="text-sm font-semibold underline text-blackish-green ml-4 mb-4 block">More info</a>
-          </label>
-        </div>
 
-        <!-- 3. LOGIN CARD -->
-        <div class="flex flex-col p-6 md:p-8 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-6">
-          <form class="flex flex-col gap-4">
-            <h2 class="font-trade-gothic text-xl font-bold text-blackish-green leading-snug m-0">Login or Sign up to book</h2>
-            <input type="tel" class="text-base font-normal text-blackish-green p-4 border border-input-border rounded outline-none focus:border-mint-green transition-colors" placeholder="Phone Number" />
-            <p class="text-sm font-normal text-blackish-green mb-2 mt-0">We’ll call or text you to confirm your number. Standard message and data rates apply. <a href="#" class="font-semibold text-blackish-green no-underline hover:underline">Privacy Policy</a></p>
-            <a href="flight-booking-detail-visa.html" class="btn-primary w-full py-3.5 block text-center no-underline">Continue</a>
-          </form>
+            <div>
+              <button type="button" onclick="window.location.href='flight-detail-page.html'" class="px-6 py-4 bg-white border border-solid border-mint-green rounded text-blackish-green font-bold cursor-pointer hover:bg-mint-green/10 transition-colors">Back</button>
+            </div>
+          </div>
 
-          <div class="flex items-center text-base font-medium text-blackish-green text-center before:content-[''] before:flex-1 before:h-px before:bg-blackish-green/25 before:mr-6 after:content-[''] after:flex-1 after:h-px after:bg-blackish-green/25 after:ml-6">Or</div>
+          <!-- STEP 2: CHOOSE PAYMENT METHOD -->
+          <div id="step-2" class="step-content hidden flex-col gap-6 w-full">
+            <div class="flex flex-col p-4 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-4">
+              <!-- Option 1 -->
+              <label class="radio-card group has-[:checked]:bg-mint-green">
+                <input type="radio" name="payment_method" value="full" class="hidden" checked />
+                <div class="flex justify-between items-center p-4">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-base font-bold text-blackish-green m-0">Pay in full</p>
+                    <p class="text-sm font-normal text-blackish-green m-0">Pay the total and you are all set</p>
+                  </div>
+                  <div class="relative w-6 h-6 shrink-0">
+                    <div class="absolute inset-0 border-2 border-blackish-green rounded-full group-has-[:checked]:border-white transition-colors"></div>
+                    <div class="absolute inset-0 m-auto w-3 h-3 bg-white rounded-full hidden group-has-[:checked]:block"></div>
+                  </div>
+                </div>
+              </label>
 
-          <div class="grid grid-cols-3 gap-4">
-            <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer">
-              <img src="../assets/image/facebook_icon.svg" alt="Facebook" class="w-6 h-6" />
-            </button>
-            <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer">
-              <img src="../assets/image/google_icon.svg" alt="Google" class="w-6 h-6" />
-            </button>
-            <button type="button" class="flex justify-center items-center py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors cursor-pointer">
-              <img src="../assets/image/apple_icon.svg" alt="Apple" class="w-6 h-6" />
-            </button>
+              <!-- Option 2 -->
+              <label class="relative flex flex-col w-full rounded-xl cursor-pointer hover:bg-mint-green/20 transition-all duration-300 group has-[:checked]:bg-mint-green">
+                <input type="radio" name="payment_method" value="later" class="hidden" />
+                <div class="flex justify-between items-center p-4">
+                  <div class="flex flex-col gap-2">
+                    <p class="text-base font-bold text-blackish-green m-0">Pay part now, part later</p>
+                    <p class="text-sm font-normal text-blackish-green m-0 leading-relaxed pr-4">Pay $207.43 now, and the rest ($207.43) will be automatically charged to the same payment method on Nov 14, 2022. No extra fees.</p>
+                  </div>
+                  <div class="relative w-6 h-6 shrink-0">
+                    <div class="absolute inset-0 border-2 border-blackish-green rounded-full group-has-[:checked]:border-white transition-colors"></div>
+                    <div class="absolute inset-0 m-auto w-3 h-3 bg-white rounded-full hidden group-has-[:checked]:block"></div>
+                  </div>
+                </div>
+                <a href="#" class="text-sm font-semibold underline text-blackish-green ml-4 mb-4 block">More info</a>
+              </label>
+            </div>
 
-            <button type="button" class="col-span-3 flex justify-center items-center gap-4 py-3.5 px-4 rounded border border-solid border-mint-green bg-white hover:bg-mint-green/10 transition-colors text-base font-medium text-blackish-green cursor-pointer">
-              <img src="../assets/image/mail_light.svg" alt="Email" class="w-6 h-6" />
-              Continue with email
-            </button>
+            <!-- Saved Cards / Add new card -->
+            <div class="flex flex-col p-4 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] w-full gap-4">
+              <!-- Visa Option -->
+              <label class="radio-card group has-[:checked]:bg-mint-green">
+                <input type="radio" name="selected_card" class="hidden" checked />
+                <div class="flex justify-between items-center p-4">
+                  <div class="flex items-center gap-4 md:gap-6">
+                    <img src="../assets/image/Visa_light.svg" alt="visa" class="w-12 h-auto object-contain shrink-0" />
+                    <p class="text-base font-bold text-blackish-green">**** 4321</p>
+                    <p class="text-sm font-normal text-blackish-green">02/27</p>
+                  </div>
+                  <div class="relative w-6 h-6 shrink-0">
+                    <div class="absolute inset-0 border-2 border-blackish-green rounded-full group-has-[:checked]:border-white transition-colors"></div>
+                    <div class="absolute inset-0 m-auto w-3 h-3 bg-white rounded-full hidden group-has-[:checked]:block"></div>
+                  </div>
+                </div>
+              </label>
+
+              <button type="button" id="btn-open-modal" class="w-full bg-transparent border-none p-0 mt-2 cursor-pointer outline-none block">
+                <div class="flex flex-col justify-center items-center py-4 px-6 h-48 border-2 border-dashed border-mint-green rounded-[15px] hover:bg-mint-green/10 transition-colors">
+                  <img src="../assets/image/add_circle.svg" alt="Add" class="w-12 h-12 mb-3 shrink-0" />
+                  <p class="text-sm font-medium text-blackish-green m-0">Add a new card</p>
+                </div>
+              </button>
+            </div>
+
+            <div class="flex gap-4 mt-2 w-full">
+              <button type="button" id="btn-back-to-step1" class="px-6 py-4 bg-white border border-solid border-mint-green rounded text-blackish-green font-bold cursor-pointer hover:bg-mint-green/10 transition-colors shrink-0">Back</button>
+              <button type="button" id="btn-confirm-booking" class="btn-primary flex-1 py-4 text-center border-none cursor-pointer">Confirm Booking (Next)</button>
+            </div>
           </div>
         </div>
+
+        <!-- RIGHT COLUMN: ASIDE SUMMARY -->
+        <aside class="lg:col-span-2 flex flex-col p-6 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] gap-4 w-full h-fit">
+          <div class="flex flex-col xl:flex-row gap-6">
+            <img src="../assets/image/Frame 186 (1).png" alt="Airline Cover" class="w-30 h-30 rounded-xl object-cover shrink-0" />
+            <div class="flex flex-col justify-between min-w-0 py-2">
+              <div class="flex flex-col gap-1">
+                <p class="text-sm font-medium text-blackish-green/75 m-0 leading-tight">Economy</p>
+                <h3 class="font-trade-gothic text-xl font-semibold text-blackish-green leading-tight m-0">Emirates A380 Airbus</h3>
+              </div>
+              <div class="flex items-center mt-2">
+                <span class="px-3 py-1 bg-white rounded border border-mint-green text-xs font-bold text-blackish-green mr-2">4.2</span>
+                <span class="text-xs font-medium text-blackish-green"><strong class="font-bold">Very Good</strong> 54 reviews</span>
+              </div>
+            </div>
+          </div>
+          <div class="h-px w-full bg-blackish-green/25 my-2"></div>
+          <p class="text-base font-medium text-blackish-green m-0">Your booking is protected by <strong class="font-bold">golobe</strong></p>
+          <div class="h-px w-full bg-blackish-green/25 my-2"></div>
+          <div class="flex flex-col text-base text-blackish-green gap-4">
+            <h4 class="text-base font-bold text-blackish-green m-0">Price Details</h4>
+            <div class="flex justify-between"><span class="font-medium">Base Fare</span><span class="font-semibold">$400</span></div>
+            <div class="flex justify-between"><span class="font-medium">Discount</span><span class="font-semibold">$400</span></div>
+            <div class="flex justify-between"><span class="font-medium">Taxes</span><span class="font-semibold">$400</span></div>
+            <div class="flex justify-between"><span class="font-medium">Service Fee</span><span class="font-semibold">$400</span></div>
+            <div class="h-px w-full bg-blackish-green/25 my-1"></div>
+            <div class="flex justify-between items-center"><span class="font-medium">Total</span><span class="font-semibold text-2xl">$400</span></div>
+          </div>
+        </aside>
       </div>
 
-      <!-- RIGHT COLUMN (Chiếm 2/5 không gian) -->
-      <aside class="lg:col-span-2 flex flex-col p-6 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] gap-4 w-full h-fit">
-        <div class="flex flex-col xl:flex-row gap-6">
-          <img src="../assets/image/Frame 186 (1).png" alt="Airline Cover" class="w-30 h-30 rounded-xl object-cover shrink-0" />
-          <div class="flex flex-col justify-between min-w-0 py-1">
-            <div class="flex flex-col gap-1">
-              <p class="text-sm font-medium text-blackish-green/75 m-0 leading-tight">Economy</p>
-              <h3 class="font-trade-gothic text-xl font-semibold text-blackish-green leading-tight m-0">Emirates A380 Airbus</h3>
+      <!-- STEP 3: TICKET -->
+      <div id="step-3" class="step-content hidden flex-col gap-10 w-full">
+        <!-- BOOKING CARD WRAP -->
+        <div class="flex flex-col gap-10 lg:mb-4">
+          <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+            <div class="flex flex-col gap-4">
+              <h2 class="font-trade-gothic text-3xl font-bold leading-none text-blackish-green m-0">Emirates A380 Airbus</h2>
+              <span class="flex items-center gap-2 text-sm font-medium text-blackish-green/75">
+                <img src="../assets/image/location_light.svg" alt="Location" class="w-4 h-4 shrink-0" />
+                <span>Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437</span>
+              </span>
             </div>
-            <div class="flex items-center mt-2">
-              <span class="px-3 py-1 bg-white rounded border border-mint-green text-xs font-bold text-blackish-green mr-2">4.2</span>
-              <span class="text-xs font-medium text-blackish-green"><strong class="font-bold">Very Good</strong> 54 reviews</span>
+            <div class="grid grid-cols-[auto_auto] gap-4 items-center w-full md:w-auto">
+              <span class="col-span-2 text-right text-3xl font-bold leading-none text-slamon m-0">$240</span>
+              <button class="btn-icon-outline cursor-pointer"><img src="../assets/image/share_light.png" alt="Share" class="w-5 h-5 object-contain" /></button>
+              <button class="btn-primary py-4 px-10 border-none cursor-pointer">Download</button>
             </div>
+          </header>
+
+          <div class="flex flex-col lg:flex-row w-full">
+            <!-- Left Ticket Box -->
+            <div class="flex flex-col md:flex-row flex-1 bg-white rounded-2xl border border-[#eaeaea] overflow-hidden">
+              <div class="flex flex-row md:flex-col justify-between items-center md:items-start p-4 md:p-8 bg-[#edf6f2] shrink-0 md:min-w-45">
+                <div class="flex flex-col gap-1 text-center md:text-left"><span class="text-xl md:text-3xl font-bold leading-none text-blackish-green m-0">12:00 PM</span><span class="text-xs md:text-sm font-medium leading-none text-blackish-green/60">Newark(EWR)</span></div>
+                <div class="flex items-center justify-center py-2 md:py-0 shrink-0 md:flex-1"><img src="../assets/image/Frame 286.png" alt="Flight Path" class="w-10 md:w-auto h-auto object-contain rotate-270 md:rotate-0" /></div>
+                <div class="flex flex-col gap-1 text-center md:text-left"><span class="text-xl md:text-3xl font-bold leading-none text-blackish-green m-0">12:00 PM</span><span class="text-xs md:text-sm font-medium leading-none text-blackish-green/60">Newark(EWR)</span></div>
+              </div>
+
+              <div class="bg-white flex-1 flex flex-col justify-between min-h-full">
+                <div>
+                  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-[#8cd4b9] py-4 px-4 md:py-5 md:px-6 gap-3 sm:gap-0">
+                    <div class="flex items-center">
+                      <img src="../assets/image/user-avt.png" alt="John D." class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-white mr-3 md:mr-4 shrink-0" />
+                      <div class="flex flex-col">
+                        <span class="font-bold text-blackish-green text-lg md:text-xl m-0">John D.</span>
+                        <span class="text-blackish-green text-xs md:text-[13px] font-medium">Boarding Pass N’123</span>
+                      </div>
+                    </div>
+                    <div class="font-bold text-blackish-green text-sm md:text-base">Business Class</div>
+                  </div>
+
+                  <div class="flex flex-wrap justify-between gap-y-4 md:gap-y-6 p-4 md:p-6">
+                    <div class="flex items-center gap-2 md:gap-3 min-w-28">
+                      <img src="../assets/image/calendar_primary.svg" alt="Date Icon" class="w-6 h-6 md:w-8 md:h-8 object-contain shrink-0" />
+                      <div class="flex flex-col gap-1"><span class="text-xs md:text-sm font-semibold leading-none text-blackish-green/60">Date</span><span class="text-xs md:text-sm font-medium leading-none text-blackish-green m-0">Newark(EWR)</span></div>
+                    </div>
+                    <div class="flex items-center gap-2 md:gap-3 min-w-28">
+                      <img src="../assets/image/timer_primary.svg" alt="Flight Time Icon" class="w-6 h-6 md:w-8 md:h-8 object-contain shrink-0" />
+                      <div class="flex flex-col gap-1"><span class="text-xs md:text-sm font-semibold leading-none text-blackish-green/60">Flight time</span><span class="text-xs md:text-sm font-medium leading-none text-blackish-green m-0">12:00</span></div>
+                    </div>
+                    <div class="flex items-center gap-2 md:gap-3 min-w-28">
+                      <img src="../assets/image/door_primary.svg" alt="Gate Icon" class="w-6 h-6 md:w-8 md:h-8 object-contain shrink-0" />
+                      <div class="flex flex-col gap-1"><span class="text-xs md:text-sm font-semibold leading-none text-blackish-green/60">Gate</span><span class="text-xs md:text-sm font-medium leading-none text-blackish-green m-0">12A</span></div>
+                    </div>
+                    <div class="flex items-center gap-2 md:gap-3 min-w-28">
+                      <img src="../assets/image/airplane-seat_primary.svg" alt="Seat Icon" class="w-6 h-6 md:w-8 md:h-8 object-contain shrink-0" />
+                      <div class="flex flex-col gap-1"><span class="text-xs md:text-sm font-semibold leading-none text-blackish-green/60">Seat</span><span class="text-xs md:text-sm font-medium leading-none text-blackish-green m-0">128</span></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex justify-between items-end p-4 md:p-6 mt-auto">
+                  <div class="flex flex-col gap-1"><span class="text-2xl md:text-3xl font-extrabold leading-none text-blackish-green m-0">EK</span><span class="text-xs md:text-sm font-medium leading-none text-blackish-green/60 m-0">ABC12345</span></div>
+                  <img class="h-12 md:h-20 w-auto object-contain shrink-0" src="../assets/image/Frame 2608686.png" alt="Barcode/QR Code" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Aside Map -->
+            <aside class="bg-white border border-[#eaeaea] rounded-2xl p-4 md:p-6 flex items-center justify-center shrink-0 w-full lg:w-[320px]">
+              <img class="w-full h-full object-contain max-h-[250px] lg:max-h-65" src="../assets/image/Frame 2608715.png" alt="Ticket Map Path" />
+            </aside>
           </div>
         </div>
 
-        <div class="h-px w-full bg-blackish-green/25 my-2"></div>
+        <!-- TERMS AND CONDITIONS -->
+        <div class="flex flex-col gap-8 text-blackish-green w-full">
+          <h2 class="font-trade-gothic text-2xl font-semibold leading-none m-0">Terms and Conditions</h2>
 
-        <p class="text-base font-medium text-blackish-green m-0">Your booking is protected by <strong class="font-bold">golobe</strong></p>
-
-        <div class="h-px w-full bg-blackish-green/25 my-2"></div>
-
-        <div class="flex flex-col text-base text-blackish-green gap-4">
-          <h4 class="text-base font-bold text-blackish-green m-0">Price Details</h4>
-
-          <div class="flex justify-between">
-            <span class="font-medium">Base Fare</span>
-            <span class="font-semibold">$400</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="font-medium">Discount</span>
-            <span class="font-semibold">$400</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="font-medium">Taxes</span>
-            <span class="font-semibold">$400</span>
-          </div>
-          <div class="flex justify-between">
-            <span class="font-medium">Service Fee</span>
-            <span class="font-semibold">$400</span>
+          <div class="flex flex-col">
+            <h3 class="text-xl font-medium leading-none m-0 mb-4">Payments</h3>
+            <ul class="flex flex-col list-none p-0 m-0 gap-4">
+              <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">If you are purchasing your ticket using a debit or credit card via the Website, we will process these payments via the automated secure common payment gateway which will be subject to fraud screening purposes.</li>
+              <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">If you do not supply the correct card billing address and/or cardholder information, your booking will not be confirmed and the overall cost may increase. We reserve the right to cancel your booking if payment is declined for any reason or if you have supplied incorrect card information. If we become aware of, or is notified of, any fraud or illegal activity associated with the payment for the booking, the booking will be cancelled and you will be liable for all costs and expenses arising from such cancellation, without prejudice to any action that may be taken against us.</li>
+              <li class="relative pl-2 text-sm font-normal leading-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1 before:h-1 before:bg-current before:rounded-full">Golobe may require the card holder to provide additional payment verification upon request by either submitting an online form or visiting the nearest Golobe office, or at the airport at the time of check-in. Golobe reserves the right to deny boarding or to collect a guarantee payment (in cash or from another credit card) if the card originally used for the purchase cannot be presented by the cardholder at check-in or when collecting the tickets, or in the case the original payment has been withheld or disputed by the card issuing bank. Credit card details are held in a secured environment and transferred through an internationally accepted system.</li>
+            </ul>
           </div>
 
-          <div class="h-px w-full bg-blackish-green/25 my-1"></div>
-
-          <div class="flex justify-between items-center">
-            <span class="font-medium">Total</span>
-            <span class="font-semibold">$400</span>
+          <div class="flex flex-col">
+            <h3 class="text-xl font-medium leading-none m-0 mb-4">Contact Us</h3>
+            <div class="text-sm font-normal leading-5 flex flex-col">
+              <p class="m-0">If you have any questions about our Website or our Terms of Use, please contact:</p>
+              <address class="not-italic m-0">
+                Golobe Group Q.C.S.C<br />
+                Golobe Tower<br />
+                P.O. Box: 22550<br />
+                Doha, State of Qatar
+              </address>
+              <p class="m-0">Further contact details can be found at <a href="#" class="text-blackish-green underline">golobe.com/help</a></p>
+            </div>
           </div>
         </div>
-      </aside>
+        <button type="button" onclick="window.location.href='/'" class="btn-primary py-4 w-fit px-12 mt-4 border-none cursor-pointer text-center mx-auto lg:mx-0">Back to Home</button>
+      </div>
+
+      <!-- MODAL OVERLAY ADD CARD -->
+      <div id="upload-popup" class="hidden p-2 fixed inset-0 bg-blackish-green/40 items-center justify-center z-[1000]">
+        <div class="flex flex-col relative bg-white p-10 md:p-16 w-full max-w-160 rounded-xl overflow-y-auto max-h-[90vh]">
+          <button type="button" class="close-x self-end bg-transparent border-none cursor-pointer hover:opacity-75 transition-opacity">
+            <img src="../assets/image/close_light.svg" alt="close" class="w-4 h-4 pointer-events-none" />
+          </button>
+
+          <h2 class="font-trade-gothic text-4xl font-bold leading-none mb-12 mt-0">Add a new card</h2>
+
+          <form id="add-card-form" class="flex flex-col gap-6">
+            <div class="relative flex flex-col">
+              <label class="floating-label">Card Number</label>
+              <input type="text" id="card-number" class="modal-input" placeholder="XXXX XXXX XXXX XXXX" />
+              <img src="../assets/image/Visa_blue.svg" alt="visa" class="absolute top-6 right-3 -translate-y-1/2" />
+              <span id="err-card-number" class="text-xs text-slamon hidden mt-1">Vui lòng nhập đủ 16 số thẻ.</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-6 justify-between">
+              <div class="relative flex flex-col w-full">
+                <label class="floating-label">Exp. Date</label>
+                <input type="text" id="exp-date" class="modal-input" placeholder="MM/YY" />
+                <span id="err-exp-date" class="text-xs text-slamon hidden mt-1">Định dạng không đúng.</span>
+              </div>
+              <div class="relative flex flex-col w-full">
+                <label class="floating-label">CVC</label>
+                <input type="password" id="cvc-number" class="modal-input" placeholder="3 hoặc 4 số" maxlength="4" />
+                <span id="err-cvc-number" class="text-xs text-slamon hidden mt-1">Nhập 3 hoặc 4 số.</span>
+              </div>
+            </div>
+
+            <div class="relative flex flex-col">
+              <label class="floating-label">Name on Card</label>
+              <input type="text" id="card-name" class="modal-input" placeholder="Tên chủ thẻ" />
+              <span id="err-card-name" class="text-xs text-slamon hidden mt-1">Không được để trống.</span>
+            </div>
+
+            <div class="relative flex flex-col">
+              <label class="floating-label">Country or Region</label>
+              <input type="text" id="country-region" name="country" class="modal-input" value="United-States" />
+            </div>
+
+            <div class="flex items-center gap-2 mt-2">
+              <input type="checkbox" id="save-info" class="w-5 h-5 border-2 border-blackish-green rounded-[3px] appearance-none cursor-pointer checked:bg-[url('../image/checkbox_light.svg')] checked:bg-[length:24px_24px] checked:bg-center transition-all duration-100 ease-in" />
+              <label for="save-info" class="text-sm font-medium leading-none text-blackish-green cursor-pointer">Securely save my information for 1-click checkout</label>
+            </div>
+          </form>
+
+          <button type="button" id="btn-modal-add-card" class="btn-primary py-4 mt-10 mb-4 block text-center border-none cursor-pointer">Add Card</button>
+          <p class="text-xs font-normal leading-tight text-center opacity-75 text-blackish-green m-0">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms.</p>
+        </div>
+      </div>
     </main>
 
     <!-- Footer -->
