@@ -109,6 +109,7 @@ export function initSignup() {
       const confirmPassword = document.getElementById("signup-confirm-password").value;
       const termsChecked = document.getElementById("signup-terms").checked;
 
+      // 1. Kiểm tra tính hợp lệ của dữ liệu đầu vào
       if (!firstName || !lastName || !email || !phone || !password) {
         alert("Vui lòng điền đầy đủ thông tin!");
         return;
@@ -124,19 +125,24 @@ export function initSignup() {
         return;
       }
 
+      // Lấy danh sách users từ localStorage
       let users = JSON.parse(localStorage.getItem("golobe_db_users")) || [];
 
+      // Kiểm tra xem email đã tồn tại chưa
       const isExist = users.some((u) => u.email === email);
       if (isExist) {
         alert("Email này đã được đăng ký! Vui lòng dùng email khác.");
         return;
       }
 
-      users.push({ firstName, lastName, email, phone, password });
-      localStorage.setItem("golobe_db_users", JSON.stringify(users));
+      // Lưu tạm thông tin người dùng đang đăng ký vào Session Storage (hoặc Local Storage)
+      // Để trang add-payment.html có thể lấy và hoàn tất quá trình tạo tài khoản
+      const pendingUser = { firstName, lastName, email, phone, password };
+      sessionStorage.setItem("golobe_pending_user", JSON.stringify(pendingUser));
 
-      alert("Đăng ký thành công! Chuyển hướng đến trang đăng nhập.");
-      window.location.href = "login.html";
+      // Chuyển hướng đến trang thêm phương thức thanh toán
+      // SỬA LẠI TÊN FILE TẠI ĐÂY
+      window.location.href = "signup_payment-methods.html";
     });
   }
 }
