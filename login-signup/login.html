@@ -34,17 +34,17 @@
 
           <div class="flex flex-col gap-10">
             <div class="flex flex-col gap-6">
-              <!-- Email Input -->
+              <!-- Email Input (Đã thêm ID và sửa value thành placeholder) -->
               <div class="relative flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Email</label>
-                <input type="email" value="john.doe@gmail.com" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                <label for="login-email" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Email</label>
+                <input type="email" id="login-email" placeholder="john.doe@gmail.com" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
               </div>
 
-              <!-- Password Input -->
+              <!-- Password Input (Đã thêm ID và sửa value thành placeholder) -->
               <div class="relative flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Password</label>
-                <input type="password" value="............" class="w-full border-none outline-none text-base font-bold tracking-widest text-blackish-green bg-transparent" />
-                <button type="button" class="ml-2 w-6 h-6 flex items-center justify-center cursor-pointer shrink-0">
+                <label for="login-password" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Password</label>
+                <input type="password" id="login-password" placeholder="••••••••" class="w-full border-none outline-none text-base font-bold tracking-widest text-blackish-green bg-transparent" />
+                <button type="button" class="ml-2 w-6 h-6 flex items-center justify-center cursor-pointer shrink-0 border-none bg-transparent">
                   <img src="../assets/image/eye-off_light.svg" alt="Toggle Password" class="w-full h-full opacity-75 hover:opacity-100 transition-opacity" />
                 </button>
               </div>
@@ -61,7 +61,7 @@
             </div>
             <!-- 3. Button Login & Signup -->
             <div class="flex flex-col gap-4">
-              <a href="../index.html" class="flex items-center justify-center w-full h-12 bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors cursor-pointer no-underline">Login</a>
+              <button type="button" id="btn-login" class="flex items-center justify-center w-full h-12 bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors cursor-pointer border-none">Login</button>
               <p class="text-sm font-medium text-blackish-green text-center m-0">
                 Don't have an account?
                 <a href="signup.html" class="font-semibold text-slamon hover:underline no-underline">Sign up</a>
@@ -115,6 +115,6 @@
       </div>
     </div>
 
-    <script type="module" src="../assets/js/login.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
   </body>
 </html>
