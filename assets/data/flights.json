@@ -1,0 +1,65 @@
+[
+  {
+    "id": "flt-001",
+    "type": "cheapest",
+    "trip": "Roundtrip",
+    "airlineName": "Emirates",
+    "airlineLogo": "../assets/image/image 40.png",
+    "rating": 4.2,
+    "ratingText": "Very Good",
+    "reviewsCount": 54,
+    "price": 104,
+    "priceUnit": "",
+    "flights": [
+      { "time": "08:00 am - 10:28 am", "airline": "Emirates", "type": "non stop", "duration": "2h 28m", "route": "EWR-BNA" },
+      { "time": "02:00 pm - 04:28 pm", "airline": "Emirates", "type": "non stop", "duration": "2h 28m", "route": "BNA-EWR" }
+    ]
+  },
+  {
+    "id": "flt-002",
+    "type": "best",
+    "trip": "Oneway",
+    "airlineName": "Flydubai",
+    "airlineLogo": "../assets/image/image 41.png",
+    "rating": 4.2,
+    "ratingText": "Very Good",
+    "reviewsCount": 54,
+    "price": 110,
+    "priceUnit": "",
+    "flights": [
+      { "time": "12:00 pm - 02:28 pm", "airline": "Flydubai", "type": "non stop", "duration": "2h 28m", "route": "EWR-BNA" },
+      { "time": "06:00 pm - 08:28 pm", "airline": "Flydubai", "type": "non stop", "duration": "2h 28m", "route": "BNA-EWR" }
+    ]
+  },
+  {
+    "id": "flt-003",
+    "type": "quickest",
+    "trip": "Multicity",
+    "airlineName": "Qatar Airways",
+    "airlineLogo": "../assets/image/image 43.png",
+    "rating": 4.2,
+    "ratingText": "Very Good",
+    "reviewsCount": 54,
+    "price": 120,
+    "priceUnit": "/night",
+    "flights": [
+      { "time": "08:00 pm - 10:15 pm", "airline": "Qatar", "type": "non stop", "duration": "2h 15m", "route": "EWR-BNA" }
+    ]
+  },
+  {
+    "id": "flt-004",
+    "type": "quickest",
+    "trip": "Flexible",
+    "airlineName": "Etihad",
+    "airlineLogo": "../assets/image/image 45.png",
+    "rating": 3.2,
+    "ratingText": "Very Good",
+    "reviewsCount": 54,
+    "price": 120,
+    "priceUnit": "/night",
+    "flights": [
+      { "time": "06:30 am - 08:45 am", "airline": "Etihad", "type": "non stop", "duration": "2h 15m", "route": "EWR-BNA" },
+      { "time": "11:00 am - 01:15 pm", "airline": "Etihad", "type": "non stop", "duration": "2h 15m", "route": "BNA-EWR" }
+    ]
+  }
+]
