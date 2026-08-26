@@ -3,9 +3,11 @@ import { initGlobalAuth } from "./modules/global-auth.js";
 import { initLogin } from "./modules/login.js";
 import { initHotelListing } from "./modules/hotel-listing.js";
 import { initFavorites } from "./modules/favourites.js";
-import { initHotelBookingDetail } from "./modules/hotel-booking-detail.js";
+import { initBookingDetail } from "./modules/booking-detail.js";
 import { initSignup } from "./modules/signup.js";
 import { initSearchValidation } from "./modules/search-validation.js";
+import { initFlightListing } from "./modules/flight-listing.js";
+import { initFlightSearchValidation } from "./modules/flight-search-validation.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initNav();
@@ -25,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     initFavorites();
   }
 
-  if (path.includes("hotel-booking-detail.html")) {
-    initHotelBookingDetail();
+  if (path.includes("hotel-booking-detail.html") || path.includes("flight-booking-detail.html")) {
+    initBookingDetail();
   }
 
   if (path.includes("hotel-listing.html")) {
@@ -35,5 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (path.includes("find-stays.html") || path.includes("hotel-listing.html")) {
     initSearchValidation();
+  }
+
+  if (path.includes("flight-listing.html")) {
+    initFlightListing();
+  }
+
+  if (path.includes("find-flights.html") || path.includes("flight-listing.html")) {
+    initFlightSearchValidation();
   }
 });
