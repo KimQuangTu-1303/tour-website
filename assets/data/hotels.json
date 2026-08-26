@@ -1,0 +1,62 @@
+[
+  {
+    "id": "htl-001",
+    "name": "CVK Park Bosphorus Hotel Istanbul",
+    "location": "Gümüssuyu Mah. Inönü Cad. No:8, Istanbul 34437",
+    "price": 240,
+    "rating": 3.2,
+    "reviewsCount": 371,
+    "ratingText": "Very Good",
+    "stars": 5,
+    "amenitiesCount": 20,
+    "imagesCount": 9,
+    "image": "../assets/image/cvk-park-bosphorus-hotel.png",
+    "type": "resorts-list",
+    "freebies": ["breakfast", "internet", "cancellation"],
+    "amenities": ["24hr_front_desk", "air_conditioned", "pool"]
+  },
+  {
+    "id": "htl-002",
+    "name": "Eresin Hotels Sultanahmet - Boutique Class",
+    "location": "Kucukayasofya No. 40 Sultanahmet, Istanbul 34022",
+    "price": 104,
+    "rating": 4.2,
+    "reviewsCount": 54,
+    "ratingText": "Very Good",
+    "stars": 5,
+    "amenitiesCount": 20,
+    "imagesCount": 9,
+    "image": "../assets/image/eresin-hotels-sultanahmet(1).png",
+    "type": "resorts-list",
+    "freebies": ["parking", "internet", "shuttle"]
+  },
+  {
+    "id": "htl-003",
+    "name": "Eresin Hotels Sultanahmet - Boutique Class",
+    "location": "Kucukayasofya No. 40 Sultanahmet, Istanbul 34022",
+    "price": 104,
+    "rating": 4.2,
+    "reviewsCount": 54,
+    "ratingText": "Very Good",
+    "stars": 5,
+    "amenitiesCount": 20,
+    "imagesCount": 9,
+    "image": "../assets/image/eresin-hotels-sultanahmet(2).png",
+    "type": "motels-list",
+    "amenities": ["24hr_front_desk", "air_conditioned", "pool"]
+  },
+  {
+    "id": "htl-004",
+    "name": "Eresin Hotels Sultanahmet - Boutique Class",
+    "location": "Kucukayasofya No. 40 Sultanahmet, Istanbul 34022",
+    "price": 104,
+    "rating": 4.2,
+    "reviewsCount": 54,
+    "ratingText": "Very Good",
+    "stars": 5,
+    "amenitiesCount": 20,
+    "imagesCount": 9,
+    "image": "../assets/image/eresin-hotels-sultanahmet(3).png",
+    "type": "hotels-list"
+  }
+]
