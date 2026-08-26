@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initHome();
   }
 
-  if (path.includes("login.html")) {
+  if (path.includes("login.html") || path.includes("forgotpass")) {
     initLogin();
   }
 
