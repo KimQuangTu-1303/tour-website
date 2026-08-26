@@ -16,7 +16,7 @@
 
   <body>
     <!-- HEADER -->
-    {{> header stays_active="nav-active" is_logged_in=true }}
+    {{> header stays_active="nav-active" }}
 
     <!-- HOTEL SEARCH & BANNER -->
     <section class="relative flex flex-col items-center lg:block mb-12 lg:mb-40 w-full">
@@ -48,8 +48,8 @@
           <div class="input-group lg:col-span-3">
             <label class="floating-label" for="checkin">Check In</label>
             <div class="flex items-center justify-between w-full gap-2.5">
-              <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="checkin" type="text" name="checkin" value="Fri 12/2" placeholder="dd/mm/yy" />
-              <img src="../assets/image/calendar_light.svg" alt="calendar" class="shrink-0" />
+              <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent [&::-webkit-calendar-picker-indicator]:hidden" id="checkin" type="date" name="checkin" required />
+              <img src="../assets/image/calendar_light.svg" id="checkin-icon" alt="calendar" class="shrink-0 cursor-pointer" />
             </div>
           </div>
 
@@ -57,8 +57,8 @@
           <div class="input-group lg:col-span-3">
             <label class="floating-label" for="checkout">Check Out</label>
             <div class="flex items-center justify-between w-full gap-2.5">
-              <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent placeholder:text-blackish-green/50" id="checkout" type="text" name="checkout" value="Sun 12/4" placeholder="dd/mm/yy" />
-              <img src="../assets/image/calendar_light.svg" alt="calendar" class="shrink-0" />
+              <input class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent [&::-webkit-calendar-picker-indicator]:hidden" id="checkout" type="date" name="checkout" required />
+              <img src="../assets/image/calendar_light.svg" id="checkout-icon" alt="calendar" class="shrink-0 cursor-pointer" />
             </div>
           </div>
 

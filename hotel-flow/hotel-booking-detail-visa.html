@@ -15,7 +15,7 @@
 
   <body>
     <!-- HEADER -->
-    {{> header stays_active="nav-active" mb_class="mb-12" is_logged_in=true }}
+    {{> header stays_active="nav-active" mb_class="mb-12" }}
 
     <!-- MAIN CONTENT -->
     <main class="w-full max-w-7xl mx-auto px-4 lg:px-8 grid grid-cols-1 lg:grid-cols-5 gap-y-8 gap-x-10 items-start">
@@ -187,50 +187,59 @@
       <div id="upload-popup" class="hidden p-2 fixed inset-0 bg-blackish-green/50 items-center justify-center z-1000">
         <!-- MODAL CONTENT -->
         <div class="flex flex-col relative bg-white p-10 md:p-16 w-full max-w-160 rounded-xl overflow-y-auto max-h-[90vh]">
-          <button class="close-x self-end bg-transparent border-none cursor-pointer hover:opacity-75 transition-opacity">
+          <button type="button" class="close-x self-end bg-transparent border-none cursor-pointer hover:opacity-75 transition-opacity">
             <img src="../assets/image/close_light.svg" alt="close" class="w-4 h-4 pointer-events-none" />
           </button>
 
           <h2 class="font-trade-gothic text-4xl font-bold leading-none mb-12 mt-0">Add a new card</h2>
 
-          <form class="flex flex-col gap-6">
-            <div class="relative">
+          <form id="add-card-form" class="flex flex-col gap-6">
+            <!-- Card Number -->
+            <div class="relative flex flex-col">
               <label class="floating-label">Card Number</label>
-              <input type="text" class="modal-input" placeholder="XXXX XXXX XXXX XXXX" />
-              <img src="../assets/image/Visa_blue.svg" alt="visa" class="absolute top-1/2 right-3 -translate-y-1/2" />
+              <input type="text" id="card-number" class="modal-input" placeholder="XXXX XXXX XXXX XXXX" />
+              <img src="../assets/image/Visa_blue.svg" alt="visa" class="absolute top-6 right-3 -translate-y-1/2" />
+              <span id="err-card-number" class="text-xs text-slamon hidden mt-1">Vui lòng nhập đủ 16 số thẻ.</span>
             </div>
 
             <div class="flex flex-col sm:flex-row gap-6 justify-between">
-              <div class="relative w-full">
+              <!-- Exp Date -->
+              <div class="relative flex flex-col w-full">
                 <label class="floating-label">Exp. Date</label>
-                <input type="text" class="modal-input" placeholder="mm/dd" />
+                <input type="text" id="exp-date" class="modal-input" placeholder="MM/YY" />
+                <span id="err-exp-date" class="text-xs text-slamon hidden mt-1">Định dạng không đúng (VD: 12/25).</span>
               </div>
 
-              <div class="relative w-full">
+              <!-- CVC -->
+              <div class="relative flex flex-col w-full">
                 <label class="floating-label">CVC</label>
-                <input type="password" class="modal-input" placeholder="Enter your password" />
+                <input type="password" id="cvc-number" class="modal-input" placeholder="3 hoặc 4 số" maxlength="4" />
+                <span id="err-cvc-number" class="text-xs text-slamon hidden mt-1">Nhập 3 hoặc 4 số CVC.</span>
               </div>
             </div>
 
-            <div class="relative">
+            <!-- Name on Card -->
+            <div class="relative flex flex-col">
               <label class="floating-label">Name on Card</label>
-              <input type="text" class="modal-input" placeholder="Enter your Name" />
+              <input type="text" id="card-name" class="modal-input" placeholder="Tên chủ thẻ" />
+              <span id="err-card-name" class="text-xs text-slamon hidden mt-1">Không được để trống tên chủ thẻ.</span>
             </div>
 
-            <div class="relative">
+            <!-- Country or Region -->
+            <div class="relative flex flex-col">
               <label class="floating-label">Country or Region</label>
-              <input type="text" name="country" class="modal-input" value="United-States" />
+              <input type="text" id="country-region" name="country" class="modal-input" value="United-States" />
             </div>
 
             <div class="flex items-center gap-2 mt-2">
-              <input type="checkbox" class="w-5 h-5 border-2 border-blackish-green rounded-[3px] appearance-none cursor-pointer checked:bg-[url('../image/checkbox_light.svg')] checked:bg-[length:24px_24px] checked:bg-center transition-all duration-100 ease-in" />
-              <span class="text-sm font-medium leading-none text-blackish-green">Securely save my information for 1-click checkout</span>
+              <input type="checkbox" id="save-info" class="w-5 h-5 border-2 border-blackish-green rounded-[3px] appearance-none cursor-pointer checked:bg-[url('../image/checkbox_light.svg')] checked:bg-[length:24px_24px] checked:bg-center transition-all duration-100 ease-in" />
+              <label for="save-info" class="text-sm font-medium leading-none text-blackish-green cursor-pointer">Securely save my information for 1-click checkout</label>
             </div>
           </form>
 
           <!-- Nút Add Card -->
-          <a href="hotel-booking-detail-ticket.html" class="btn-primary py-4 mt-10 mb-4">Add Card</a>
-          <p class="text-xs font-normal leading-tight text-center opacity-75 text-blackish-green">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.</p>
+          <a href="hotel-booking-detail-ticket.html" id="btn-add-card" class="btn-primary py-4 mt-10 mb-4 block text-center no-underline">Add Card</a>
+          <p class="text-xs font-normal leading-tight text-center opacity-75 text-blackish-green m-0">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.</p>
         </div>
       </div>
     </main>
@@ -239,6 +248,5 @@
     {{> footer }}
 
     <script type="module" src="../assets/js/main.js"></script>
-    <script type="module" src="../assets/js/hotel-booking-detail-visa.js"></script>
   </body>
 </html>
