@@ -1,278 +1,342 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-    <title>Home - Tour Du lịch</title>
-    <meta name="description" content="Nền tảng đặt vé máy bay và phòng khách sạn hàng đầu. Khám phá các điểm đến hấp dẫn và tận hưởng kỳ nghỉ tuyệt vời cùng chúng tôi." />
-    <meta property="og:title" content="Home - Tour Du lịch | Đặt Vé & Phòng Nhanh Chóng" />
-    <meta property="og:description" content="Khám phá các điểm đến hấp dẫn và tận hưởng kỳ nghỉ tuyệt vời cùng những ưu đãi đặc biệt nhất." />
-    <meta property="og:image" content="./assets/image/banner.png" />
-    <meta property="og:url" content="https://ten-mien-website-cua-ban.com/" />
-    <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="./assets/css/index.css" />
-    <link rel="stylesheet" href="./assets/css/input.css" />
-  </head>
-  <body>
-    <!-- HEADER SECTION -->
-    <header class="hero">
-      <nav class="navbar">
-        <div class="navbar__group navbar__group--left">
-          <a href="flight-flow/find-flight.html" class="navbar__link">
-            <img src="assets/image/Vector-plane.png" alt="Plane" class="navbar__icon" />
-            Find Flights
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Home - Tour Du lịch</title>
+  <meta name="description"
+    content="Nền tảng đặt vé máy bay và phòng khách sạn hàng đầu. Khám phá các điểm đến hấp dẫn và tận hưởng kỳ nghỉ tuyệt vời cùng chúng tôi." />
+  <meta property="og:title" content="Home - Tour Du lịch | Đặt Vé & Phòng Nhanh Chóng" />
+  <meta property="og:description"
+    content="Khám phá các điểm đến hấp dẫn và tận hưởng kỳ nghỉ tuyệt vời cùng những ưu đãi đặc biệt nhất." />
+  <meta property="og:image" content="./assets/image/banner.png" />
+  <meta property="og:url" content="https://ten-mien-website-cua-ban.com/" />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="../assets/css/input.css" />
+  <!-- Font Awesome cho các icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+  <!-- HEADER SECTION -->
+  <header class="relative bg-cover bg-center bg-no-repeat pb-24"
+    style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('./assets/image/Rectangle\ 31.png');">
+    <!-- Navbar -->
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a href="flight-flow/find-flight.html"
+          class="flex items-center gap-2 text-white font-medium hover:text-teal-300 transition">
+          <img src="assets/image/Vector-plane.png" alt="Plane" class="w-5 h-5 object-contain" />
+          Find Flights
+        </a>
+        <a href="hotel-flow/find-stays.html"
+          class="flex items-center gap-2 text-white font-medium hover:text-teal-300 transition">
+          <img src="assets/image/Vector-bed.png" alt="Bed" class="w-5 h-5 object-contain" />
+          Find Stays
+        </a>
+      </div>
+      <div class="flex items-center">
+        <img src="assets/image/Logo-web.png" alt="Logo" class="h-8 object-contain" />
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="login-signup/login.html"
+          class="text-white font-medium px-4 py-2 hover:text-teal-300 transition">Login</a>
+        <a href="login-signup/signup.html"
+          class="bg-white text-gray-900 font-medium px-5 py-2.5 rounded-lg shadow hover:bg-[#8DD3BB] transition">Sign
+          Up</a>
+      </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="text-center text-white mt-12 mb-16 px-4">
+      <h3 class="text-lg font-medium tracking-wide uppercase text-white mb-2">Helping Others</h3>
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-wider mb-4 font-trade-gothic uppercase">LIVE & TRAVEL</h1>
+      <p class="text-lg text-gray-200">Special offers to suit your plan</p>
+    </div>
+
+    <!-- Booking Card -->
+    <div class="max-w-5xl mx-auto px-4 relative z-20 translate-y-2/3">
+      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+        <div class="flex gap-6 border-b border-gray-200 pb-4 mb-6">
+          <a href="#"
+            class="flex items-center gap-2 font-semibold text-teal-600 border-b-2 border-teal-600 pb-2 -mb-4"><i
+              class="fa-solid fa-plane"></i> Flights</a>
+          <a href="#"
+            class="flex items-center gap-2 font-semibold text-gray-500 hover:text-teal-600 pb-2 -mb-4 transition"><i
+              class="fa-solid fa-bed"></i> Stays</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+          <div
+            class="relative border border-gray-300 rounded-xl p-3 focus-within:border-teal-600 flex items-center justify-between">
+            <!-- Phần chứa Label và Input thuần túy -->
+            <div class="w-full">
+              <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">From - To</label>
+              <input class="w-full bg-transparent font-medium text-gray-800 focus:outline-none" type="text"
+                name="from-to" value="Lahore - Karachi" placeholder="e.g. Lahore - Karachi" />
+            </div>
+
+            <!-- Nút bấm đảo chiều (Swap button) -->
+            <button type="button" onclick="swapLocations(this)"
+              class="ml-2 text-gray-400 hover:text-teal-600 transition p-1 cursor-pointer" title="Đổi chiều đi/đến">
+              <i class="fa-solid fa-right-left"></i>
+            </button>
+          </div>
+          <div class="border border-gray-300 rounded-xl p-3 focus-within:border-teal-600">
+            <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Trip</label>
+            <select class="w-full bg-transparent font-medium text-gray-800 focus:outline-none cursor-pointer"
+              name="trip">
+              <option value="">Return</option>
+              <option value="">One Way</option>
+            </select>
+          </div>
+          <div class="border border-gray-300 rounded-xl p-3 focus-within:border-teal-600">
+            <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Depart Date</label>
+            <input type="date" name="depart-date"
+              class="w-full bg-transparent font-medium text-gray-800 text-sm focus:outline-none cursor-pointer"
+              value="2022-11-07" />
+          </div>
+          <div class="border border-gray-300 rounded-xl p-3 focus-within:border-teal-600">
+            <label class="block text-xs font-semibold text-gray-400 uppercase mb-1">Passenger - Class</label>
+            <input class="w-full bg-transparent font-medium text-gray-800 focus:outline-none" type="text"
+              value="1 Passenger, Economy" />
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+          <button class="text-gray-600 font-medium hover:text-teal-600 flex items-center gap-2 transition"><i
+              class="fa-solid fa-plus"></i> Add Promo Code</button>
+          <a href="flight-flow/find-flight.html"
+            class="w-full sm:w-auto bg-teal-600 text-white font-semibold px-8 py-3 rounded-xl hover:bg-teal-700 transition flex items-center justify-center gap-2 shadow-lg">
+            <i class="fa-solid fa-paper-plane"></i>
+            Show Flights
           </a>
-          <a href="hotel-flow/find-stays.html" class="navbar__link">
-            <img src="assets/image/Vector-bed.png" alt="Bed" class="navbar__icon" />
-            Find Stays
-          </a>
-        </div>
-        <div class="navbar__logo">
-          <img src="assets/image/Logo-web.png" alt="Logo" />
-        </div>
-        <div class="navbar__group navbar__group--right">
-          <a href="login-signup/login.html" class="btn btn--login">Login</a>
-          <a href="login-signup/signup.html" class="btn btn--signup">Sign Up</a>
-        </div>
-      </nav>
-
-      <div class="hero__content">
-        <h3 class="hero__subtitle">Helping Others</h3>
-        <h1 class="hero__title">LIVE & TRAVEL</h1>
-        <p class="hero__desc">Special offers to suit your plan</p>
-      </div>
-
-      <div class="booking">
-        <div class="booking__card">
-          <div class="booking__tabs">
-            <a href="#" class="booking__tab booking__tab--active"><i class="fa-solid fa-plane"></i> Flights</a>
-            <a href="#" class="booking__tab"><i class="fa-solid fa-bed"></i> Stays</a>
-          </div>
-          <div class="booking__form">
-            <div class="booking__input-group">
-              <label class="booking__label">From - To</label>
-              <select class="booking__select" name="from-to">
-                <option value="">Lahore - Karachi</option>
-                <option value="">1</option>
-                <option value="">2</option>
-              </select>
-            </div>
-            <div class="booking__input-group">
-              <label class="booking__label">Trip</label>
-              <select class="booking__select" name="trip">
-                <option value="">Return</option>
-                <option value="">One Way</option>
-              </select>
-            </div>
-            <div class="booking__input-group">
-              <label class="booking__label">Depart - Return</label>
-              <input class="booking__input" type="text" value="07 Nov 22 - 13 Nov 22" />
-            </div>
-            <div class="booking__input-group">
-              <label class="booking__label">Passenger - Class</label>
-              <input class="booking__input" type="text" value="1 Passenger, Economy" />
-            </div>
-            <div class="booking__actions">
-              <button class="btn btn--promo"><i class="fa-solid fa-plus"></i> Add Promo Code</button>
-              <button class="btn btn--search">
-                <i class="fa-solid fa-paper-plane"></i>
-                <a href="flight-flow\find-flight.html">Show Flights</a>
-              </button>
-            </div>
-          </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-      <!-- Section: Popular Destinations -->
-      <section class="section-header">
-        <div class="section-header__text">
-          <h2 class="section-header__title">Plan your perfect trip</h2>
-          <p class="section-header__subtitle">Search Flights & Hotels to our most popular destinations</p>
-        </div>
-        <button class="btn btn--outline">See All Places</button>
-      </section>
+  <!-- MAIN CONTENT -->
+  <main class="max-w-7xl mx-auto px-4 pt-32 pb-16">
+    <!-- Section: Popular Destinations -->
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Plan your perfect trip</h2>
+        <p class="text-gray-500">Search Flights & Hotels to our most popular destinations</p>
+      </div>
+      <button
+        class="border border-teal-600 text-teal-600 font-medium px-5 py-2.5 rounded-xl hover:bg-teal-50 transition">See
+        All Places</button>
+    </div>
 
-      <div class="destinations">
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="assets/image/Istanbul, Turkey.png" alt="Istanbul" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">Istanbul, Turkey</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
-        </div>
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="assets/image/Sydney, Australia.png" alt="Sydney" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">Sydney, Australia</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
-        </div>
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0JrYlT7GeyvwSM33PygXG2fZloXuPjbYJyFvut5Nmeg&s=10" alt="Malé" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">Malé, Maldives</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
-        </div>
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTmzp1WvexoJ__Oj9qsPVy0k-6WKnDDhxo74Y1mDd1Gg&s" alt="London" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">London, UK</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
-        </div>
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUaK0z8UbB0LRObKoaVgGXH6A_4DLkrMFdmXGMu0MDQ&s=10" alt="Paris" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">Paris, France</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
-        </div>
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bHCdCjOETKsP8wOloXSfkcLNAeJnDgbzPLN7X6e-sA&s=10" alt="Tokyo" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">Tokyo, Japan</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
-        </div>
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbw-jEFKzY-eAUGLXQ4rKF1FKxAFOzuB7WOeSUusztSg&s=10" alt="Baku" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">Baku, Azerbaijan</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
-        </div>
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHP9TOP-RtovEmqpSbgt4yT4_6_IAYc5j-GmXRaVZWaA&s=10" alt="New York" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">New York, US</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
-        </div>
-        <div class="destination-card">
-          <div class="destination-card__media">
-            <img class="destination-card__img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7UNh0PmgAmklI-9YKQe6Xabh88ja_D231jbGUoK0PA&s=10" alt="Dubai" />
-          </div>
-          <div class="destination-card__info">
-            <h3 class="destination-card__title">Dubai, UAE</h3>
-            <p class="destination-card__desc">Flights • Hotels • Resorts</p>
-          </div>
+    <!-- Destinations Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+      <!-- Card mẫu (lặp lại cho các địa điểm) -->
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Istanbul, Turkey.png" alt="Istanbul" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">Istanbul, Turkey</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
         </div>
       </div>
-
-      <!-- Section: Travel Options -->
-      <section class="services">
-        <div class="service-card" style="background-image: url(&quot;https://cdn.prod.website-files.com/668d36b0a5adddf78c78caac/67196a75b7f123a37c8a9ed7_airlines.webp&quot;)">
-          <div class="service-card__content">
-            <h2 class="service-card__title">Flight</h2>
-            <p class="service-card__desc">Search flight & Places Hire to our most popular destinations</p>
-            <button class="btn btn--outline"><i class="fa-solid fa-plane"></i><a href="flight-listing.html">Show Flight </a></button>
-          </div>
-        </div>
-
-        <div class="service-card" style="background-image: url(&quot;https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/YKb6N1M1xnt0anrR/img-m5K76vyVL1CRPjJO.png&quot;)">
-          <div class="service-card__content">
-            <h2 class="service-card__title">Hotels</h2>
-            <p class="service-card__desc">Search flight & Places Hire to our most popular destinations</p>
-            <button class="btn btn--outline"><i class="fa-solid fa-bed"></i><a href="hotel-listing.html">Show Stays</a></button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section: Reviews -->
-      <section class="section-header">
-        <div class="section-header__text">
-          <h2 class="section-header__title">Review</h2>
-          <p class="section-header__subtitle">What people say about Golobe facilities</p>
-        </div>
-      </section>
-
-      <div class="reviews">
-        <div class="reviews__slider" id="menuReview">
-          <button class="reviews__nav reviews__nav--prev" onclick="scrollMenu(-1)"></button>
-
-          <div class="reviews__item">
-            <div class="review-card">
-              <h3 class="review-card__title">“A real sense of community, nurtured”</h3>
-              <p class="review-card__text">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
-              <button class="review-card__btn-more" onclick="toggleReview(this)">View more</button>
-              <div class="review-card__rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <p class="review-card__author">Olga</p>
-              <small class="review-card__location">Weave Studios – Kai Tak</small>
-              <div class="review-card__platform">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png" alt="Google" />
-                <p>Google</p>
-              </div>
-              <div class="review-card__media">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxVQG6AOd9zZDFz-HxIJnJl-U2H80M6QXShRYGgXND9uIXYuKujk4a5pqKwmnaKsjlPfF0u3HbaVoSXXlvvisG3pDRm09NoR9YB9kyhh20ZcmtTCpjwuArBpLapc6GfTOBk1gkLMLFHEPUuwpcoMa3vcTQJc6scSkqCfgU5LEB7fonlO7LRRooH88EvQw/s377/review1.png" alt="Review1" />
-              </div>
-            </div>
-          </div>
-
-          <div class="reviews__item">
-            <div class="review-card">
-              <h3 class="review-card__title">“The facilities are superb. Clean, slick, bright.”</h3>
-              <p class="review-card__text">“A real sense of community, nurtured”Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
-              <button class="review-card__btn-more" onclick="toggleReview(this)">View more</button>
-              <div class="review-card__rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <p class="review-card__author">Thomas</p>
-              <small class="review-card__location">Weave Studios – Olympic</small>
-              <div class="review-card__platform">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png" alt="Google" />
-                <p>Google</p>
-              </div>
-              <div class="review-card__media">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOi8zDWkAN4Y1B9QQA1Zimt_5CJ9q2w6VrgsIzemTYolmiuu7XUcoYyJQ5gb_BR1ZPqKwSMAjA_bfeeeyiO2AkentwpT3aBRHnc8XKaYm66Xwi1AMmPq-5p9No8tL12Cv4qJhPR34l9pZUFb6KHYo3PHlgKVhHjl-KQi156aiLouoPAiM6d8k81CI6hPc/s377/Rectangle%2036.png" alt="Review 2" />
-              </div>
-            </div>
-          </div>
-
-          <div class="reviews__item">
-            <div class="review-card">
-              <h3 class="review-card__title">“A real sense of community, nurtured”</h3>
-              <p class="review-card__text">Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always available when needed.</p>
-              <button class="review-card__btn-more" onclick="toggleReview(this)">View more</button>
-              <div class="review-card__rating"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-              <p class="review-card__author">Eliot</p>
-              <small class="review-card__location">Weave Studios – Kai Tak</small>
-              <div class="review-card__platform">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeJ2QT_4ophwE4g-4Bo2YlQX-hVfIalw_4XagaNmijOIQZ175HQi81x92G8DrPb_wnWmYbWb0ZlogwFMZtL87pTv6jXSNnZW19inChjF_FjlHBdPjpcYuvNw3AiLTaKJZJTb2ifyilNMf25xJ7l7o-66XxC5oU0iRd3MuM55_8HAnMRV8BBK4yptP_SU/s24/flat-color-icons_google.png" alt="Google" />
-                <p>Google</p>
-              </div>
-              <div class="review-card__media">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDr2y2rYojpzLm281ZyVY5zoVUoceYqY0DGr1VMxASPP9Bdknbi7HSZxCwp6ntebSOp36iS-JK5xA937RguSsi0WKk0QRe0GSpFNLVsbrVTynGcVppzjYaX5YlVfZ3bTRPWSKWqd8MZAcj5UdyhMSAKUb-BA9IrDZb7q1tNOcX1u9-oJaZ99GhX_rgzTI/s365/Rectangle%2036%20%281%29.png" alt="Review 3" />
-              </div>
-            </div>
-          </div>
-
-          <button class="reviews__nav reviews__nav--next" onclick="scrollMenu(1)"></button>
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover" src="assets/image/Sydney, Australia.png" alt="Sydney" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">Sydney, Australia</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
         </div>
       </div>
-    </main>
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Baku, Azerbajian.png"
+          alt="Baku,Azerbaijan" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">Baku,Azerbaijan</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
+        </div>
+      </div>
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4.svg" alt="Malé, Maldives" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">Malé, Maldives</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
+        </div>
+      </div>
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIUaK0z8UbB0LRObKoaVgGXH6A_4DLkrMFdmXGMu0MDQ&s=10"
+          alt="Paris" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">Paris, France</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
+        </div>
+      </div>
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (1).png" alt="New York, US" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">New York, US</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
+        </div>
+      </div>
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3 (1).svg" alt="London, UK" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">London, UK</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
+        </div>
+      </div>
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 3.svg" alt="Tokyo, Japan" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">Tokyo, Japan</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
+        </div>
+      </div>
+      <div
+        class="bg-white rounded-2xl shadow-sm hover:shadow-md transition overflow-hidden flex items-center p-4 gap-4">
+        <img class="w-20 h-20 rounded-xl object-cover" src="./assets/image/Rectangle 4 (2).png" alt="Dubai" />
+        <div>
+          <h3 class="font-bold text-gray-900 text-lg mb-1">Dubai, UAE</h3>
+          <p class="text-sm text-gray-500">Flights • Hotels • Resorts</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- FOOTER -->
-    {{> footer }}
+    <!-- Section: Travel Options -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div
+        class="relative rounded-3xl overflow-hidden bg-cover bg-center h-96 flex flex-col justify-end items-center text-center p-8 text-white shadow-lg"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://cdn.prod.website-files.com/668d36b0a5adddf78c78caac/67196a75b7f123a37c8a9ed7_airlines.webp');">
+        <h2 class="text-4xl font-bold mb-2 font-trade-gothic uppercase">Flight</h2>
+        <p class="text-gray-200 mb-6 max-w-sm">Search flight & Places Hire to our most popular destinations</p>
+        <a href="flight-listing.html"
+          class="inline-flex items-center justify-center gap-2 bg-[#8DD3BB] hover:bg-teal-700 text-[#112211] font-semibold py-3 px-6 rounded-xl w-fit transition shadow">
+          <img src="./assets/image/Paper Plane.png"></i> Show Flight
+        </a>
+      </div>
 
-    <script type="module" src="./assets/js/header.js"></script>
-  </body>
+      <div
+        class="relative rounded-3xl overflow-hidden bg-cover bg-center h-96 flex flex-col justify-end items-center text-center p-8 text-white shadow-lg"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=358,fit=crop/YKb6N1M1xnt0anrR/img-m5K76vyVL1CRPjJO.png');">
+        <h2 class="text-4xl font-bold mb-2 font-trade-gothic uppercase">Hotels</h2>
+        <p class="text-gray-200 mb-6 max-w-sm">Search flight & Places Hire to our most popular destinations</p>
+        <a href="hotel-listing.html"
+          class="inline-flex items-center justify-center gap-2 bg-[#8DD3BB] hover:bg-teal-700 text-[#112211] font-semibold py-3 px-6 rounded-xl w-fit transition shadow">
+          <img src="./assets/image/Paper Plane.png"></i> Show Stays
+        </a>
+      </div>
+    </div>
+
+    <!-- Section: Reviews Header -->
+    <div class="mb-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-2">Review</h2>
+      <p class="text-gray-500">What people say about Golobe facilities</p>
+    </div>
+
+    <!-- Reviews Container -->
+    <div class="relative w-full overflow-hidden">
+      <div class="flex gap-10 overflow-x-auto pb-8 pt-8 pl-8 snap-x snap-mandatory" id="menuReview">
+
+        <!-- Review Card 1 -->
+        <div class="bg-[#ccebe1] rounded-[24px] pb-6 pr-6 w-[350px] shrink-0 snap-center">
+          <div
+            class="bg-white rounded-[24px] p-6 shadow-sm flex flex-col justify-between -ml-6 -mt-6 border border-gray-100 h-full">
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-3">“A real sense of community, nurtured”</h3>
+              <p
+                class="review-text text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">
+                Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for
+                helping me always, even when I was out of the country. And always available when needed.
+              </p>
+              <button class="text-teal-600 font-semibold text-sm mb-4 hover:underline block ml-auto cursor-pointer"
+                onclick="toggleReview(this)">View more</button>
+              <div class="text-yellow-400 text-sm mb-4">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="font-bold text-gray-900">Olga</p>
+              <small class="text-gray-400 block mb-4">Weave Studios – Kai Tak</small>
+              <div class="flex items-center gap-2 mb-4 text-xs font-medium text-gray-500">
+                <img
+                  src="./assets/image/flat-color-icons_google.png"
+                  alt="Google" class="w-4 h-4" />
+                Google
+              </div>
+            </div>
+            <img src="./assets/image/review1.png" alt="Review1" class="rounded-xl h-48 w-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="bg-[#ccebe1] rounded-[24px] pb-6 pr-6 w-[350px] shrink-0 snap-center">
+          <div
+            class="bg-white rounded-[24px] p-6 shadow-sm flex flex-col justify-between -ml-6 -mt-6 border border-gray-100 h-full">
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-3">“The facilities are superb. Clean, slick, bright.”</h3>
+              <p
+                class="review-text text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">
+                “A real sense of community, nurtured” Really appreciate the help and support from the staff during these
+                tough times. Shoutout to Katie for helping me always, even when I was out of the country. And always
+                available when needed.
+              </p>
+              <button class="text-teal-600 font-semibold text-sm mb-4 hover:underline block ml-auto cursor-pointer"
+                onclick="toggleReview(this)">View more</button>
+              <div class="text-yellow-400 text-sm mb-4">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="font-bold text-gray-900">Thomas</p>
+              <small class="text-gray-400 block mb-4">Weave Studios – Olympic</small>
+              <div class="flex items-center gap-2 mb-4 text-xs font-medium text-gray-500">
+                <img
+                  src="./assets/image/flat-color-icons_google.png"
+                  alt="Google" class="w-4 h-4" />
+                Google
+              </div>
+            </div>
+            <img src="./assets/image/Rectangle 36.png" alt="Review 2" class="rounded-xl h-48 w-full object-cover" />
+          </div>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div class="bg-[#ccebe1] rounded-[24px] pb-6 pr-6 w-[350px] shrink-0 snap-center">
+          <div
+            class="bg-white rounded-[24px] p-6 shadow-sm flex flex-col justify-between -ml-6 -mt-6 border border-gray-100 h-full">
+            <div>
+              <h3 class="font-bold text-gray-900 text-lg mb-3">“A real sense of community, nurtured”</h3>
+              <p
+                class="review-text text-gray-600 text-sm mb-4 leading-relaxed line-clamp-2 overflow-hidden transition-all duration-300">
+                Really appreciate the help and support from the staff during these tough times. Shoutout to Katie for
+                helping me always, even when I was out of the country. And always available when needed.
+              </p>
+              <button class="text-teal-600 font-semibold text-sm mb-4 hover:underline block ml-auto cursor-pointer"
+                onclick="toggleReview(this)">View more</button>
+              <div class="text-yellow-400 text-sm mb-4">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+              <p class="font-bold text-gray-900">Eliot</p>
+              <small class="text-gray-400 block mb-4">Weave Studios – Kai Tak</small>
+              <div class="flex items-center gap-2 mb-4 text-xs font-medium text-gray-500">
+                <img
+                  src="./assets/image/flat-color-icons_google.png"
+                  alt="Google" class="w-4 h-4" />
+                Google
+              </div>
+            </div>
+            <img src="./assets/image/Rectangle 36 (1).png" alt="Review 3" class="rounded-xl h-48 w-full object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  {{> footer }}
+
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+
 </html>

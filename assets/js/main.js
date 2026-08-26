@@ -1,6 +1,7 @@
 import { initNav } from "./modules/header-nav.js";
 import { initGlobalAuth } from "./modules/global-auth.js";
 import { initLogin } from "./modules/login.js";
+import { initHome } from "./modules/index.js";
 import { initHotelListing } from "./modules/hotel-listing.js";
 import { initFavorites } from "./modules/favourites.js";
 import { initHotelBookingDetail } from "./modules/hotel-booking-detail.js";
@@ -12,6 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initGlobalAuth();
 
   const path = window.location.pathname;
+
+  // Thêm điều kiện nhận diện trang chủ (index.html hoặc đường dẫn gốc /)
+  if (path.endsWith("/") || path.includes("index.html")) {
+    initHome();
+  }
 
   if (path.includes("login.html")) {
     initLogin();
