@@ -1,4 +1,4 @@
-export function initHotelBookingDetail() {
+export function initBookingDetail() {
   let currentStep = 1;
 
   // Hàm kiểm tra trạng thái đăng nhập an toàn
