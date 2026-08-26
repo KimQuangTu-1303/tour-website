@@ -31,25 +31,28 @@
 
     <!-- Right Menu -->
     <div class="flex items-center">
-      <!-- logged in -->
-      {{#if is_logged_in}}
-      <ul class="m-0 flex list-none p-0 md:gap-8 items-center">
-        <li class="nav-item {{ favourites_active }} hidden md:flex">
+      <!-- BLOCK GUEST (Guest) -->
+      <div id="guest-menu" class="flex items-center gap-2">
+        <a href="../login-signup/login.html" class="hidden sm:block text-sm font-semibold px-4 md:px-6 py-2 md:py-3 text-blackish-green no-underline hover:bg-blackish-green/10 rounded-lg transition-colors">Login</a>
+        <a href="../login-signup/signup.html" class="text-xs md:text-sm font-semibold text-white bg-blackish-green px-4 md:px-6 py-2 md:py-3 rounded-lg no-underline hover:bg-black transition-colors">Sign up</a>
+      </div>
+
+      <!-- BLOCK LOGGED IN (User) -->
+      <ul id="logged-in-menu" class="m-0 list-none p-0 md:gap-8 items-center hidden">
+        <li class="nav-item hidden md:flex">
           <img src="/assets/image/heart_light.svg" alt="Heart" />
           <a href="../favorites.html" class="text-blackish-green no-underline block">Favourites</a>
         </li>
-
         <li class="nav-item text-blackish-green hidden md:block bg-blackish-green w-0.5 h-4"></li>
-
         <!-- Dropdown Container -->
         <li class="group nav-item">
           <button id="user-menu-button" aria-expanded="false" class="text-blackish-green no-underline flex items-center h-auto gap-2">
             <div class="relative inline-flex">
-              <img src="/assets/image/user-avt.png" alt="John D." class="w-8 h-8 md:w-auto md:h-auto rounded-full" />
+              <img id="display-user-avatar" src="/assets/image/user-avt.png" alt="User Avatar" class="w-8 h-8 md:w-auto md:h-auto rounded-full object-cover" />
               <img src="/assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px hidden md:block" />
               <img src="/assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0 hidden md:block" />
             </div>
-            <span class="hidden md:block">John D.</span>
+            <span id="display-user-name" class="hidden md:block">John D.</span>
           </button>
 
           <!-- User Menu -->
@@ -99,7 +102,7 @@
                 </a>
               </li>
               <li>
-                <a href="../login-signup/login.html" class="dropdown-link">
+                <a href="#" id="btn-logout" class="dropdown-link">
                   <img src="/assets/image/logout_light.png" alt="#" />
                   Logout
                 </a>
@@ -108,14 +111,6 @@
           </div>
         </li>
       </ul>
-
-      <!-- not logged in -->
-      {{else}}
-      <div class="flex items-center gap-2">
-        <a href="../login-signup/login.html" class="hidden sm:block text-sm font-semibold px-4 md:px-6 py-2 md:py-3 text-blackish-green no-underline hover:bg-blackish-green/10 rounded-lg transition-colors">Login</a>
-        <a href="../login-signup/signup.html" class="text-xs md:text-sm font-semibold text-white bg-blackish-green px-4 md:px-6 py-2 md:py-3 rounded-lg no-underline hover:bg-black transition-colors">Sign up</a>
-      </div>
-      {{/if}}
     </div>
   </div>
 
@@ -135,14 +130,12 @@
         </a>
       </li>
       <!-- Favourites link visible on mobile if logged in -->
-      {{#if is_logged_in}}
       <li>
         <a href="../favorites.html" class="flex items-center gap-3 text-base text-blackish-green no-underline p-3 hover:bg-mint-cream rounded-md transition-colors {{#if favourites_active}} bg-mint-green/30 font-bold {{else}} font-semibold {{/if}}">
           <img src="/assets/image/heart_light.svg" alt="Heart" class="w-5 h-5" />
           Favourites
         </a>
       </li>
-      {{/if}}
     </ul>
   </nav>
 </header>
