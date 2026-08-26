@@ -15,185 +15,70 @@
 
   <body>
     <!-- HEADER -->
-    <header class="flex py-5 px-24 h-22 items-center shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] mb-12 bg-white">
-      <div class="flex justify-between items-center h-9 w-full">
-        <!-- Left Menu -->
-        <nav class="flex flex-1">
-          <ul class="m-0 flex list-none p-0 gap-8">
-            <!-- Active item -->
-            <li class="nav-item">
-              <img src="../assets/image/airplane_light.svg" alt="Flight" />
-              <a href="../flight-flow/find-flight.html" class="text-blackish-green no-underline">Find Flight</a>
-            </li>
-            <li class="nav-item">
-              <img src="../assets/image/bed_light.svg" alt="Stays" />
-              <a href="../hotel-flow/find-stays.html" class="text-blackish-green no-underline">Find Stays</a>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Logo Center -->
-        <div>
-          <a href="../index.html" class="flex items-center">
-            <img src="../assets/image/logo-small.png" alt="Golobe" />
-          </a>
-        </div>
-
-        <!-- Right Menu -->
-        <div class="flex flex-1 justify-end">
-          <ul class="m-0 flex list-none p-0 gap-8">
-            <li class="nav-item">
-              <img src="../assets/image/heart_light.svg" alt="Heart" />
-              <a href="../favorites.html" class="text-blackish-green no-underline">Favourites</a>
-            </li>
-            <li class="nav-item text-blackish-green">|</li>
-
-            <!-- Dropdown Container -->
-            <li class="group nav-item">
-              <a href="#" class="text-blackish-green no-underline flex items-center h-auto gap-2">
-                <div class="relative inline-flex">
-                  <img src="../assets/image/user-avt.png" alt="John D." />
-                  <img src="../assets/image/ellipse.svg" alt="" class="w-2.5 absolute bottom-px right-px" />
-                  <img src="../assets/image/arrow-down_slamon.svg" alt="" class="w-3 absolute bottom-0 right-0" />
-                </div>
-                John D.
-              </a>
-
-              <!-- User Menu -->
-              <div class="hidden group-hover:flex flex-col absolute p-8 right-0 top-full mt-5 w-72 max-w-xs rounded-xl gap-6 z-999 bg-white shadow-[0_2px_10px_0_rgba(0,0,0,0.05)] before:content-[''] before:w-full before:h-6 before:block before:absolute before:-top-5 before:left-0">
-                <div class="flex items-center gap-4">
-                  <img src="../assets/image/user-avt.svg" alt="John Doe." />
-                  <div class="flex flex-col w-full gap-1">
-                    <span class="text-base font-semibold text-blackish-green">John Doe.</span>
-                    <span class="text-sm font-normal text-blackish-green opacity-75">Online</span>
-                  </div>
-                </div>
-
-                <div class="h-px w-full bg-blackish-green opacity-25"></div>
-
-                <ul class="flex flex-col list-none p-0 gap-4">
-                  <li>
-                    <a href="#" class="dropdown-link">
-                      <img src="../assets/image/user_light.svg" alt="#" />
-                      My account
-                      <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="dropdown-link">
-                      <img src="../assets/image/card_light.png" alt="#" />
-                      Payments
-                      <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="dropdown-link">
-                      <img src="../assets/image/setting_light.png" alt="#" />
-                      Setting
-                      <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
-                    </a>
-                  </li>
-                </ul>
-
-                <div class="h-px w-full bg-blackish-green opacity-25"></div>
-
-                <ul class="flex flex-col list-none p-0 gap-4">
-                  <li>
-                    <a href="#" class="dropdown-link">
-                      <img src="../assets/image/support_light.png" alt="#" />
-                      Support
-                      <img src="../assets/image/chevron-forward.svg" alt="#" class="ml-auto" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="dropdown-link">
-                      <img src="../assets/image/logout_light.png" alt="#" />
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+    {{> header stays_active="nav-active" mb_class="mb-12" }}
 
     <!-- MAIN CONTENT -->
-    <main class="max-w-7xl w-11/12 mx-auto flex flex-col font-montserrat">
-      <!-- Cover Section -->
+    <main class="max-w-7xl w-11/12 mx-auto flex flex-col font-montserrat mb-20">
       <section class="relative w-full">
-        <img src="../assets/image/background-avt.png" alt="Cover Image" class="w-full h-80 md:h-88 rounded-3xl object-cover" />
-
-        <button class="absolute right-4 md:right-8 bottom-4 md:bottom-8 flex items-center gap-2 bg-mint-green py-2.5 px-4 rounded font-medium text-sm text-blackish-green transition-transform hover:-translate-y-1 shadow-sm z-10">
-          <img src="../assets/image/upload_light.svg" alt="Upload Icon" />
+        <img src="../assets/image/background-avt.png" alt="Cover Image" class="w-full h-48 sm:h-64 md:h-88 rounded-3xl object-cover" />
+        <button class="absolute top-4 sm:top-auto bottom-auto sm:bottom-4 md:bottom-8 right-4 md:right-8 flex items-center gap-2 bg-mint-green py-2 px-3 sm:py-2.5 sm:px-4 rounded font-medium text-xs sm:text-sm text-blackish-green transition-transform hover:-translate-y-1 shadow-sm z-10">
+          <img src="../assets/image/upload_light.svg" alt="Upload Icon" class="w-4 sm:w-auto" />
           Upload new cover
         </button>
       </section>
 
       <!-- Profile Card Section -->
-      <section class="relative flex flex-col items-center -mt-20">
+      <section class="relative flex flex-col items-center -mt-16 sm:-mt-20">
         <div class="relative">
-          <img src="../assets/image/user-avt_225x225.png" alt="John Doe" class="w-40 h-40 rounded-full border-4 border-slamon object-cover bg-white shadow-sm" />
-          <button class="absolute bottom-1 right-1 w-10 h-10 bg-slamon rounded-full flex items-center justify-center border-4 border-white transition-transform hover:-translate-y-1">
-            <img src="../assets/image/pen_light.svg" alt="Edit Avatar" />
+          <img src="../assets/image/user-avt_225x225.png" alt="John Doe" class="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-slamon object-cover bg-white shadow-sm relative z-20" />
+          <button class="absolute bottom-1 right-1 w-8 h-8 sm:w-10 sm:h-10 bg-slamon rounded-full flex items-center justify-center border-2 sm:border-4 border-white transition-transform hover:-translate-y-1 z-30">
+            <img src="../assets/image/pen_light.svg" alt="Edit Avatar" class="w-4 sm:w-auto" />
           </button>
         </div>
-
-        <h2 class="mt-4 text-2xl font-semibold text-blackish-green font-trade-gothic">John Doe.</h2>
-        <p class="mt-1 text-sm font-normal text-blackish-green/75">john.doe@gmail.com</p>
+        <h2 class="mt-4 text-xl sm:text-2xl font-semibold text-blackish-green font-trade-gothic text-center">John Doe.</h2>
+        <p class="mt-1 text-xs sm:text-sm font-normal text-blackish-green/75 text-center">john.doe@gmail.com</p>
       </section>
 
-      <!-- Tabs Navigation -->
-      <div class="relative grid grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-4 mt-10 w-full text-left">
-        <!-- Account Tab -->
-        <button class="hotel-listing__tab hotel-listing__tab--active flex items-center px-6 h-12 text-blackish-green" data-target="account-section">
-          <h3 class="text-base font-semibold leading-none m-0">Account</h3>
+      <!-- MAIN TABS NAVIGATION -->
+      <div class="relative grid grid-cols-3 bg-white rounded-xl shadow-[0_4px_16px_0_rgba(17,34,17,0.05)] py-2 sm:py-4 mt-8 sm:mt-10 w-full text-center sm:text-left">
+        <button class="main-tab main-tab--active flex justify-center sm:justify-start items-center px-2 sm:px-6 h-12 text-blackish-green cursor-pointer bg-transparent border-none" data-target="account-section">
+          <h3 class="text-xs sm:text-sm md:text-base font-semibold leading-none m-0">Account</h3>
         </button>
-
-        <!-- History Tab -->
-        <button onclick="window.location.href='account_history-flights.html'" class="hotel-listing__tab flex items-center px-6 h-12 border-x border-solid border-blackish-green/10 text-blackish-green hover:text-blackish-green transition-colors" data-target="history-section">
-          <h3 class="text-base font-semibold leading-none m-0">History</h3>
+        <button class="main-tab flex justify-center sm:justify-start items-center px-2 sm:px-6 h-12 border-0 border-x border-solid border-blackish-green/10 text-blackish-green cursor-pointer bg-transparent" data-target="history-section">
+          <h3 class="text-xs sm:text-sm md:text-base font-semibold leading-none m-0">History</h3>
         </button>
-
-        <!-- Payment methods Tab -->
-        <button onclick="window.location.href='account_payment-methods.html'" class="hotel-listing__tab flex items-center px-6 h-12 text-blackish-green hover:text-blackish-green transition-colors" data-target="payment-section">
-          <h3 class="text-base font-semibold leading-none m-0">Payment methods</h3>
+        <button class="main-tab flex justify-center sm:justify-start items-center px-2 sm:px-6 h-12 text-blackish-green cursor-pointer bg-transparent border-none" data-target="payment-section">
+          <h3 class="text-xs sm:text-sm md:text-base font-semibold leading-none m-0">Payment</h3>
         </button>
-
-        <!-- Active Indicator -->
-        <div class="slide-indicator absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-all duration-300 ease-out"></div>
+        <div class="main-tab-indicator absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-all duration-300 ease-out"></div>
       </div>
-      <!-- Account Details Box -->
-      <section class="mt-10" id="account-section">
-        <h2 class="text-[32px] font-bold text-blackish-green mb-6 font-trade-gothic">Account</h2>
 
-        <!-- Container -->
-        <div class="bg-white rounded-2xl shadow-sm p-6 md:p-8 flex flex-col gap-8">
+      <!-- SECTION 1: ACCOUNT DETAILS -->
+      <section id="account-section" class="account-content block mt-10 w-full">
+        <h2 class="text-2xl sm:text-[32px] font-bold text-blackish-green mb-6 font-trade-gothic m-0">Account</h2>
+
+        <div class="bg-white rounded-2xl shadow-sm p-4 sm:p-6 md:p-8 flex flex-col gap-6 sm:gap-8">
           <!-- Name -->
           <div class="flex flex-col md:flex-row justify-between md:items-center">
             <div class="flex flex-col gap-1.5">
-              <span class="text-sm font-normal text-blackish-green/75">Name</span>
-              <h4 class="text-lg font-semibold text-blackish-green m-0">John Doe</h4>
+              <span class="text-xs sm:text-sm font-normal text-blackish-green/75">Name</span>
+              <h4 class="text-base sm:text-lg font-semibold text-blackish-green m-0">John Doe</h4>
             </div>
-            <button class="mt-4 md:mt-0 flex items-center justify-center gap-2 px-4 py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-sm font-medium text-blackish-green w-full md:w-auto">
-              <img src="../assets/image/edit_light.svg" alt="Edit" />
-              Change
-            </button>
+            <button class="mt-3 md:mt-0 flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-xs sm:text-sm font-medium text-blackish-green w-full md:w-auto cursor-pointer"><img src="../assets/image/edit_light.svg" alt="Edit" /> Change</button>
           </div>
 
           <!-- Email -->
           <div class="flex flex-col md:flex-row justify-between md:items-center">
-            <div class="flex flex-col gap-1.5">
-              <span class="text-sm font-normal text-blackish-green/75">Email</span>
-              <h4 class="text-lg font-semibold text-blackish-green m-0">john.doe@gmail.com</h4>
+            <div class="flex flex-col gap-1.5 overflow-hidden">
+              <span class="text-xs sm:text-sm font-normal text-blackish-green/75">Email</span>
+              <h4 class="text-base sm:text-lg font-semibold text-blackish-green m-0 truncate">john.doe@gmail.com</h4>
             </div>
-            <div class="mt-4 md:mt-0 flex flex-col md:flex-row gap-4">
-              <button class="flex items-center justify-center gap-2 px-4 py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-sm font-medium text-blackish-green w-full md:w-auto">
+            <div class="mt-3 md:mt-0 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <button class="flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-xs sm:text-sm font-medium text-blackish-green w-full md:w-auto cursor-pointer">
                 <img src="../assets/image/add-circle_light.svg" alt="Add Email" />
                 Add another email
               </button>
-              <button class="flex items-center justify-center gap-2 px-4 py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-sm font-medium text-blackish-green w-full md:w-auto">
+              <button class="flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-xs sm:text-sm font-medium text-blackish-green w-full md:w-auto cursor-pointer">
                 <img src="../assets/image/edit_light.svg" alt="Edit" />
                 Change
               </button>
@@ -203,10 +88,10 @@
           <!-- Password -->
           <div class="flex flex-col md:flex-row justify-between md:items-center">
             <div class="flex flex-col gap-1.5">
-              <span class="text-sm font-normal text-blackish-green/75">Password</span>
-              <h4 class="text-lg font-semibold text-blackish-green m-0">************</h4>
+              <span class="text-xs sm:text-sm font-normal text-blackish-green/75">Password</span>
+              <h4 class="text-base sm:text-lg font-semibold text-blackish-green m-0">************</h4>
             </div>
-            <button class="mt-4 md:mt-0 flex items-center justify-center gap-2 px-4 py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-sm font-medium text-blackish-green w-full md:w-auto">
+            <button class="mt-3 md:mt-0 flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-xs sm:text-sm font-medium text-blackish-green w-full md:w-auto cursor-pointer">
               <img src="../assets/image/edit_light.svg" alt="Edit" />
               Change
             </button>
@@ -215,10 +100,10 @@
           <!-- Phone Number -->
           <div class="flex flex-col md:flex-row justify-between md:items-center">
             <div class="flex flex-col gap-1.5">
-              <span class="text-sm font-normal text-blackish-green/75">Phone number</span>
-              <h4 class="text-lg font-semibold text-blackish-green m-0">+1 000-000-0000</h4>
+              <span class="text-xs sm:text-sm font-normal text-blackish-green/75">Phone number</span>
+              <h4 class="text-base sm:text-lg font-semibold text-blackish-green m-0">+1 000-000-0000</h4>
             </div>
-            <button class="mt-4 md:mt-0 flex items-center justify-center gap-2 px-4 py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-sm font-medium text-blackish-green w-full md:w-auto">
+            <button class="mt-3 md:mt-0 flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-xs sm:text-sm font-medium text-blackish-green w-full md:w-auto cursor-pointer">
               <img src="../assets/image/edit_light.svg" alt="Edit" />
               Change
             </button>
@@ -227,10 +112,10 @@
           <!-- Address -->
           <div class="flex flex-col md:flex-row justify-between md:items-center">
             <div class="flex flex-col gap-1.5">
-              <span class="text-sm font-normal text-blackish-green/75">Address</span>
-              <h4 class="text-lg font-semibold text-blackish-green m-0">St 32 main downtown, Los Angeles, California, USA</h4>
+              <span class="text-xs sm:text-sm font-normal text-blackish-green/75">Address</span>
+              <h4 class="text-base sm:text-lg font-semibold text-blackish-green m-0">St 32 main downtown, Los Angeles, California, USA</h4>
             </div>
-            <button class="mt-4 md:mt-0 flex items-center justify-center gap-2 px-4 py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-sm font-medium text-blackish-green w-full md:w-auto">
+            <button class="mt-3 md:mt-0 flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-xs sm:text-sm font-medium text-blackish-green w-full md:w-auto cursor-pointer">
               <img src="../assets/image/edit_light.svg" alt="Edit" />
               Change
             </button>
@@ -239,114 +124,481 @@
           <!-- Date of Birth -->
           <div class="flex flex-col md:flex-row justify-between md:items-center">
             <div class="flex flex-col gap-1.5">
-              <span class="text-sm font-normal text-blackish-green/75">Date of birth</span>
-              <h4 class="text-lg font-semibold text-blackish-green m-0">01-01-1992</h4>
+              <span class="text-xs sm:text-sm font-normal text-blackish-green/75">Date of birth</span>
+              <h4 class="text-base sm:text-lg font-semibold text-blackish-green m-0">01-01-1992</h4>
             </div>
-            <button class="mt-4 md:mt-0 flex items-center justify-center gap-2 px-4 py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-sm font-medium text-blackish-green w-full md:w-auto">
+            <button class="mt-3 md:mt-0 flex items-center justify-center gap-2 px-4 py-2 sm:py-2.5 rounded border border-solid border-mint-green bg-transparent hover:bg-mint-cream transition-colors text-xs sm:text-sm font-medium text-blackish-green w-full md:w-auto cursor-pointer">
               <img src="../assets/image/edit_light.svg" alt="Edit" />
               Change
             </button>
           </div>
         </div>
       </section>
+
+      <!-- SECTION 2: HISTORY -->
+      <section id="history-section" class="account-content hidden mt-10 flex-col gap-6 w-full">
+        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 w-full">
+          <h2 class="text-2xl sm:text-[32px] font-bold text-blackish-green m-0 font-trade-gothic">Tickets/Bookings</h2>
+          <button class="flex items-center justify-between sm:justify-start w-full sm:w-auto gap-2 text-sm font-medium text-blackish-green hover:opacity-80 transition-opacity bg-transparent border border-blackish-green/20 sm:border-none p-2 sm:p-0 rounded cursor-pointer">Upcoming <img src="../assets/image/chevron_down.svg" alt="" class="w-4 h-4" /></button>
+        </div>
+
+        <!-- Sub Tabs (Flights / Stays) -->
+        <div class="relative grid grid-cols-2 bg-white rounded-xl shadow-sm text-center sm:text-left py-4 sm:py-6 w-full">
+          <button class="sub-tab sub-tab--active flex justify-center sm:justify-start items-center px-2 sm:px-6 h-12 gap-2 text-blackish-green text-sm sm:text-base font-semibold bg-transparent transition-colors border-none cursor-pointer" data-target="flights-list"><img src="../assets/image/airplane_light.svg" alt="Flight" class="w-5 h-5 sm:w-6 sm:h-6" /> Flights</button>
+          <button class="sub-tab flex justify-center sm:justify-start items-center px-2 sm:px-6 h-12 gap-2 border-0 border-l border-solid border-blackish-green/10 text-blackish-green text-sm sm:text-base font-semibold bg-transparent transition-colors cursor-pointer" data-target="stays-list"><img src="../assets/image/bed_light.svg" alt="Stays" class="w-5 h-5 sm:w-6 sm:h-6" /> Stays</button>
+          <div class="sub-indicator absolute bottom-0 left-0 h-1 bg-mint-green rounded-full transition-all duration-300 ease-out"></div>
+        </div>
+
+        <!-- 2.1 FLIGHTS LIST -->
+        <div id="flights-list" class="history-list-content flex flex-col gap-4 w-full">
+          <!-- TICKET FLIGHT 1 -->
+          <div class="bg-white rounded-xl p-4 md:p-6 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 shadow-sm">
+            <div class="flex items-center gap-4 w-full xl:w-auto">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg border border-mint-green flex items-center justify-center p-2 shrink-0">
+                <img src="../assets/image/image 40.png" alt="Emirates" class="max-w-full max-h-full object-contain" />
+              </div>
+              <div class="flex items-center justify-between w-full sm:gap-6 sm:w-auto">
+                <div class="flex flex-col gap-1 text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Newark(EWR)</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">12:00 pm</span>
+                </div>
+                <span class="text-blackish-green/60 font-semibold text-lg sm:text-xl shrink-0 mx-2 sm:mx-0">—</span>
+                <div class="flex flex-col gap-1 text-right sm:text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Newark(EWR)</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">6:00 pm</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden xl:block w-px h-12 bg-blackish-green/20"></div>
+
+            <div class="grid grid-cols-2 md:flex md:flex-row w-full xl:w-auto justify-between md:justify-start gap-4 md:gap-10 shrink-0">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/calendar_primary.svg" alt="Date" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Date</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">12-11-22</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Flight time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">Newark(EWR)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/door_primary.svg" alt="Gate" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Gate</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">A12</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/airplane-seat_primary.svg" alt="Seat" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Seat no.</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">128</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 shrink-0 w-full xl:w-auto xl:ml-auto justify-end mt-2 xl:mt-0">
+              <button class="w-full sm:w-auto bg-mint-green hover:bg-mint-green/80 transition-colors text-blackish-green text-xs sm:text-sm font-semibold py-3 px-6 rounded whitespace-nowrap border-none cursor-pointer shadow-sm">Download Ticket</button>
+              <button class="hidden sm:flex items-center justify-center border border-solid border-[#eaeaea] bg-white hover:bg-gray-50 rounded w-11 h-11 transition-colors shrink-0 shadow-sm cursor-pointer">
+                <img src="../assets/image/chevron-forward.svg" alt="View" class="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          <!-- TICKET FLIGHT 2 -->
+          <div class="bg-white rounded-xl p-4 md:p-6 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 shadow-sm">
+            <div class="flex items-center gap-4 w-full xl:w-auto">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg border border-mint-green flex items-center justify-center p-2 shrink-0">
+                <img src="../assets/image/image 40.png" alt="Emirates" class="max-w-full max-h-full object-contain" />
+              </div>
+              <div class="flex items-center justify-between w-full sm:gap-6 sm:w-auto">
+                <div class="flex flex-col gap-1 text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Newark(EWR)</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">12:00 pm</span>
+                </div>
+                <span class="text-blackish-green/60 font-semibold text-lg sm:text-xl shrink-0 mx-2 sm:mx-0">—</span>
+                <div class="flex flex-col gap-1 text-right sm:text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Newark(EWR)</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">6:00 pm</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden xl:block w-px h-12 bg-blackish-green/20"></div>
+
+            <div class="grid grid-cols-2 md:flex md:flex-row w-full xl:w-auto justify-between md:justify-start gap-4 md:gap-10 shrink-0">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/calendar_primary.svg" alt="Date" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Date</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">12-11-22</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Flight time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">Newark(EWR)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/door_primary.svg" alt="Gate" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Gate</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">A12</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/airplane-seat_primary.svg" alt="Seat" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Seat no.</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">128</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 shrink-0 w-full xl:w-auto xl:ml-auto justify-end mt-2 xl:mt-0">
+              <button class="w-full sm:w-auto bg-mint-green hover:bg-mint-green/80 transition-colors text-blackish-green text-xs sm:text-sm font-semibold py-3 px-6 rounded whitespace-nowrap border-none cursor-pointer shadow-sm">Download Ticket</button>
+              <button class="hidden sm:flex items-center justify-center border border-solid border-[#eaeaea] bg-white hover:bg-gray-50 rounded w-11 h-11 transition-colors shrink-0 shadow-sm cursor-pointer">
+                <img src="../assets/image/chevron-forward.svg" alt="View" class="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          <!-- TICKET FLIGHT 3 -->
+          <div class="bg-white rounded-xl p-4 md:p-6 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 shadow-sm">
+            <div class="flex items-center gap-4 w-full xl:w-auto">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg border border-mint-green flex items-center justify-center p-2 shrink-0">
+                <img src="../assets/image/image 40.png" alt="Emirates" class="max-w-full max-h-full object-contain" />
+              </div>
+              <div class="flex items-center justify-between w-full sm:gap-6 sm:w-auto">
+                <div class="flex flex-col gap-1 text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Newark(EWR)</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">12:00 pm</span>
+                </div>
+                <span class="text-blackish-green/60 font-semibold text-lg sm:text-xl shrink-0 mx-2 sm:mx-0">—</span>
+                <div class="flex flex-col gap-1 text-right sm:text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Newark(EWR)</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">6:00 pm</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden xl:block w-px h-12 bg-blackish-green/20"></div>
+
+            <div class="grid grid-cols-2 md:flex md:flex-row w-full xl:w-auto justify-between md:justify-start gap-4 md:gap-10 shrink-0">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/calendar_primary.svg" alt="Date" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Date</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">12-11-22</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Flight time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">Newark(EWR)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/door_primary.svg" alt="Gate" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Gate</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">A12</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/airplane-seat_primary.svg" alt="Seat" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Seat no.</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">128</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 shrink-0 w-full xl:w-auto xl:ml-auto justify-end mt-2 xl:mt-0">
+              <button class="w-full sm:w-auto bg-mint-green hover:bg-mint-green/80 transition-colors text-blackish-green text-xs sm:text-sm font-semibold py-3 px-6 rounded whitespace-nowrap border-none cursor-pointer shadow-sm">Download Ticket</button>
+              <button class="hidden sm:flex items-center justify-center border border-solid border-[#eaeaea] bg-white hover:bg-gray-50 rounded w-11 h-11 transition-colors shrink-0 shadow-sm cursor-pointer">
+                <img src="../assets/image/chevron-forward.svg" alt="View" class="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2.2 STAYS LIST -->
+        <div id="stays-list" class="history-list-content hidden flex-col gap-4 w-full">
+          <!-- TICKET STAY 1 -->
+          <div class="bg-white rounded-xl p-4 md:p-6 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 shadow-sm">
+            <div class="flex items-center gap-4 w-full xl:w-auto">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg border border-mint-green flex items-center justify-center p-2 shrink-0">
+                <img src="../assets/image/hotel-card-logo.png" alt="CVK Park Bosphorus" class="max-w-full max-h-full object-contain" />
+              </div>
+              <div class="flex items-center justify-between w-full sm:gap-6 sm:w-auto">
+                <div class="flex flex-col gap-1 text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Check-In</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">Thur, Dec 8</span>
+                </div>
+                <span class="text-blackish-green/60 font-semibold text-lg sm:text-xl shrink-0 mx-2 sm:mx-0">—</span>
+                <div class="flex flex-col gap-1 text-right sm:text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Check-Out</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">Fri, Dec 9</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden xl:block w-px h-12 bg-blackish-green/20"></div>
+
+            <div class="grid grid-cols-2 md:flex md:flex-row w-full xl:w-auto justify-between md:justify-start gap-4 md:gap-10 shrink-0">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Check-In time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">12:00pm</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Check-Out time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">11:30am</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/door_primary.svg" alt="Gate" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Room no.</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">On arrival</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 shrink-0 w-full xl:w-auto xl:ml-auto justify-end mt-2 xl:mt-0">
+              <button class="w-full sm:w-auto bg-mint-green hover:bg-mint-green/80 transition-colors text-blackish-green text-xs sm:text-sm font-semibold py-3 px-6 rounded whitespace-nowrap border-none cursor-pointer shadow-sm">Download Ticket</button>
+              <button class="hidden sm:flex items-center justify-center border border-solid border-[#eaeaea] bg-white hover:bg-gray-50 rounded w-11 h-11 transition-colors shrink-0 shadow-sm cursor-pointer">
+                <img src="../assets/image/chevron-forward.svg" alt="View" class="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          <!-- TICKET STAY 2 -->
+          <div class="bg-white rounded-xl p-4 md:p-6 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 shadow-sm">
+            <div class="flex items-center gap-4 w-full xl:w-auto">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg border border-mint-green flex items-center justify-center p-2 shrink-0">
+                <img src="../assets/image/hotel-card-logo.png" alt="CVK Park Bosphorus" class="max-w-full max-h-full object-contain" />
+              </div>
+              <div class="flex items-center justify-between w-full sm:gap-6 sm:w-auto">
+                <div class="flex flex-col gap-1 text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Check-In</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">Thur, Dec 8</span>
+                </div>
+                <span class="text-blackish-green/60 font-semibold text-lg sm:text-xl shrink-0 mx-2 sm:mx-0">—</span>
+                <div class="flex flex-col gap-1 text-right sm:text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Check-Out</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">Fri, Dec 9</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden xl:block w-px h-12 bg-blackish-green/20"></div>
+
+            <div class="grid grid-cols-2 md:flex md:flex-row w-full xl:w-auto justify-between md:justify-start gap-4 md:gap-10 shrink-0">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Check-In time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">12:00pm</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Check-Out time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">11:30am</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/door_primary.svg" alt="Gate" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Room no.</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">On arrival</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 shrink-0 w-full xl:w-auto xl:ml-auto justify-end mt-2 xl:mt-0">
+              <button class="w-full sm:w-auto bg-mint-green hover:bg-mint-green/80 transition-colors text-blackish-green text-xs sm:text-sm font-semibold py-3 px-6 rounded whitespace-nowrap border-none cursor-pointer shadow-sm">Download Ticket</button>
+              <button class="hidden sm:flex items-center justify-center border border-solid border-[#eaeaea] bg-white hover:bg-gray-50 rounded w-11 h-11 transition-colors shrink-0 shadow-sm cursor-pointer">
+                <img src="../assets/image/chevron-forward.svg" alt="View" class="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          <!-- TICKET STAY 3 -->
+          <div class="bg-white rounded-xl p-4 md:p-6 flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6 shadow-sm">
+            <div class="flex items-center gap-4 w-full xl:w-auto">
+              <div class="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-lg border border-mint-green flex items-center justify-center p-2 shrink-0">
+                <img src="../assets/image/hotel-card-logo.png" alt="CVK Park Bosphorus" class="max-w-full max-h-full object-contain" />
+              </div>
+              <div class="flex items-center justify-between w-full sm:gap-6 sm:w-auto">
+                <div class="flex flex-col gap-1 text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Check-In</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">Thur, Dec 8</span>
+                </div>
+                <span class="text-blackish-green/60 font-semibold text-lg sm:text-xl shrink-0 mx-2 sm:mx-0">—</span>
+                <div class="flex flex-col gap-1 text-right sm:text-left">
+                  <span class="text-xs sm:text-sm text-blackish-green/75 leading-none">Check-Out</span>
+                  <span class="text-base sm:text-xl font-semibold text-blackish-green leading-none m-0">Fri, Dec 9</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="hidden xl:block w-px h-12 bg-blackish-green/20"></div>
+
+            <div class="grid grid-cols-2 md:flex md:flex-row w-full xl:w-auto justify-between md:justify-start gap-4 md:gap-10 shrink-0">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Check-In time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">12:00pm</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/timer_primary.svg" alt="Time" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Check-Out time</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">11:30am</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
+                  <img src="../assets/image/door_primary.svg" alt="Gate" class="w-5 sm:w-auto" />
+                  <div class="flex flex-col">
+                    <span class="text-[10px] sm:text-xs font-semibold text-blackish-green/60 leading-none">Room no.</span>
+                    <span class="text-sm sm:text-base font-medium text-blackish-green leading-none">On arrival</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 shrink-0 w-full xl:w-auto xl:ml-auto justify-end mt-2 xl:mt-0">
+              <button class="w-full sm:w-auto bg-mint-green hover:bg-mint-green/80 transition-colors text-blackish-green text-xs sm:text-sm font-semibold py-3 px-6 rounded whitespace-nowrap border-none cursor-pointer shadow-sm">Download Ticket</button>
+              <button class="hidden sm:flex items-center justify-center border border-solid border-[#eaeaea] bg-white hover:bg-gray-50 rounded w-11 h-11 transition-colors shrink-0 shadow-sm cursor-pointer">
+                <img src="../assets/image/chevron-forward.svg" alt="View" class="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: PAYMENT METHODS -->
+      <section id="payment-section" class="account-content hidden mt-10 flex-col gap-4 w-full">
+        <h2 class="text-2xl sm:text-3xl font-bold text-blackish-green m-0 font-trade-gothic">Payment methods</h2>
+        <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm w-full flex flex-col md:flex-row gap-4 sm:gap-6">
+          <div class="relative bg-mint-green rounded-2xl p-5 sm:p-6 w-full sm:max-w-80 h-44 sm:h-50 flex flex-col justify-between shrink-0 shadow-sm">
+            <div class="flex justify-between items-start">
+              <div class="flex flex-col text-blackish-green"><span class="text-lg sm:text-2xl font-semibold tracking-widest leading-none">**** **** ****</span><span class="text-xl sm:text-3xl font-bold leading-none mt-1 sm:mt-0">4321</span></div>
+              <button class="bg-transparent border-none text-blackish-green hover:opacity-75 transition-opacity cursor-pointer"><img src="../assets/image/bin_light.svg" alt="Trash" class="w-5 h-5 sm:w-auto" /></button>
+            </div>
+            <div class="flex justify-between items-end">
+              <div class="flex flex-col text-blackish-green"><span class="text-[10px] sm:text-xs font-medium leading-none">Valid Thru</span><span class="text-lg sm:text-xl font-semibold leading-none mt-1">02/27</span></div>
+              <div><img src="../assets/image/visa_50x33_light.svg" alt="VISA" class="w-10 sm:w-auto" /></div>
+            </div>
+          </div>
+
+          <div id="open-popup-btn" class="block cursor-pointer w-full sm:max-w-80 h-44 sm:h-48 shrink-0">
+            <div class="flex flex-col gap-2 justify-center items-center h-full border border-dashed border-mint-green rounded-2xl hover:bg-mint-green/10 transition-colors">
+              <img src="../assets/image/add_circle.svg" alt="Add new card" class="w-12 h-12 sm:w-16 sm:h-16" />
+              <p class="text-xs font-medium text-blackish-green/75 m-0">Add a new card</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL OVERLAY ADD CARD -->
+      <div id="upload-popup" class="hidden p-4 sm:p-2 fixed inset-0 bg-blackish-green/40 items-center justify-center z-[1000]">
+        <div class="flex flex-col relative bg-white p-6 sm:p-10 md:p-16 w-full max-w-160 rounded-xl overflow-y-auto max-h-[95vh] sm:max-h-[90vh]">
+          <button type="button" class="close-x absolute top-4 right-4 sm:static sm:self-end bg-transparent border-none cursor-pointer hover:opacity-75 transition-opacity">
+            <img src="../assets/image/close_light.svg" alt="close" class="w-4 h-4 pointer-events-none" />
+          </button>
+
+          <h2 class="font-trade-gothic text-2xl sm:text-4xl font-bold leading-none mb-8 sm:mb-12 mt-4 sm:mt-0 text-center sm:text-left">Add a new card</h2>
+
+          <form id="add-card-form" class="flex flex-col gap-4 sm:gap-6">
+            <div class="relative flex flex-col">
+              <label class="floating-label text-xs sm:text-sm">Card Number</label>
+              <input type="text" id="card-number" class="modal-input py-2 sm:py-3" placeholder="XXXX XXXX XXXX XXXX" />
+              <img src="../assets/image/Visa_blue.svg" alt="visa" class="absolute top-1/2 sm:top-6 right-3 -translate-y-1/2 w-8 sm:w-auto" />
+              <span id="err-card-number" class="text-[10px] sm:text-xs text-slamon hidden mt-1">Vui lòng nhập đủ 16 số thẻ.</span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-between">
+              <div class="relative flex flex-col w-full">
+                <label class="floating-label text-xs sm:text-sm">Exp. Date</label>
+                <input type="text" id="exp-date" class="modal-input py-2 sm:py-3" placeholder="MM/YY" />
+                <span id="err-exp-date" class="text-[10px] sm:text-xs text-slamon hidden mt-1">Định dạng không đúng.</span>
+              </div>
+              <div class="relative flex flex-col w-full">
+                <label class="floating-label text-xs sm:text-sm">CVC</label>
+                <input type="password" id="cvc-number" class="modal-input py-2 sm:py-3" placeholder="3 hoặc 4 số" maxlength="4" />
+                <span id="err-cvc-number" class="text-[10px] sm:text-xs text-slamon hidden mt-1">Nhập 3 hoặc 4 số.</span>
+              </div>
+            </div>
+
+            <div class="relative flex flex-col">
+              <label class="floating-label text-xs sm:text-sm">Name on Card</label>
+              <input type="text" id="card-name" class="modal-input py-2 sm:py-3" placeholder="Tên chủ thẻ" />
+              <span id="err-card-name" class="text-[10px] sm:text-xs text-slamon hidden mt-1">Không được để trống.</span>
+            </div>
+
+            <div class="relative flex flex-col">
+              <label class="floating-label text-xs sm:text-sm">Country or Region</label>
+              <input type="text" id="country-region" name="country" class="modal-input py-2 sm:py-3" value="United-States" />
+            </div>
+
+            <div class="flex items-start sm:items-center gap-2 mt-2">
+              <input type="checkbox" id="save-info" class="w-5 h-5 shrink-0 border-2 border-blackish-green rounded-[3px] appearance-none cursor-pointer checked:bg-[url('../image/checkbox_light.svg')] checked:bg-[length:24px_24px] checked:bg-center transition-all duration-100 ease-in mt-0.5 sm:mt-0" />
+              <label for="save-info" class="text-xs sm:text-sm font-medium leading-tight sm:leading-none text-blackish-green cursor-pointer">Securely save my information for 1-click checkout</label>
+            </div>
+          </form>
+
+          <button type="button" id="btn-modal-add-card" class="btn-primary py-3 sm:py-4 mt-6 sm:mt-10 mb-4 block text-center border-none cursor-pointer text-sm sm:text-base">Add Card</button>
+          <p class="text-[10px] sm:text-xs font-normal leading-tight sm:leading-none text-center opacity-75 text-blackish-green m-0">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms.</p>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="w-full bg-white">
-      <div class="relative bg-mint-green pt-40 pb-8 mt-44 lg:pt-56 lg:pb-16 lg:mt-64">
-        <!-- Newsletter Card -->
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col md:flex-row justify-between items-center w-11/12 lg:w-full lg:max-w-308 bg-mint-green-light rounded-3xl p-6 lg:px-6 lg:py-0 text-center md:text-left shadow-lg">
-          <div class="flex flex-col justify-between py-6 w-full lg:w-auto">
-            <h2 class="font-trade-gothic text-4xl lg:text-5xl font-bold text-blackish-green leading-tight mb-6">Subscribe<br />Newsletter</h2>
+    {{> footer }}
 
-            <div class="flex flex-col gap-2 mb-3">
-              <h4 class="font-trade-gothic text-xl font-bold text-blackish-green opacity-80">The Travel</h4>
-              <p class="font-montserrat text-base font-medium text-blackish-green leading-none opacity-70">Get inspired! Receive travel discounts, tips and behind the scenes stories.</p>
-            </div>
-
-            <form class="flex flex-col md:flex-row gap-4 justify-between mt-4">
-              <input type="email" placeholder="Your email address" required class="flex-1 bg-white leading-none py-4 px-5 rounded-lg border-none outline-none text-base font-normal text-blackish-green" />
-              <button type="submit" class="font-montserrat text-sm font-semibold bg-blackish-green text-white py-4 px-7 rounded-lg transition-colors hover:opacity-80">Subscribe</button>
-            </form>
-          </div>
-
-          <div class="hidden md:block self-end">
-            <img src="../assets/image/mailbox.svg" alt="Mailbox Illustration" class="max-w-sm h-auto block" />
-          </div>
-        </div>
-
-        <!-- Footer Container (Chứa Brand và Links) -->
-        <div class="flex flex-col md:flex-row justify-between w-11/12 lg:w-full lg:max-w-308 mx-auto gap-8 lg:gap-0">
-          <!-- Footer Brand -->
-          <div class="flex flex-col gap-6">
-            <div class="logo">
-              <img src="../assets/image/Logo_dark.svg" alt="Golobe Logo" class="h-9 w-auto block" />
-            </div>
-            <div class="flex justify-between md:gap-4">
-              <img src="../assets/image/facebook_light.svg" alt="Facebook" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/twitter_light.svg" alt="Twitter" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/youtube_light.svg" alt="Youtube" class="cursor-pointer transition-opacity hover:opacity-80" />
-              <img src="../assets/image/instagram_lilght.svg" alt="Instagram" class="cursor-pointer transition-opacity hover:opacity-80" />
-            </div>
-          </div>
-
-          <!-- Footer Links -->
-          <div class="flex flex-wrap lg:flex-nowrap gap-y-6 gap-x-4 lg:gap-6">
-            <!-- Link Column 1 -->
-            <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Destinations</h4>
-              <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Canada</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Alaska</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">France</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Iceland</a></li>
-              </ul>
-            </div>
-
-            <!-- Link Column 2 -->
-            <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Our Activities</h4>
-              <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Northern Lights</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Cruising & sailing</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Multi-activities</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Kayaing</a></li>
-              </ul>
-            </div>
-
-            <!-- Link Column 3 -->
-            <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Travel Blogs</h4>
-              <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Sri Lanks Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Peru Travel Guide</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Bali Travel Guide</a></li>
-              </ul>
-            </div>
-
-            <!-- Link Column 4 -->
-            <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">About Us</h4>
-              <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
-              </ul>
-            </div>
-
-            <!-- Link Column 5 -->
-            <div class="w-5/12 lg:w-44">
-              <h4 class="text-lg font-bold text-blackish-green mb-4">Contact Us</h4>
-              <ul class="flex flex-col gap-4 list-none p-0 m-0">
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Our Story</a></li>
-                <li><a href="#" class="text-blackish-green/80 text-sm font-medium hover:text-blackish-green">Work with us</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script type="module" src="../assets/js/hotel-listing.js"></script>
+    <script type="module" src="../assets/js/main.js"></script>
   </body>
 </html>

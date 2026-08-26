@@ -53,54 +53,55 @@
             <div class="flex flex-col gap-6">
               <!-- First Name & Last Name -->
               <div class="flex flex-col md:flex-row gap-6 w-full">
-                <div class="relative flex-1 flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                  <label for="signup-firstname" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">First Name</label>
-                  <input type="text" id="signup-firstname" placeholder="John" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                <div class="relative flex-1 block border border-input-border rounded-md px-4 focus-within:border-mint-green transition-colors">
+                  <label for="signup-firstname" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">First Name</label>
+                  <input type="text" id="signup-firstname" placeholder="John" class="block w-full bg-transparent border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green" />
                 </div>
-                <div class="relative flex-1 flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                  <label for="signup-lastname" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Last Name</label>
-                  <input type="text" id="signup-lastname" placeholder="Doe" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                <div class="relative flex-1 block border border-input-border rounded-md px-4 focus-within:border-mint-green transition-colors">
+                  <label for="signup-lastname" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Last Name</label>
+                  <input type="text" id="signup-lastname" placeholder="Doe" class="block w-full bg-transparent border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green" />
                 </div>
               </div>
 
               <!-- Email & Phone Number -->
               <div class="flex flex-col md:flex-row gap-6 w-full">
-                <div class="relative flex-1 flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                  <label for="signup-email" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Email</label>
-                  <input type="email" id="signup-email" placeholder="john.doe@gmail.com" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                <div class="relative flex-1 block border border-input-border rounded-md px-4 focus-within:border-mint-green transition-colors">
+                  <label for="signup-email" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Email</label>
+                  <input type="email" id="signup-email" placeholder="john.doe@gmail.com" class="block w-full bg-transparent border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green" />
                 </div>
-                <div class="relative flex-1 flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                  <label for="signup-phone" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Phone Number</label>
-                  <input type="tel" id="signup-phone" placeholder="0123456789" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+                <div class="relative flex-1 block border border-input-border rounded-md px-4 focus-within:border-mint-green transition-colors">
+                  <label for="signup-phone" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Phone Number</label>
+                  <input type="tel" id="signup-phone" placeholder="0123456789" class="block w-full bg-transparent border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green" />
                 </div>
               </div>
 
               <!-- Password Input -->
-              <div class="relative flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                <label for="signup-password" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Password</label>
-                <input type="password" id="signup-password" placeholder="••••••••" class="w-full border-none outline-none text-base font-bold tracking-widest text-blackish-green bg-transparent" />
-                <button type="button" class="btn-toggle-password ml-2 w-6 h-6 flex items-center justify-center cursor-pointer shrink-0 border-none bg-transparent">
+              <div class="relative flex items-center justify-between gap-2 border border-input-border rounded-md px-4 focus-within:border-mint-green transition-colors">
+                <label for="signup-password" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Password</label>
+                <input type="password" id="signup-password" placeholder="••••••••" class="block w-full bg-transparent border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-bold tracking-widest text-blackish-green" />
+                <button type="button" class="btn-toggle-password w-6 h-6 shrink-0 flex items-center justify-center cursor-pointer border-none bg-transparent p-0 m-0">
                   <img src="../assets/image/eye-off_light.svg" alt="Toggle Password" class="w-full h-full opacity-75 hover:opacity-100 transition-opacity" />
                 </button>
               </div>
 
               <!-- Confirm Password Input -->
-              <div class="relative flex items-center border border-input-border rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                <label for="signup-confirm-password" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Confirm Password</label>
-                <input type="password" id="signup-confirm-password" placeholder="••••••••" class="w-full border-none outline-none text-base font-bold tracking-widest text-blackish-green bg-transparent" />
-                <button type="button" class="btn-toggle-password ml-2 w-6 h-6 flex items-center justify-center cursor-pointer shrink-0 border-none bg-transparent">
+              <div class="relative flex items-center justify-between gap-2 border border-input-border rounded-md px-4 focus-within:border-mint-green transition-colors">
+                <label for="signup-confirm-password" class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Confirm Password</label>
+                <input type="password" id="signup-confirm-password" placeholder="••••••••" class="block w-full bg-transparent border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-bold tracking-widest text-blackish-green" />
+                <button type="button" class="btn-toggle-password w-6 h-6 shrink-0 flex items-center justify-center cursor-pointer border-none bg-transparent p-0 m-0">
                   <img src="../assets/image/eye-off_light.svg" alt="Toggle Password" class="w-full h-full opacity-75 hover:opacity-100 transition-opacity" />
                 </button>
               </div>
 
               <!-- Options: Agree to Terms -->
-              <div class="flex items-center">
-                <label class="flex items-center gap-2 cursor-pointer group">
-                  <input type="checkbox" id="signup-terms" class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:bg-[url('../image/checkbox_light.svg')] bg-center bg-no-repeat transition-all cursor-pointer" />
-                  <span class="text-sm font-medium text-blackish-green mt-0.5">I agree to all the <a href="#" class="text-slamon hover:underline no-underline">Terms</a> and <a href="#" class="text-slamon hover:underline no-underline">Privacy Policies</a></span>
+              <div class="flex items-start mt-2">
+                <label class="flex items-start sm:items-center gap-2 cursor-pointer group w-full">
+                  <input type="checkbox" id="signup-terms" class="shrink-0 mt-0.5 sm:mt-0 appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:bg-[url('../image/checkbox_light.svg')] bg-center bg-no-repeat transition-all cursor-pointer" />
+                  <span class="text-sm font-medium text-blackish-green leading-tight">I agree to all the <a href="#" class="text-slamon hover:underline no-underline">Terms</a> and <a href="#" class="text-slamon hover:underline no-underline">Privacy Policies</a></span>
                 </label>
               </div>
             </div>
+
             <!-- 3. Button & Login -->
             <div class="flex flex-col gap-4">
               <button type="button" id="btn-signup" class="flex items-center justify-center w-full h-12 bg-mint-green hover:bg-mint-green/80 text-blackish-green text-sm font-semibold rounded transition-colors cursor-pointer border-none">Create account</button>

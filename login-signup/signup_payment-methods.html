@@ -50,45 +50,45 @@
         <form class="flex flex-col gap-8 w-full -mt-4" action="account_payment-methods.html" method="post">
           <div class="flex flex-col gap-6">
             <!-- Card Number -->
-            <div class="relative flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Card Number</label>
-              <input type="text" value="4321 4321 4321 4321" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+            <div class="relative flex items-center justify-between gap-2 border border-blackish-green/40 rounded-md px-4 focus-within:border-mint-green transition-colors">
+              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Card Number</label>
+              <input type="text" value="4321 4321 4321 4321" class="block w-full border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green bg-transparent leading-normal" />
               <img src="../assets/image/Visa_blue.svg" alt="Visa" class="w-10 h-auto object-contain shrink-0" />
             </div>
 
             <!-- Exp. Date & CVC -->
             <div class="flex flex-col md:flex-row gap-6 w-full">
               <!-- Exp. Date -->
-              <div class="relative flex-1 flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Exp. Date</label>
-                <input type="text" value="02/27" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+              <div class="relative flex-1 block border border-blackish-green/40 rounded-md px-4 focus-within:border-mint-green transition-colors">
+                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Exp. Date</label>
+                <input type="text" value="02/27" class="block w-full border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green bg-transparent leading-normal" />
               </div>
 
               <!-- CVC -->
-              <div class="relative flex-1 flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">CVC</label>
-                <input type="password" value="123" class="w-full border-none outline-none text-base font-medium text-blackish-green tracking-widest bg-transparent" />
+              <div class="relative flex-1 block border border-blackish-green/40 rounded-md px-4 focus-within:border-mint-green transition-colors">
+                <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">CVC</label>
+                <input type="password" value="123" class="block w-full border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green tracking-widest bg-transparent leading-normal" />
               </div>
             </div>
 
             <!-- Name on Card -->
-            <div class="relative flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Name on Card</label>
-              <input type="text" value="John Doe" class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent" />
+            <div class="relative block border border-blackish-green/40 rounded-md px-4 focus-within:border-mint-green transition-colors">
+              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Name on Card</label>
+              <input type="text" value="John Doe" class="block w-full border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green bg-transparent leading-normal" />
             </div>
 
             <!-- Country or Region -->
-            <div class="relative flex items-center border border-blackish-green/40 rounded-md px-4 h-14 focus-within:border-mint-green transition-colors">
-              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green">Country or Region</label>
-              <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none pr-8">
+            <div class="relative block border border-blackish-green/40 rounded-md px-4 focus-within:border-mint-green transition-colors">
+              <label class="absolute -top-2.5 left-3 bg-white px-1 text-sm font-medium text-blackish-green z-10">Country or Region</label>
+              <select class="block w-full border-none outline-none focus:ring-0 p-0 m-0 py-4 text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none pr-8 leading-normal">
                 <option value="us">United States</option>
                 <option value="vn">Vietnam</option>
               </select>
-              <img src="../assets/image/chevron_down.svg" alt="Dropdown" class="absolute right-3 w-5 h-5 pointer-events-none" />
+              <img src="../assets/image/chevron_down.svg" alt="Dropdown" class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none" />
             </div>
 
-            <label class="flex items-center gap-3 cursor-pointer group">
-              <input type="checkbox" checked class="appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:bg-[url('../image/checkbox_light.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
+            <label class="flex items-start sm:items-center gap-3 cursor-pointer group mt-2">
+              <input type="checkbox" checked class="mt-0.5 sm:mt-0 appearance-none w-5 h-5 border-2 border-blackish-green rounded-sm checked:bg-[url('../image/checkbox_light.svg')] bg-center bg-no-repeat transition-all cursor-pointer shrink-0" />
               <span class="text-sm font-medium text-blackish-green leading-tight">Securely save my information for 1-click checkout</span>
             </label>
           </div>
