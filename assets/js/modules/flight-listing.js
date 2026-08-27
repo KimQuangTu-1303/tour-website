@@ -241,7 +241,7 @@ export function initFlightListing() {
 
   async function fetchFlightTickets() {
     try {
-      // Ép công cụ build nhận diện file JSON bằng URL động
+
       const jsonUrl = new URL('../../data/flights.json', import.meta.url).href;
       
       const response = await fetch(jsonUrl);
@@ -264,13 +264,13 @@ export function initFlightListing() {
     if (!container || !template) return;
 
     container.innerHTML = "";
-    const fragment = document.createDocumentFragment(); // Tối ưu hóa render
+    const fragment = document.createDocumentFragment();
 
     ticketsData.forEach((ticket) => {
       const clone = template.content.cloneNode(true);
       const logoImg = clone.querySelector(".ticket-card__airline-logo");
       if (ticket.airlineLogo) {
-        let imagePath = ticket.airlineLogo.replace(/^(\.\.\/)+/, ''); // Loại bỏ các dấu ../
+        let imagePath = ticket.airlineLogo.replace(/^(\.\.\/)+/, ''); 
         if (!imagePath.startsWith('/')) {
           imagePath = '/' + imagePath;
         }
@@ -279,7 +279,7 @@ export function initFlightListing() {
           const resolvedLogoUrl = new URL(`../../${imagePath.replace('/assets/', '')}`, import.meta.url).href;
           logoImg.src = resolvedLogoUrl;
         } catch (e) {
-          logoImg.src = ticket.airlineLogo; // Fallback nếu lỗi
+          logoImg.src = ticket.airlineLogo; 
         }
       }
       logoImg.alt = ticket.airlineName || "Airline";
