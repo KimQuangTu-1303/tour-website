@@ -268,11 +268,8 @@ export function initFlightListing() {
 
     ticketsData.forEach((ticket) => {
       const clone = template.content.cloneNode(true);
-
-      // Xử lý đường dẫn ảnh hãng bay bằng new URL để chống lỗi 404 khi build lên Vercel
       const logoImg = clone.querySelector(".ticket-card__airline-logo");
       if (ticket.airlineLogo) {
-        // Nếu trong JSON lưu đường dẫn kiểu relative như "../image/...", ta chuẩn hóa lại
         let imagePath = ticket.airlineLogo.replace(/^(\.\.\/)+/, ''); // Loại bỏ các dấu ../
         if (!imagePath.startsWith('/')) {
           imagePath = '/' + imagePath;
