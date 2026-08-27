@@ -122,14 +122,15 @@
         </div>
 
         <!-- Trip -->
-          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-2 focus-within:border-mint-green transition-colors bg-white">
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-2 focus-within:border-mint-green focus-within:ring-1 focus-within:ring-mint-green transition-all bg-white group">
             <label class="floating-label" for="trip">Trip</label>
             <div class="flex items-center justify-between w-full gap-3 relative">
               <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none z-10" id="trip" name="trip">
-                <option value="">Return</option>
-                <option value="one-way">One Way</option>
+                <option value="" class="py-2 text-blackish-green">Return</option>
+                <option value="one-way" class="py-2 text-blackish-green">One Way</option>
               </select>
-              <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0 pointer-events-none absolute right-0" />
+              <!-- Icon mũi tên với hiệu ứng group-focus để tạo chuyển động tinh tế -->
+              <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0 pointer-events-none transition-transform duration-200 group-focus-within:rotate-180" />
             </div>
           </div>
 
