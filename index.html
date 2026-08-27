@@ -122,16 +122,16 @@
         </div>
 
         <!-- Trip -->
-        <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-2 focus-within:border-mint-green transition-colors bg-white">
-          <label class="floating-label" for="trip">Trip</label>
-          <div class="flex items-center justify-between w-full gap-3">
-            <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none" id="trip" name="trip">
-              <option value="">Return</option>
-              <option value="one-way">One Way</option>
-            </select>
-            <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0" />
+          <div class="relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-2 focus-within:border-mint-green transition-colors bg-white">
+            <label class="floating-label" for="trip">Trip</label>
+            <div class="flex items-center justify-between w-full gap-3 relative">
+              <select class="w-full border-none outline-none text-base font-medium text-blackish-green bg-transparent cursor-pointer appearance-none z-10" id="trip" name="trip">
+                <option value="">Return</option>
+                <option value="one-way">One Way</option>
+              </select>
+              <img src="assets/image/chevron_down.svg" alt="expand icon" class="w-6 h-6 shrink-0 pointer-events-none absolute right-0" />
+            </div>
           </div>
-        </div>
 
         <!-- Depart - Return -->
         <div class="input-group relative flex items-center border border-input-border rounded-lg px-4 h-14 lg:col-span-4 focus-within:border-mint-green transition-colors bg-white">
