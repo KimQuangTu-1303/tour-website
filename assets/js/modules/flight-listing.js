@@ -241,14 +241,20 @@ export function initFlightListing() {
 
   async function fetchFlightTickets() {
     try {
-      const response = await fetch("flights.json?v=" + new Date().getTime());
-      if (!response.ok) return;
+      // Ép công cụ build nhận diện file JSON bằng URL động
+      const jsonUrl = new URL('../../data/flights.json', import.meta.url).href;
+      
+      const response = await fetch(jsonUrl);
+      if (!response.ok) {
+        console.log("Lỗi fetch: Không lấy được dữ liệu");
+        return;
+      }
 
       allFlights = await response.json();
       updateTabSubtitles();
       runFlightFilter();
     } catch (error) {
-      console.log("File JSON chuyến bay không tồn tại hoặc không ở trang danh sách:", error);
+      console.log("File JSON chuyến bay không tồn tại hoặc lỗi cú pháp:", error);
     }
   }
 
