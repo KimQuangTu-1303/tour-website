@@ -269,8 +269,24 @@ export function initFlightListing() {
     ticketsData.forEach((ticket) => {
       const clone = template.content.cloneNode(true);
 
-      clone.querySelector(".ticket-card__airline-logo").src = ticket.airlineLogo || "";
-      clone.querySelector(".ticket-card__airline-logo").alt = ticket.airlineName || "Airline";
+      // Xử lý đường dẫn ảnh hãng bay bằng new URL để chống lỗi 404 khi build lên Vercel
+      const logoImg = clone.querySelector(".ticket-card__airline-logo");
+      if (ticket.airlineLogo) {
+        // Nếu trong JSON lưu đường dẫn kiểu relative như "../image/...", ta chuẩn hóa lại
+        let imagePath = ticket.airlineLogo.replace(/^(\.\.\/)+/, ''); // Loại bỏ các dấu ../
+        if (!imagePath.startsWith('/')) {
+          imagePath = '/' + imagePath;
+        }
+        
+        // Dùng URL động để trỏ chuẩn xác vào thư mục assets/image/ sau khi build
+        try {
+          const resolvedLogoUrl = new URL(`../../${imagePath.replace('/assets/', '')}`, import.meta.url).href;
+          logoImg.src = resolvedLogoUrl;
+        } catch (e) {
+          logoImg.src = ticket.airlineLogo; // Fallback nếu lỗi
+        }
+      }
+      logoImg.alt = ticket.airlineName || "Airline";
       clone.querySelector(".ticket-card__score").textContent = ticket.rating;
       clone.querySelector(".ticket-card__rating-text").textContent = ticket.ratingText;
       clone.querySelector(".ticket-card__review-count").textContent = `${ticket.reviewsCount} reviews`;
