@@ -20,24 +20,64 @@
     <section class="relative flex flex-col items-center lg:block mb-12 lg:mb-56 w-full px-4 lg:px-7 pt-4 lg:pt-7">
       <!-- 1. HERO BANNER -->
       <header class="relative w-full h-150 bg-cover bg-center bg-no-repeat pb-24 lg:pb-40 rounded-3xl overflow-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(&quot;./assets/image/home-banner.png&quot;)">
-        <!-- Navbar -->
-        <nav class="px-6 py-6 flex items-center justify-between relative z-20">
-          <div class="flex items-center gap-8">
-            <a href="flight-flow/find-flight.html" class="flex items-center gap-2 text-sm text-white font-medium hover:text-teal-300 transition">
-              <img src="assets/image/Vector-plane.png" alt="Plane" class="w-5 h-5 object-contain" />
-              Find Flights
-            </a>
-            <a href="hotel-flow/find-stays.html" class="flex items-center gap-2 text-white font-medium hover:text-teal-300 transition">
-              <img src="assets/image/Vector-bed.png" alt="Bed" class="w-5 h-5 object-contain" />
-              Find Stays
-            </a>
+       <!-- Navbar -->
+        <nav class="px-4 py-4 flex items-center justify-between relative z-50 bg-transparent">
+          
+          <!-- BÊN TRÁI: Cụm chứa Nút 3 gạch & Menu Dropdown -->
+          <div class="flex items-center relative">
+            <!-- Nút 3 gạch -->
+            <button id="mobile-menu-button" type="button" class="lg:hidden text-white text-2xl focus:outline-none cursor-pointer p-2">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- 👉 MENU XỔ XUỐNG (Nằm ngay dưới nút 3 gạch, rộng 240px) -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 mt-4 w-[240px] bg-white text-blackish-green px-5 py-5 flex flex-col gap-5 rounded-2xl shadow-xl border border-gray-100 lg:hidden">
+              
+              <a href="flight-flow/find-flight.html" class="flex items-center gap-4 font-bold text-base hover:text-mint-green transition">
+                <i class="fa-solid fa-plane text-blackish-green"></i>
+                Find Flight
+              </a>
+              
+              <a href="hotel-flow/find-stays.html" class="flex items-center gap-4 font-bold text-base hover:text-mint-green transition">
+                <i class="fa-solid fa-bed text-blackish-green"></i>
+                Find Stays
+              </a>
+              
+              <a href="#" class="flex items-center gap-4 font-bold text-base hover:text-mint-green transition">
+                <i class="fa-solid fa-heart text-blackish-green"></i>
+                Favourites
+              </a>
+              
+              <div class="pt-4 border-t border-gray-100 flex flex-col mt-1">
+                <a href="login-signup/login.html" class="w-full text-center font-semibold text-blackish-green py-2.5 rounded-xl border border-gray-300 hover:bg-gray-50 transition">Login</a>
+              </div>
+            </div>
+
+            <!-- Desktop Links (Ẩn trên điện thoại) -->
+            <div class="hidden lg:flex items-center gap-8 ml-4">
+              <a href="flight-flow/find-flight.html" class="flex items-center gap-2 text-sm text-white font-medium hover:text-teal-300 transition">
+                <img src="assets/image/Vector-plane.png" alt="Plane" class="w-5 h-5 object-contain" />
+                Find Flights
+              </a>
+              <a href="hotel-flow/find-stays.html" class="flex items-center gap-2 text-white font-medium hover:text-teal-300 transition">
+                <img src="assets/image/Vector-bed.png" alt="Bed" class="w-5 h-5 object-contain" />
+                Find Stays
+              </a>
+            </div>
           </div>
-          <div class="flex items-center">
-            <img src="assets/image/Logo-web.png" alt="Logo" class="h-8 object-contain" />
+
+          <!-- Ở GIỮA: Logo -->
+          <div class="flex items-center absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0">
+            <img src="assets/image/Logo-web.png" alt="Logo" class="h-7 lg:h-8 object-contain" />
           </div>
+
+          <!-- BÊN PHẢI: Nút Sign Up -->
           <div class="flex items-center gap-4">
-            <a href="login-signup/login.html" class="text-white font-medium px-4 py-2 hover:text-teal-300 transition">Login</a>
-            <a href="login-signup/signup.html" class="bg-white text-blackish-green font-medium px-5 py-2.5 rounded-lg shadow hover:bg-mint-green transition">Sign Up</a>
+            <!-- Desktop Login -->
+            <a href="login-signup/login.html" class="hidden lg:inline-block text-white font-medium px-4 py-2 hover:text-teal-300 transition">Login</a>
+            
+            <!-- Sign Up -->
+            <a href="login-signup/signup.html" class="bg-white text-blackish-green font-medium px-4 py-2 lg:px-5 lg:py-2.5 rounded-lg shadow hover:opacity-90 transition text-sm lg:text-base">Sign Up</a>
           </div>
         </nav>
 

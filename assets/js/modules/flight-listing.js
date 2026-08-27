@@ -247,7 +247,7 @@ export function initFlightListing() {
 
   async function fetchFlightTickets() {
     try {
-      const response = await fetch("../assets/data/flights.json?v=" + new Date().getTime());
+      const response = await fetch("/assets/data/flights.json?v=" + new Date().getTime());
       if (!response.ok) return;
 
       allFlights = await response.json();
