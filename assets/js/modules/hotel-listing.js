@@ -67,16 +67,22 @@ export function initHotelListing() {
     indicator.style.transform = `translateX(${tableLeft}px)`;
   }
 
-  // --- 3. FETCH DỮ LIỆU TỪ JSON ---
+  // --- 3. FETCH DỮ LIỆU TỪ JSON (Đã fix chuẩn cho Vercel & Vite) ---
   async function fetchHotels() {
     try {
-      const response = await fetch("../assets/data/hotels.json?v=" + new Date().getTime());
+      const jsonUrl = new URL('../../data/hotels.json', import.meta.url).href;
+      const response = await fetch(jsonUrl);
+      if (!response.ok) {
+        console.error("Lỗi fetch: Không lấy được dữ liệu khách sạn");
+        return;
+      }
+
       allHotels = await response.json();
 
       updateTabCounts();
       runFilter();
     } catch (error) {
-      console.error("Lỗi tải dữ liệu:", error);
+      console.error("Lỗi tải dữ liệu hoặc file JSON không tồn tại:", error);
     }
   }
 
