@@ -1,9 +1,6 @@
 export function initFlightListing() {
   let allFlights = [];
-
-  // ==========================================
   // 1. XỬ LÝ PRICE SLIDER
-  // ==========================================
   const priceMin = document.getElementById("slider-min");
   const priceMax = document.getElementById("slider-max");
   const sliderFill = document.getElementById("slider-fill");
@@ -42,12 +39,9 @@ export function initFlightListing() {
 
     priceMin.addEventListener("change", runFlightFilter);
     priceMax.addEventListener("change", runFlightFilter);
-    updatePriceSlider(); // Gọi lần đầu không có 'e' sẽ an toàn
+    updatePriceSlider();
   }
-
-  // ==========================================
   // 2. XỬ LÝ TIME SLIDER (Departure Time)
-  // ==========================================
   const timeMin = document.getElementById("slider-min-time");
   const timeMax = document.getElementById("slider-max-time");
   const timeFill = document.getElementById("slider-fill-time");
@@ -109,10 +103,7 @@ export function initFlightListing() {
     if (period === "pm") hours += 12;
     return hours * 60 + minutes;
   }
-
-  // ==========================================
   // 3. XỬ LÝ TABS & TRƯỢT INDICATOR
-  // ==========================================
   const tabItems = document.querySelectorAll(".flight-results__tab");
   const indicator = document.querySelector(".slide-indicator");
 
@@ -142,10 +133,7 @@ export function initFlightListing() {
     const activeTab = document.querySelector(".flight-results__tab--active");
     if (activeTab) moveIndicator(activeTab);
   });
-
-  // ==========================================
   // 4. LỌC CHUYẾN BAY
-  // ==========================================
   function runFlightFilter() {
     const listContainer = document.getElementById("ticket-list");
     if (!listContainer) return;
@@ -192,10 +180,7 @@ export function initFlightListing() {
 
     renderTickets(filteredFlights);
   }
-
-  // ==========================================
   // 5. GẮN SỰ KIỆN CHO CÁC CHECKBOX BỘ LỌC
-  // ==========================================
   let currentBaseRating = null;
   document.querySelectorAll('input[name="rating"]').forEach((cb) => {
     cb.addEventListener("click", function () {
@@ -216,10 +201,6 @@ export function initFlightListing() {
   document.querySelectorAll('input[name="airlines"], input[name="trips"]').forEach((cb) => {
     cb.addEventListener("change", runFlightFilter);
   });
-
-  // ==========================================
-  // 6. RENDER VÀ FETCH DỮ LIỆU
-  // ==========================================
   function updateTabSubtitles() {
     const tabs = document.querySelectorAll(".flight-results__tab");
     tabs.forEach((tab) => {
