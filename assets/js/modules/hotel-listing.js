@@ -12,6 +12,24 @@ export function initHotelListing() {
 
   let allHotels = [];
 
+  // --- HÀM CHUẨN HÓA ĐƯỜNG DẪN ẢNH (CHỐNG LỖI VỠ ẢNH TRÊN VERCEL) ---
+  function getResolvedImageUrl(imagePath) {
+    if (!imagePath) return "";
+    if (imagePath.startsWith("http") || imagePath.startsWith("/")) {
+      return imagePath;
+    }
+    let cleanPath = imagePath.replace(/^(\.\.\/)+/, '');
+    if (cleanPath.startsWith('assets/')) {
+      cleanPath = cleanPath.replace('assets/', '');
+    }
+    
+    try {
+      return new URL(`../../${cleanPath}`, import.meta.url).href;
+    } catch (e) {
+      return imagePath;
+    }
+  }
+
   // --- 1. LOGIC THANH TRƯỢT GIÁ ---
   function updateSliderUI() {
     if (!sliderMin || !sliderMax || !sliderFill) return;
@@ -67,7 +85,7 @@ export function initHotelListing() {
     indicator.style.transform = `translateX(${tableLeft}px)`;
   }
 
-  // --- 3. FETCH DỮ LIỆU TỪ JSON (Đã fix chuẩn cho Vercel & Vite) ---
+  // --- 3. FETCH DỮ LIỆU TỪ JSON (Chuẩn cho Vercel & Vite) ---
   async function fetchHotels() {
     try {
       const jsonUrl = new URL('../../data/hotels.json', import.meta.url).href;
@@ -134,7 +152,7 @@ export function initHotelListing() {
       <li>
         <article class="hotel-card">
           <div class="relative md:col-span-4 h-64 md:h-auto">
-            <img src="${hotel.image}" alt="${hotel.name}" class="w-full h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
+            <img src="${getResolvedImageUrl(hotel.image)}" alt="${hotel.name}" class="w-full h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
             <span class="absolute top-2 right-2 flex items-center justify-center px-2 py-1 bg-white/50 backdrop-blur-sm rounded-lg text-sm font-medium text-blackish-green leading-none"> ${hotel.imagesCount || 9} images </span>
           </div>
           <div class="md:col-span-8 flex flex-col justify-between p-6 gap-6">
@@ -142,16 +160,16 @@ export function initHotelListing() {
               <div class="flex flex-col gap-3">
                 <h2 class="text-2xl font-bold text-blackish-green leading-none m-0">${hotel.name}</h2>
                 <span class="flex items-center gap-1 text-xs font-medium text-blackish-green/75">
-                  <img src="../assets/image/location_light.svg" alt="location" class="w-4 h-4" />
+                  <img src="${getResolvedImageUrl('../image/location_light.svg')}" alt="location" class="w-4 h-4" />
                   ${hotel.location}
                 </span>
                 <div class="flex items-center gap-8 text-xs font-medium text-blackish-green">
                   <span class="flex items-center gap-1">
-                    <img src="../assets/image/5-stars.svg" alt="5 star" class="w-20" />
+                    <img src="${getResolvedImageUrl('../image/5-stars.svg')}" alt="5 star" class="w-20" />
                     ${hotel.stars || 5} Star Hotel
                   </span>
                   <span class="flex items-center gap-1">
-                    <img src="../assets/image/cafe_light.svg" alt="amenities" class="w-4 h-4" />
+                    <img src="${getResolvedImageUrl('../image/cafe_light.svg')}" alt="amenities" class="w-4 h-4" />
                     <strong>${hotel.amenitiesCount || 20}+</strong> Amenities
                   </span>
                 </div>
