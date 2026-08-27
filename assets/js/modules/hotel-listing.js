@@ -11,7 +11,6 @@ export function initHotelListing() {
   const minGap = 100; // Khoảng cách giá tối thiểu giữa 2 cục trượt
 
   let allHotels = [];
-
   // --- HÀM CHUẨN HÓA ĐƯỜNG DẪN ẢNH (CHỐNG LỖI VỠ ẢNH TRÊN VERCEL) ---
   function getResolvedImageUrl(imagePath) {
     if (!imagePath) return "";
@@ -29,7 +28,6 @@ export function initHotelListing() {
       return imagePath;
     }
   }
-
   // --- 1. LOGIC THANH TRƯỢT GIÁ ---
   function updateSliderUI() {
     if (!sliderMin || !sliderMax || !sliderFill) return;
@@ -70,7 +68,6 @@ export function initHotelListing() {
 
     updateSliderUI();
   }
-
   // --- 2. LOGIC THANH CHỈ THỊ TAB ---
   function moveIndicator(tab) {
     if (!indicator) return;
@@ -84,7 +81,6 @@ export function initHotelListing() {
     indicator.style.width = `${contentWidth}px`;
     indicator.style.transform = `translateX(${tableLeft}px)`;
   }
-
   // --- 3. FETCH DỮ LIỆU TỪ JSON (Chuẩn cho Vercel & Vite) ---
   async function fetchHotels() {
     try {
@@ -103,7 +99,6 @@ export function initHotelListing() {
       console.error("Lỗi tải dữ liệu hoặc file JSON không tồn tại:", error);
     }
   }
-
   // --- 4. LỌC VÀ RENDER HTML ĐỘNG ---
   function runFilter() {
     if (!listContainer) return;
@@ -205,7 +200,6 @@ export function initHotelListing() {
 
     attachFavoriteEvents();
   }
-
   // --- 5. LOGIC THÊM/XÓA YÊU THÍCH ---
   function attachFavoriteEvents() {
     const favoriteCheckboxes = document.querySelectorAll(".favorite-checkbox");
@@ -225,7 +219,6 @@ export function initHotelListing() {
       });
     });
   }
-
   // --- 6. GẮN SỰ KIỆN CHO TABS VÀ RATING ---
   tabs.forEach((tab) => {
     tab.addEventListener("click", function () {
@@ -240,7 +233,6 @@ export function initHotelListing() {
     const activeTab = document.querySelector(".hotel-listing__tab--active");
     if (activeTab) moveIndicator(activeTab);
   });
-
   // --- HÀM CẬP NHẬT SỐ LƯỢNG TRÊN TAB ---
   function updateTabCounts() {
     const tabs = document.querySelectorAll(".hotel-listing__tab");
@@ -260,7 +252,6 @@ export function initHotelListing() {
   }
 
   fetchHotels();
-
   // --- LOGIC CHỌN RATING LIÊN HOÀN ---
   let currentBaseRating = null;
 
