@@ -275,7 +275,6 @@ export function initFlightListing() {
           imagePath = '/' + imagePath;
         }
         
-        // Dùng URL động để trỏ chuẩn xác vào thư mục assets/image/ sau khi build
         try {
           const resolvedLogoUrl = new URL(`../../${imagePath.replace('/assets/', '')}`, import.meta.url).href;
           logoImg.src = resolvedLogoUrl;
