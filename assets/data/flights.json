@@ -4,7 +4,7 @@
     "type": "cheapest",
     "trip": "Roundtrip",
     "airlineName": "Emirates",
-    "airlineLogo": "../assets/image/image 40.png",
+    "airlineLogo": "/assets/image/image 40.png",
     "rating": 4.2,
     "ratingText": "Very Good",
     "reviewsCount": 54,
